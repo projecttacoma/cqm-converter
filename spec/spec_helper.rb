@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'cqm/converter'
+require 'json'
 
 RSpec.configure do |config|
   # Disable RSpec exposing methods globally on `Module` and `main`

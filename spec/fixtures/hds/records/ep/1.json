@@ -1,0 +1,1808 @@
+{
+  "birthdate": -155034000,
+  "bundle_id": "5abb9cf2aeac507a9c761e5e",
+  "conditions": [
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-9-CM": [
+          "897.6"
+        ],
+        "ICD-10-CM": [
+          "Q72.03"
+        ]
+      },
+      "description": "Diagnosis: Bilateral amputation of leg below or above knee",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1172995200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "298674008"
+        ],
+        "ICD-10-CM": [
+          "M54.5"
+        ]
+      },
+      "description": "Diagnosis: Uncomplicated Low Back Pain",
+      "end_time": 1347030000,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1330268400,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "313435000"
+        ],
+        "ICD-9-CM": [
+          "250.01"
+        ],
+        "ICD-10-CM": [
+          "E13.9"
+        ]
+      },
+      "description": "Diagnosis: Diabetes",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 699116400,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    }
+  ],
+  "created_at": "2018-03-28T17:12:23.397Z",
+  "description": "",
+  "description_category": "DENOM",
+  "encounters": [
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "CPT": [
+          "99203"
+        ]
+      },
+      "description": "Encounter, Performed: Office Visit",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1330268400,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1330264800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "CPT": [
+          "98942"
+        ]
+      },
+      "description": "Encounter, Performed: Osteopathic or Chiropractic Manipulative Treatment",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1332516600,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1332514800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2186-5",
+    "name": "Not Hispanic or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": [
+    {
+      "measure_id": "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0,
+      "DENEX": 0
+    },
+    {
+      "measure_id": "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+      "population_index": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 3,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 1,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 4,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 5,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 1,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 6,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 7,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 8,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "population_index": 0,
+      "NUMER": 0,
+      "DENOM": 0,
+      "IPP": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "population_index": 3,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 1,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "59E84144-6332-4369-AEBD-03A7899CA3DA",
+      "population_index": 4,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "STRAT": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0DAC1DEC-E011-493B-A281-7C28964872DD",
+      "population_index": 0,
+      "IPP": 1,
+      "DENOM": 1,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0,
+      "DENEX": 0
+    },
+    {
+      "measure_id": "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0,
+      "DENEX": 0
+    },
+    {
+      "measure_id": "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "population_index": 0,
+      "IPP": 1,
+      "DENOM": 1,
+      "NUMER": 1,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "population_index": 0,
+      "NUMER": 0,
+      "DENOM": 0,
+      "IPP": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "500E4792-7F94-4E34-8546-EE71C56FE463",
+      "population_index": 1,
+      "NUMER": 0,
+      "DENOM": 0,
+      "IPP": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "population_index": 0,
+      "NUMER": 0,
+      "DENOM": 0,
+      "IPP": 1,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "population_index": 1,
+      "IPP": 1,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+      "population_index": 2,
+      "IPP": 1,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "population_index": 0,
+      "NUMER": 0,
+      "DENOM": 1,
+      "IPP": 1,
+      "DENEX": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "population_index": 1,
+      "IPP": 1,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0,
+      "DENEX": 0
+    },
+    {
+      "measure_id": "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+      "population_index": 2,
+      "IPP": 1,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0,
+      "DENEX": 0
+    },
+    {
+      "measure_id": "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "E35791DF-5B25-41BB-B260-673337BC44A8",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "population_index": 1,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+      "population_index": 3,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "59657B9B-01BF-4979-A090-8534DA1D0516",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "703CC49B-B653-4885-80E8-245A057F5AE9",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 3,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 4,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 5,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "BEB1C33C-2549-4E7F-9567-05ED38448464",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A244AA29-7D11-4616-888A-86E376BFCC6F",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "60176FBF-BFDC-4892-9C9E-604F206553C8",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "9A031E24-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "9A033A94-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8924F2B3-EC06-4650-B634-D70A53DEE577",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "BC5B4A57-B964-4399-9D40-667C896F31EA",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "population_index": 1,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 3,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 4,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 5,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 6,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 7,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 8,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "population_index": 1,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 3,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 4,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 5,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 6,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 7,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+      "population_index": 8,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "C3657D72-21B4-4675-820A-86C7FE293BF5",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    }
+  ],
+  "expired": false,
+  "first": "A",
+  "gender": "F",
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": "1234567890",
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1199163600,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "Diabetes Adult",
+  "measure_ids": [
+    "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+    "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+    "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+    "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+    "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+    "0DAC1DEC-E011-493B-A281-7C28964872DD",
+    "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+    "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+    "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+    "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+    "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+    "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+    "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+    "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+    "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+    "500E4792-7F94-4E34-8546-EE71C56FE463",
+    "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+    "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+    "59657B9B-01BF-4979-A090-8534DA1D0516",
+    "59E84144-6332-4369-AEBD-03A7899CA3DA",
+    "60176FBF-BFDC-4892-9C9E-604F206553C8",
+    "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+    "703CC49B-B653-4885-80E8-245A057F5AE9",
+    "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+    "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+    "80744AE2-DE81-4B16-A71D-69522EB865C5",
+    "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+    "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+    "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+    "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+    "8924F2B3-EC06-4650-B634-D70A53DEE577",
+    "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+    "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+    "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+    "9A031E24-3D9B-11E1-8634-00237D5BF174",
+    "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+    "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+    "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+    "9A033A94-3D9B-11E1-8634-00237D5BF174",
+    "A244AA29-7D11-4616-888A-86E376BFCC6F",
+    "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+    "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+    "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+    "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+    "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+    "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+    "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+    "B6016B47-B65D-4BE0-866F-1D397886CA89",
+    "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+    "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+    "BC5B4A57-B964-4399-9D40-667C896F31EA",
+    "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+    "BEB1C33C-2549-4E7F-9567-05ED38448464",
+    "C0D72444-7C26-4863-9B51-8080F8928A85",
+    "C3657D72-21B4-4675-820A-86C7FE293BF5",
+    "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+    "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+    "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+    "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+    "E35791DF-5B25-41BB-B260-673337BC44A8",
+    "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+    "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+    "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+    "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+    "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+    "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+    null
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "42c73d794abbb2b83a1ce6d5f5f8d261225b0707950f3b2c6d8f04aba0cf149b",
+  "notes": "47yo female;\n*9qdes\n*Pt w h/o juvenile diabetes. Poorly managed, lead to bilateral amputations. ",
+  "origin_data": [
+
+  ],
+  "procedures": [
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "42410-1"
+        ]
+      },
+      "components": null,
+      "description": "Diagnostic Study, Performed: X-Ray of Lower Spine",
+      "end_time": 1342947600,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.3",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1342945800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    }
+  ],
+  "race": {
+    "code": "1002-5",
+    "name": "American Indian or Alaska Native",
+    "codeSystem": "CDC Race"
+  },
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Bilateralamputationoflegbeloworaboveknee",
+      "description": "Diagnosis: Bilateral amputation of leg below or above knee",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1056",
+      "type": "conditions",
+      "id": "Bilateralamputationoflegbeloworaboveknee_Diagnosis_062684fd_7fec_4b88_8fea_32efd0e08b3c_source",
+      "start_date": 1172995200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "cms_id": "CMS123v7",
+      "criteria_id": "16268e0e63eva",
+      "codes": {
+        "ICD-9-CM": [
+          "897.6"
+        ],
+        "ICD-10-CM": [
+          "Q72.03"
+        ]
+      },
+      "coded_entry_id": "5abbdcefaeac508c3233e00c",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "laboratory_test",
+      "status": "performed",
+      "title": "HbA1c Laboratory Test",
+      "description": "Laboratory Test, Performed: HbA1c Laboratory Test",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.198.12.1013",
+      "type": "laboratory_tests",
+      "id": "OccurrenceA_HbA1cLaboratoryTest_LaboratoryTestPerformed_3b63e1f8_aaf3_4b56_9869_eb05ccc33687_source",
+      "start_date": 1330264800000,
+      "end_date": 1330264800000,
+      "value": [
+        {
+          "type": "PQ",
+          "value": "8",
+          "unit": "%"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "cms_id": "CMS122v6",
+      "criteria_id": "15c218a5120Lx",
+      "codes": {
+        "LOINC": [
+          "17856-6"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5abbdcefaeac508c3233e012",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "laboratory_test",
+      "status": "performed",
+      "title": "Urine Protein Tests",
+      "description": "Laboratory Test, Performed: Urine Protein Tests",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.109.12.1024",
+      "type": "laboratory_tests",
+      "id": "prefix_2c2ca946_d75e_4561_a1b9_59fb0693ea6b_28120d98_866d_488a_b3c6_4cd573a59048_source",
+      "start_date": 1330264800000,
+      "end_date": 1330264800000,
+      "value": [
+        {
+          "type": "PQ",
+          "value": "positive",
+          "unit": ""
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "cms_id": "CMS134v6",
+      "criteria_id": "15c218a7be4Cf",
+      "codes": {
+        "LOINC": [
+          "1753-3"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5abbdcefaeac508c3233e014",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "laboratory_test",
+      "status": "performed",
+      "title": "LDL Test",
+      "description": "Laboratory Test, Performed: LDL Test",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.198.11.1029",
+      "type": "laboratory_tests",
+      "id": "b94a2389_fe57_4c0f_9118_d06c5387ed60_b61c3492_a9e1_476d_aa30_071ac7dbef2f_source",
+      "start_date": 1330264800000,
+      "end_date": 1330264800000,
+      "value": [
+        {
+          "type": "PQ",
+          "value": "98",
+          "unit": "mg/dL"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+      "cms_id": "CMS347v1",
+      "criteria_id": "15c3b8d3b8blb",
+      "codes": {
+        "LOINC": [
+          "2089-1"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5abbdcefaeac508c3233e016",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "OfficeVisit",
+      "description": "Encounter, Performed: Office Visit",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+      "type": "encounters",
+      "id": "OfficeVisit_EncounterPerformed_ccaea27f_c786_41f6_9f67_90ed125d1c0d_source",
+      "start_date": 1330264800000,
+      "end_date": 1330268400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+      "cms_id": "CMS134v7",
+      "criteria_id": "16268fbac8cfb",
+      "codes": {
+        "CPT": [
+          "99203"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5abbdcefaeac508c3233e00f",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Uncomplicated Low Back Pain",
+      "description": "Diagnosis: Uncomplicated Low Back Pain",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1001",
+      "type": "conditions",
+      "id": "OccurrenceA_UncomplicatedLowBackPain_Diagnosis_8a2757c3_def7_432a_946a_e7892ed7a4e0_source",
+      "start_date": 1330268400000,
+      "end_date": 1347030000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "cms_id": "CMS166v7",
+      "criteria_id": "15c218acd45M4",
+      "codes": {
+        "SNOMED-CT": [
+          "298674008"
+        ],
+        "ICD-10-CM": [
+          "M54.5"
+        ]
+      },
+      "coded_entry_id": "5abbdcefaeac508c3233e00d",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "Osteopathic or Chiropractic Manipulative Treatment",
+      "description": "Encounter, Performed: Osteopathic or Chiropractic Manipulative Treatment",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1076",
+      "type": "encounters",
+      "id": "OsteopathicorChiropracticManipulativeTreatment_EncounterPerformed_bc27a561_5771_4833_a04f_c9ce0ac84c47_source",
+      "start_date": 1332514800000,
+      "end_date": 1332516600000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "cms_id": "CMS166v7",
+      "criteria_id": "15c31309ce7TT",
+      "codes": {
+        "CPT": [
+          "98942"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5abbdcefaeac508c3233e010",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnostic_study",
+      "status": "performed",
+      "title": "X-Ray of Lower Spine",
+      "description": "Diagnostic Study, Performed: X-Ray of Lower Spine",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.113.12.1033",
+      "type": "diagnostic_studies",
+      "id": "X_RayofLowerSpine_DiagnosticStudyPerformed_40280381_3d61_56a7_013e_62790ffd2cb1_source",
+      "start_date": 1342945800000,
+      "end_date": 1342947600000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "B6016B47-B65D-4BE0-866F-1D397886CA89",
+      "cms_id": "CMS166v7",
+      "criteria_id": "15c218afcd0PD",
+      "codes": {
+        "LOINC": [
+          "42410-1"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5abbdcefaeac508c3233e011",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Diabetes",
+      "description": "Diagnosis: Diabetes",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1001",
+      "type": "conditions",
+      "id": "Diabetes_Diagnosis_da6d48b1_67d2_4bb9_8010_ebdf4fbadf78_source",
+      "start_date": 699116400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "C0D72444-7C26-4863-9B51-8080F8928A85",
+      "cms_id": "CMS123v7",
+      "criteria_id": "16268e12d369k",
+      "codes": {
+        "SNOMED-CT": [
+          "313435000"
+        ],
+        "ICD-9-CM": [
+          "250.01"
+        ],
+        "ICD-10-CM": [
+          "E13.9"
+        ]
+      },
+      "coded_entry_id": "5abbdcefaeac508c3233e00e",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-03-28T18:20:31.372Z",
+  "vital_signs": [
+    {
+      "codes": {
+        "LOINC": [
+          "17856-6"
+        ]
+      },
+      "components": null,
+      "description": "Laboratory Test, Performed: HbA1c Laboratory Test",
+      "end_time": 1330264800,
+      "health_record_field": null,
+      "interpretation": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.5",
+      "qdm_status": null,
+      "reaction": null,
+      "reason": null,
+      "referenceRange": null,
+      "referenceRangeHigh": null,
+      "referenceRangeLow": null,
+      "result_date_time": null,
+      "specifics": null,
+      "start_time": 1330264800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "8",
+          "units": "%",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "VitalSign"
+    },
+    {
+      "codes": {
+        "LOINC": [
+          "1753-3"
+        ]
+      },
+      "components": null,
+      "description": "Laboratory Test, Performed: Urine Protein Tests",
+      "end_time": 1330264800,
+      "health_record_field": null,
+      "interpretation": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.5",
+      "qdm_status": null,
+      "reaction": null,
+      "reason": null,
+      "referenceRange": null,
+      "referenceRangeHigh": null,
+      "referenceRangeLow": null,
+      "result_date_time": null,
+      "specifics": null,
+      "start_time": 1330264800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "positive",
+          "units": "",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "VitalSign"
+    },
+    {
+      "codes": {
+        "LOINC": [
+          "2089-1"
+        ]
+      },
+      "components": null,
+      "description": "Laboratory Test, Performed: LDL Test",
+      "end_time": 1330264800,
+      "health_record_field": null,
+      "interpretation": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.5",
+      "qdm_status": null,
+      "reaction": null,
+      "reason": null,
+      "referenceRange": null,
+      "referenceRangeHigh": null,
+      "referenceRangeLow": null,
+      "result_date_time": null,
+      "specifics": null,
+      "start_time": 1330264800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "98",
+          "units": "mg/dL",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "VitalSign"
+    }
+  ]
+}

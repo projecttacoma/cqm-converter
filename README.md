@@ -4,7 +4,7 @@ This repository includes a Ruby Gem that provides a module for converting betwee
 
 ## HDS Record => QDM Patient
 
-The Converter module provides a class (`CQM::Converter::HDSRecord`) for converting a HDS based patient `Record` into a QDM based `Patient`.
+The `CQM::Converter` module provides a class (`CQM::Converter::HDSRecord`) for converting an HDS based patient `Record` into a QDM based `Patient`.
 
 ### Programmatic Conversion
 
@@ -25,8 +25,9 @@ qdm_patient = hds_record_converter.to_qdm(hds_record)
 
 ### Rake Task Conversion
 
-Also included is a rake task to do this conversion. Just point it to a JSON file containing an HDS record, and it will output the corresponding QDM Patient JSON to STDOUT.
-Note: This rake task is not intended for anything other than experimentation. Any serious use of this library should be programmatic.
+Also included is a rake task to do this conversion. Just point it to a JSON file containing an HDS `Record`, and it will output the corresponding QDM `Patient` JSON to STDOUT.
+
+__Note__: This rake task is not intended for anything other than experimentation. Any serious use of this library should be programmatic.
 
 Example:
 ```

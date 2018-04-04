@@ -4,7 +4,7 @@ module CQM::Converter
   class QDMPatient
     # Given a QDM patient, return a corresponding HDS record.
     def self.to_hds(patient)
-      raise 'Unimplemented! ' + patient
+      raise 'Unimplemented!' + patient
     end
   end
 end

@@ -19,7 +19,9 @@ module CQM::Converter
       environment.append_path(cql_qdm_patientapi_spec.gem_dir + '/app/assets/javascripts')
       environment.append_path(cql_qdm_patientapi_spec.gem_dir + '/vendor/assets/javascripts')
       environment.append_path(momentjs_rails_spec.gem_dir + '/vendor/assets/javascripts')
-      @js_dependencies = environment['moment'].to_s + environment['cql4browsers'].to_s + environment['cql_qdm_patientapi'].to_s
+      @js_dependencies = environment['moment'].to_s
+      @js_dependencies += environment['cql4browsers'].to_s
+      @js_dependencies += environment['cql_qdm_patientapi'].to_s
       @datatype_attributes = gather_qdm_model_attrs
     end
 
@@ -54,7 +56,8 @@ module CQM::Converter
       # Convert patient characteristic birthdate.
       birthdate = record.birthdate
       if birthdate
-        patient.data_elements << QDM::PatientCharacteristicBirthdate.new(birth_datetime: DateTime.strptime(birthdate.to_s, '%s'))
+        birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
+        patient.data_elements << QDM::PatientCharacteristicBirthdate.new(birth_datetime: birth_datetime)
       end
 
       # Convert patient characteristic clinical trial participant.
@@ -72,7 +75,8 @@ module CQM::Converter
       # Convert patient characteristic expired.
       expired = record.deathdate
       if expired
-        patient.data_elements << QDM::PatientCharacteristicExpired.new(expired_datetime: DateTime.strptime(expired.to_s, '%s'))
+        expired_datetime = DateTime.strptime(expired.to_s, '%s')
+        patient.data_elements << QDM::PatientCharacteristicExpired.new(expired_datetime: expired_datetime)
       end
 
       # Convert patient characteristic payer.

@@ -1,23 +1,23 @@
 Style/ClassAndModuleChildren:
   Enabled: false
 
-Metrics/BlockLength:
+Style/DateTime:
   Enabled: false
 
 Metrics/LineLength:
-  Enabled: false
+  Max: 120
+
+Metrics/BlockLength:
+  Max: 35
 
 Metrics/AbcSize:
-  Enabled: false
-
-Metrics/PerceivedComplexity:
-  Enabled: false
+  Max: 100
 
 Metrics/CyclomaticComplexity:
-  Enabled: false
+  Max: 15
+
+Metrics/PerceivedComplexity:
+  Max: 15
 
 Metrics/MethodLength:
-  Enabled: false
-
-Style/DateTime:
-  Enabled: false
+  Max: 50

@@ -22,7 +22,7 @@ module CQM::Converter
       @js_dependencies = environment['moment'].to_s
       @js_dependencies += environment['cql4browsers'].to_s
       @js_dependencies += environment['cql_qdm_patientapi'].to_s
-      @datatype_attributes = gather_qdm_model_attrs
+      @datatype_attributes = Utils.gather_qdm_model_attrs
     end
 
     # Given an HDS record, return a corresponding QDM patient.
@@ -33,9 +33,7 @@ module CQM::Converter
       # Build and execute JavaScript that will create a 'CQL_QDM.Patient'
       # JavaScript version of the HDS record. Specifically, we will use
       # this to build our patient's 'data_elements'.
-      template = File.read('templates/hds_to_qdm.js.erb')
-      renderer = ERB.new(template, nil, '-')
-      cql_qdm_patient = ExecJS.exec renderer.result(binding).to_s
+      cql_qdm_patient = ExecJS.exec Utils.hds_to_qdm_js(@js_dependencies, record, @datatype_attributes)
 
       # Grab the results from the CQL_QDM.Patient and add a new 'data_element'
       # for each datatype found on the CQL_QDM.Patient to the new QDM Patient.
@@ -111,18 +109,6 @@ module CQM::Converter
       patient.bundle_id = record.bundle_id if record.bundle_id
 
       patient
-    end
-
-    # This helper method looks at the current state of cqm-models, and builds a hash of
-    # datatype models and their attributes.
-    def gather_qdm_model_attrs
-      datatype_attributes = {}
-      QDM.constants.each do |model|
-        if QDM.const_get(model).respond_to?('fields')
-          datatype_attributes[model.to_s] = QDM.const_get(model).fields.keys.map! { |a| a.camelize(:lower) }
-        end
-      end
-      datatype_attributes
     end
   end
 end

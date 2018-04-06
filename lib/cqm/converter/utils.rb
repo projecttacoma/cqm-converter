@@ -13,5 +13,44 @@ module CQM::Converter
       end
       datatype_attributes
     end
+
+    # Builds JavaScript to assist the HDS Record to QDM Patient conversion.
+    def self.hds_to_qdm_js(js_dependencies, record, datatype_attributes)
+      <<-JS
+        window = {};
+        #{js_dependencies};
+        function PatientWrapper() {
+        }
+        PatientWrapper.prototype.get = function(attr) {
+          const contents = #{record.to_json};
+          return contents[attr];
+        }
+        cql = window.cql;
+        patient = new CQL_QDM.CQLPatient(new PatientWrapper());
+        raw_datatypes = patient.buildDatatypes();
+        datatype_attributes = #{datatype_attributes.to_json};
+        processed_datatypes = {};
+        // Loop over each QDM datatype
+        Object.keys(raw_datatypes).forEach(function(key) {
+          processed_datatypes[key] = [];
+          // Collect the values of the QDM attributes
+          raw_datatypes[key].forEach(function(datatype) {
+            results = {};
+            datatype_attributes[datatype.constructor.name].forEach(function(method) {
+              // Call the datatype attribute method to get its value
+              if (datatype[method]) {
+                results[method] = datatype[method]();
+              }
+            });
+            // Add codes to result
+            results['dataElementCodes'] = datatype['getCode']();
+            // Add description to result
+            results['description'] = datatype['entry']['description'];
+            processed_datatypes[key].push(results);
+          });
+        });
+        return processed_datatypes;
+      JS
+    end
   end
 end

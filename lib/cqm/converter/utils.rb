@@ -16,13 +16,19 @@ module CQM::Converter
 
     # Builds JavaScript to assist the HDS Record to QDM Patient conversion.
     def self.hds_to_qdm_js(js_dependencies, record, datatype_attributes)
+      record_json = JSON.parse(record.to_json)
+      # Bonnie changes start_date and end_date in the front end before calculation,
+      # and this is what is expected by the cql_qdm_patientapi, so make that change
+      # before generating the executable JavaScript.
+      record_json = record_json.deep_transform_keys { |key| key.to_s == 'start_date' ? 'start_time' : key }
+      record_json = record_json.deep_transform_keys { |key| key.to_s == 'end_date' ? 'end_time' : key }
       <<-JS
         window = {};
         #{js_dependencies};
         function PatientWrapper() {
         }
         PatientWrapper.prototype.get = function(attr) {
-          const contents = #{record.to_json};
+          const contents = #{record_json.to_json};
           return contents[attr];
         }
         cql = window.cql;
@@ -39,7 +45,11 @@ module CQM::Converter
             datatype_attributes[datatype.constructor.name].forEach(function(method) {
               // Call the datatype attribute method to get its value
               if (datatype[method]) {
-                results[method] = datatype[method]();
+                if (datatype[method]() && datatype[method]()['toJSON']) {
+                  results[method] = datatype[method]().toJSON();
+                } else {
+                  results[method] = datatype[method]();
+                }
               }
             });
             // Add codes to result

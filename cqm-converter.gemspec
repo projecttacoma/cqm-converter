@@ -18,9 +18,16 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_development_dependency 'activesupport'
   spec.add_development_dependency 'bundler', '~> 1.15'
   spec.add_development_dependency 'byebug', '~> 10.0.0'
+  spec.add_runtime_dependency 'coffee-script'
+  spec.add_runtime_dependency 'cql_qdm_patientapi'
+  spec.add_runtime_dependency 'execjs'
+  spec.add_runtime_dependency 'health-data-standards', '~> 4.0.0'
+  spec.add_runtime_dependency 'momentjs-rails'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.54.0'
+  spec.add_runtime_dependency 'sprockets'
 end

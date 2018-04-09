@@ -14,3 +14,4 @@
 .DS_Store
 .byebug_history
 .vscode/
+Gemfile.lock

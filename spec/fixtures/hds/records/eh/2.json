@@ -113,37 +113,6 @@
       "admitType": null,
       "codes": {
         "SNOMED-CT": [
-          "19951005"
-        ]
-      },
-      "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
-      "diagnosis": null,
-      "dischargeDisposition": null,
-      "dischargeTime": null,
-      "end_time": null,
-      "facility": null,
-      "health_record_field": null,
-      "mood_code": "EVN",
-      "negationInd": null,
-      "negationReason": null,
-      "oid": "2.16.840.1.113883.3.560.1.83",
-      "performer_id": null,
-      "reason": null,
-      "specifics": null,
-      "start_time": 1337616900,
-      "status_code": {
-        "HL7 ActStatus": [
-          "ordered"
-        ]
-      },
-      "time": null,
-      "_type": "Encounter"
-    },
-    {
-      "admitTime": null,
-      "admitType": null,
-      "codes": {
-        "SNOMED-CT": [
           "32485007"
         ]
       },
@@ -165,6 +134,37 @@
       "status_code": {
         "HL7 ActStatus": [
           "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "19951005"
+        ]
+      },
+      "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": null,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.83",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1337616900,
+      "status_code": {
+        "HL7 ActStatus": [
+          "ordered"
         ]
       },
       "time": null,

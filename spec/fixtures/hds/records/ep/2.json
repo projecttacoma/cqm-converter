@@ -1755,13 +1755,6 @@
         ]
       },
       "time": null,
-      "values": [
-        {
-          "scalar": "positive",
-          "units": "",
-          "_type": "PhysicalQuantityResultValue"
-        }
-      ],
       "_type": "VitalSign"
     },
     {

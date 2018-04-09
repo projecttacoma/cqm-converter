@@ -10,7 +10,7 @@ namespace :cqm do
     task :to_hds do
       converter = CQM::Converter::QDMPatient.new
       patient = QDM::Patient.new.from_json(File.read(ENV['RECORD']))
-      puts JSON.pretty_generate(JSON.parse(converter.to_hds(patient).to_json(except: '_id')))
+      puts JSON.pretty_generate(JSON.parse(converter.to_hds(patient).to_json(except: '_id', methods: :_type)))
     end
   end
 end

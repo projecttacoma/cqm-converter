@@ -1,0 +1,712 @@
+{
+  "assessments": [
+    {
+      "codes": {
+        "SNOMED-CT": [
+          "444135009"
+        ]
+      },
+      "components": null,
+      "description": "Assessment, Performed: Estimated Gestational Age at Delivery",
+      "end_time": null,
+      "health_record_field": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.117",
+      "reason": null,
+      "specifics": null,
+      "start_time": 1337317200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "37",
+          "units": "weeks",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "Assessment"
+    },
+    {
+      "codes": {
+        "SNOMED-CT": [
+          "397836004"
+        ]
+      },
+      "components": null,
+      "description": "Assessment, Performed: Time of Delivery",
+      "end_time": null,
+      "health_record_field": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.117",
+      "reason": null,
+      "specifics": null,
+      "start_time": 1337318100,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Assessment"
+    }
+  ],
+  "birthdate": 396043200,
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "calc_results": [
+
+  ],
+  "conditions": [
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-10-CM": [
+          "O71.81"
+        ],
+        "SNOMED-CT": [
+          "7395000"
+        ]
+      },
+      "description": "Diagnosis: Perforation of Uterus",
+      "end_time": 1190106900,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1190102400,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "434591000124100"
+        ]
+      },
+      "description": "Diagnosis: Uterine Window",
+      "end_time": 1265794140,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1265792400,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-10-CM": [
+          "O71.00"
+        ],
+        "SNOMED-CT": [
+          "34430009"
+        ]
+      },
+      "description": "Diagnosis: Uterine Rupture",
+      "end_time": 1265796000,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1265794200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    }
+  ],
+  "created_at": "2015-09-18T18:12:42.010Z",
+  "description": "",
+  "encounters": [
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1337501700,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1337317200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2135-2",
+    "name": "Hispanic Or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": {
+  },
+  "expired": false,
+  "first": "1",
+  "gender": "F",
+  "has_measure_history": true,
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": null,
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1420070400,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "OB",
+  "measure_ids": [
+    "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+    "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+    "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+    "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+    "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+    "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+    "03876D69-085B-415C-AE9D-9924171040C2",
+    "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+    "7DC26160-E615-4CC2-879C-75985189EC1A",
+    "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+    "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+    "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+    "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+    "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+    "9A033274-3D9B-11E1-8634-00237D5BF174",
+    "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+    "EBFA203E-ACC1-4228-906C-855C4BF11310",
+    "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+    "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+    "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+    "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+    "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+    "32CFC834-843A-4F45-B359-8E158EAC4396",
+    "BB481284-30DD-4383-928C-82385BBF1B17",
+    "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+    "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+    "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+    "D78CE034-8288-4012-A31E-7F485A74F2A9",
+    "7D374C6A-3821-4333-A1BC-4531005D77B8",
+    null
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "91cc28d0-1665-0135-6ded-20999b0ed66f",
+  "notes": "30yo female; \n*9qdes\n*Pt w h/o fibroid removal and uterine perforation/rupture. Cerclage done to strengthen cervix for pregnancy.  Pregnancy the following year w c section delivery.",
+  "origin_data": [
+
+  ],
+  "procedures": [
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "236901008"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Myomectomy",
+      "end_time": 1127035800,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1127030400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "ICD-10-PCS": [
+          "0UVC0CZ"
+        ],
+        "SNOMED-CT": [
+          "46681009"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Transabdominal Cerclage",
+      "end_time": 1313652600,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1313650800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "ICD-10-PCS": [
+          "10D00Z0"
+        ],
+        "SNOMED-CT": [
+          "177143000"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Cesarean Birth",
+      "end_time": 1337320800,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1337317200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    }
+  ],
+  "race": {
+    "code": "2106-3",
+    "name": "White",
+    "codeSystem": "CDC Race"
+  },
+  "results_exceed_storage": false,
+  "results_size": 2,
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "Myomectomy",
+      "description": "Procedure, Performed: Myomectomy",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.422",
+      "type": "procedures",
+      "id": "Myomectomy_ProcedurePerformed_40280381_3d27_5493_013d_4dbf057b6868_source",
+      "start_date": 1127030400000,
+      "end_date": 1127035800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de8f273ix",
+      "codes": {
+        "SNOMED-CT": [
+          "236901008"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab3aeac503a2e663f47",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "PerforationofUterus",
+      "description": "Diagnosis: Perforation of Uterus",
+      "code_list_id": "2.16.840.1.113762.1.4.1110.14",
+      "type": "conditions",
+      "id": "PerforationofUterus_Diagnosis_1b471a86_a4a3_4152_acb5_ad24cd7fabbb_source",
+      "start_date": 1190102400000,
+      "end_date": 1190106900000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de76c7bec",
+      "codes": {
+        "ICD-10-CM": [
+          "O71.81"
+        ],
+        "SNOMED-CT": [
+          "7395000"
+        ]
+      },
+      "coded_entry_id": "5ab3fab3aeac503a2e663f43",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "UterineWindow",
+      "description": "Diagnosis: Uterine Window",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.137",
+      "type": "conditions",
+      "id": "UterineWindow_Diagnosis_c6d49175_63a2_4c58_b014_70340768e092_source",
+      "start_date": 1265792400000,
+      "end_date": 1265794140000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de807a32D",
+      "codes": {
+        "SNOMED-CT": [
+          "434591000124100"
+        ]
+      },
+      "coded_entry_id": "5ab3fab3aeac503a2e663f44",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "UterineRupture",
+      "description": "Diagnosis: Uterine Rupture",
+      "code_list_id": "2.16.840.1.113762.1.4.1110.16",
+      "type": "conditions",
+      "id": "UterineRupture_Diagnosis_fb95a6a0_2e8d_4525_8d38_85281afe355a_source",
+      "start_date": 1265794200000,
+      "end_date": 1265796000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de7c0cbUt",
+      "codes": {
+        "ICD-10-CM": [
+          "O71.00"
+        ],
+        "SNOMED-CT": [
+          "34430009"
+        ]
+      },
+      "coded_entry_id": "5ab3fab3aeac503a2e663f45",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "TransabdominalCerclage",
+      "description": "Procedure, Performed: Transabdominal Cerclage",
+      "code_list_id": "2.16.840.1.113762.1.4.1110.18",
+      "type": "procedures",
+      "id": "TransabdominalCerclage_ProcedurePerformed_b0e25a33_f0f4_45bc_8d2d_f85f6d75ebe5_source",
+      "start_date": 1313650800000,
+      "end_date": 1313652600000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de938a1f3",
+      "codes": {
+        "ICD-10-PCS": [
+          "0UVC0CZ"
+        ],
+        "SNOMED-CT": [
+          "46681009"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab3aeac503a2e663f48",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "assessment",
+      "status": "performed",
+      "title": "EstimatedGestationalAgeatDelivery",
+      "description": "Assessment, Performed: Estimated Gestational Age at Delivery",
+      "code_list_id": "2.16.840.1.113762.1.4.1045.26",
+      "type": "assessments",
+      "id": "EstimatedGestationalAgeatDelivery_AssessmentPerformed_30da8e92_bcd9_4dd9_a57b_2e85864a9544_source",
+      "start_date": 1337317200000,
+      "value": [
+        {
+          "type": "PQ",
+          "type_cmp": "CD",
+          "value": "37",
+          "unit": "weeks"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de6dc58ZC",
+      "codes": {
+        "SNOMED-CT": [
+          "444135009"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab3aeac503a2e663f4a",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "CesareanBirth",
+      "description": "Procedure, Performed: Cesarean Birth",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.282",
+      "type": "procedures",
+      "id": "CesareanBirth_ProcedurePerformed_03321e5d_74e7_4b22_b3e1_6f933f4dd6a3_source",
+      "start_date": 1337317200000,
+      "end_date": 1337320800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de89969R3",
+      "codes": {
+        "ICD-10-PCS": [
+          "10D00Z0"
+        ],
+        "SNOMED-CT": [
+          "177143000"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab3aeac503a2e663f49",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "EncounterInpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "id": "EncounterInpatient_EncounterPerformed_c8060e96_dc7d_4780_a5cd_0aff93854cf3_source",
+      "start_date": 1337317200000,
+      "end_date": 1337501700000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de83c73PY",
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab3aeac503a2e663f46",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "assessment",
+      "status": "performed",
+      "title": "TimeofDelivery",
+      "description": "Assessment, Performed: Time of Delivery",
+      "code_list_id": "2.16.840.1.113762.1.4.1045.28",
+      "type": "assessments",
+      "id": "TimeofDelivery_AssessmentPerformed_673faafb_84bb_4893_a38a_ef1710a77585_source",
+      "start_date": 1337318100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "cms_id": "CMS113v7",
+      "criteria_id": "1624de734cfoP",
+      "codes": {
+        "SNOMED-CT": [
+          "397836004"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab3aeac503a2e663f4c",
+      "code_source": "DEFAULT"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-04-03T16:59:17.722Z",
+  "version": 46
+}

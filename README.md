@@ -2,6 +2,8 @@
 
 This repository includes a Ruby Gem that provides a module for converting between the older HDS based models (https://github.com/projectcypress/health-data-standards) and the newer QDM based models (https://github.com/projecttacoma/cqm-models).
 
+See the `Gemfile` for specific Gem dependency requirements for using this library.
+
 ## HDS Record => QDM Patient
 
 The `CQM::Converter` module provides a class (`CQM::Converter::HDSRecord`) for converting an HDS based patient `Record` into a QDM based `Patient`.

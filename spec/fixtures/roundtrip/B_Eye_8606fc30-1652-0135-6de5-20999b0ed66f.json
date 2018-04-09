@@ -1,0 +1,1694 @@
+{
+  "birthdate": -912416400,
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "calc_results": [
+
+  ],
+  "communications": [
+    {
+      "codes": {
+        "SNOMED-CT": [
+          "312903003"
+        ]
+      },
+      "description": "Communication From Provider To Provider: Level of Severity of Retinopathy Findings",
+      "direction": "communication_from_provider_to_provider",
+      "end_time": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.29",
+      "reason": null,
+      "specifics": null,
+      "start_time": 1327427100,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "_type": "Communication"
+    },
+    {
+      "codes": {
+        "SNOMED-CT": [
+          "312912001"
+        ]
+      },
+      "description": "Communication From Provider To Provider: Macular Edema Findings Present",
+      "direction": "communication_from_provider_to_provider",
+      "end_time": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.29",
+      "reason": null,
+      "specifics": null,
+      "start_time": 1327427100,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "_type": "Communication"
+    }
+  ],
+  "conditions": [
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-9-CM": [
+          "362.03"
+        ],
+        "SNOMED-CT": [
+          "312904009"
+        ],
+        "ICD-10-CM": [
+          "E10.311"
+        ]
+      },
+      "description": "Diagnosis: Diabetic Retinopathy",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1325698200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-9-CM": [
+          "365.10"
+        ],
+        "ICD-10-CM": [
+          "H40.10X0"
+        ],
+        "SNOMED-CT": [
+          "77075001"
+        ]
+      },
+      "description": "Diagnosis: Primary Open-Angle Glaucoma",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1325698200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "44054006"
+        ],
+        "ICD-9-CM": [
+          "362.03"
+        ],
+        "ICD-10-CM": [
+          "E11.9"
+        ]
+      },
+      "description": "Diagnosis: Diabetes",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1325698200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    }
+  ],
+  "created_at": "2015-05-04T16:27:55.499Z",
+  "description": "",
+  "description_category": "DENOM",
+  "encounters": [
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "CPT": [
+          "92004"
+        ]
+      },
+      "description": "Encounter, Performed: Ophthalmological Services",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1325700000,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1325696400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "CPT": [
+          "92014"
+        ]
+      },
+      "description": "Encounter, Performed: Ophthalmological Services",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1327428900,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1327426200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "CPT": [
+          "92014"
+        ]
+      },
+      "description": "Encounter, Performed: Ophthalmological Services",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1328207400,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1328202000,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2186-5",
+    "name": "Not Hispanic or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": {
+  },
+  "expired": false,
+  "first": "B",
+  "gender": "M",
+  "has_measure_history": true,
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": null,
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1420070400,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "Eye",
+  "measure_ids": [
+    "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+    "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+    "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+    "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+    "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+    "0DAC1DEC-E011-493B-A281-7C28964872DD",
+    "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+    "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+    "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+    "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+    "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+    "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+    "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+    "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+    "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+    "500E4792-7F94-4E34-8546-EE71C56FE463",
+    "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+    "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+    "59657B9B-01BF-4979-A090-8534DA1D0516",
+    "59E84144-6332-4369-AEBD-03A7899CA3DA",
+    "60176FBF-BFDC-4892-9C9E-604F206553C8",
+    "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+    "703CC49B-B653-4885-80E8-245A057F5AE9",
+    "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+    "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+    "80744AE2-DE81-4B16-A71D-69522EB865C5",
+    "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+    "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+    "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+    "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+    "8924F2B3-EC06-4650-B634-D70A53DEE577",
+    "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+    "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+    "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+    "9A031E24-3D9B-11E1-8634-00237D5BF174",
+    "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+    "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+    "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+    "9A033A94-3D9B-11E1-8634-00237D5BF174",
+    "A244AA29-7D11-4616-888A-86E376BFCC6F",
+    "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+    "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+    "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+    "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+    "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+    "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+    "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+    "B6016B47-B65D-4BE0-866F-1D397886CA89",
+    "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+    "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+    "BC5B4A57-B964-4399-9D40-667C896F31EA",
+    "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+    "BEB1C33C-2549-4E7F-9567-05ED38448464",
+    "C0D72444-7C26-4863-9B51-8080F8928A85",
+    "C3657D72-21B4-4675-820A-86C7FE293BF5",
+    "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+    "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+    "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+    "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+    "E35791DF-5B25-41BB-B260-673337BC44A8",
+    "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+    "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+    "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+    "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+    "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+    "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+    "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+    "ED78899D-2375-4D68-AA63-58E1734F5694",
+    "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "8606fc30-1652-0135-6de5-20999b0ed66f",
+  "notes": "71yo male\n*21qdes\n*pt with recurrent ophthalmology complications after cataract surgery.",
+  "origin_data": [
+
+  ],
+  "procedures": [
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "CPT": [
+          "66982"
+        ],
+        "SNOMED-CT": [
+          "112963003"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Cataract Surgery",
+      "end_time": 1325697900,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1325696400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "71487-3"
+        ]
+      },
+      "components": null,
+      "description": "Diagnostic Study, Performed: Optic Disc Exam for Structural Abnormalities",
+      "end_time": 1325698200,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.3",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1325698200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "1",
+          "units": "",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "71485-7"
+        ]
+      },
+      "components": null,
+      "description": "Diagnostic Study, Performed: Cup to Disc Ratio",
+      "end_time": 1325698200,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.3",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1325698200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "0.8",
+          "units": "",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "32451-7"
+        ]
+      },
+      "components": {
+        "type": "COL",
+        "values": [
+          {
+            "code": {
+              "code_system": "LOINC",
+              "code": "32451-7"
+            },
+            "result": {
+              "code": {
+                "code_system": "SNOMED-CT",
+                "code": "312903003"
+              },
+              "title": "Level of Severity of Retinopathy Findings"
+            }
+          },
+          {
+            "code": {
+              "code_system": "LOINC",
+              "code": "32451-7"
+            },
+            "result": {
+              "code": {
+                "code_system": "SNOMED-CT",
+                "code": "193350004"
+              },
+              "title": "Macular Edema Findings Present"
+            }
+          }
+        ]
+      },
+      "description": "Diagnostic Study, Performed: Macular Exam",
+      "end_time": 1327428000,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.3",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1327427100,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "CPT": [
+          "66030"
+        ],
+        "SNOMED-CT": [
+          "416773006"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Aspiration and Injection Procedures",
+      "end_time": 1328206800,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1328204700,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "438601000"
+        ],
+        "CPT": [
+          "65860"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Excision of Adhesions",
+      "end_time": 1328206800,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1328204700,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "231751005"
+        ],
+        "CPT": [
+          "66986"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Lens Procedure",
+      "end_time": 1328206800,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1328204700,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "419775003"
+        ]
+      },
+      "components": null,
+      "description": "Physical Exam, Performed: Best corrected visual acuity (observable entity)",
+      "end_time": 1328207400,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.57",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1328207400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "codes": {
+            "SNOMED-CT": [
+              "422497000"
+            ]
+          },
+          "description": "Visual Acuity 20/40 or Better",
+          "_type": "CodedResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "CPT": [
+          "65235"
+        ],
+        "SNOMED-CT": [
+          "54362002"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Removal Procedures",
+      "end_time": 1341217200,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1341207900,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "296867007"
+        ],
+        "CPT": [
+          "67010"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Vitreous Procedures",
+      "end_time": 1341217200,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1341207900,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "CPT": [
+          "67105"
+        ],
+        "SNOMED-CT": [
+          "78917001"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Retinal Repair Procedures",
+      "end_time": 1350030000,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1350021600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "CPT": [
+          "66250"
+        ],
+        "SNOMED-CT": [
+          "231741009"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Revision Procedures",
+      "end_time": 1350030000,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1350021600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "10807008"
+        ],
+        "CPT": [
+          "67250"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Scleral Procedures",
+      "end_time": 1350030000,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1350021600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    }
+  ],
+  "race": {
+    "code": "1002-5",
+    "name": "American Indian or Alaska Native",
+    "codeSystem": "CDC Race"
+  },
+  "results_exceed_storage": false,
+  "results_size": 2,
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "CataractSurgery",
+      "description": "Procedure, Performed: Cataract Surgery",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1411",
+      "type": "procedures",
+      "id": "CataractSurgery_ProcedurePerformed_b4d21c5b_7ed9_4299_b001_e4ba97ab55ac_source",
+      "start_date": 1325696400000,
+      "end_date": 1325697900000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "cms_id": "CMS133v7",
+      "criteria_id": "162875d0362tN",
+      "codes": {
+        "CPT": [
+          "66982"
+        ],
+        "SNOMED-CT": [
+          "112963003"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffbf",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "OphthalmologicalServices",
+      "description": "Encounter, Performed: Ophthalmological Services",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1285",
+      "type": "encounters",
+      "id": "OphthalmologicalServices_EncounterPerformed_05ab18cc_304f_4661_a90a_3e8ab02c4081_source",
+      "start_date": 1325696400000,
+      "end_date": 1325700000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "cms_id": "CMS167v7",
+      "criteria_id": "162735ab37cqD",
+      "codes": {
+        "CPT": [
+          "92004"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffbc",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "DiabeticRetinopathy",
+      "description": "Diagnosis: Diabetic Retinopathy",
+      "code_list_id": "2.16.840.1.113883.3.526.3.327",
+      "type": "conditions",
+      "id": "DiabeticRetinopathy_Diagnosis_065c41d4_e3db_4957_8d0f_2098fd66515a_source",
+      "start_date": 1325698200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "cms_id": "CMS167v7",
+      "criteria_id": "1627356060cN7",
+      "codes": {
+        "ICD-9-CM": [
+          "362.03"
+        ],
+        "SNOMED-CT": [
+          "312904009"
+        ],
+        "ICD-10-CM": [
+          "E10.311"
+        ]
+      },
+      "coded_entry_id": "5ac5153eaeac50408e25ffb9",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "PrimaryOpen-AngleGlaucoma",
+      "description": "Diagnosis: Primary Open-Angle Glaucoma",
+      "code_list_id": "2.16.840.1.113883.3.526.3.326",
+      "type": "conditions",
+      "id": "PrimaryOpen_AngleGlaucoma_Diagnosis_ad55c7bd_1e7a_4f0f_aae5_658a53cdccfd_source",
+      "start_date": 1325698200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "cms_id": "CMS143v7",
+      "criteria_id": "1628727865eBb",
+      "codes": {
+        "ICD-9-CM": [
+          "365.10"
+        ],
+        "ICD-10-CM": [
+          "H40.10X0"
+        ],
+        "SNOMED-CT": [
+          "77075001"
+        ]
+      },
+      "coded_entry_id": "5ac5153eaeac50408e25ffba",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Diabetes",
+      "description": "Diagnosis: Diabetes",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.103.12.1001",
+      "type": "conditions",
+      "id": "Diabetes_Diagnosis_dbaa8edd_2495_49f1_9d8d_86c97c3dd2da_source",
+      "start_date": 1325698200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+      "cms_id": "CMS122v7",
+      "criteria_id": "162878fdb2c1o",
+      "codes": {
+        "SNOMED-CT": [
+          "44054006"
+        ],
+        "ICD-9-CM": [
+          "362.03"
+        ],
+        "ICD-10-CM": [
+          "E11.9"
+        ]
+      },
+      "coded_entry_id": "5ac5153eaeac50408e25ffbb",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnostic_study",
+      "status": "performed",
+      "title": "Optic Disc Exam for Structural Abnormalities",
+      "description": "Diagnostic Study, Performed: Optic Disc Exam for Structural Abnormalities",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1334",
+      "type": "diagnostic_studies",
+      "id": "prefix_332e0480_bfe2_4862_a279_4fddc472c21c_e657c9ef_62d9_4942_865b_9f3fd7007a78_source",
+      "start_date": 1325698200000,
+      "end_date": 1325698200000,
+      "value": [
+        {
+          "type": "PQ",
+          "value": "1",
+          "unit": ""
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "cms_id": "CMS143v6",
+      "criteria_id": "15c227f8d42iQ",
+      "codes": {
+        "LOINC": [
+          "71487-3"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc0",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnostic_study",
+      "status": "performed",
+      "title": "CuptoDiscRatio",
+      "description": "Diagnostic Study, Performed: Cup to Disc Ratio",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1333",
+      "type": "diagnostic_studies",
+      "id": "CuptoDiscRatio_DiagnosticStudyPerformed_9b397a11_4a16_4b2e_9993_eb7747f9a5b8_source",
+      "start_date": 1325698200000,
+      "end_date": 1325698200000,
+      "value": [
+        {
+          "type": "PQ",
+          "type_cmp": "CD",
+          "value": "0.8",
+          "unit": ""
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+      "cms_id": "CMS143v7",
+      "criteria_id": "1628727cb10Ad",
+      "codes": {
+        "LOINC": [
+          "71485-7"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc2",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "OphthalmologicalServices",
+      "description": "Encounter, Performed: Ophthalmological Services",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1285",
+      "type": "encounters",
+      "id": "OphthalmologicalServices_EncounterPerformed_05ab18cc_304f_4661_a90a_3e8ab02c4081_source",
+      "start_date": 1327426200000,
+      "end_date": 1327428900000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "cms_id": "CMS167v7",
+      "criteria_id": "162735a7514H2",
+      "codes": {
+        "CPT": [
+          "92014"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffbd",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "communication_from_provider_to_provider",
+      "title": "LevelofSeverityofRetinopathyFindings",
+      "description": "Communication From Provider To Provider: Level of Severity of Retinopathy Findings",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1283",
+      "type": "communications",
+      "id": "LevelofSeverityofRetinopathyFindings_Communication_FromProviderToProvider_4fd09b3d_1be7_405a_bed9_ccd02479c37c_source",
+      "start_date": 1327427100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "cms_id": "CMS142v7",
+      "criteria_id": "16287348c80tU",
+      "codes": {
+        "SNOMED-CT": [
+          "312903003"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffcf",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "communication_from_provider_to_provider",
+      "title": "MacularEdemaFindingsPresent",
+      "description": "Communication From Provider To Provider: Macular Edema Findings Present",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1320",
+      "type": "communications",
+      "id": "MacularEdemaFindingsPresent_Communication_FromProviderToProvider_9e4073ea_696f_484b_afb0_5167888e330c_source",
+      "start_date": 1327427100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+      "cms_id": "CMS142v7",
+      "criteria_id": "1628734b4capf",
+      "codes": {
+        "SNOMED-CT": [
+          "312912001"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffd0",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnostic_study",
+      "status": "performed",
+      "title": "MacularExam",
+      "description": "Diagnostic Study, Performed: Macular Exam",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1251",
+      "type": "diagnostic_studies",
+      "id": "MacularExam_DiagnosticStudyPerformed_40280381_3d61_56a7_013e_57fe7eec37f2_source",
+      "start_date": 1327427100000,
+      "end_date": 1327428000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "COMPONENT": {
+          "type": "COL",
+          "values": [
+            {
+              "type": "CMP",
+              "type_cmp": "CD",
+              "key": "COMPONENT",
+              "code_list_id": "2.16.840.1.113883.3.526.3.1251",
+              "title_cmp": "Level of Severity of Retinopathy Findings",
+              "field_title": "Component",
+              "code_list_id_cmp": "2.16.840.1.113883.3.526.3.1283",
+              "title": "Macular Exam"
+            },
+            {
+              "type": "CMP",
+              "key": "COMPONENT",
+              "code_list_id": "2.16.840.1.113883.3.526.3.1251",
+              "title_cmp": "Macular Edema Findings Present",
+              "field_title": "Component",
+              "type_cmp": "CD",
+              "code_list_id_cmp": "2.16.840.1.113883.3.526.3.1320",
+              "title": "Macular Exam"
+            }
+          ],
+          "field_title": "Component"
+        }
+      },
+      "hqmf_set_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "cms_id": "CMS167v7",
+      "criteria_id": "1627357107aZu",
+      "codes": {
+        "LOINC": [
+          "32451-7"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc4",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "OphthalmologicalServices",
+      "description": "Encounter, Performed: Ophthalmological Services",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1285",
+      "type": "encounters",
+      "id": "OphthalmologicalServices_EncounterPerformed_05ab18cc_304f_4661_a90a_3e8ab02c4081_source",
+      "start_date": 1328202000000,
+      "end_date": 1328207400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+      "cms_id": "CMS167v7",
+      "criteria_id": "162735a237akB",
+      "codes": {
+        "CPT": [
+          "92014"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffbe",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "AspirationandInjectionProcedures",
+      "description": "Procedure, Performed: Aspiration and Injection Procedures",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1408",
+      "type": "procedures",
+      "id": "AspirationandInjectionProcedures_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98584b2b_source",
+      "start_date": 1328204700000,
+      "end_date": 1328206800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162691db6d6qy",
+      "codes": {
+        "CPT": [
+          "66030"
+        ],
+        "SNOMED-CT": [
+          "416773006"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc5",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "ExcisionofAdhesions",
+      "description": "Procedure, Performed: Excision of Adhesions",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1422",
+      "type": "procedures",
+      "id": "ExcisionofAdhesions_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98584b2a_source",
+      "start_date": 1328204700000,
+      "end_date": 1328206800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162691e0602Ji",
+      "codes": {
+        "SNOMED-CT": [
+          "438601000"
+        ],
+        "CPT": [
+          "65860"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc6",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "LensProcedure",
+      "description": "Procedure, Performed: Lens Procedure",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1429",
+      "type": "procedures",
+      "id": "LensProcedure_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98584b2c_source",
+      "start_date": 1328204700000,
+      "end_date": 1328206800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162691e7806rm",
+      "codes": {
+        "SNOMED-CT": [
+          "231751005"
+        ],
+        "CPT": [
+          "66986"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc7",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "physical_exam",
+      "status": "performed",
+      "title": "Physical Exam, Performed: Physical Exam, Performed",
+      "description": "Physical Exam, Performed: Best corrected visual acuity (observable entity)",
+      "code_list_id": "drc-c165b007cbd4a8cf3bf4068e36fa9ff12f59281f8e23276d271c64dc8da701c9",
+      "type": "physical_exams",
+      "id": "prefix_419775003_PhysicalExamPerformed_41ACBFA7_1715_4E96_A2C8_3314BCE8EEDB_source",
+      "start_date": 1328207400000,
+      "end_date": 1328207400000,
+      "value": [
+        {
+          "type": "CD",
+          "type_cmp": "CD",
+          "code_list_id": "2.16.840.1.113883.3.526.3.1483",
+          "title": "Visual Acuity 20/40 or Better"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+      "cms_id": "CMS133v7",
+      "criteria_id": "162875ca00cB6",
+      "codes": {
+        "SNOMED-CT": [
+          "419775003"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffc8",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "RemovalProcedures",
+      "description": "Procedure, Performed: Removal Procedures",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1436",
+      "type": "procedures",
+      "id": "RemovalProcedures_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98584b28_source",
+      "start_date": 1341207900000,
+      "end_date": 1341217200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162691f02bePA",
+      "codes": {
+        "CPT": [
+          "65235"
+        ],
+        "SNOMED-CT": [
+          "54362002"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffca",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "VitreousProcedures",
+      "description": "Procedure, Performed: Vitreous Procedures",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1447",
+      "type": "procedures",
+      "id": "VitreousProcedures_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98584b2d_source",
+      "start_date": 1341207900000,
+      "end_date": 1341217200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "1626920a066S3",
+      "codes": {
+        "SNOMED-CT": [
+          "296867007"
+        ],
+        "CPT": [
+          "67010"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffcb",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "RetinalRepairProcedures",
+      "description": "Procedure, Performed: Retinal Repair Procedures",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1437",
+      "type": "procedures",
+      "id": "RetinalRepairProcedures_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98594b2e_source",
+      "start_date": 1350021600000,
+      "end_date": 1350030000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162691f748aKZ",
+      "codes": {
+        "CPT": [
+          "67105"
+        ],
+        "SNOMED-CT": [
+          "78917001"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffcc",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "RevisionProcedures",
+      "description": "Procedure, Performed: Revision Procedures",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1439",
+      "type": "procedures",
+      "id": "RevisionProcedures_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98594b30_source",
+      "start_date": 1350021600000,
+      "end_date": 1350030000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162692010520D",
+      "codes": {
+        "CPT": [
+          "66250"
+        ],
+        "SNOMED-CT": [
+          "231741009"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffcd",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "ScleralProcedures",
+      "description": "Procedure, Performed: Scleral Procedures",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1440",
+      "type": "procedures",
+      "id": "ScleralProcedures_ProcedurePerformed_40280381_3d61_56a7_013e_66ae98594b2f_source",
+      "start_date": 1350021600000,
+      "end_date": 1350030000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+      "cms_id": "CMS132v7",
+      "criteria_id": "162692066b2z0",
+      "codes": {
+        "SNOMED-CT": [
+          "10807008"
+        ],
+        "CPT": [
+          "67250"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac5153eaeac50408e25ffce",
+      "code_source": "DEFAULT"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-04-04T18:11:10.183Z",
+  "version": 16
+}

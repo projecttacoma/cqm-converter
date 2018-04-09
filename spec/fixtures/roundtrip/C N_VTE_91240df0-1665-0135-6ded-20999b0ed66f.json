@@ -1,0 +1,420 @@
+{
+  "birthdate": -239527800,
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "calc_results": [
+
+  ],
+  "created_at": "2015-05-04T18:47:56.115Z",
+  "description": "",
+  "encounters": [
+    {
+      "admitTime": 1335888900,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "4525004"
+        ]
+      },
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnosis": null,
+      "dischargeDisposition": {
+        "code_system": "SNOMED-CT",
+        "code": "306701001",
+        "title": "Discharge To Acute Care Facility"
+      },
+      "dischargeTime": 1335898800,
+      "end_time": 1335898800,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1335888900,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1336080600,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1335900600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2186-5",
+    "name": "Not Hispanic or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": {
+  },
+  "expired": false,
+  "first": "C N",
+  "gender": "M",
+  "has_measure_history": true,
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": "1234567890",
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1199163600,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "VTE",
+  "measure_ids": [
+    "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+    "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+    "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+    "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+    "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+    "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+    "03876D69-085B-415C-AE9D-9924171040C2",
+    "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+    "7DC26160-E615-4CC2-879C-75985189EC1A",
+    "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+    "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+    "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+    "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+    "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+    "9A033274-3D9B-11E1-8634-00237D5BF174",
+    "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+    "EBFA203E-ACC1-4228-906C-855C4BF11310",
+    "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+    "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+    "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+    "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+    "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+    "32CFC834-843A-4F45-B359-8E158EAC4396",
+    "BB481284-30DD-4383-928C-82385BBF1B17",
+    "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+    "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+    "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+    "D78CE034-8288-4012-A31E-7F485A74F2A9",
+    "7D374C6A-3821-4333-A1BC-4531005D77B8"
+  ],
+  "medical_equipment": [
+    {
+      "anatomicalStructure": null,
+      "anatomical_approach": null,
+      "codes": {
+        "SNOMED-CT": [
+          "348681001"
+        ]
+      },
+      "description": "Device, Applied: Graduated compression stockings (GCS)",
+      "end_time": null,
+      "health_record_field": null,
+      "manufacturer": null,
+      "mood_code": "EVN",
+      "negationInd": true,
+      "negationReason": {
+        "code_system": "SNOMED-CT",
+        "code": "183932001"
+      },
+      "oid": "2.16.840.1.113883.3.560.1.110",
+      "reaction": null,
+      "reason": null,
+      "removalTime": null,
+      "specifics": null,
+      "start_time": 1335893400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "applied"
+        ]
+      },
+      "time": null,
+      "_type": "MedicalEquipment"
+    }
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "91240df0-1665-0135-6ded-20999b0ed66f",
+  "medications": [
+    {
+      "active_datetime": null,
+      "administrationTiming": null,
+      "allowedAdministrations": null,
+      "anatomical_approach": null,
+      "codes": {
+        "RxNorm": [
+          "1658634"
+        ]
+      },
+      "cumulativeMedicationDuration": null,
+      "deliveryMethod": null,
+      "description": "Medication, Administered: Low Dose Unfractionated Heparin for VTE Prophylaxis",
+      "dose": {
+        "value": "5000",
+        "unit": "{capsule(s)}"
+      },
+      "doseIndicator": null,
+      "doseRestriction": null,
+      "end_time": 1335902400,
+      "freeTextSig": null,
+      "fulfillmentHistory": [
+
+      ],
+      "fulfillmentInstructions": null,
+      "health_record_field": null,
+      "indication": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.14",
+      "patientInstructions": null,
+      "productForm": null,
+      "reaction": null,
+      "reason": null,
+      "route": {
+        "code_system": "SNOMED-CT",
+        "code": "34206005",
+        "title": "Subcutaneous route"
+      },
+      "signed_datetime": null,
+      "specifics": null,
+      "start_time": 1335902400,
+      "statusOfMedication": null,
+      "status_code": {
+        "HL7 ActStatus": [
+          "administered"
+        ]
+      },
+      "supply": null,
+      "time": null,
+      "typeOfMedication": null,
+      "vehicle": null,
+      "_type": "Medication"
+    }
+  ],
+  "notes": "50yo male; Num 108\n*4qdes\n*Inpatient transferred in from outside ED. GCS not ordered due to med reason (lower extremity skin ulcers). Receives an anticoagulant.",
+  "origin_data": [
+
+  ],
+  "race": {
+    "code": "1002-5",
+    "name": "American Indian or Alaska Native",
+    "codeSystem": "CDC Race"
+  },
+  "results_exceed_storage": false,
+  "results_size": 2,
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "EmergencyDepartmentVisit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+      "start_date": 1335888900000,
+      "end_date": 1335898800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "DISCHARGE_STATUS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.87",
+          "field_title": "Discharge Disposition",
+          "title": "Discharge To Acute Care Facility"
+        },
+        "ADMISSION_DATETIME": {
+          "type": "TS",
+          "code_list_id": "",
+          "field_title": "Admission Date/Time",
+          "start_date": "05/01/2012",
+          "start_time": "4:15 PM",
+          "value": 1335888900000
+        },
+        "DISCHARGE_DATETIME": {
+          "type": "TS",
+          "code_list_id": "",
+          "field_title": "Discharge Date/Time",
+          "start_date": "05/01/2012",
+          "start_time": "7:00 PM",
+          "value": 1335898800000
+        }
+      },
+      "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "cms_id": "CMS32v8",
+      "criteria_id": "1624f0e966duy",
+      "codes": {
+        "SNOMED-CT": [
+          "4525004"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fbc1aeac503a2e664020",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": true,
+      "definition": "device",
+      "status": "applied",
+      "title": "Graduatedcompressionstockings(GCS)",
+      "description": "Device, Applied: Graduated compression stockings (GCS)",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.256",
+      "type": "devices",
+      "id": "Graduatedcompressionstockings_GCS__DeviceApplied_40280381_3d27_5493_013d_4be146945c81_source",
+      "start_date": 1335893400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "cms_id": "CMS108v7",
+      "criteria_id": "1624ed76e31i4",
+      "codes": {
+        "SNOMED-CT": [
+          "348681001"
+        ]
+      },
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.473",
+      "coded_entry_id": "5ab3fbc1aeac503a2e664022",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "EncounterInpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "id": "EncounterInpatient_EncounterPerformed_c8060e96_dc7d_4780_a5cd_0aff93854cf3_source",
+      "start_date": 1335900600000,
+      "end_date": 1336080600000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "cms_id": "CMS108v7",
+      "criteria_id": "1624ed7a93dJp",
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fbc1aeac503a2e664021",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "medication",
+      "status": "administered",
+      "title": "LowDoseUnfractionatedHeparinforVTEProphylaxis",
+      "description": "Medication, Administered: Low Dose Unfractionated Heparin for VTE Prophylaxis",
+      "code_list_id": "2.16.840.1.113762.1.4.1045.39",
+      "type": "medications",
+      "id": "LowDoseUnfractionatedHeparinforVTEProphylaxis_MedicationAdministered_389f98c4_53d0_4562_bfae_02b74a2f8c26_source",
+      "start_date": 1335902400000,
+      "end_date": 1335902400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "ROUTE": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.223",
+          "field_title": "Route",
+          "title": "Subcutaneous route"
+        }
+      },
+      "hqmf_set_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "cms_id": "CMS108v7",
+      "criteria_id": "1624ed818c1pN",
+      "codes": {
+        "RxNorm": [
+          "1658634"
+        ]
+      },
+      "fulfillments": null,
+      "dose_value": "5000",
+      "dose_unit": "{capsule(s)}",
+      "frequency_value": "",
+      "frequency_unit": "min",
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fbc1aeac503a2e664023",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-04-03T16:59:17.606Z",
+  "version": 50
+}

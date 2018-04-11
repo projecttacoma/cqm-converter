@@ -2,8 +2,8 @@
 module CQM::Converter
   # CQM Converter class for QDM based patients.
   class QDMPatient
-    # Initialize a new HDSRecord converter. NOTE: This should be done once, and then
-    # used for every HDS Record you want to convert, since it takes a few seconds
+    # Initialize a new QDMPatient converter. NOTE: This should be done once, and then
+    # used for every QDM Patient you want to convert, since it takes a few seconds
     # to initialize the conversion environment.
     def initialize
       @qdm_model_attrs = Utils.gather_qdm_model_attrs

@@ -1,0 +1,523 @@
+{
+  "birthdate": -660746700,
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "calc_results": [
+
+  ],
+  "created_at": "2016-09-09T20:09:42.117Z",
+  "description": "",
+  "encounters": [
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1338020100,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "principalDiagnosis": {
+        "code": "10273003",
+        "code_system": "SNOMED-CT",
+        "title": "Acute or Evolving MI"
+      },
+      "reason": null,
+      "specifics": null,
+      "start_time": 1337587200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2186-5",
+    "name": "Not Hispanic or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": {
+  },
+  "expired": false,
+  "first": "Z4",
+  "gender": "M",
+  "has_measure_history": true,
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": null,
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1420070400,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "AMI",
+  "measure_ids": [
+    "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+    "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+    "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+    "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+    "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+    "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+    "03876D69-085B-415C-AE9D-9924171040C2",
+    "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+    "7DC26160-E615-4CC2-879C-75985189EC1A",
+    "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+    "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+    "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+    "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+    "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+    "9A033274-3D9B-11E1-8634-00237D5BF174",
+    "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+    "EBFA203E-ACC1-4228-906C-855C4BF11310",
+    "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+    "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+    "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+    "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+    "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+    "32CFC834-843A-4F45-B359-8E158EAC4396",
+    "BB481284-30DD-4383-928C-82385BBF1B17",
+    "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+    "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+    "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+    "D78CE034-8288-4012-A31E-7F485A74F2A9",
+    "7D374C6A-3821-4333-A1BC-4531005D77B8",
+    null
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "8f21b930-1665-0135-6ded-20999b0ed66f",
+  "medications": [
+    {
+      "active_datetime": null,
+      "administrationTiming": null,
+      "allowedAdministrations": null,
+      "anatomical_approach": null,
+      "codes": {
+        "RxNorm": [
+          "313212"
+        ]
+      },
+      "cumulativeMedicationDuration": null,
+      "deliveryMethod": null,
+      "description": "Medication, Administered: Fibrinolytic Therapy",
+      "dose": {
+        "value": "30",
+        "unit": "{capsule(s)}"
+      },
+      "doseIndicator": null,
+      "doseRestriction": null,
+      "end_time": 1337606100,
+      "freeTextSig": null,
+      "fulfillmentHistory": [
+
+      ],
+      "fulfillmentInstructions": null,
+      "health_record_field": null,
+      "indication": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.14",
+      "patientInstructions": null,
+      "productForm": null,
+      "reaction": null,
+      "reason": null,
+      "route": null,
+      "signed_datetime": null,
+      "specifics": null,
+      "start_time": 1337606100,
+      "statusOfMedication": null,
+      "status_code": {
+        "HL7 ActStatus": [
+          "administered"
+        ]
+      },
+      "supply": null,
+      "time": null,
+      "typeOfMedication": null,
+      "vehicle": null,
+      "_type": "Medication"
+    },
+    {
+      "active_datetime": null,
+      "administrationTiming": null,
+      "allowedAdministrations": null,
+      "anatomical_approach": null,
+      "codes": {
+        "RxNorm": [
+          "200349"
+        ]
+      },
+      "cumulativeMedicationDuration": null,
+      "deliveryMethod": null,
+      "description": "Medication, Administered: Glycoprotein IIb/IIIa Inhibitors",
+      "dose": {
+        "value": "5",
+        "unit": "{ml(s)}"
+      },
+      "doseIndicator": null,
+      "doseRestriction": null,
+      "end_time": 1337606100,
+      "freeTextSig": null,
+      "fulfillmentHistory": [
+
+      ],
+      "fulfillmentInstructions": null,
+      "health_record_field": null,
+      "indication": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.14",
+      "patientInstructions": null,
+      "productForm": null,
+      "reaction": null,
+      "reason": null,
+      "route": null,
+      "signed_datetime": null,
+      "specifics": null,
+      "start_time": 1337606100,
+      "statusOfMedication": null,
+      "status_code": {
+        "HL7 ActStatus": [
+          "administered"
+        ]
+      },
+      "supply": null,
+      "time": null,
+      "typeOfMedication": null,
+      "vehicle": null,
+      "_type": "Medication"
+    }
+  ],
+  "notes": "63yo female;\n* 5qdes\n* Pt admitted to IP w princ dx AMI. ECG done showing AMI. Pt required intubation shortly upon admission. Combo AMI tx of Fibrinolytics - tenecteplase & Glycoprotein - eptifibatide.",
+  "origin_data": [
+
+  ],
+  "procedures": [
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "164847006"
+        ]
+      },
+      "components": null,
+      "description": "Diagnostic Study, Performed: Electrocardiogram (ECG)",
+      "end_time": 1337587500,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.3",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1337587500,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "codes": {
+            "SNOMED-CT": [
+              "10273003"
+            ],
+            "ICD-10-CM": [
+              "I21.01"
+            ]
+          },
+          "description": "Acute or Evolving MI",
+          "_type": "CodedResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "ICD-10-PCS": [
+          "0BH13EZ"
+        ],
+        "SNOMED-CT": [
+          "112798008"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Endotracheal Intubation",
+      "end_time": 1337589000,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1337588100,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    }
+  ],
+  "race": {
+    "code": "2028-9",
+    "name": "Asian",
+    "codeSystem": "CDC Race"
+  },
+  "results_exceed_storage": false,
+  "results_size": 2,
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "EncounterInpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "id": "EncounterInpatient_EncounterPerformed_8ee8cc7d_b1d8_4e88_b02c_6be2f448bbd7_source",
+      "start_date": 1337587200000,
+      "end_date": 1338020100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "PRINCIPAL_DIAGNOSIS": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3022",
+          "field_title": "Principal Diagnosis",
+          "title": "Acute or Evolving MI"
+        }
+      },
+      "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "cms_id": "CMS53v7",
+      "criteria_id": "1624dd2d5bejo",
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab2aeac503a2e663ec2",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnostic_study",
+      "status": "performed",
+      "title": "Electrocardiogram(ECG)",
+      "description": "Diagnostic Study, Performed: Electrocardiogram (ECG)",
+      "code_list_id": "2.16.840.1.113883.3.666.5.735",
+      "type": "diagnostic_studies",
+      "id": "Electrocardiogram_ECG__DiagnosticStudyPerformed_fce36416_5e59_44e2_991d_78fc3f716dd8_source",
+      "start_date": 1337587500000,
+      "end_date": 1337587500000,
+      "value": [
+        {
+          "type": "CD",
+          "type_cmp": "CD",
+          "code_list_id": "2.16.840.1.113883.3.666.5.3022",
+          "title": "Acute or Evolving MI"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "cms_id": "CMS53v7",
+      "criteria_id": "1624dd1ce457I",
+      "codes": {
+        "SNOMED-CT": [
+          "164847006"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab2aeac503a2e663ec6",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "EndotrachealIntubation",
+      "description": "Procedure, Performed: Endotracheal Intubation",
+      "code_list_id": "2.16.840.1.113762.1.4.1045.69",
+      "type": "procedures",
+      "id": "EndotrachealIntubation_ProcedurePerformed_9488a130_aaeb_4a81_a408_233778e33ab8_source",
+      "start_date": 1337588100000,
+      "end_date": 1337589000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "cms_id": "CMS53v7",
+      "criteria_id": "1624dd3ab34Bp",
+      "codes": {
+        "ICD-10-PCS": [
+          "0BH13EZ"
+        ],
+        "SNOMED-CT": [
+          "112798008"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab2aeac503a2e663ec8",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "medication",
+      "status": "administered",
+      "title": "FibrinolyticTherapy",
+      "description": "Medication, Administered: Fibrinolytic Therapy",
+      "code_list_id": "2.16.840.1.113883.3.666.5.736",
+      "type": "medications",
+      "id": "FibrinolyticTherapy_MedicationAdministered_9cc94634_2acc_4c2f_89c4_b7bdad109448_source",
+      "start_date": 1337606100000,
+      "end_date": 1337606100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "cms_id": "CMS53v7",
+      "criteria_id": "1624dd351d56f",
+      "codes": {
+        "RxNorm": [
+          "313212"
+        ]
+      },
+      "fulfillments": null,
+      "dose_value": "30",
+      "dose_unit": "{capsule(s)}",
+      "frequency_value": "",
+      "frequency_unit": "min",
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab2aeac503a2e663ec4",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "medication",
+      "status": "administered",
+      "title": "GlycoproteinIIb/IIIaInhibitors",
+      "description": "Medication, Administered: Glycoprotein IIb/IIIa Inhibitors",
+      "code_list_id": "2.16.840.1.113762.1.4.1045.41",
+      "type": "medications",
+      "id": "GlycoproteinIIb_IIIaInhibitors_MedicationAdministered_255893d5_bf16_4b8f_93c2_7f5b708aa666_source",
+      "start_date": 1337606100000,
+      "end_date": 1337606100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "cms_id": "CMS108v7",
+      "criteria_id": "1624eef6fa7xa",
+      "codes": {
+        "RxNorm": [
+          "200349"
+        ]
+      },
+      "fulfillments": null,
+      "dose_value": "5",
+      "dose_unit": "{ml(s)}",
+      "frequency_value": "",
+      "frequency_unit": "min",
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab3fab2aeac503a2e663ec5",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-04-03T16:59:17.825Z",
+  "version": 44
+}

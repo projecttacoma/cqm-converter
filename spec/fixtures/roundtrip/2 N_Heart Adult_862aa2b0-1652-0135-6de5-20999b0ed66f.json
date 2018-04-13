@@ -1,0 +1,1599 @@
+{
+  "allergies": [
+    {
+      "codes": {
+        "RxNorm": [
+          "29046"
+        ]
+      },
+      "description": "Allergy/Intolerance: ACE Inhibitor or ARB Ingredient",
+      "end_time": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.119",
+      "reaction": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1321099200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "type": null,
+      "_type": "Allergy"
+    },
+    {
+      "codes": {
+        "RxNorm": [
+          "19484"
+        ]
+      },
+      "description": "Allergy/Intolerance: Beta Blocker Therapy Ingredient",
+      "end_time": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.119",
+      "reaction": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1321099200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "type": null,
+      "_type": "Allergy"
+    }
+  ],
+  "birthdate": -346953600,
+  "bundle_id": "5a982c77aeac507ce3abfefd",
+  "calc_results": [
+
+  ],
+  "conditions": [
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "195967001"
+        ],
+        "ICD-9-CM": [
+          "493.90"
+        ],
+        "ICD-10-CM": [
+          "J45.30"
+        ]
+      },
+      "description": "Diagnosis: Asthma",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": -40579200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-10-CM": [
+          "I21.19"
+        ],
+        "SNOMED-CT": [
+          "15990001"
+        ]
+      },
+      "description": "Diagnosis: Acute Myocardial Infarction",
+      "end_time": 1321086600,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1321084800,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "609534005"
+        ]
+      },
+      "description": "Diagnosis: Allergy to ACE Inhibitor or ARB",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1321099200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "293967003"
+        ]
+      },
+      "description": "Diagnosis: Allergy to Beta Blocker Therapy",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1321099200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-9-CM": [
+          "426.0"
+        ],
+        "SNOMED-CT": [
+          "27885002"
+        ],
+        "ICD-10-CM": [
+          "I44.2"
+        ]
+      },
+      "description": "Diagnosis: Atrioventricular Block",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1331539200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "ICD-9-CM": [
+          "458.0"
+        ],
+        "SNOMED-CT": [
+          "45007003"
+        ],
+        "ICD-10-CM": [
+          "I95.1"
+        ]
+      },
+      "description": "Diagnosis: Hypotension",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1331539200,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "49710005"
+        ],
+        "ICD-9-CM": [
+          "427.89"
+        ],
+        "ICD-10-CM": [
+          "R00.1"
+        ]
+      },
+      "description": "Diagnosis: Bradycardia",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1331539800,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "134401001"
+        ]
+      },
+      "description": "Diagnosis: Left Ventricular Systolic Dysfunction",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1331541000,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    },
+    {
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "causeOfDeath": null,
+      "codes": {
+        "SNOMED-CT": [
+          "5375005"
+        ],
+        "ICD-9-CM": [
+          "428.1"
+        ],
+        "ICD-10-CM": [
+          "I50.1"
+        ]
+      },
+      "description": "Diagnosis: Heart Failure",
+      "end_time": null,
+      "health_record_field": null,
+      "laterality": null,
+      "mood_code": "EVN",
+      "name": null,
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.10.20.28.3.110",
+      "ordinality": null,
+      "priority": null,
+      "reason": null,
+      "severity": null,
+      "specifics": null,
+      "start_time": 1331541000,
+      "status_code": {
+        "HL7 ActStatus": [
+          null
+        ]
+      },
+      "time": null,
+      "time_of_death": null,
+      "type": null,
+      "_type": "Condition"
+    }
+  ],
+  "created_at": "2015-11-12T15:07:33.434Z",
+  "description": "",
+  "description_category": "DENOM",
+  "encounters": [
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "HCPCS": [
+          "G0438"
+        ]
+      },
+      "description": "Encounter, Performed: Annual Wellness Visit",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1328171400,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1328169600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "308335008"
+        ]
+      },
+      "description": "Encounter, Performed: Patient Provider Interaction",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1331542800,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1331539200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "CPT": [
+          "99213"
+        ]
+      },
+      "description": "Encounter, Performed: Office Visit",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1336810500,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1336809600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2135-2",
+    "name": "Hispanic Or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": {
+  },
+  "expired": false,
+  "first": "2 N",
+  "gender": "M",
+  "has_measure_history": true,
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": null,
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1420070400,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "Heart Adult",
+  "measure_ids": [
+    "0336A17B-7C2A-48FC-A657-E9B04269A4CC",
+    "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+    "0A7F0278-A05C-40AA-94A4-70EC44F5C568",
+    "0B63F730-25D6-4248-B11F-8C09C66A04EB",
+    "0B81B6BA-3B30-41BF-A2F3-95BDC9F558F2",
+    "0DAC1DEC-E011-493B-A281-7C28964872DD",
+    "1635C14D-E612-4FA6-96CD-285361AA7F7B",
+    "19783C1B-4FD1-46C1-8A96-A2F192B97EE0",
+    "1CDD20DE-5DE9-4759-8A93-31F1F8BAAAA2",
+    "1D8363CE-A529-490B-8C98-9B54AA75DA06",
+    "2F291003-3F2F-48AF-BEF9-E5AACB95AC3E",
+    "39E0424A-1727-4629-89E2-C46C2FBB3F5F",
+    "3BBFC929-50C8-44B8-8D34-82BE75C08A70",
+    "42E7E489-790F-427A-A1A6-D6E807F65A6D",
+    "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+    "500E4792-7F94-4E34-8546-EE71C56FE463",
+    "50164228-9D64-4EFC-AF67-DA0547FF61F1",
+    "53D6D7C3-43FB-4D24-8099-17E74C022C05",
+    "59657B9B-01BF-4979-A090-8534DA1D0516",
+    "59E84144-6332-4369-AEBD-03A7899CA3DA",
+    "60176FBF-BFDC-4892-9C9E-604F206553C8",
+    "61947125-4376-4A7B-AB7A-AC2BE9BD9138",
+    "703CC49B-B653-4885-80E8-245A057F5AE9",
+    "7B2A9277-43DA-4D99-9BEE-6AC271A07747",
+    "7C443B9B-1AD1-4467-B527-DEFC445701FF",
+    "80744AE2-DE81-4B16-A71D-69522EB865C5",
+    "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+    "8455CD3E-DBB9-4E0C-8084-3ECE4068FE94",
+    "8479F6D6-4200-4FD0-9438-30048EBE3E29",
+    "848D09DE-7E6B-43C4-BEDD-5A2957CCFFE3",
+    "8924F2B3-EC06-4650-B634-D70A53DEE577",
+    "8E6C8479-99FD-4949-B0AD-24FA60FE4201",
+    "95FB767E-0CB2-4778-B5FF-6BA9A53FA28E",
+    "9A031BB8-3D9B-11E1-8634-00237D5BF174",
+    "9A031E24-3D9B-11E1-8634-00237D5BF174",
+    "9A032D9C-3D9B-11E1-8634-00237D5BF174",
+    "9A0330D0-3D9B-11E1-8634-00237D5BF174",
+    "9A0339C2-3D9B-11E1-8634-00237D5BF174",
+    "9A033A94-3D9B-11E1-8634-00237D5BF174",
+    "A244AA29-7D11-4616-888A-86E376BFCC6F",
+    "A3837FF8-1ABC-4BA9-800E-FD4E7953ADBD",
+    "A4B9763C-847E-4E02-BB7E-ACC596E90E2C",
+    "A5E96A45-8132-4E72-BF4F-E8C81DB9E641",
+    "AA2A4BBC-864F-45EE-B17A-7EBCC62E6AAC",
+    "ABDC37CC-BAC6-4156-9B91-D1BE2C8B7268",
+    "AC639794-CB3F-4F4F-8FA6-680300D5ED4E",
+    "B2802B7A-3580-4BE8-9458-921AEA62B78C",
+    "B6016B47-B65D-4BE0-866F-1D397886CA89",
+    "B99AAEF6-7889-4ABA-85FC-5A2B739DD098",
+    "BB9B8EF7-0354-40E0-BEC7-D6891B7DF519",
+    "BC5B4A57-B964-4399-9D40-667C896F31EA",
+    "BE8D9655-1194-46EF-B43E-4B1D0C36AB71",
+    "BEB1C33C-2549-4E7F-9567-05ED38448464",
+    "C0D72444-7C26-4863-9B51-8080F8928A85",
+    "C3657D72-21B4-4675-820A-86C7FE293BF5",
+    "C9930664-BE3D-4FFE-AE4A-5CF4933ECB89",
+    "D90BDAB4-B9D2-4329-9993-5C34E2C0DC66",
+    "DB9D9F09-6B6A-4749-A8B2-8C1FDB018823",
+    "E0A07809-7B74-473F-BCC4-1891BE506AAA",
+    "E35791DF-5B25-41BB-B260-673337BC44A8",
+    "E455FAC0-F2CB-4074-A351-1E68A90FB7CF",
+    "F2986519-5A4E-4149-A8F2-AF0A1DC7F6BC",
+    "F58FC0D6-EDF5-416A-8D29-79AFBFD24DEA",
+    "F70B2984-AF4A-4072-AE0D-CEC677A7FF8F",
+    null,
+    "5375D6A9-203B-4FFF-B851-AFA9B68D2AC2",
+    "977B302E-CDF3-4BA2-8020-5E099D93AD18",
+    "1C05C6C0-8099-4270-83CE-292CF6E35C51",
+    "ED78899D-2375-4D68-AA63-58E1734F5694",
+    "A3CE125D-C238-42CE-862E-DBA0055DFC66"
+  ],
+  "medical_equipment": [
+    {
+      "anatomicalStructure": null,
+      "anatomical_approach": null,
+      "codes": {
+        "SNOMED-CT": [
+          "424921004"
+        ]
+      },
+      "description": "Device, Applied: Cardiac Pacer",
+      "end_time": 1331804700,
+      "health_record_field": null,
+      "manufacturer": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.10",
+      "reaction": null,
+      "reason": null,
+      "removalTime": null,
+      "specifics": null,
+      "start_time": 1331802000,
+      "status_code": {
+        "HL7 ActStatus": [
+          "applied"
+        ]
+      },
+      "time": null,
+      "_type": "MedicalEquipment"
+    }
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "862aa2b0-1652-0135-6de5-20999b0ed66f",
+  "medications": [
+    {
+      "active_datetime": null,
+      "administrationTiming": null,
+      "allowedAdministrations": null,
+      "anatomical_approach": null,
+      "codes": {
+        "RxNorm": [
+          "1000001"
+        ]
+      },
+      "cumulativeMedicationDuration": null,
+      "deliveryMethod": null,
+      "description": "Medication, Order: ACE Inhibitor or ARB",
+      "dose": null,
+      "doseIndicator": null,
+      "doseRestriction": null,
+      "end_time": null,
+      "freeTextSig": null,
+      "fulfillmentHistory": [
+
+      ],
+      "fulfillmentInstructions": null,
+      "health_record_field": null,
+      "indication": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": true,
+      "negationReason": {
+        "code_system": "SNOMED-CT",
+        "code": "183932001"
+      },
+      "oid": "2.16.840.1.113883.3.560.1.78",
+      "patientInstructions": null,
+      "productForm": null,
+      "reaction": null,
+      "reason": null,
+      "route": null,
+      "signed_datetime": null,
+      "specifics": null,
+      "start_time": 1331542800,
+      "statusOfMedication": null,
+      "status_code": {
+        "HL7 ActStatus": [
+          "ordered"
+        ]
+      },
+      "supply": null,
+      "time": null,
+      "typeOfMedication": null,
+      "vehicle": null,
+      "_type": "Medication"
+    },
+    {
+      "active_datetime": null,
+      "administrationTiming": null,
+      "allowedAdministrations": null,
+      "anatomical_approach": null,
+      "codes": {
+        "RxNorm": [
+          "854901"
+        ]
+      },
+      "cumulativeMedicationDuration": null,
+      "deliveryMethod": null,
+      "description": "Medication, Order: Beta Blocker Therapy",
+      "dose": null,
+      "doseIndicator": null,
+      "doseRestriction": null,
+      "end_time": null,
+      "freeTextSig": null,
+      "fulfillmentHistory": [
+
+      ],
+      "fulfillmentInstructions": null,
+      "health_record_field": null,
+      "indication": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": true,
+      "negationReason": {
+        "code_system": "SNOMED-CT",
+        "code": "183932001"
+      },
+      "oid": "2.16.840.1.113883.3.560.1.78",
+      "patientInstructions": null,
+      "productForm": null,
+      "reaction": null,
+      "reason": null,
+      "route": null,
+      "signed_datetime": null,
+      "specifics": null,
+      "start_time": 1331542800,
+      "statusOfMedication": null,
+      "status_code": {
+        "HL7 ActStatus": [
+          "ordered"
+        ]
+      },
+      "supply": null,
+      "time": null,
+      "typeOfMedication": null,
+      "vehicle": null,
+      "_type": "Medication"
+    }
+  ],
+  "notes": "53yo male; DExcep 135, 144, 145\n*21qdes\n*Pt w h/o asthma dx in childhood. Experienced AMI requiring surgery. Multiple allergies to heart meds. Pt dvlped other heart complications leading to hypotension/bradycardia. Req pacer.",
+  "origin_data": [
+
+  ],
+  "procedures": [
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "CPT": [
+          "33510"
+        ],
+        "SNOMED-CT": [
+          "275216000"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: Cardiac Surgery",
+      "end_time": 1321097400,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1321086600,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "8867-4"
+        ]
+      },
+      "components": null,
+      "description": "Physical Exam, Performed: Heart rate",
+      "end_time": 1331539200,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.57",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1331539200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "45",
+          "units": "{H.B.}/min",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "10230-1"
+        ]
+      },
+      "components": null,
+      "description": "Diagnostic Study, Performed: Ejection Fraction",
+      "end_time": 1331541000,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.3",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1331539200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "35",
+          "units": "%",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "LOINC": [
+          "8867-4"
+        ]
+      },
+      "components": null,
+      "description": "Physical Exam, Performed: Heart rate",
+      "end_time": 1334737800,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.57",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1334737800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "values": [
+        {
+          "scalar": "45",
+          "units": "{H.B.}/min",
+          "_type": "PhysicalQuantityResultValue"
+        }
+      ],
+      "_type": "Procedure"
+    }
+  ],
+  "race": {
+    "code": "2131-1",
+    "name": "Other",
+    "codeSystem": "CDC Race"
+  },
+  "results_exceed_storage": false,
+  "results_size": 2,
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Asthma",
+      "description": "Diagnosis: Asthma",
+      "code_list_id": "2.16.840.1.113883.3.526.3.362",
+      "type": "conditions",
+      "id": "Asthma_Diagnosis_4463d46d_0303_4ff7_9da9_7cace9732a63_source",
+      "start_date": -40579200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cc804eSf",
+      "codes": {
+        "SNOMED-CT": [
+          "195967001"
+        ],
+        "ICD-9-CM": [
+          "493.90"
+        ],
+        "ICD-10-CM": [
+          "J45.30"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e26022e",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "AcuteMyocardialInfarction",
+      "description": "Diagnosis: Acute Myocardial Infarction",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.104.12.1001",
+      "type": "conditions",
+      "id": "AcuteMyocardialInfarction_Diagnosis_5fce5277_9eb3_44ab_a76e_a6852821f166_source",
+      "start_date": 1321084800000,
+      "end_date": 1321086600000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "cms_id": "CMS164v7",
+      "criteria_id": "162736d6874vb",
+      "codes": {
+        "ICD-10-CM": [
+          "I21.19"
+        ],
+        "SNOMED-CT": [
+          "15990001"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e26022f",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "CardiacSurgery",
+      "description": "Procedure, Performed: Cardiac Surgery",
+      "code_list_id": "2.16.840.1.113883.3.526.3.371",
+      "type": "procedures",
+      "id": "CardiacSurgery_ProcedurePerformed_8a4d92b2_3946_cdae_0139_78e023917b93_source",
+      "start_date": 1321086600000,
+      "end_date": 1321097400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286d20178yh",
+      "codes": {
+        "CPT": [
+          "33510"
+        ],
+        "SNOMED-CT": [
+          "275216000"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e26023d",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "AllergytoACEInhibitororARB",
+      "description": "Diagnosis: Allergy to ACE Inhibitor or ARB",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1211",
+      "type": "conditions",
+      "id": "AllergytoACEInhibitororARB_Diagnosis_6b77901b_57a9_41f8_a6fa_654ac1a40d84_source",
+      "start_date": 1321099200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "cms_id": "CMS135v7",
+      "criteria_id": "16263743882sr",
+      "codes": {
+        "SNOMED-CT": [
+          "609534005"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260230",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "allergy_intolerance",
+      "title": "ACEInhibitororARBIngredient",
+      "description": "Allergy/Intolerance: ACE Inhibitor or ARB Ingredient",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1489",
+      "type": "allergies_intolerances",
+      "id": "ACEInhibitororARBIngredient_Allergy_Intolerance_40280381_3d61_56a7_013e_62367ba02986_source",
+      "start_date": 1321099200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "cms_id": "CMS135v7",
+      "criteria_id": "16263752dcaAk",
+      "codes": {
+        "RxNorm": [
+          "29046"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e26022c",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "AllergytoBetaBlockerTherapy",
+      "description": "Diagnosis: Allergy to Beta Blocker Therapy",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1177",
+      "type": "conditions",
+      "id": "AllergytoBetaBlockerTherapy_Diagnosis_6ded81a5_ac70_47c1_a534_9aee60c85bdb_source",
+      "start_date": 1321099200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cc0a58oM",
+      "codes": {
+        "SNOMED-CT": [
+          "293967003"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260231",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "allergy_intolerance",
+      "title": "BetaBlockerTherapyIngredient",
+      "description": "Allergy/Intolerance: Beta Blocker Therapy Ingredient",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1493",
+      "type": "allergies_intolerances",
+      "id": "BetaBlockerTherapyIngredient_Allergy_Intolerance_40280381_3d61_56a7_013e_658031d33c36_source",
+      "start_date": 1321099200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286d07eae6B",
+      "codes": {
+        "RxNorm": [
+          "19484"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e26022d",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "AnnualWellnessVisit",
+      "description": "Encounter, Performed: Annual Wellness Visit",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1240",
+      "type": "encounters",
+      "id": "AnnualWellnessVisit_EncounterPerformed_d44294a7_4e9f_4cae_ba8c_04ec713826fb_source",
+      "start_date": 1328169600000,
+      "end_date": 1328171400000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "0713EA8F-0E5B-4099-8C7C-DD677280398F",
+      "cms_id": "CMS164v7",
+      "criteria_id": "162736df43685",
+      "codes": {
+        "HCPCS": [
+          "G0438"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e260237",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "AtrioventricularBlock",
+      "description": "Diagnosis: Atrioventricular Block",
+      "code_list_id": "2.16.840.1.113883.3.526.3.367",
+      "type": "conditions",
+      "id": "AtrioventricularBlock_Diagnosis_22fb5109_00b8_465e_9707_5469a13a0c0a_source",
+      "start_date": 1331539200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cd4972xL",
+      "codes": {
+        "ICD-9-CM": [
+          "426.0"
+        ],
+        "SNOMED-CT": [
+          "27885002"
+        ],
+        "ICD-10-CM": [
+          "I44.2"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260232",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Hypotension",
+      "description": "Diagnosis: Hypotension",
+      "code_list_id": "2.16.840.1.113883.3.526.3.370",
+      "type": "conditions",
+      "id": "Hypotension_Diagnosis_fb4c6a5b_a609_4355_ad15_220360203d86_source",
+      "start_date": 1331539200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286ce6d64wt",
+      "codes": {
+        "ICD-9-CM": [
+          "458.0"
+        ],
+        "SNOMED-CT": [
+          "45007003"
+        ],
+        "ICD-10-CM": [
+          "I95.1"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260233",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "physical_exam",
+      "status": "performed",
+      "title": "Physical Exam, Performed: Physical Exam, Performed",
+      "description": "Physical Exam, Performed: Heart rate",
+      "code_list_id": "drc-6815def8ee9fb6107af4a29a9d28a09d954d2b03eade747240bdcce562809ccb",
+      "type": "physical_exams",
+      "id": "prefix_8867_4_PhysicalExamPerformed_A384470C_6DDE_4A70_8BBB_E74AE417B6E8_source",
+      "start_date": 1331539200000,
+      "end_date": 1331539200000,
+      "value": [
+        {
+          "type": "PQ",
+          "type_cmp": "CD",
+          "value": "45",
+          "unit": "{H.B.}/min"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286d17fe2fW",
+      "codes": {
+        "LOINC": [
+          "8867-4"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e26023e",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "diagnostic_study",
+      "status": "performed",
+      "title": "EjectionFraction",
+      "description": "Diagnostic Study, Performed: Ejection Fraction",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1134",
+      "type": "diagnostic_studies",
+      "id": "EjectionFraction_DiagnosticStudyPerformed_8a4d92b2_3946_cdae_0139_78e023917ba0_source",
+      "start_date": 1331539200000,
+      "end_date": 1331541000000,
+      "value": [
+        {
+          "type": "PQ",
+          "type_cmp": "CD",
+          "value": "35",
+          "unit": "%"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cf6d18dr",
+      "codes": {
+        "LOINC": [
+          "10230-1"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e260240",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "PatientProviderInteraction",
+      "description": "Encounter, Performed: Patient Provider Interaction",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1012",
+      "type": "encounters",
+      "id": "PatientProviderInteraction_EncounterPerformed_40280381_3d61_56a7_013e_62367ba1299a_source",
+      "start_date": 1331539200000,
+      "end_date": 1331542800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "cms_id": "CMS135v7",
+      "criteria_id": "16263748948K0",
+      "codes": {
+        "SNOMED-CT": [
+          "308335008"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e260238",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "Bradycardia",
+      "description": "Diagnosis: Bradycardia",
+      "code_list_id": "2.16.840.1.113883.3.526.3.412",
+      "type": "conditions",
+      "id": "Bradycardia_Diagnosis_927cab58_6a26_4739_b482_760ee5f319a6_source",
+      "start_date": 1331539800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cddfaacQ",
+      "codes": {
+        "SNOMED-CT": [
+          "49710005"
+        ],
+        "ICD-9-CM": [
+          "427.89"
+        ],
+        "ICD-10-CM": [
+          "R00.1"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260234",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "LeftVentricularSystolicDysfunction",
+      "description": "Diagnosis: Left Ventricular Systolic Dysfunction",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1091",
+      "type": "conditions",
+      "id": "LeftVentricularSystolicDysfunction_Diagnosis_89ac25af_f8b0_4932_b62b_06d6e336d282_source",
+      "start_date": 1331541000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cf1d26ax",
+      "codes": {
+        "SNOMED-CT": [
+          "134401001"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260235",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "diagnosis",
+      "title": "HeartFailure",
+      "description": "Diagnosis: Heart Failure",
+      "code_list_id": "2.16.840.1.113883.3.526.3.376",
+      "type": "conditions",
+      "id": "HeartFailure_Diagnosis_6f251fa6_0b44_4c8a_b09f_c918590542f3_source",
+      "start_date": 1331541000000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "8439F671-2932-4D4C-88CA-EA5FAEACC89A",
+      "cms_id": "CMS144v7",
+      "criteria_id": "16287129a04KS",
+      "codes": {
+        "SNOMED-CT": [
+          "5375005"
+        ],
+        "ICD-9-CM": [
+          "428.1"
+        ],
+        "ICD-10-CM": [
+          "I50.1"
+        ]
+      },
+      "coded_entry_id": "5ac51541aeac50408e260236",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": true,
+      "definition": "medication",
+      "status": "ordered",
+      "title": "ACEInhibitororARB",
+      "description": "Medication, Order: ACE Inhibitor or ARB",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1139",
+      "type": "medications",
+      "id": "ACEInhibitororARB_MedicationOrder_40280381_3d61_56a7_013e_62367ba229a2_source",
+      "start_date": 1331542800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "430FFC53-4122-4421-88CC-2EDD8117BB3C",
+      "cms_id": "CMS135v7",
+      "criteria_id": "1626375c7a4lW",
+      "codes": {
+        "RxNorm": [
+          "1000001"
+        ]
+      },
+      "fulfillments": null,
+      "administrations_value": "",
+      "frequency_value": "",
+      "frequency_unit": "min",
+      "negation_code_list_id": "2.16.840.1.113883.3.526.3.1007",
+      "coded_entry_id": "5ac51541aeac50408e26023b",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": true,
+      "definition": "medication",
+      "status": "ordered",
+      "title": "BetaBlockerTherapy",
+      "description": "Medication, Order: Beta Blocker Therapy",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1174",
+      "type": "medications",
+      "id": "BetaBlockerTherapy_MedicationOrder_8a4d92b2_3946_cdae_0139_78e023917ba8_source",
+      "start_date": 1331542800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286d0de3cRr",
+      "codes": {
+        "RxNorm": [
+          "854901"
+        ]
+      },
+      "fulfillments": null,
+      "administrations_value": "",
+      "frequency_value": "",
+      "frequency_unit": "min",
+      "negation_code_list_id": "2.16.840.1.113883.3.526.3.1007",
+      "coded_entry_id": "5ac51541aeac50408e26023c",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "device",
+      "status": "applied",
+      "title": "CardiacPacer",
+      "description": "Device, Applied: Cardiac Pacer",
+      "code_list_id": "2.16.840.1.113883.3.526.3.1193",
+      "type": "devices",
+      "id": "CardiacPacer_DeviceApplied_8a4d92b2_3946_cdae_0139_78e023927bb3_source",
+      "start_date": 1331802000000,
+      "end_date": 1331804700000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cba462I0",
+      "codes": {
+        "SNOMED-CT": [
+          "424921004"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e26023a",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "physical_exam",
+      "status": "performed",
+      "title": "Physical Exam, Performed: Physical Exam, Performed",
+      "description": "Physical Exam, Performed: Heart rate",
+      "code_list_id": "drc-6815def8ee9fb6107af4a29a9d28a09d954d2b03eade747240bdcce562809ccb",
+      "type": "physical_exams",
+      "id": "prefix_8867_4_PhysicalExamPerformed_A384470C_6DDE_4A70_8BBB_E74AE417B6E8_source",
+      "start_date": 1334737800000,
+      "end_date": 1334737800000,
+      "value": [
+        {
+          "type": "PQ",
+          "type_cmp": "CD",
+          "value": "45",
+          "unit": "{H.B.}/min"
+        }
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286d2f8a4uH",
+      "codes": {
+        "LOINC": [
+          "8867-4"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e260242",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "OfficeVisit",
+      "description": "Encounter, Performed: Office Visit",
+      "code_list_id": "2.16.840.1.113883.3.464.1003.101.12.1001",
+      "type": "encounters",
+      "id": "OfficeVisit_EncounterPerformed_8a4d92b2_3946_cdae_0139_78e023917b95_source",
+      "start_date": 1336809600000,
+      "end_date": 1336810500000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "80744AE2-DE81-4B16-A71D-69522EB865C5",
+      "cms_id": "CMS145v7",
+      "criteria_id": "16286cfdcb6dU",
+      "codes": {
+        "CPT": [
+          "99213"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ac51541aeac50408e260239",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-04-04T18:11:13.602Z",
+  "version": 23
+}

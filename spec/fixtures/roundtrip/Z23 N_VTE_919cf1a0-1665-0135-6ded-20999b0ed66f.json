@@ -1,0 +1,566 @@
+{
+  "birthdate": -590139000,
+  "bundle_id": "5a982caaaeac507ce3abfeff",
+  "calc_results": [
+
+  ],
+  "created_at": "2016-10-18T15:43:13.613Z",
+  "description": "",
+  "encounters": [
+    {
+      "admitTime": 1336010400,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "4525004"
+        ]
+      },
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": 1336033800,
+      "end_time": 1336033800,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1336010400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "305351004"
+        ]
+      },
+      "description": "Encounter, Performed: ICU Admission or Transfer",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1336216500,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1336033800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    },
+    {
+      "admitTime": null,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": null,
+      "end_time": 1336562100,
+      "facility": {
+        "type": "COL",
+        "values": [
+          {
+            "code": {
+              "code_system": "SNOMED-CT",
+              "code": "309904001"
+            },
+            "display": "Intensive Care Unit",
+            "locationPeriodLow": "05/03/2012 8:30 AM",
+            "locationPeriodHigh": "05/05/2012 11:15 AM"
+          }
+        ]
+      },
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "reason": null,
+      "specifics": null,
+      "start_time": 1336033800,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ],
+  "ethnicity": {
+    "code": "2186-5",
+    "name": "Not Hispanic or Latino",
+    "codeSystem": "CDC Race"
+  },
+  "expected_values": {
+  },
+  "expired": false,
+  "first": "Z23 N",
+  "gender": "M",
+  "has_measure_history": true,
+  "insurance_providers": [
+    {
+      "codes": {
+        "SOP": [
+          "349"
+        ]
+      },
+      "description": null,
+      "end_time": null,
+      "financial_responsibility_type": {
+        "code": "SELF",
+        "codeSystem": "HL7 Relationship Code"
+      },
+      "health_record_field": null,
+      "member_id": "1234567890",
+      "mood_code": "EVN",
+      "name": "Other",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": null,
+      "payer": {
+        "name": "Other"
+      },
+      "reason": null,
+      "relationship": null,
+      "specifics": null,
+      "start_time": 1199163600,
+      "status_code": null,
+      "time": null,
+      "type": "OT",
+      "_type": "InsuranceProvider"
+    }
+  ],
+  "is_shared": false,
+  "languages": [
+
+  ],
+  "last": "VTE",
+  "measure_ids": [
+    "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+    "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+    "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+    "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+    "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+    "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+    "03876D69-085B-415C-AE9D-9924171040C2",
+    "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+    "7DC26160-E615-4CC2-879C-75985189EC1A",
+    "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+    "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+    "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+    "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+    "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+    "9A033274-3D9B-11E1-8634-00237D5BF174",
+    "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+    "EBFA203E-ACC1-4228-906C-855C4BF11310",
+    "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+    "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+    "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+    "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+    "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+    "32CFC834-843A-4F45-B359-8E158EAC4396",
+    "BB481284-30DD-4383-928C-82385BBF1B17",
+    "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+    "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+    "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+    "D78CE034-8288-4012-A31E-7F485A74F2A9",
+    "7D374C6A-3821-4333-A1BC-4531005D77B8",
+    null
+  ],
+  "medical_equipment": [
+    {
+      "anatomicalStructure": null,
+      "anatomical_approach": null,
+      "codes": {
+        "SNOMED-CT": [
+          "348681001"
+        ]
+      },
+      "description": "Device, Applied: Graduated compression stockings (GCS)",
+      "end_time": null,
+      "health_record_field": null,
+      "manufacturer": null,
+      "mood_code": "EVN",
+      "negationInd": true,
+      "negationReason": {
+        "code_system": "SNOMED-CT",
+        "code": "105480006"
+      },
+      "oid": "2.16.840.1.113883.3.560.1.110",
+      "reaction": null,
+      "reason": null,
+      "removalTime": null,
+      "specifics": null,
+      "start_time": 1336075200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "applied"
+        ]
+      },
+      "time": null,
+      "_type": "MedicalEquipment"
+    }
+  ],
+  "medical_record_assigner": "2.16.840.1.113883.4.572",
+  "medical_record_number": "919cf1a0-1665-0135-6ded-20999b0ed66f",
+  "notes": "61yo male; DExcl 108, 190\n* 6qdes\n* Pt presented to ED w resp distress and abd pain resulting from intestinal ulcer; pt refused GCS; Admitted to ICU for prep for GI surg",
+  "origin_data": [
+
+  ],
+  "procedures": [
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "SNOMED-CT": [
+          "112943005"
+        ],
+        "ICD-10-PCS": [
+          "3E030FZ"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: General or Neuraxial Anesthesia",
+      "end_time": 1336044600,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": null,
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1336037400,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    },
+    {
+      "anatomical_approach": null,
+      "anatomical_location": null,
+      "anatomical_target": null,
+      "codes": {
+        "ICD-10-PCS": [
+          "0D998ZZ"
+        ],
+        "SNOMED-CT": [
+          "87659008"
+        ]
+      },
+      "components": null,
+      "description": "Procedure, Performed: General Surgery",
+      "end_time": 1336044300,
+      "facility": null,
+      "health_record_field": null,
+      "incisionTime": null,
+      "method": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.6",
+      "ordinality": {
+        "code_system": "SNOMED-CT",
+        "code": "63161005",
+        "title": "Principal"
+      },
+      "performer_id": null,
+      "qdm_status": null,
+      "radiation_dose": null,
+      "radiation_duration": null,
+      "reaction": null,
+      "reason": null,
+      "result_date_time": null,
+      "source": null,
+      "specifics": null,
+      "start_time": 1336037700,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Procedure"
+    }
+  ],
+  "race": {
+    "code": "2054-5",
+    "name": "Black or African American",
+    "codeSystem": "CDC Race"
+  },
+  "results_exceed_storage": false,
+  "results_size": 2,
+  "source_data_criteria": [
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "EmergencyDepartmentVisit",
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+      "type": "encounters",
+      "id": "EmergencyDepartmentVisit_EncounterPerformed_943fd468_a486_47eb_bcef_69bbc31a73a0_source",
+      "start_date": 1336010400000,
+      "end_date": 1336033800000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "ADMISSION_DATETIME": {
+          "type": "TS",
+          "code_list_id": "",
+          "field_title": "Admission Date/Time",
+          "start_date": "05/03/2012",
+          "start_time": "2:00 AM",
+          "value": 1336010400000
+        },
+        "DISCHARGE_DATETIME": {
+          "type": "TS",
+          "code_list_id": "",
+          "field_title": "Discharge Date/Time",
+          "start_date": "05/03/2012",
+          "start_time": "8:30 AM",
+          "value": 1336033800000
+        }
+      },
+      "hqmf_set_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+      "cms_id": "CMS107v7",
+      "criteria_id": "1622f79d203pq",
+      "codes": {
+        "SNOMED-CT": [
+          "4525004"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab400f9aeac503a2e664246",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "ICU Admission or Transfer",
+      "description": "Encounter, Performed: ICU Admission or Transfer",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.305",
+      "type": "encounters",
+      "id": "OccurrenceA_ICUAdmissionorTransfer_EncounterPerformed_1a1b76f1_b0cb_44e5_82e5_24c24f263984_source",
+      "start_date": 1336033800000,
+      "end_date": 1336216500000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "cms_id": "CMS190v6",
+      "criteria_id": "15c11e166baOz",
+      "codes": {
+        "SNOMED-CT": [
+          "305351004"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab400f9aeac503a2e664247",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "encounter",
+      "status": "performed",
+      "title": "EncounterInpatient",
+      "description": "Encounter, Performed: Encounter Inpatient",
+      "code_list_id": "2.16.840.1.113883.3.666.5.307",
+      "type": "encounters",
+      "id": "EncounterInpatient_EncounterPerformed_c8060e96_dc7d_4780_a5cd_0aff93854cf3_source",
+      "start_date": 1336033800000,
+      "end_date": 1336562100000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "FACILITY_LOCATION": {
+          "type": "COL",
+          "values": [
+            {
+              "type": "FAC",
+              "key": "FACILITY_LOCATION",
+              "code_list_id": "2.16.840.1.113762.1.4.1110.23",
+              "field_title": "Facility Location",
+              "start_date": "05/03/2012",
+              "start_time": "8:30 AM",
+              "end_date": "05/05/2012",
+              "end_time": "11:15 AM",
+              "value": 1336033800000,
+              "locationPeriodLow": "05/03/2012 8:30 AM",
+              "locationPeriodHigh": "05/05/2012 11:15 AM",
+              "end_value": 1336216500000,
+              "title": "Intensive Care Unit"
+            }
+          ]
+        }
+      },
+      "hqmf_set_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "cms_id": "CMS108v7",
+      "criteria_id": "1624eec4af6WW",
+      "codes": {
+        "SNOMED-CT": [
+          "32485007"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab400f9aeac503a2e664248",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "GeneralorNeuraxialAnesthesia",
+      "description": "Procedure, Performed: General or Neuraxial Anesthesia",
+      "code_list_id": "2.16.840.1.113883.3.666.5.1743",
+      "type": "procedures",
+      "id": "GeneralorNeuraxialAnesthesia_ProcedurePerformed_5ab270b7_7fa2_4cd9_b997_3c5814d781f0_source",
+      "start_date": 1336037400000,
+      "end_date": 1336044600000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "cms_id": "CMS190v7",
+      "criteria_id": "1624eb9de64W1",
+      "codes": {
+        "SNOMED-CT": [
+          "112943005"
+        ],
+        "ICD-10-PCS": [
+          "3E030FZ"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab400f9aeac503a2e66424a",
+      "code_source": "DEFAULT"
+    },
+    {
+      "negation": false,
+      "definition": "procedure",
+      "status": "performed",
+      "title": "GeneralSurgery",
+      "description": "Procedure, Performed: General Surgery",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.255",
+      "type": "procedures",
+      "id": "GeneralSurgery_ProcedurePerformed_40280381_3d27_5493_013d_4bd0bae55a65_source",
+      "start_date": 1336037700000,
+      "end_date": 1336044300000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+        "ORDINAL": {
+          "type": "CD",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.14",
+          "field_title": "Ordinality",
+          "title": "Principal"
+        }
+      },
+      "hqmf_set_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "cms_id": "CMS190v7",
+      "criteria_id": "1624eb9fd84Lb",
+      "codes": {
+        "ICD-10-PCS": [
+          "0D998ZZ"
+        ],
+        "SNOMED-CT": [
+          "87659008"
+        ]
+      },
+      "negation_code_list_id": "",
+      "coded_entry_id": "5ab400f9aeac503a2e66424b",
+      "code_source": "USER_DEFINED"
+    },
+    {
+      "negation": true,
+      "definition": "device",
+      "status": "applied",
+      "title": "Graduatedcompressionstockings(GCS)",
+      "description": "Device, Applied: Graduated compression stockings (GCS)",
+      "code_list_id": "2.16.840.1.113883.3.117.1.7.1.256",
+      "type": "devices",
+      "id": "Graduatedcompressionstockings_GCS__DeviceApplied_40280381_3d27_5493_013d_4bd0bae45a55_source",
+      "start_date": 1336075200000,
+      "value": [
+
+      ],
+      "references": null,
+      "field_values": {
+      },
+      "hqmf_set_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "cms_id": "CMS190v7",
+      "criteria_id": "1624eb99c71CE",
+      "codes": {
+        "SNOMED-CT": [
+          "348681001"
+        ]
+      },
+      "negation_code_list_id": "2.16.840.1.113883.3.117.1.7.1.93",
+      "coded_entry_id": "5ab400f9aeac503a2e664249",
+      "code_source": "DEFAULT"
+    },
+    {
+      "id": "MeasurePeriod",
+      "start_date": 0,
+      "end_date": 0,
+      "references": null
+    }
+  ],
+  "updated_at": "2018-04-03T16:59:17.918Z",
+  "version": 48
+}

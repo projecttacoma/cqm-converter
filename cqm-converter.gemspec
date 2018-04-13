@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'cqm-converter'
-  spec.version       = '0.1.0'
+  spec.version       = '0.2.0'
   spec.authors       = ['aholmes@mitre.org']
   spec.email         = ['aholmes@mitre.org']
 
@@ -18,16 +18,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'activesupport'
-  spec.add_development_dependency 'bundler', '~> 1.15'
-  spec.add_development_dependency 'byebug', '~> 10.0.0'
+  spec.add_runtime_dependency 'activesupport'
+  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'byebug'
   spec.add_runtime_dependency 'coffee-script'
-  spec.add_runtime_dependency 'cql_qdm_patientapi'
   spec.add_runtime_dependency 'execjs'
-  spec.add_runtime_dependency 'health-data-standards', '~> 4.0.0'
   spec.add_runtime_dependency 'momentjs-rails'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.54.0'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rubocop'
   spec.add_runtime_dependency 'sprockets'
 end

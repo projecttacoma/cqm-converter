@@ -1,3 +1,6 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
 Style/ClassAndModuleChildren:
   Enabled: false
 
@@ -5,19 +8,34 @@ Style/DateTime:
   Enabled: false
 
 Metrics/LineLength:
-  Max: 120
+  Max: 200
 
 Metrics/BlockLength:
   Max: 50
 
 Metrics/AbcSize:
-  Max: 100
+  Max: 120
 
 Metrics/CyclomaticComplexity:
-  Max: 15
+  Max: 30
 
 Metrics/PerceivedComplexity:
-  Max: 15
+  Max: 30
 
 Metrics/MethodLength:
   Max: 50
+
+Style/WordArray:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/MethodLength:
+  Max: 60
+
+Style/IfUnlessModifier:
+  Enabled: false

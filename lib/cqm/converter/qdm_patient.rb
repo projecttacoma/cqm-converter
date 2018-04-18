@@ -17,7 +17,7 @@ module CQM::Converter
 
       # Loop over the QDM Patient's data elements, and create the corresponding
       # HDS Record Entry models on the newly created record.
-      patient.data_elements.each do |data_element|
+      patient.dataElements.each do |data_element|
         category = data_element.category if data_element.fields.include? 'category'
         next unless category
         # Handle patient characteristics seperately.
@@ -36,10 +36,10 @@ module CQM::Converter
         hds_entry = hds_model.new
 
         # Populate codes.
-        hds_entry.codes = Utils.qdm_codes_to_hds_codes(data_element.data_element_codes)
+        hds_entry.codes = Utils.qdm_codes_to_hds_codes(data_element.dataElementCodes)
 
         # Populate OID.
-        hds_entry.oid = data_element.hqmf_oid
+        hds_entry.oid = data_element.hqmfOid
 
         # Populate description.
         hds_entry.description = data_element.description
@@ -48,7 +48,7 @@ module CQM::Converter
         hds_entry.set(_type: hds_model.to_s)
 
         # Set status_code.
-        status = data_element.fields.include?('qdm_status') ? data_element[:qdm_status] : nil
+        status = data_element.fields.include?('qdmStatus') ? data_element[:qdmStatus] : nil
         status = 'ordered' if status == 'order'
         hds_entry.status_code = { 'HL7 ActStatus': [status] }
 
@@ -56,8 +56,8 @@ module CQM::Converter
         # corresponding HDS attributes.
         hds_attrs = {}
         @qdm_to_hds_mappings[qdm_model_name].each do |qdm_attr, hds_attr|
-          next if data_element[qdm_attr.underscore].nil?
-          extracted_value = extractor(data_element[qdm_attr.underscore])
+          next if data_element[qdm_attr].nil?
+          extracted_value = extractor(data_element[qdm_attr])
           if hds_attr.is_a?(Hash) && hds_attr[:low]
             # Handle something that has multiple parts.
             hds_attrs[hds_attr[:low]] = extracted_value.first
@@ -155,7 +155,7 @@ module CQM::Converter
 
     # Extract a QDM::Code to something usable in HDS.
     def code_extractor(code)
-      { code: code[:code], code_system: code[:code_system], title: code[:descriptor] }
+      { code: code[:code], code_system: code[:codeSystem], title: code[:descriptor] }
     end
 
     # Extract a QDM::Interval to something usable in HDS.
@@ -185,8 +185,8 @@ module CQM::Converter
     # is no active Mongo connection.
     def get_data_elements(patient, category, status = nil)
       matches = []
-      patient.data_elements.each do |data_element|
-        matches << data_element if data_element[:category] == category && (data_element[:qdm_status] == status || status.nil?)
+      patient.dataElements.each do |data_element|
+        matches << data_element if data_element[:category] == category && (data_element[:qdmStatus] == status || status.nil?)
       end
       matches
     end
@@ -195,7 +195,7 @@ module CQM::Converter
     # is no active Mongo connection.
     def get_data_elements_by_type(patient, type)
       matches = []
-      patient.data_elements.each do |data_element|
+      patient.dataElements.each do |data_element|
         matches << data_element if data_element[:_type] == type
       end
       matches
@@ -213,8 +213,8 @@ module CQM::Converter
       return unless hds_attrs.key?('components') && !hds_attrs['components'].nil?
       hds_attrs['components']['type'] = 'COL'
       hds_attrs['components'][:values].collect do |code_value|
-        code_value['code'] = code_value.delete('_code')
-        code_value['result'] = { code: code_value.delete('_result'), title: code_value['code'][:title] }
+        code_value['code'] = code_value.delete('Code')
+        code_value['result'] = { code: code_value.delete('Result'), title: code_value['code'][:title] }
         code_value['code'].delete(:title)
         code_value['result'][:code].delete(:title)
         { code: code_value }
@@ -229,7 +229,7 @@ module CQM::Converter
         unpacked['values'] = hds_attrs['diagnosis'].collect do |diag|
           code = Utils.hds_codes_to_qdm_codes(diag.codes).first
           {
-            code_system: code[:code_system],
+            code_system: code[:codeSystem],
             code: code[:code],
             title: diag.description
           }
@@ -238,7 +238,7 @@ module CQM::Converter
       end
       # Remove diagnosis if principalDiagnosis is equivalent.
       return unless hds_attrs.key?('diagnosis') && hds_attrs.key?('principalDiagnosis')
-      return unless hds_attrs['diagnosis']['values'] && hds_attrs['diagnosis']['values'].first == hds_attrs['principalDiagnosis']
+      return unless hds_attrs['diagnosis']['values'] && Hash[hds_attrs['diagnosis']['values'].first.sort] == Hash[hds_attrs['principalDiagnosis'].sort]
       hds_attrs.delete('diagnosis')
     end
 
@@ -247,25 +247,25 @@ module CQM::Converter
       return unless hds_attrs.key?('facility') && !hds_attrs['facility'].nil?
       hds_attrs['facility']['type'] = 'COL'
       hds_attrs['facility'][:values].each do |value|
-        value['code'] = value.delete('_code')
-        value[:display] = value['code'].delete(:title)
-        value[:locationPeriodHigh] = Time.at(value['_location_period'].last).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
-        value[:locationPeriodLow] = Time.at(value['_location_period'].first).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
-        value.delete('_location_period')
+        value['code'] = value.delete('Code')
+        value[:display] = value['code'].delete(:title) if value['code']
+        value[:locationPeriodHigh] = Time.at(value['Locationperiod'].last).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
+        value[:locationPeriodLow] = Time.at(value['Locationperiod'].first).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
+        value.delete('Locationperiod')
       end
     end
 
     # Unpack references.
     def unpack_references(hds_attrs)
       return unless hds_attrs.key?('references') && !hds_attrs['references'].nil?
-      hds_attrs['references'] = hds_attrs['references'][:values].collect { |value| { referenced_id: value['value'], referenced_type: value['referenced_type'], type: value['type'] } }
+      hds_attrs['references'] = hds_attrs['references'][:values].collect { |value| { referenced_id: value['value'], referenced_type: value['referencedType'], type: value['type'] } }
     end
 
     # Unpack patient characteristics.
     def unpack_patient_characteristics(patient, record)
       # Convert patient characteristic birthdate.
       birthdate = get_data_elements(patient, 'patient_characteristic', 'birthdate').first
-      record.birthdate = birthdate.birth_datetime if birthdate
+      record.birthdate = birthdate.birthDatetime if birthdate
 
       # Convert patient characteristic clinical trial participant.
       # TODO, Adam 4/9: The Bonnie team is working on implementing this in HDS. When that work
@@ -274,46 +274,49 @@ module CQM::Converter
 
       # Convert patient characteristic ethnicity.
       ethnicity = get_data_elements(patient, 'patient_characteristic', 'ethnicity').first
-      ethnicity_code = ethnicity.data_element_codes.first.symbolize_keys if ethnicity.data_element_codes.any?
-      record.ethnicity = { code: ethnicity_code[:code], name: ethnicity_code[:descriptor], codeSystem: ethnicity_code[:code_system] } if ethnicity_code
+      ethnicity_code = ethnicity.dataElementCodes.first.symbolize_keys if ethnicity.dataElementCodes.any?
+      record.ethnicity = { code: ethnicity_code[:code], name: ethnicity_code[:descriptor], codeSystem: ethnicity_code[:codeSystem] } if ethnicity_code
 
       # Convert patient characteristic expired.
       expired = get_data_elements_by_type(patient, 'QDM::PatientCharacteristicExpired').first
-      record.deathdate = date_time_converter(expired.expired_datetime) if expired
+      record.deathdate = date_time_converter(expired.expiredDatetime) if expired
       record.expired = record.deathdate if record.deathdate
 
       # Convert patient characteristic race.
       race = get_data_elements(patient, 'patient_characteristic', 'race').first
-      race_code = race.data_element_codes.first.symbolize_keys if race.data_element_codes.any?
-      record.race = { code: race_code[:code], name: race_code[:descriptor], codeSystem: race_code[:code_system] } if race_code
+      race_code = race.dataElementCodes.first.symbolize_keys if race.dataElementCodes.any?
+      record.race = { code: race_code[:code], name: race_code[:descriptor], codeSystem: race_code[:codeSystem] } if race_code
 
       # Convert patient characteristic sex.
       sex = get_data_elements_by_type(patient, 'QDM::PatientCharacteristicSex').first
-      sex_code = sex.data_element_codes.first.symbolize_keys if sex.data_element_codes.any?
+      sex_code = sex.dataElementCodes.first.symbolize_keys if sex.dataElementCodes.any?
       record.gender = sex_code[:code] if sex
 
       # Convert remaining metadata.
-      record.birthdate = date_time_converter(patient.birth_datetime) unless record.birthdate
-      record.first = patient.given_names.first if patient.given_names.any?
-      record.last = patient.family_name if patient.family_name
-      record.bundle_id = patient.bundle_id if patient.bundle_id
+      record.birthdate = date_time_converter(patient.birthDatetime) unless record.birthdate
+      record.first = patient.givenNames.first if patient.givenNames.any?
+      record.last = patient.familyName if patient.familyName
+      record.bundle_id = patient.bundleId if patient.bundleId
     end
 
     # Unpack extended data.
     def unpack_extended_data(patient, record)
-      record['type'] = patient.extended_data['type'] if patient.extended_data['type']
-      record['measure_ids'] = patient.extended_data['measure_ids'] if patient.extended_data['measure_ids']
-      record['source_data_criteria'] = patient.extended_data['source_data_criteria'] if patient.extended_data['source_data_criteria']
-      record['expected_values'] = patient.extended_data['expected_values'] if patient.extended_data['expected_values']
-      record['notes'] = patient.extended_data['notes'] if patient.extended_data['notes']
-      record['is_shared'] = patient.extended_data['is_shared'] if patient.extended_data['is_shared']
-      record['origin_data'] = patient.extended_data['origin_data'] if patient.extended_data['origin_data']
-      record['test_id'] = patient.extended_data['test_id'] if patient.extended_data['test_id']
-      record['medical_record_number'] = patient.extended_data['medical_record_number'] if patient.extended_data['medical_record_number']
-      record['medical_record_assigner'] = patient.extended_data['medical_record_assigner'] if patient.extended_data['medical_record_assigner']
-      record['description'] = patient.extended_data['description'] if patient.extended_data['description']
-      record['description_category'] = patient.extended_data['description_category'] if patient.extended_data['description_category']
-      record['insurance_providers'] = patient.extended_data['insurance_providers'] if patient.extended_data['insurance_providers']
+      record['type'] = patient.extendedData['type'] if patient.extendedData['type']
+      record['measure_ids'] = patient.extendedData['measure_ids'] if patient.extendedData['measure_ids']
+      record['source_data_criteria'] = patient.extendedData['source_data_criteria'] if patient.extendedData['source_data_criteria']
+      record['expected_values'] = patient.extendedData['expected_values'] if patient.extendedData['expected_values']
+      record['notes'] = patient.extendedData['notes'] if patient.extendedData['notes']
+      record['is_shared'] = patient.extendedData['is_shared'] if patient.extendedData['is_shared']
+      record['origin_data'] = patient.extendedData['origin_data'] if patient.extendedData['origin_data']
+      record['test_id'] = patient.extendedData['test_id'] if patient.extendedData['test_id']
+      record['medical_record_number'] = patient.extendedData['medical_record_number'] if patient.extendedData['medical_record_number']
+      record['medical_record_assigner'] = patient.extendedData['medical_record_assigner'] if patient.extendedData['medical_record_assigner']
+      record['description'] = patient.extendedData['description'] if patient.extendedData['description']
+      record['description_category'] = patient.extendedData['description_category'] if patient.extendedData['description_category']
+      insurance_providers = JSON.parse(patient.extendedData['insurance_providers']).collect do |insurance_provider|
+        InsuranceProvider.new.from_json(insurance_provider.to_json)
+      end
+      record['insurance_providers'] = insurance_providers
     end
   end
 end

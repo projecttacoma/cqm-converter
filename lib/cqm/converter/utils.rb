@@ -7,7 +7,8 @@ module CQM::Converter
       codes = {}
       qdm_codes.each do |qdm_code|
         qdm_code = qdm_code.stringify_keys
-        code_system = qdm_code['code_system']
+        code_system = qdm_code['codeSystem']
+        code_system = qdm_code['code_system'] if qdm_code['code_system']
         codes[code_system] = [] unless codes.key? code_system
         codes[code_system] << qdm_code['code'] if qdm_code['code']
       end
@@ -19,7 +20,7 @@ module CQM::Converter
       qdm_codes = []
       hds_codes.each do |code_system, codes|
         codes.each do |code|
-          qdm_codes << { code_system: code_system, code: code }
+          qdm_codes << { codeSystem: code_system, code: code }
         end
       end
       qdm_codes
@@ -133,7 +134,7 @@ module CQM::Converter
             // Add description to result.
             results['description'] = datatype['entry']['description'];
             // Add oid to result.
-            results['hqmf_oid'] = datatype['entry']['oid'];
+            results['hqmfOid'] = datatype['entry']['oid'];
             processed_datatypes[key].push(results);
           });
         });

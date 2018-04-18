@@ -1,48 +1,45 @@
 {
-  "birth_datetime": "1937-03-06T10:30:00.000-05:00",
-  "bundle_id": "5abb9cd8aeac507a9c761e5c",
-  "data_element_codes": [
-
-  ],
-  "data_elements": [
+  "birthDatetime": "1937-03-06T10:30:00.000-05:00",
+  "bundleId": "5abb9cd8aeac507a9c761e5c",
+  "dataElements": [
     {
-      "anatomical_location_site": null,
-      "author_datetime": "2012-05-21T11:30:00.000-04:00",
+      "anatomicalLocationSite": null,
+      "authorDatetime": "2012-05-21T11:30:00.000-04:00",
       "category": "condition",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
-          "code_system": "ICD-9-CM",
+          "codeSystem": "ICD-9-CM",
           "code": "427.31"
         },
         {
-          "code_system": "ICD-10-CM",
+          "codeSystem": "ICD-10-CM",
           "code": "I48.1"
         },
         {
-          "code_system": "SNOMED-CT",
+          "codeSystem": "SNOMED-CT",
           "code": "233911009"
         }
       ],
       "description": "Diagnosis: Atrial Fibrillation/Flutter",
-      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.110",
-      "prevalence_period": {
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "prevalencePeriod": {
         "low": "2012-05-21T15:30:00.00+0000",
         "high": "9999-12-31T23:59:59.99+0000",
-        "low_closed": true,
-        "high_closed": true
+        "lowClosed": true,
+        "highClosed": true
       },
-      "qdm_version": "5.3",
-      "qrda_oid": "2.16.840.1.113883.10.20.24.3.135",
+      "qdmVersion": "5.3",
+      "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
       "severity": null,
       "_type": "QDM::Diagnosis"
     },
     {
-      "admission_source": null,
-      "author_datetime": "2012-04-02T13:00:00.000-04:00",
+      "admissionSource": null,
+      "authorDatetime": "2012-04-02T13:00:00.000-04:00",
       "category": "encounter",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
-          "code_system": "SNOMED-CT",
+          "codeSystem": "SNOMED-CT",
           "code": "4525004"
         }
       ],
@@ -50,34 +47,34 @@
       "diagnoses": [
 
       ],
-      "discharge_disposition": null,
-      "facility_locations": [
+      "dischargeDisposition": null,
+      "facilityLocations": [
 
       ],
-      "hqmf_oid": "2.16.840.1.113883.3.560.1.79",
-      "length_of_stay": {
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
         "value": 0,
         "unit": "days"
       },
-      "negation_rationale": null,
-      "principal_diagnosis": null,
-      "qdm_status": "performed",
-      "qdm_version": "5.3",
-      "relevant_period": {
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
         "low": "2012-04-02T17:00:00.00+0000",
         "high": "2012-04-02T21:00:00.00+0000",
-        "low_closed": true,
-        "high_closed": true
+        "lowClosed": true,
+        "highClosed": true
       },
       "_type": "QDM::EncounterPerformed"
     },
     {
-      "admission_source": null,
-      "author_datetime": "2012-05-21T11:00:00.000-04:00",
+      "admissionSource": null,
+      "authorDatetime": "2012-05-21T11:00:00.000-04:00",
       "category": "encounter",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
-          "code_system": "SNOMED-CT",
+          "codeSystem": "SNOMED-CT",
           "code": "4525004"
         }
       ],
@@ -85,34 +82,34 @@
       "diagnoses": [
 
       ],
-      "discharge_disposition": null,
-      "facility_locations": [
+      "dischargeDisposition": null,
+      "facilityLocations": [
 
       ],
-      "hqmf_oid": "2.16.840.1.113883.3.560.1.79",
-      "length_of_stay": {
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
         "value": 0,
         "unit": "days"
       },
-      "negation_rationale": null,
-      "principal_diagnosis": null,
-      "qdm_status": "performed",
-      "qdm_version": "5.3",
-      "relevant_period": {
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
         "low": "2012-05-21T15:00:00.00+0000",
         "high": "2012-05-21T16:30:00.00+0000",
-        "low_closed": true,
-        "high_closed": true
+        "lowClosed": true,
+        "highClosed": true
       },
       "_type": "QDM::EncounterPerformed"
     },
     {
-      "admission_source": null,
-      "author_datetime": "2012-05-21T13:00:00.000-04:00",
+      "admissionSource": null,
+      "authorDatetime": "2012-05-21T13:00:00.000-04:00",
       "category": "encounter",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
-          "code_system": "SNOMED-CT",
+          "codeSystem": "SNOMED-CT",
           "code": "32485007"
         }
       ],
@@ -120,142 +117,150 @@
       "diagnoses": [
 
       ],
-      "discharge_disposition": null,
-      "facility_locations": [
+      "dischargeDisposition": null,
+      "facilityLocations": [
 
       ],
-      "hqmf_oid": "2.16.840.1.113883.3.560.1.79",
-      "length_of_stay": {
+      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "lengthOfStay": {
         "value": 3,
         "unit": "days"
       },
-      "negation_rationale": null,
-      "principal_diagnosis": null,
-      "qdm_status": "performed",
-      "qdm_version": "5.3",
-      "relevant_period": {
+      "negationRationale": null,
+      "principalDiagnosis": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
+      "relevantPeriod": {
         "low": "2012-05-21T17:00:00.00+0000",
         "high": "2012-05-24T18:00:00.00+0000",
-        "low_closed": true,
-        "high_closed": true
+        "lowClosed": true,
+        "highClosed": true
       },
       "_type": "QDM::EncounterPerformed"
     },
     {
-      "author_datetime": "2012-05-21T12:15:00.000-04:00",
+      "authorDatetime": "2012-05-21T12:15:00.000-04:00",
       "category": "encounter",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
-          "code_system": "SNOMED-CT",
+          "codeSystem": "SNOMED-CT",
           "code": "19951005"
         }
       ],
       "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
-      "facility_location": null,
-      "hqmf_oid": "2.16.840.1.113883.3.560.1.83",
-      "negation_rationale": null,
-      "qdm_status": "order",
-      "qdm_version": "5.3",
+      "facilityLocation": null,
+      "hqmfOid": "2.16.840.1.113883.3.560.1.83",
+      "negationRationale": null,
+      "qdmStatus": "order",
+      "qdmVersion": "5.3",
       "reason": null,
       "_type": "QDM::EncounterOrder"
     },
     {
-      "author_datetime": "2012-05-21T17:00:00.000-04:00",
+      "authorDatetime": "2012-05-21T17:00:00.000-04:00",
       "category": "laboratory_test",
       "components": [
 
       ],
-      "data_element_codes": [
+      "dataElementCodes": [
         {
-          "code_system": "LOINC",
+          "codeSystem": "LOINC",
           "code": "18261-8"
         }
       ],
       "description": "Laboratory Test, Performed: LDL-c",
-      "hqmf_oid": "2.16.840.1.113883.3.560.1.5",
+      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
       "method": null,
-      "negation_rationale": null,
-      "qdm_status": "performed",
-      "qdm_version": "5.3",
+      "negationRationale": null,
+      "qdmStatus": "performed",
+      "qdmVersion": "5.3",
       "reason": null,
-      "reference_range": null,
-      "relevant_period": {
+      "referenceRange": null,
+      "relevantPeriod": {
         "low": "2012-05-21T21:00:00.00+0000",
         "high": "2012-05-21T21:00:00.00+0000",
-        "low_closed": true,
-        "high_closed": true
+        "lowClosed": true,
+        "highClosed": true
       },
       "result": {
         "unit": "mg/dL",
         "value": 110
       },
-      "result_datetime": null,
+      "resultDatetime": null,
       "status": null,
       "_type": "QDM::LaboratoryTestPerformed"
     },
     {
-      "birth_datetime": "1937-03-06T10:30:00.000-05:00",
+      "birthDatetime": "1937-03-06T10:30:00.000-05:00",
       "category": "patient_characteristic",
-      "data_element_codes": [
-
+      "dataElementCodes": [
+        {
+          "code": "21112-8",
+          "codeSystem": "LOINC",
+          "descriptor": null,
+          "codeSystemOid": null,
+          "version": null
+        }
       ],
       "description": null,
-      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.54",
-      "qdm_status": "birthdate",
-      "qdm_version": "5.3",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "qdmStatus": "birthdate",
+      "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
       "category": "patient_characteristic",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
           "code": "2186-5",
-          "code_system": "CDC Race",
+          "codeSystem": "CDC Race",
           "descriptor": "Not Hispanic or Latino",
-          "code_system_oid": "2.16.840.1.113883.6.238",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null
         }
       ],
       "description": null,
-      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.56",
-      "qdm_status": "ethnicity",
-      "qdm_version": "5.3",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "qdmStatus": "ethnicity",
+      "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
       "category": "patient_characteristic",
-      "data_element_codes": [
+      "dataElementCodes": [
         {
           "code": "1002-5",
-          "code_system": "CDC Race",
+          "codeSystem": "CDC Race",
           "descriptor": "American Indian or Alaska Native",
-          "code_system_oid": "2.16.840.1.113883.6.238",
+          "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null
         }
       ],
       "description": null,
-      "hqmf_oid": "2.16.840.1.113883.10.20.28.3.59",
-      "qdm_status": "race",
-      "qdm_version": "5.3",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "qdmStatus": "race",
+      "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "data_element_codes": [
+      "category": "patient_characteristic",
+      "dataElementCodes": [
         {
           "code": "M",
-          "code_system": "AdministrativeSex",
+          "codeSystem": "AdministrativeSex",
           "descriptor": "2.16.840.1.113883.18.2",
-          "code_system_oid": null,
+          "codeSystemOid": null,
           "version": null
         }
       ],
       "description": null,
-      "qdm_version": "5.3",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "qdmStatus": "gender",
+      "qdmVersion": "5.3",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
-  "description": null,
-  "extended_data": {
+  "extendedData": {
     "measure_ids": [
       "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
       "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
@@ -1008,43 +1013,11 @@
     "medical_record_number": "93c3b655fbf10d0eb1ecb223cf2301f2b0f589aff448ea55402fe71908f587cb",
     "medical_record_assigner": "2.16.840.1.113883.4.572",
     "description": "",
-    "insurance_providers": [
-      {
-        "codes": {
-          "SOP": [
-            "349"
-          ]
-        },
-        "description": null,
-        "end_time": null,
-        "financial_responsibility_type": {
-          "code": "SELF",
-          "codeSystem": "HL7 Relationship Code"
-        },
-        "health_record_field": null,
-        "member_id": "1234567890",
-        "mood_code": "EVN",
-        "name": "Other",
-        "negationInd": null,
-        "negationReason": null,
-        "oid": null,
-        "payer": {
-          "name": "Other"
-        },
-        "reason": null,
-        "relationship": null,
-        "specifics": null,
-        "start_time": 1199163600,
-        "status_code": null,
-        "time": null,
-        "type": "OT"
-      }
-    ]
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
   },
-  "family_name": "STROKE",
-  "given_names": [
+  "familyName": "STROKE",
+  "givenNames": [
     "A"
   ],
-  "qdm_version": "5.3",
-  "_type": "QDM::Patient"
+  "qdmVersion": "5.3"
 }

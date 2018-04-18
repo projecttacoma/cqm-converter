@@ -32,23 +32,23 @@ module CQM::Converter
 
       # Build and execute JavaScript that will create a 'CQL_QDM.Patient'
       # JavaScript version of the HDS record. Specifically, we will use
-      # this to build our patient's 'data_elements'.
+      # this to build our patient's 'dataElements'.
       cql_qdm_patient = ExecJS.exec Utils.hds_to_qdm_js(@js_dependencies, record, @qdm_model_attrs)
 
       # Grab the results from the CQL_QDM.Patient and add a new 'data_element'
       # for each datatype found on the CQL_QDM.Patient to the new QDM Patient.
       cql_qdm_patient.keys.each do |dc_type|
         cql_qdm_patient[dc_type].each do |dc|
-          # Convert mixedCase to underscore_case
-          dc_fixed_keys = dc.deep_transform_keys { |key| key.to_s.underscore }
+          # Convert snake_case to camelCase
+          dc_fixed_keys = dc.deep_transform_keys { |key| key.to_s.camelize(:lower) }
 
-          # Our Code model uses 'code_system' to describe the code system (since system is
+          # Our Code model uses 'codeSystem' to describe the code system (since system is
           # a reserved keyword). The cql.Code calls this 'system', so make sure the proper
           # conversion is made. Also do this for 'display', where we call this descriptor.
-          dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? :code_system : key }
+          dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? :codeSystem : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? :descriptor : key }
 
-          patient.data_elements << QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
+          patient.dataElements << QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
         end
       end
 
@@ -56,63 +56,65 @@ module CQM::Converter
       birthdate = record.birthdate
       if birthdate
         birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
-        patient.data_elements << QDM::PatientCharacteristicBirthdate.new(birth_datetime: birth_datetime)
+        code = QDM::Code.new('21112-8', 'LOINC')
+        patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
       end
 
       # Convert patient characteristic clinical trial participant.
       # TODO, Adam 4/1: The Bonnie team is working on implementing this in HDS. When that work
       # is complete, this should be updated to reflect how that looks in HDS.
-      # patient.data_elements << QDM::PatientCharacteristicClinicalTrialParticipant.new
+      # patient.dataElements << QDM::PatientCharacteristicClinicalTrialParticipant.new
 
       # Convert patient characteristic ethnicity.
       ethnicity = record.ethnicity
       if ethnicity
         code = QDM::Code.new(ethnicity['code'], ethnicity['codeSystem'], ethnicity['name'], Utils.code_system_helper(ethnicity['codeSystem']))
-        patient.data_elements << QDM::PatientCharacteristicEthnicity.new(data_element_codes: [code])
+        patient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code])
       end
 
       # Convert patient characteristic expired.
       expired = record.deathdate
       if expired
         expired_datetime = DateTime.strptime(expired.to_s, '%s')
-        patient.data_elements << QDM::PatientCharacteristicExpired.new(expired_datetime: expired_datetime)
+        code = QDM::Code.new('419099009', 'SNOMED-CT')
+        patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
       end
 
       # Convert patient characteristic race.
       race = record.race
       if race
         code = QDM::Code.new(race['code'], race['codeSystem'], race['name'], Utils.code_system_helper(race['codeSystem']))
-        patient.data_elements << QDM::PatientCharacteristicRace.new(data_element_codes: [code])
+        patient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code])
       end
 
       # Convert patient characteristic sex.
       sex = record.gender
       if sex
         code = QDM::Code.new(sex, 'AdministrativeSex', Utils.code_system_helper('AdministrativeSex'))
-        patient.data_elements << QDM::PatientCharacteristicSex.new(data_element_codes: [code])
+        patient.dataElements << QDM::PatientCharacteristicSex.new(dataElementCodes: [code])
       end
 
       # Convert remaining metadata.
-      patient.birth_datetime = DateTime.strptime(record.birthdate.to_s, '%s') if record.birthdate
-      patient.given_names = record.first ? [record.first] : []
-      patient.family_name = record.last if record.last
-      patient.bundle_id = record.bundle_id if record.bundle_id
+      patient.birthDatetime = DateTime.strptime(record.birthdate.to_s, '%s') if record.birthdate
+      patient.givenNames = record.first ? [record.first] : []
+      patient.familyName = record.last if record.last
+      patient.bundleId = record.bundle_id if record.bundle_id
 
       # Convert extended_data.
-      patient.extended_data = {}
-      patient.extended_data['type'] = record.type if record.respond_to?('type')
-      patient.extended_data['measure_ids'] = record.measure_ids if record.respond_to?('measure_ids')
-      patient.extended_data['source_data_criteria'] = record.source_data_criteria if record.respond_to?('source_data_criteria')
-      patient.extended_data['expected_values'] = record.expected_values if record.respond_to?('expected_values')
-      patient.extended_data['notes'] = record.notes if record.respond_to?('notes')
-      patient.extended_data['is_shared'] = record.is_shared if record.respond_to?('is_shared')
-      patient.extended_data['origin_data'] = record.origin_data if record.respond_to?('origin_data')
-      patient.extended_data['test_id'] = record.test_id if record.respond_to?('test_id')
-      patient.extended_data['medical_record_number'] = record.medical_record_number if record.respond_to?('medical_record_number')
-      patient.extended_data['medical_record_assigner'] = record.medical_record_assigner if record.respond_to?('medical_record_assigner')
-      patient.extended_data['description'] = record.description if record.respond_to?('description')
-      patient.extended_data['description_category'] = record.description_category if record.respond_to?('description_category')
-      patient.extended_data['insurance_providers'] = record.insurance_providers if record.respond_to?('insurance_providers')
+      patient.extendedData = {}
+      patient.extendedData['type'] = record.type if record.respond_to?('type')
+      patient.extendedData['measure_ids'] = record.measure_ids if record.respond_to?('measure_ids')
+      patient.extendedData['source_data_criteria'] = record.source_data_criteria if record.respond_to?('source_data_criteria')
+      patient.extendedData['expected_values'] = record.expected_values if record.respond_to?('expected_values')
+      patient.extendedData['notes'] = record.notes if record.respond_to?('notes')
+      patient.extendedData['is_shared'] = record.is_shared if record.respond_to?('is_shared')
+      patient.extendedData['origin_data'] = record.origin_data if record.respond_to?('origin_data')
+      patient.extendedData['test_id'] = record.test_id if record.respond_to?('test_id')
+      patient.extendedData['medical_record_number'] = record.medical_record_number if record.respond_to?('medical_record_number')
+      patient.extendedData['medical_record_assigner'] = record.medical_record_assigner if record.respond_to?('medical_record_assigner')
+      patient.extendedData['description'] = record.description if record.respond_to?('description')
+      patient.extendedData['description_category'] = record.description_category if record.respond_to?('description_category')
+      patient.extendedData['insurance_providers'] = record.insurance_providers.to_json(except: '_id') if record.respond_to?('insurance_providers')
 
       patient
     end

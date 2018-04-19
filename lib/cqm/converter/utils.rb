@@ -157,6 +157,23 @@ module CQM::Converter
       end
     end
 
+    # Remove any 'infinity' dates. The cql_qdm_patientapi adds an end time
+    # of 'infinity' if an event does not have an end time. Remove this when
+    # converting back to HDS from QDM.
+    def self.fix_infinity_dates(results)
+      if results.is_a?(Hash) && results.key?('end_time')
+        results.delete('end_time') if results['end_time'].to_s == '253402300799'
+      elsif results.is_a?(Hash)
+        results.each do |key, value|
+          results[key] = fix_infinity_dates(value)
+        end
+      elsif results.is_a?(Array)
+        results.map! { |result| fix_infinity_dates(result) }
+      else
+        results
+      end
+    end
+
     # Helper method to handle mismatched HDS Class names for QDM things.
     def self.qdm_to_hds_class_type(category)
       if category.to_s.include? 'diagnostic'

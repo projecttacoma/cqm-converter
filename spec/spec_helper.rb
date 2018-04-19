@@ -26,7 +26,7 @@ def ignore_irrelavant_fields(json)
   # Unused Encounter fields (start_time and end_time are used instead).
   ignore += ['admitTime', 'dischargeTime', 'transferFrom']
   # Unnecessary Bonnie stuff (measure history, patient bank, expired).
-  ignore += ['calc_results', 'has_measure_history', 'results_exceed_storage', 'results_size', 'version', 'is_shared', 'expired']
+  ignore += ['calc_results', 'has_measure_history', 'results_exceed_storage', 'results_size', 'version', 'is_shared', 'expired', 'expected_values']
   # Unused Medication fields.
   ignore += ['fulfillmentHistory', 'administrationTiming', 'allowedAdministrations']
   ignore.each { |ignore_key| json.deep_reject_key!(ignore_key) }

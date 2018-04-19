@@ -304,7 +304,7 @@ module CQM::Converter
       record['type'] = patient.extendedData['type'] if patient.extendedData['type']
       record['measure_ids'] = patient.extendedData['measure_ids'] if patient.extendedData['measure_ids']
       record['source_data_criteria'] = patient.extendedData['source_data_criteria'] if patient.extendedData['source_data_criteria']
-      record['expected_values'] = patient.extendedData['expected_values'] if patient.extendedData['expected_values']
+      record['expected_values'] = patient.extendedData['expected_values'] if patient.extendedData['expected_values'].is_a?(Array)
       record['notes'] = patient.extendedData['notes'] if patient.extendedData['notes']
       record['is_shared'] = patient.extendedData['is_shared'] if patient.extendedData['is_shared']
       record['origin_data'] = patient.extendedData['origin_data'] if patient.extendedData['origin_data']

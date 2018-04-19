@@ -35,6 +35,9 @@ module CQM::Converter
       # this to build our patient's 'dataElements'.
       cql_qdm_patient = ExecJS.exec Utils.hds_to_qdm_js(@js_dependencies, record, @qdm_model_attrs)
 
+      # Make sure all date times are in the correct form.
+      Utils.date_time_adjuster(cql_qdm_patient) if cql_qdm_patient
+
       # Grab the results from the CQL_QDM.Patient and add a new 'data_element'
       # for each datatype found on the CQL_QDM.Patient to the new QDM Patient.
       cql_qdm_patient.keys.each do |dc_type|

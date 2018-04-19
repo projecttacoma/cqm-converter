@@ -142,6 +142,21 @@ module CQM::Converter
       JS
     end
 
+    # Adjust improper date times from the cql_qdm_patientapi.
+    def self.date_time_adjuster(results)
+      if results.is_a?(Hash) && results.key?('year') && results.key?('minute')
+        DateTime.new(results['year'], results['month'], results['day'], results['hour'], results['minute'], results['second'], results['millisecond']).to_s
+      elsif results.is_a?(Hash)
+        results.each do |key, value|
+          results[key] = date_time_adjuster(value)
+        end
+      elsif results.is_a?(Array)
+        results.map! { |result| date_time_adjuster(result) }
+      else
+        results
+      end
+    end
+
     # Helper method to handle mismatched HDS Class names for QDM things.
     def self.qdm_to_hds_class_type(category)
       if category.to_s.include? 'diagnostic'

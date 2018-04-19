@@ -57,7 +57,7 @@ module CQM::Converter
         hds_attrs = {}
         @qdm_to_hds_mappings[qdm_model_name].each do |qdm_attr, hds_attr|
           next if data_element[qdm_attr].nil?
-          extracted_value = extractor(data_element[qdm_attr])
+          extracted_value = extractor(data_element[qdm_attr].as_json)
           if hds_attr.is_a?(Hash) && hds_attr[:low]
             # Handle something that has multiple parts.
             hds_attrs[hds_attr[:low]] = extracted_value.first
@@ -105,6 +105,9 @@ module CQM::Converter
           hds_attrs['direction'] = qdm_model_name.underscore
         end
 
+        # Ignore infinity dates.
+        Utils.fix_infinity_dates(hds_attrs)
+
         # Apply the attributes to the entry.
         hds_entry.set(hds_attrs)
 
@@ -127,7 +130,6 @@ module CQM::Converter
     # Given something QDM model based, return a corresponding HDS
     # representation. This will operate recursively.
     def extractor(qdm_thing)
-      qdm_thing = qdm_thing.to_h if qdm_thing.class == 'BSON::Document'
       keys = qdm_thing.symbolize_keys.keys if qdm_thing.class.to_s == 'Hash'
       if qdm_thing.nil? # Is nothing.
         nil
@@ -173,7 +175,7 @@ module CQM::Converter
 
     # Extract a Dose to something usable in HDS.
     def dose_extractor(dose)
-      { unit: dose[:units], value: dose[:scalar].to_s }
+      { unit: dose[:units], value: dose[:scalar] }
     end
 
     # Convert a DateTime to something usable in HDS.
@@ -213,7 +215,7 @@ module CQM::Converter
     def unpack_components(hds_attrs)
       return unless hds_attrs.key?('components') && !hds_attrs['components'].nil?
       hds_attrs['components']['type'] = 'COL'
-      hds_attrs['components'][:values].collect do |code_value|
+      hds_attrs['components'][:values]&.collect do |code_value|
         code_value['code'] = code_value.delete('Code')
         code_value['result'] = { code: code_value.delete('Result'), title: code_value['code'][:title] }
         code_value['code'].delete(:title)
@@ -224,7 +226,7 @@ module CQM::Converter
 
     # Unpack diagnosis.
     def unpack_diagnosis(hds_attrs)
-      if hds_attrs.key?('diagnosis') && !hds_attrs['diagnosis'].nil?
+      if hds_attrs.key?('diagnosis') && !hds_attrs['diagnosis'].empty?
         unpacked = {}
         unpacked['type'] = 'COL'
         unpacked['values'] = hds_attrs['diagnosis'].collect do |diag|
@@ -245,9 +247,9 @@ module CQM::Converter
 
     # Unpack facility.
     def unpack_facility(hds_attrs)
-      return unless hds_attrs.key?('facility') && !hds_attrs['facility'].nil?
+      return unless hds_attrs.key?('facility') && !hds_attrs['facility'].empty?
       hds_attrs['facility']['type'] = 'COL'
-      hds_attrs['facility'][:values].each do |value|
+      hds_attrs['facility'][:values]&.each do |value|
         value['code'] = value.delete('Code')
         value[:display] = value['code'].delete(:title) if value['code']
         value[:locationPeriodHigh] = Time.at(value['Locationperiod'].last).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
@@ -258,7 +260,7 @@ module CQM::Converter
 
     # Unpack references.
     def unpack_references(hds_attrs)
-      return unless hds_attrs.key?('references') && !hds_attrs['references'].nil?
+      return unless hds_attrs.key?('references') && !hds_attrs['references'].empty?
       hds_attrs['references'] = hds_attrs['references'][:values].collect { |value| { referenced_id: value['value'], referenced_type: value['referencedType'], type: value['type'] } }
     end
 

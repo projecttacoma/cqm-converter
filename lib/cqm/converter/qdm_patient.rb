@@ -127,6 +127,7 @@ module CQM::Converter
     # Given something QDM model based, return a corresponding HDS
     # representation. This will operate recursively.
     def extractor(qdm_thing)
+      qdm_thing = qdm_thing.to_h if qdm_thing.class == 'BSON::Document'
       keys = qdm_thing.symbolize_keys.keys if qdm_thing.class.to_s == 'Hash'
       if qdm_thing.nil? # Is nothing.
         nil

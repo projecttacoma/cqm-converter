@@ -4,6 +4,15 @@ This repository includes a Ruby Gem that provides a module for converting betwee
 
 See the `Gemfile` for specific Gem dependency requirements for using this library.
 
+## Installation
+
+Include cqm-converter in your Gemfile:
+```
+gem 'cqm-converter'
+```
+
+Then run `bundle install`.
+
 ## HDS Record => QDM Patient
 
 The `CQM::Converter` module provides a class (`CQM::Converter::HDSRecord`) for converting an HDS `Record` into a QDM `Patient`.

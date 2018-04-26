@@ -278,7 +278,7 @@ module CQM::Converter
       # Convert patient characteristic ethnicity.
       ethnicity = get_data_elements(patient, 'patient_characteristic', 'ethnicity').first
       ethnicity_code = ethnicity.dataElementCodes.first.symbolize_keys if ethnicity.dataElementCodes.any?
-      record.ethnicity = { code: ethnicity_code[:code], name: ethnicity_code[:descriptor], codeSystem: ethnicity_code[:codeSystem] } if ethnicity_code
+      record.ethnicity = { code: ethnicity_code[:code], name: ethnicity_code[:descriptor], codeSystem: 'CDC Race' } if ethnicity_code
 
       # Convert patient characteristic expired.
       expired = get_data_elements_by_type(patient, 'QDM::PatientCharacteristicExpired').first
@@ -288,7 +288,7 @@ module CQM::Converter
       # Convert patient characteristic race.
       race = get_data_elements(patient, 'patient_characteristic', 'race').first
       race_code = race.dataElementCodes.first.symbolize_keys if race.dataElementCodes.any?
-      record.race = { code: race_code[:code], name: race_code[:descriptor], codeSystem: race_code[:codeSystem] } if race_code
+      record.race = { code: race_code[:code], name: race_code[:descriptor], codeSystem: 'CDC Race' } if race_code
 
       # Convert patient characteristic sex.
       sex = get_data_elements_by_type(patient, 'QDM::PatientCharacteristicSex').first

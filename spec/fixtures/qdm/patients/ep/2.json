@@ -310,7 +310,7 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "CDC Race",
+          "codeSystem": "cdcrec",
           "descriptor": "Not Hispanic or Latino",
           "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null
@@ -327,7 +327,7 @@
       "dataElementCodes": [
         {
           "code": "1002-5",
-          "codeSystem": "CDC Race",
+          "codeSystem": "cdcrec",
           "descriptor": "American Indian or Alaska Native",
           "codeSystemOid": "2.16.840.1.113883.6.238",
           "version": null
@@ -344,8 +344,8 @@
       "dataElementCodes": [
         {
           "code": "F",
-          "codeSystem": "AdministrativeSex",
-          "descriptor": "2.16.840.1.113883.18.2",
+          "codeSystem": "AdministrativeGender",
+          "descriptor": "2.16.840.1.113883.5.1",
           "codeSystemOid": null,
           "version": null
         }

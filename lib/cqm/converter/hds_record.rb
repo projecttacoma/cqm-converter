@@ -71,7 +71,8 @@ module CQM::Converter
       # Convert patient characteristic ethnicity.
       ethnicity = record.ethnicity
       if ethnicity
-        code = QDM::Code.new(ethnicity['code'], ethnicity['codeSystem'], ethnicity['name'], Utils.code_system_helper(ethnicity['codeSystem']))
+        # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
+        code = QDM::Code.new(ethnicity['code'], 'cdcrec', ethnicity['name'], '2.16.840.1.113883.6.238')
         patient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code])
       end
 
@@ -86,14 +87,16 @@ module CQM::Converter
       # Convert patient characteristic race.
       race = record.race
       if race
-        code = QDM::Code.new(race['code'], race['codeSystem'], race['name'], Utils.code_system_helper(race['codeSystem']))
+        # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
+        code = QDM::Code.new(race['code'], 'cdcrec', race['name'], '2.16.840.1.113883.6.238')
         patient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code])
       end
 
       # Convert patient characteristic sex.
       sex = record.gender
       if sex
-        code = QDM::Code.new(sex, 'AdministrativeSex', Utils.code_system_helper('AdministrativeSex'))
+        # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.5.1
+        code = QDM::Code.new(sex, 'AdministrativeGender', '2.16.840.1.113883.5.1')
         patient.dataElements << QDM::PatientCharacteristicSex.new(dataElementCodes: [code])
       end
 

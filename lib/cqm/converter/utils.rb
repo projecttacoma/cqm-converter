@@ -194,9 +194,5 @@ module CQM::Converter
         category
       end
     end
-
-    def self.code_system_helper(code_system)
-      HealthDataStandards::Util::CodeSystemHelper::CODE_SYSTEMS.key(code_system)
-    end
   end
 end

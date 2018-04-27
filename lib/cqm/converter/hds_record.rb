@@ -96,7 +96,7 @@ module CQM::Converter
       sex = record.gender
       if sex
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.5.1
-        code = QDM::Code.new(sex, 'AdministrativeGender', '2.16.840.1.113883.5.1')
+        code = QDM::Code.new(sex, 'AdministrativeGender', sex, '2.16.840.1.113883.5.1')
         patient.dataElements << QDM::PatientCharacteristicSex.new(dataElementCodes: [code])
       end
 

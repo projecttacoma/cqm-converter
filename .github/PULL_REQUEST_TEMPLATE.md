@@ -9,14 +9,14 @@ Pull requests into cqm-converter require the following. Submitter and reviewer s
 - [ ] Tests have been run locally and pass
 - [ ] If applicable, the library version number in `cqm-converter.gemspec` has been updated
 
-**Reviewer 1:**
+**Bonnie Reviewer:**
 
 Name:
 - [ ] Code is maintainable and reusable, reuses existing code and infrastructure where appropriate, and accomplishes the task’s purpose
 - [ ] The tests appropriately test the new code, including edge cases
 - [ ] You have tried to break the code
 
-**Reviewer 2:**
+**Cypress Reviewer:**
 
 Name:
 - [ ] Code is maintainable and reusable, reuses existing code and infrastructure where appropriate, and accomplishes the task’s purpose

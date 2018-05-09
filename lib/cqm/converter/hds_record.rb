@@ -121,6 +121,7 @@ module CQM::Converter
       patient.extendedData['description'] = record.description if record.respond_to?('description')
       patient.extendedData['description_category'] = record.description_category if record.respond_to?('description_category')
       patient.extendedData['insurance_providers'] = record.insurance_providers.to_json(except: '_id') if record.respond_to?('insurance_providers')
+      patient.extendedData['provider_performances'] = record.provider_performances.to_json(except: '_id') unless record.provider_performances.empty?
 
       patient
     end

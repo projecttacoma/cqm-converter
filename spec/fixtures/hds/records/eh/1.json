@@ -511,6 +511,13 @@
   "expired": false,
   "first": "4",
   "gender": "F",
+  "provider_performances" : [ 
+    {
+      "provider_id" : {"$oid":"59c13eb95bd177142c6f1f06"},
+      "end_date" : null,
+      "start_date" : null
+    }
+  ],
   "insurance_providers": [
     {
       "codes": {

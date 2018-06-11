@@ -194,5 +194,14 @@ module CQM::Converter
         category
       end
     end
+
+    def self.transform_key(key)
+      key = key.to_s
+      if key == '_locationPeriod'
+        key[1..key.length].camelize(:lower)
+      else
+        key.camelize(:lower)
+      end
+    end
   end
 end

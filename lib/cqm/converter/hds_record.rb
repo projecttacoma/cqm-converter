@@ -43,14 +43,7 @@ module CQM::Converter
       cql_qdm_patient.keys.each do |dc_type|
         cql_qdm_patient[dc_type].each do |dc|
           # Convert snake_case to camelCase
-          dc_fixed_keys = dc.deep_transform_keys do |key|
-            key = key.to_s
-            if key == '_locationPeriod'
-              key[1..key.length].camelize(:lower)
-            else
-              key.camelize(:lower)
-            end
-          end
+          dc_fixed_keys = dc.deep_transform_keys { |key| Utils.transform_key(key) }
 
           # Our Code model uses 'codeSystem' to describe the code system (since system is
           # a reserved keyword). The cql.Code calls this 'system', so make sure the proper

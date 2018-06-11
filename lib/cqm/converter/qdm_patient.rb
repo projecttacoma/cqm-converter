@@ -252,9 +252,9 @@ module CQM::Converter
       hds_attrs['facility'][:values]&.each do |value|
         value['code'] = value.delete('Code')
         value[:display] = value['code'].delete(:title) if value['code']
-        value[:locationPeriodHigh] = Time.at(value['Locationperiod'].last).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
-        value[:locationPeriodLow] = Time.at(value['Locationperiod'].first).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
-        value.delete('Locationperiod')
+        value[:locationPeriodHigh] = Time.at(value['locationPeriod'].last).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
+        value[:locationPeriodLow] = Time.at(value['locationPeriod'].first).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
+        value.delete('locationPeriod')
       end
     end
 

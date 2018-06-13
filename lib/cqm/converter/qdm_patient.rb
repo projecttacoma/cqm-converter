@@ -160,9 +160,9 @@ module CQM::Converter
       end
     end
 
-    def location_extractor(fac)
-      inter = interval_extractor(fac[:locationPeriod].as_json.symbolize_keys)
-      { 'code' => code_extractor(fac[:code].as_json.symbolize_keys), 'locationPeriod' => inter }
+    def location_extractor(facility)
+      interval = interval_extractor(facility[:locationPeriod].as_json.symbolize_keys)
+      { 'code' => code_extractor(facility[:code].as_json.symbolize_keys), 'locationPeriod' => interval }
     end
 
     def component_extractor(component)

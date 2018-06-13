@@ -43,7 +43,7 @@ module CQM::Converter
       cql_qdm_patient.keys.each do |dc_type|
         cql_qdm_patient[dc_type].each do |dc|
           # Convert snake_case to camelCase
-          dc_fixed_keys = dc.deep_transform_keys { |key| Utils.transform_key(key) }
+          dc_fixed_keys = dc.deep_transform_keys { |key| key.to_s.gsub(/^_/, '').camelize(:lower) }
 
           # Our Code model uses 'codeSystem' to describe the code system (since system is
           # a reserved keyword). The cql.Code calls this 'system', so make sure the proper
@@ -51,7 +51,7 @@ module CQM::Converter
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? :codeSystem : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? :descriptor : key }
 
-          patient.dataElements << QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
+          patient.dataElements << generate_qdm_data_element(dc_fixed_keys, dc_type)
         end
       end
 
@@ -124,6 +124,18 @@ module CQM::Converter
       patient.extendedData['provider_performances'] = record.provider_performances.to_json(except: '_id') unless record.provider_performances.empty?
 
       patient
+    end
+
+    def generate_qdm_data_element(dc_fixed_keys, dc_type)
+      data_element = QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
+
+      if data_element.is_a?(QDM::EncounterPerformed)
+        data_element.facilityLocations = data_element.facilityLocations.map do |facility|
+          QDM::FacilityLocation.new.from_json(facility.to_json)
+        end
+      end
+
+      data_element
     end
   end
 end

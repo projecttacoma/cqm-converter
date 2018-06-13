@@ -62,7 +62,7 @@ module CQM::Converter
             # Handle something that has multiple parts.
             hds_attrs[hds_attr[:low]] = extracted_value.first
             hds_attrs[hds_attr[:high]] = extracted_value.last if hds_attr[:high]
-          elsif extracted_value.is_a?(Array) && extracted_value.any? && extracted_value.first.is_a?(Hash) && extracted_value.first[:code]
+          elsif extracted_value.is_a?(Array) && extracted_value.any? && extracted_value.first.is_a?(Hash) && extracted_value.first[:code] && hds_attr != 'facility' && hds_attr != 'components'
             # Handle a result that is returning multiple codes.
             hds_attrs[hds_attr] = [CodedResultValue.new(codes: Utils.qdm_codes_to_hds_codes(extracted_value), description: extracted_value.first[:title])]
           elsif extracted_value.is_a?(Array)
@@ -139,21 +139,34 @@ module CQM::Converter
         date_time_converter(qdm_thing)
       elsif qdm_thing.is_a?(Hash) && keys.include?(:low) # Is a QDM::Interval.
         interval_extractor(qdm_thing.symbolize_keys)
+      elsif qdm_thing.is_a?(Hash) && keys.include?(:locationPeriod)
+        location_extractor(qdm_thing.symbolize_keys)
+      elsif qdm_thing.is_a?(Hash) && keys.include?(:result) # is a QDM::CodedResultValue
+        component_extractor(qdm_thing.symbolize_keys)
       elsif qdm_thing.is_a?(Hash) && keys.include?(:code) # Is a QDM::Code.
         code_extractor(qdm_thing.symbolize_keys)
       elsif qdm_thing.is_a?(Hash) && keys.include?(:unit) # Is a QDM::Quantity.
         quantity_extractor(qdm_thing.symbolize_keys)
       elsif qdm_thing.is_a?(Array) # Is an Array.
         qdm_thing.collect { |item| extractor(item) }
-      elsif qdm_thing.is_a?(Numeric) # Is an Number.
+      elsif qdm_thing.is_a?(Numeric) # Is a Number.
         { units: '', scalar: qdm_thing.to_s }
-      elsif qdm_thing.is_a?(String) # Is an String.
+      elsif qdm_thing.is_a?(String) # Is a String.
         qdm_thing
       elsif qdm_thing.is_a?(Hash)
         qdm_thing.each { |k, v| qdm_thing[k] = extractor(v) }
       else
         raise 'Unsupported type! Found: ' + qdm_thing.class.to_s
       end
+    end
+
+    def location_extractor(fac)
+      inter = interval_extractor(fac[:locationPeriod].as_json.symbolize_keys)
+      { 'code' => code_extractor(fac[:code].as_json.symbolize_keys), 'locationPeriod' => inter }
+    end
+
+    def component_extractor(component)
+      { code: code_extractor(component[:code].symbolize_keys), result: code_extractor(component[:result].symbolize_keys) }
     end
 
     # Extract a QDM::Code to something usable in HDS.
@@ -216,10 +229,14 @@ module CQM::Converter
       return unless hds_attrs.key?('components') && !hds_attrs['components'].nil?
       hds_attrs['components']['type'] = 'COL'
       hds_attrs['components'][:values]&.collect do |code_value|
-        code_value['code'] = code_value.delete('Code')
-        code_value['result'] = { code: code_value.delete('Result'), title: code_value['code'][:title] }
-        code_value['code'].delete(:title)
-        code_value['result'][:code].delete(:title)
+        code_value[:code] = code_value.delete('Code') if code_value.key?('Code')
+        code_value[:result] = if code_value.key?('Result')
+                                { code: code_value.delete('Result'), title: code_value['code'][:title] }
+                              else
+                                { code: code_value.delete(:result), title: code_value[:code][:title] }
+                              end
+        code_value[:code].delete(:title)
+        code_value[:result][:code].delete(:title)
         { code: code_value }
       end
     end
@@ -250,7 +267,7 @@ module CQM::Converter
       return unless hds_attrs.key?('facility') && !hds_attrs['facility'].empty?
       hds_attrs['facility']['type'] = 'COL'
       hds_attrs['facility'][:values]&.each do |value|
-        value['code'] = value.delete('Code')
+        value['code'] = value.delete('Code') if value['Code']
         value[:display] = value['code'].delete(:title) if value['code']
         value[:locationPeriodHigh] = Time.at(value['locationPeriod'].last).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')
         value[:locationPeriodLow] = Time.at(value['locationPeriod'].first).utc.strftime('%m/%d/%Y %l:%M %p').split.join(' ')

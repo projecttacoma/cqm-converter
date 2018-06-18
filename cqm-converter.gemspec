@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'coffee-script'
   spec.add_runtime_dependency 'cqm-models', '>= 0.7.2'
   spec.add_runtime_dependency 'execjs'
-  spec.add_runtime_dependency 'health-data-standards', '4.0.3'
+  spec.add_runtime_dependency 'health-data-standards', '>= 4.0.3'
   spec.add_runtime_dependency 'momentjs-rails'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'

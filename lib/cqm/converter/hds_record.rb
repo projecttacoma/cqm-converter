@@ -72,8 +72,12 @@ module CQM::Converter
       ethnicity = record.ethnicity
       if ethnicity
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
+        # Bonnie currently uses 'CDC Race' instead of the correct 'cdcrec'.  This duplicate code is here as a temporary
+        # workaround until the larger change of making bonnie use 'cdcrec' can be implemented.
+        # Same change is present in `race` below.
+        old_format_code = QDM::Code.new(ethnicity['code'], 'CDC Race', ethnicity['name'], '2.16.840.1.113883.6.238')
         code = QDM::Code.new(ethnicity['code'], 'cdcrec', ethnicity['name'], '2.16.840.1.113883.6.238')
-        patient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code])
+        patient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code, old_format_code])
       end
 
       # Convert patient characteristic expired.
@@ -88,8 +92,9 @@ module CQM::Converter
       race = record.race
       if race
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
+        old_format_code = QDM::Code.new(race['code'], 'CDC Race', race['name'], '2.16.840.1.113883.6.238')
         code = QDM::Code.new(race['code'], 'cdcrec', race['name'], '2.16.840.1.113883.6.238')
-        patient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code])
+        patient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code, old_format_code])
       end
 
       # Convert patient characteristic sex.

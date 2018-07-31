@@ -72,14 +72,6 @@
       "dataElementCodes": [
         {
           "code": "2135-2",
-          "codeSystem": "cdcrec",
-          "descriptor": "Hispanic Or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        },
-        {
-          "code": "2135-2",
           "codeSystem": "CDC Race",
           "descriptor": "Hispanic Or Latino",
           "codeSystemOid": "2.16.840.1.113883.6.238",
@@ -96,14 +88,6 @@
     {
       "category": "patient_characteristic",
       "dataElementCodes": [
-        {
-          "code": "2131-1",
-          "codeSystem": "cdcrec",
-          "descriptor": "Other",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        },
         {
           "code": "2131-1",
           "codeSystem": "CDC Race",

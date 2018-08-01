@@ -72,7 +72,7 @@ module CQM::Converter
       ethnicity = record.ethnicity
       if ethnicity
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
-        # Bonnie currently uses 'CDC Race' instead of the correct 'cdcrec'.  This duplicate code is here as a temporary
+        # Bonnie currently uses 'CDC Race' instead of the correct 'cdcrec'.  This incorrect code is here as a temporary
         # workaround until the larger change of making bonnie use 'cdcrec' can be implemented.
         # Same change is present in `race` below.
         code = QDM::Code.new(ethnicity['code'], 'CDC Race', ethnicity['name'], '2.16.840.1.113883.6.238')

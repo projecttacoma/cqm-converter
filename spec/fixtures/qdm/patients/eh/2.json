@@ -23,8 +23,8 @@
       "description": "Diagnosis: Atrial Fibrillation/Flutter",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
       "prevalencePeriod": {
-        "low": "2012-05-21T15:30:00.00+0000",
-        "high": "9999-12-31T23:59:59.99+0000",
+        "low": "2012-05-21T15:30:00.000+00:00",
+        "high": "9999-12-31T23:59:59.990+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -61,8 +61,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-04-02T17:00:00.00+0000",
-        "high": "2012-04-02T21:00:00.00+0000",
+        "low": "2012-04-02T17:00:00.000+00:00",
+        "high": "2012-04-02T21:00:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -96,8 +96,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-05-21T15:00:00.00+0000",
-        "high": "2012-05-21T16:30:00.00+0000",
+        "low": "2012-05-21T15:00:00.000+00:00",
+        "high": "2012-05-21T16:30:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -131,8 +131,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-05-21T17:00:00.00+0000",
-        "high": "2012-05-24T18:00:00.00+0000",
+        "low": "2012-05-21T17:00:00.000+00:00",
+        "high": "2012-05-24T18:00:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -177,8 +177,8 @@
       "reason": null,
       "referenceRange": null,
       "relevantPeriod": {
-        "low": "2012-05-21T21:00:00.00+0000",
-        "high": "2012-05-21T21:00:00.00+0000",
+        "low": "2012-05-21T21:00:00.000+00:00",
+        "high": "2012-05-21T21:00:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -199,7 +199,8 @@
           "codeSystem": "LOINC",
           "descriptor": null,
           "codeSystemOid": null,
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -213,10 +214,11 @@
       "dataElementCodes": [
         {
           "code": "2186-5",
-          "codeSystem": "cdcrec",
+          "codeSystem": "CDC Race",
           "descriptor": "Not Hispanic or Latino",
           "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -230,10 +232,11 @@
       "dataElementCodes": [
         {
           "code": "1002-5",
-          "codeSystem": "cdcrec",
+          "codeSystem": "CDC Race",
           "descriptor": "American Indian or Alaska Native",
           "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -250,7 +253,8 @@
           "codeSystem": "AdministrativeGender",
           "descriptor": "M",
           "codeSystemOid": "2.16.840.1.113883.5.1",
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,

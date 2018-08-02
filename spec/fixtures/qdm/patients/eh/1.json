@@ -41,8 +41,8 @@
       "qdmStatus": "performed",
       "qdmVersion": "5.3",
       "relevantPeriod": {
-        "low": "2012-04-06T08:00:00.00+0000",
-        "high": "2012-04-06T09:15:00.00+0000",
+        "low": "2012-04-06T08:00:00.000+00:00",
+        "high": "2012-04-06T09:15:00.000+00:00",
         "lowClosed": true,
         "highClosed": true
       },
@@ -57,7 +57,8 @@
           "codeSystem": "LOINC",
           "descriptor": null,
           "codeSystemOid": null,
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -71,10 +72,11 @@
       "dataElementCodes": [
         {
           "code": "2135-2",
-          "codeSystem": "cdcrec",
+          "codeSystem": "CDC Race",
           "descriptor": "Hispanic Or Latino",
           "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -88,10 +90,11 @@
       "dataElementCodes": [
         {
           "code": "2131-1",
-          "codeSystem": "cdcrec",
+          "codeSystem": "CDC Race",
           "descriptor": "Other",
           "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -108,7 +111,8 @@
           "codeSystem": "AdministrativeGender",
           "descriptor": "F",
           "codeSystemOid": "2.16.840.1.113883.5.1",
-          "version": null
+          "version": null,
+          "_type": "QDM::Code"
         }
       ],
       "description": null,
@@ -681,8 +685,8 @@
     "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
     "medical_record_assigner": "2.16.840.1.113883.4.572",
     "description": "",
-    "provider_performances": "[{\"end_date\":null,\"provider_id\":{\"$oid\":\"59c13eb95bd177142c6f1f06\"},\"start_date\":null}]",
-    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]"
+    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+    "provider_performances": "[{\"end_date\":null,\"provider_id\":{\"$oid\":\"59c13eb95bd177142c6f1f06\"},\"start_date\":null}]"
   },
   "familyName": "ED",
   "givenNames": [

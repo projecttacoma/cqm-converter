@@ -29,6 +29,10 @@ def ignore_irrelavant_fields(json)
   ignore += ['calc_results', 'has_measure_history', 'results_exceed_storage', 'results_size', 'version', 'is_shared', 'expired', 'expected_values']
   # Unused Medication fields.
   ignore += ['fulfillmentHistory', 'administrationTiming', 'allowedAdministrations']
+  # Codes will now correctly include all codes instead of just one
+  ignore += ['codes']
+  # TODO: Uncomment this once 'related-to' has been added to cqm-models
+  ignore += ['references']
   ignore.each { |ignore_key| json.deep_reject_key!(ignore_key) }
   json
 end

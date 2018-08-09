@@ -33,8 +33,8 @@ module CQM::Converter
       # Build and execute JavaScript that will create a 'CQL_QDM.Patient'
       # JavaScript version of the HDS record. Specifically, we will use
       # this to build our patient's 'dataElements'.
+      # binding.pry
       cql_qdm_patient = ExecJS.exec Utils.hds_to_qdm_js(@js_dependencies, record, @qdm_model_attrs)
-
       # Make sure all date times are in the correct form.
       Utils.date_time_adjuster(cql_qdm_patient) if cql_qdm_patient
 
@@ -50,7 +50,6 @@ module CQM::Converter
           # conversion is made. Also do this for 'display', where we call this descriptor.
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? :codeSystem : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? :descriptor : key }
-
           patient.dataElements << generate_qdm_data_element(dc_fixed_keys, dc_type)
         end
       end
@@ -127,22 +126,28 @@ module CQM::Converter
       patient.extendedData['description_category'] = record.description_category if record.respond_to?('description_category')
       patient.extendedData['insurance_providers'] = record.insurance_providers.to_json(except: '_id') if record.respond_to?('insurance_providers')
       patient.extendedData['provider_performances'] = record.provider_performances.to_json(except: '_id') unless record.provider_performances.empty?
-
+      # require('pry')
+      # binding.pry
       patient
     end
 
     def generate_qdm_data_element(dc_fixed_keys, dc_type)
       data_element = QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
-
       # Any nested QDM types that need initialization should be handled here
       # when converting from the QDM models to the HDS models.
-      # For now, that should just be FacilityLocation objects
+      # For now, that should just be FacilityLocation objects and Id
       if data_element.is_a?(QDM::EncounterPerformed)
         data_element.facilityLocations = data_element.facilityLocations.map do |facility|
           QDM::FacilityLocation.new.from_json(facility.to_json)
         end
       end
-
+      # data_element.attributes['id'] = QDM::Id.new({value: dc_fixed_keys["id"]["value"]["$oid"]})
+      # require('pry')
+      # binding.pry
+      data_element.id = QDM::Id.new({value: dc_fixed_keys["id"]})
+      # require('pry')
+      # binding.pry
+      # data_element.id
       data_element
     end
   end

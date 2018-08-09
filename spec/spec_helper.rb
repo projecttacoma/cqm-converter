@@ -22,6 +22,8 @@ end
 
 # Helper method to strip fields we don't care about comparing.
 def ignore_irrelavant_fields(json)
+  # #Ignore these fields since they are generated for some items (e.g. birthdate which has no id in hds)
+  # ignore = [{key_name:'id', '_id']
   ignore = ['created_at', 'updated_at', 'bundle_id', 'status_code']
   # Unused Encounter fields (start_time and end_time are used instead).
   ignore += ['admitTime', 'dischargeTime', 'transferFrom']

@@ -1,0 +1,41 @@
+{
+  "encounters": [
+    {
+      "_id": "5abbdd05aeac508c3233e01f",
+      "admitTime": 1333699200,
+      "admitType": null,
+      "codes": {
+        "SNOMED-CT": [
+          "4525004"
+        ]
+      },
+      "description": "Encounter, Performed: Emergency Department Visit",
+      "diagnosis": null,
+      "dischargeDisposition": null,
+      "dischargeTime": 1333703700,
+      "end_time": 1333703700,
+      "facility": null,
+      "health_record_field": null,
+      "mood_code": "EVN",
+      "negationInd": null,
+      "negationReason": null,
+      "oid": "2.16.840.1.113883.3.560.1.79",
+      "performer_id": null,
+      "principalDiagnosis": {
+        "code": "10278007",
+        "code_system": "SNOMED-CT",
+        "title": "Psychiatric/Mental Health Diagnosis"
+      },
+      "reason": null,
+      "specifics": null,
+      "start_time": 1333699200,
+      "status_code": {
+        "HL7 ActStatus": [
+          "performed"
+        ]
+      },
+      "time": null,
+      "_type": "Encounter"
+    }
+  ]
+}

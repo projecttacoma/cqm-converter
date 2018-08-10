@@ -136,7 +136,7 @@ module CQM::Converter
             // Add oid to result.
             results['hqmfOid'] = datatype['entry']['oid'];
 
-            // Try to set/normalize id field to be just a string, we will turn in into a nested qdm later
+            // Try to set and normalize id field to be just a string, we will turn it into a nested qdm id later
             if (results['id'] && results['id']['value'] && results['id']['value']['$oid']) {
               results['id'] = results['id']['value']['$oid'].toString();
             }
@@ -150,10 +150,6 @@ module CQM::Converter
               results['id'] = datatype['entry']['_id'].toString();
             }
 
-            //results['id'] = 'blah'
-            //if (!results['id'] && datatype['entry']['_id']) {
-            //  results['id'] = { value: datatype['entry']['_id'].toString() };
-            //}
             processed_datatypes[key].push(results);
           });
         });

@@ -55,7 +55,7 @@
     }
   ],
   "extendedData": {
-    "insurance_providers": "[]", 
+    "insurance_providers": "[]",
     "medical_record_assigner": null,
     "medical_record_number": null,
     "test_id": null

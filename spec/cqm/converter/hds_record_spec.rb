@@ -9,6 +9,10 @@ RSpec.describe CQM::Converter::HDSRecord do
   it 'converts HDS to QDM and maintains id' do
     hds_eh_id_test = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/id_test.json'))
     qdm_eh_id_test = @hds_record_converter.to_qdm(hds_eh_id_test)
+
+    # specifically check the id of the encounter is turned into a QDM.Id
+    expect(qdm_eh_id_test.dataElements.first.id.value).to eq(hds_eh_id_test.encounters.first._id.to_s)
+
     qdm_eh_id_test_json = JSON.parse(to_utc(qdm_eh_id_test.to_json(except: '_id').to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/id_test.json'))).clean_hash
     expect(qdm_eh_id_test_json).to eq(fixture)

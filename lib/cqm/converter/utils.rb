@@ -142,7 +142,7 @@ module CQM::Converter
             results['id'] = datatype['entry']['_id']['$oid']
 
             // If relatedTo is on this datatype fix the ids so they aren't locked in the { '$oid': '_id' } structure.
-            if (qdm_model_attrs[datatype.constructor.name].includes('relatedTo')) {
+            if (qdm_model_attrs[datatype.constructor.name].indexOf('relatedTo') >= 0) {
               results['relatedTo'] = datatype.relatedTo().map(function(relatedTo) {
                 return { value: relatedTo.value['$oid'], namingSystem: relatedTo.namingSystem }
               });

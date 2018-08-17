@@ -18,6 +18,25 @@ RSpec.describe CQM::Converter::HDSRecord do
     expect(qdm_eh_id_test_json).to eq(fixture)
   end
 
+  it 'converts HDS to QDM and handles relatedTo' do
+    # tests using an Assessment, Performed that is "relatedTo" an Encounter
+    hds_eh_relatedto_test = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/relatedto_test.json'))
+
+    # fix referenced_id to be a BSON::ObjectId
+    encounter_ref_id = hds_eh_relatedto_test.assessments.first.references.first.referenced_id
+    hds_eh_relatedto_test.assessments.first.references.first.referenced_id = BSON::ObjectId(encounter_ref_id)
+
+    # convert the HDS document to QDM
+    qdm_eh_relatedto_test = @hds_record_converter.to_qdm(hds_eh_relatedto_test)
+
+    # grab the converted assessment element
+    qdm_assessment = qdm_eh_relatedto_test.dataElements.select { |e| e.category == 'assessment' }.first
+
+    # specifically check the relatedTo in the assessment is the expected value
+    expect(qdm_assessment.relatedTo.length).to eq(1)
+    expect(qdm_assessment.relatedTo[0].value).to eq(encounter_ref_id)
+  end
+
   it 'converts HDS EH 1 to QDM EH 1 properly' do
     hds_eh1 = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/1.json'))
     qdm_eh1 = @hds_record_converter.to_qdm(hds_eh1)

@@ -1,0 +1,54 @@
+{
+  "encounters" : [ 
+      {
+          "_id" : "5b75d9465cc9758b16079d4d",
+          "codes" : {
+              "SNOMED-CT" : [ 
+                  "185463005"
+              ],
+              "CPT" : [ 
+                  "99201"
+              ]
+          },
+          "mood_code" : "EVN",
+          "_type" : "Encounter",
+          "description" : "Encounter, Performed: Office Visit",
+          "start_time" : 1345104000,
+          "end_time" : 1345104900,
+          "status_code" : {
+              "HL7 ActStatus" : [ 
+                  "performed"
+              ]
+          },
+          "oid" : "2.16.840.1.113883.3.560.1.79"
+      }
+  ],
+  "assessments" : [ 
+      {
+          "_id" : "5b75d9465cc9758b16079d4c",
+          "codes" : {
+              "LOINC" : [ 
+                  "71965-8"
+              ]
+          },
+          "mood_code" : "EVN",
+          "_type" : "Assessment",
+          "description" : "Assessment, Performed: PROMIS 29 Depression Score",
+          "start_time" : 1345104000,
+          "status_code" : {
+              "HL7 ActStatus" : [ 
+                  "performed"
+              ]
+          },
+          "oid" : "2.16.840.1.113883.10.20.28.3.117",
+          "references" : [ 
+              {
+                  "_id" : "5b75d9465cc9758b16079d4e",
+                  "type" : "Related To",
+                  "referenced_type" : "Encounter",
+                  "referenced_id" : "5b75d9465cc9758b16079d4d"
+              }
+          ]
+      }
+  ]
+}

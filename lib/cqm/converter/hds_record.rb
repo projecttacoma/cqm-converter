@@ -132,7 +132,7 @@ module CQM::Converter
     end
 
     def generate_qdm_data_element(dc_fixed_keys, dc_type)
-      data_element = QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
+      data_element = QDM.const_get(dc_type).new(dc_fixed_keys)
 
       # Any nested QDM types that need initialization should be handled here
       # when converting from the QDM models to the HDS models.

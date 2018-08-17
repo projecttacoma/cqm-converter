@@ -34,6 +34,9 @@ module CQM::Converter
         if QDM.const_get(model).respond_to?('fields')
           qdm_model_attrs[model.to_s] = QDM.const_get(model).fields.keys.map! { |a| a.camelize(:lower) }
         end
+        if QDM.const_get(model).respond_to?('embedded_relations')
+          qdm_model_attrs[model.to_s].concat(QDM.const_get(model).embedded_relations.keys.map! { |a| a.camelize(:lower) })
+        end
       end
       # TODO: These fields are currently not supported. See:
       # https://github.com/projecttacoma/cql_qdm_patientapi/search?q=does+not+currently+support
@@ -137,6 +140,13 @@ module CQM::Converter
             results['hqmfOid'] = datatype['entry']['oid'];
             // Add id oid as string
             results['id'] = datatype['entry']['_id']['$oid']
+
+            // If relatedTo is on this datatype fix the ids so they aren't locked in the { '$oid': '_id' } structure.
+            if (qdm_model_attrs[datatype.constructor.name].includes('relatedTo')) {
+              results['relatedTo'] = datatype.relatedTo().map(function(relatedTo) {
+                return { value: relatedTo.value['$oid'], namingSystem: relatedTo.namingSystem }
+              });
+            }
 
             processed_datatypes[key].push(results);
           });

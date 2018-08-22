@@ -143,8 +143,6 @@ module CQM::Converter
         end
       end
 
-      data_element.id = QDM::Id.new(value: dc_fixed_keys['id']) unless dc_fixed_keys['id'].nil?
-
       data_element
     end
   end

@@ -41,3 +41,7 @@ Metrics/MethodLength:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'lib/ext/mongoid.rb'

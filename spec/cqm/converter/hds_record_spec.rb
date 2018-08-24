@@ -40,6 +40,9 @@ RSpec.describe CQM::Converter::HDSRecord do
   it 'converts HDS EH 1 to QDM EH 1 properly' do
     hds_eh1 = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/1.json'))
     qdm_eh1 = @hds_record_converter.to_qdm(hds_eh1)
+    # There are some 'id' fields that are an example of data loss between hds to
+    # the qdm based on the model info file.  We test the 'id's that should persist above, so
+    # can ignore them in these tests rather than updating them all.
     qdm_eh1_json = JSON.parse(to_utc(qdm_eh1.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/1.json')))
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash

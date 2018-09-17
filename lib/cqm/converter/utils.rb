@@ -38,7 +38,7 @@ module CQM::Converter
           qdm_model_attrs[model.to_s].concat(QDM.const_get(model).embedded_relations.keys.map! { |a| a.camelize(:lower) })
         end
       end
-      # TODO: This fields is currently not supported. See:
+      # TODO: This field is currently not supported. See:
       # https://github.com/projecttacoma/cql_qdm_patientapi/search?q=does+not+currently+support
       qdm_model_attrs['PatientCharacteristicExpired'].delete('cause')
       qdm_model_attrs

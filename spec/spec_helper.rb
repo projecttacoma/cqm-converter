@@ -45,6 +45,7 @@ class Hash
     values.each { |v| v.deep_reject_key!(key) if v.is_a? Hash }
     values.each do |v|
       next unless v.is_a? Array
+
       v.each do |el|
         el.deep_reject_key!(key) if el.is_a? Hash
       end
@@ -63,6 +64,7 @@ class Hash
       each do |k, v|
         self[k] = v.clean_hash(&block) if v.is_a? Hash
         next unless v.is_a? Array
+
         self[k] = v.collect { |a| a.clean_hash(&block) if a.is_a? Hash }
         if self[k].first&.stringify_keys&.key?('description')
           self[k] = self[k].sort_by { |h| h['description'] || '' }

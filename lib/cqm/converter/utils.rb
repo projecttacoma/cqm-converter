@@ -61,6 +61,7 @@ module CQM::Converter
       qdm_model_attrs.each do |datatype, attributes|
         datatype_pattern = /#{datatype} extends CQL_QDM.QDMDatatype.*?class/m
         next unless (dc_class = datatype_pattern.match(datatypes_contents))
+
         qdm_to_hds_mappings[datatype] = {}
         attributes.each do |attribute|
           attribute_pattern = /@_#{attribute}(Low|High| ).*?$/

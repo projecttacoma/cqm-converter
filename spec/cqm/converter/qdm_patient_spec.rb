@@ -6,7 +6,7 @@ RSpec.describe CQM::Converter::QDMPatient do
     @qdm_record_converter = CQM::Converter::QDMPatient.new
   end
 
-  it 'converts QDM EH 1 to HDS EH 1 properly' do
+  xit 'converts QDM EH 1 to HDS EH 1 properly' do
     qdm_eh1 = QDM::Patient.new.from_json(File.read('spec/fixtures/qdm/patients/eh/1.json'))
     hds_eh1 = @qdm_record_converter.to_hds(qdm_eh1)
     hds_eh1_json = ignore_irrelavant_fields(JSON.parse(hds_eh1.to_json(except: '_id', methods: :_type).to_s)).clean_hash
@@ -14,7 +14,7 @@ RSpec.describe CQM::Converter::QDMPatient do
     expect(hds_eh1_json.compact).to eq(fixture.compact)
   end
 
-  it 'converts QDM EH 2 to HDS EH 2 properly' do
+  xit 'converts QDM EH 2 to HDS EH 2 properly' do
     qdm_eh2 = QDM::Patient.new.from_json(File.read('spec/fixtures/qdm/patients/eh/2.json'))
     hds_eh2 = @qdm_record_converter.to_hds(qdm_eh2)
     hds_eh2_json = ignore_irrelavant_fields(JSON.parse(hds_eh2.to_json(except: '_id', methods: :_type).to_s)).clean_hash
@@ -22,7 +22,7 @@ RSpec.describe CQM::Converter::QDMPatient do
     expect(hds_eh2_json.compact).to eq(fixture.compact)
   end
 
-  it 'converts QDM EH 3 to HDS EH 3 properly' do
+  xit 'converts QDM EH 3 to HDS EH 3 properly' do
     qdm_eh3 = QDM::Patient.new.from_json(File.read('spec/fixtures/qdm/patients/eh/3.json'))
     hds_eh3 = @qdm_record_converter.to_hds(qdm_eh3)
     hds_eh3_json = ignore_irrelavant_fields(JSON.parse(hds_eh3.to_json(except: '_id', methods: :_type).to_s)).clean_hash

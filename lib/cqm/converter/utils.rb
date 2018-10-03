@@ -63,7 +63,7 @@ module CQM::Converter
         next unless (dc_class = datatype_pattern.match(datatypes_contents))
         qdm_to_hds_mappings[datatype] = {}
         attributes.each do |attribute|
-          attribute_pattern = /@_#{attribute}(Low|High| ).*?.*?$/
+          attribute_pattern = /@_#{attribute}(Low|High| ).*?$/
           dc_class.to_s.to_enum(:scan, attribute_pattern).map do
             dc_attr = Regexp.last_match
             # Handle possible mixed values.

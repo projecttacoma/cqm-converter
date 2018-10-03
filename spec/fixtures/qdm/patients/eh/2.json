@@ -51,7 +51,7 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -86,7 +86,7 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -121,7 +121,7 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 3,
         "unit": "days"
@@ -149,7 +149,7 @@
       ],
       "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
       "facilityLocation": null,
-      "hqmfOid": "2.16.840.1.113883.3.560.1.83",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.27",
       "negationRationale": null,
       "qdmStatus": "order",
       "qdmVersion": "5.4",
@@ -169,7 +169,7 @@
         }
       ],
       "description": "Laboratory Test, Performed: LDL-c",
-      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.42",
       "method": null,
       "negationRationale": null,
       "qdmStatus": "performed",

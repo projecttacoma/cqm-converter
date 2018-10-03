@@ -63,18 +63,18 @@ module CQM::Converter
         next unless (dc_class = datatype_pattern.match(datatypes_contents))
         qdm_to_hds_mappings[datatype] = {}
         attributes.each do |attribute|
-          attribute_pattern = /@_#{attribute}(Low|High| ).*?@entry.*?$/
+          attribute_pattern = /@_#{attribute}(Low|High| ).*?.*?$/
           dc_class.to_s.to_enum(:scan, attribute_pattern).map do
             dc_attr = Regexp.last_match
             # Handle possible mixed values.
             if dc_attr.to_s.include? 'Low'
               qdm_to_hds_mappings[datatype][attribute] = {} unless qdm_to_hds_mappings[datatype][attribute]
-              qdm_to_hds_mappings[datatype][attribute][:low] = dc_attr.to_s[/@entry.(.*?)(\)|$|\?)/m, 1]
+              qdm_to_hds_mappings[datatype][attribute][:low] = dc_attr.to_s[/(.*?)(\)|$|\?)/m, 1]
             elsif dc_attr.to_s.include? 'High'
               qdm_to_hds_mappings[datatype][attribute] = {} unless qdm_to_hds_mappings[datatype][attribute]
-              qdm_to_hds_mappings[datatype][attribute][:high] = dc_attr.to_s[/@entry.(.*?)(\)|$|\?)/m, 1]
+              qdm_to_hds_mappings[datatype][attribute][:high] = dc_attr.to_s[/(.*?)(\)|$|\?)/m, 1]
             else
-              qdm_to_hds_mappings[datatype][attribute] = dc_attr.to_s[/@entry.(.*?)(\)|$|\?)/m, 1]
+              qdm_to_hds_mappings[datatype][attribute] = dc_attr.to_s[/(.*?)(\)|$|\?)/m, 1]
             end
           end
         end
@@ -125,9 +125,9 @@ module CQM::Converter
             // Add codes to result.
             results['dataElementCodes'] = datatype['getCode']();
             // Add description to result.
-            results['description'] = datatype['entry']['description'];
+            results['description'] = datatype['_description'];
             // Add oid to result.
-            results['hqmfOid'] = datatype['entry']['oid'];
+            results['hqmfOid'] = datatype['_oid'];
 
             processed_datatypes[key].push(results);
           });

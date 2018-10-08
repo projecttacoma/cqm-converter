@@ -6,6 +6,9 @@ RSpec.describe CQM::Converter::QDMPatient do
     @qdm_record_converter = CQM::Converter::QDMPatient.new
   end
 
+  # Tests are skipped because to_hds is currently adding more information onto the model
+  # Can get test to pass by addressing TODO in gather_qdm_to_hds_mappings in utils.rb
+
   xit 'converts QDM EH 1 to HDS EH 1 properly' do
     qdm_eh1 = QDM::Patient.new.from_json(File.read('spec/fixtures/qdm/patients/eh/1.json'))
     hds_eh1 = @qdm_record_converter.to_hds(qdm_eh1)

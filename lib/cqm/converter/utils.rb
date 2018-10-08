@@ -67,6 +67,7 @@ module CQM::Converter
           attribute_pattern = /@_#{attribute}(Low|High| ).*?$/
           dc_class.to_s.to_enum(:scan, attribute_pattern).map do
             dc_attr = Regexp.last_match
+            # TODO: adjust regexes used here to parse out the timing information
             # Handle possible mixed values.
             if dc_attr.to_s.include? 'Low'
               qdm_to_hds_mappings[datatype][attribute] = {} unless qdm_to_hds_mappings[datatype][attribute]

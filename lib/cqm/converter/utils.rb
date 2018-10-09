@@ -34,20 +34,13 @@ module CQM::Converter
         if QDM.const_get(model).respond_to?('fields')
           qdm_model_attrs[model.to_s] = QDM.const_get(model).fields.keys.map! { |a| a.camelize(:lower) }
         end
+        if QDM.const_get(model).respond_to?('embedded_relations')
+          qdm_model_attrs[model.to_s].concat(QDM.const_get(model).embedded_relations.keys.map! { |a| a.camelize(:lower) })
+        end
       end
-      # TODO: These fields are currently not supported. See:
+      # TODO: This field is currently not supported. See:
       # https://github.com/projecttacoma/cql_qdm_patientapi/search?q=does+not+currently+support
-      qdm_model_attrs['SubstanceAdministered'].delete('frequency')
-      qdm_model_attrs['SubstanceOrder'].delete('refills')
       qdm_model_attrs['PatientCharacteristicExpired'].delete('cause')
-      qdm_model_attrs['MedicationDispensed'].delete('refills')
-      qdm_model_attrs['MedicationDispensed'].delete('frequency')
-      qdm_model_attrs['MedicationOrder'].delete('refills')
-      qdm_model_attrs['MedicationOrder'].delete('frequency')
-      qdm_model_attrs['MedicationActive'].delete('frequency')
-      qdm_model_attrs['MedicationAdministered'].delete('frequency')
-      qdm_model_attrs['MedicationDischarge'].delete('refills')
-      qdm_model_attrs['MedicationDischarge'].delete('frequency')
       qdm_model_attrs
     end
 
@@ -135,6 +128,7 @@ module CQM::Converter
             results['description'] = datatype['entry']['description'];
             // Add oid to result.
             results['hqmfOid'] = datatype['entry']['oid'];
+
             processed_datatypes[key].push(results);
           });
         });

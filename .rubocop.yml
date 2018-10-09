@@ -1,6 +1,9 @@
 AllCops:
   TargetRubyVersion: 2.3
 
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
 Style/ClassAndModuleChildren:
   Enabled: false
 
@@ -12,6 +15,8 @@ Metrics/LineLength:
 
 Metrics/BlockLength:
   Max: 50
+  Exclude:
+    - 'spec/**/*_spec.rb'
 
 Metrics/AbcSize:
   Max: 130
@@ -39,3 +44,7 @@ Metrics/MethodLength:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+Lint/UnusedMethodArgument:
+  Exclude:
+    - 'lib/ext/mongoid.rb'

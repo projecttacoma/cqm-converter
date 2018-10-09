@@ -132,11 +132,11 @@ module CQM::Converter
     end
 
     def generate_qdm_data_element(dc_fixed_keys, dc_type)
-      data_element = QDM.const_get(dc_type).new.from_json(dc_fixed_keys.to_json)
+      data_element = QDM.const_get(dc_type).new(dc_fixed_keys)
 
       # Any nested QDM types that need initialization should be handled here
       # when converting from the QDM models to the HDS models.
-      # For now, that should just be FacilityLocation objects
+      # For now, that should just be FacilityLocation objects and Id
       if data_element.is_a?(QDM::EncounterPerformed)
         data_element.facilityLocations = data_element.facilityLocations.map do |facility|
           QDM::FacilityLocation.new.from_json(facility.to_json)

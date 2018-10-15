@@ -57,6 +57,7 @@ module CQM::Converter
         hds_attrs = {}
         @qdm_to_hds_mappings[qdm_model_name].each do |qdm_attr, hds_attr|
           next if data_element[qdm_attr].nil?
+
           extracted_value = extractor(data_element[qdm_attr].as_json)
           if hds_attr.is_a?(Hash) && hds_attr[:low]
             # Handle something that has multiple parts.
@@ -227,6 +228,7 @@ module CQM::Converter
     # Unpack components.
     def unpack_components(hds_attrs)
       return unless hds_attrs.key?('components') && !hds_attrs['components'].nil?
+
       hds_attrs['components']['type'] = 'COL'
       hds_attrs['components'][:values]&.collect do |code_value|
         code_value[:code] = code_value.delete('Code') if code_value.key?('Code')
@@ -259,12 +261,14 @@ module CQM::Converter
       # Remove diagnosis if principalDiagnosis is equivalent.
       return unless hds_attrs.key?('diagnosis') && hds_attrs.key?('principalDiagnosis')
       return unless hds_attrs['diagnosis']['values'] && Hash[hds_attrs['diagnosis']['values'].first.sort] == Hash[hds_attrs['principalDiagnosis'].sort]
+
       hds_attrs.delete('diagnosis')
     end
 
     # Unpack facility.
     def unpack_facility(hds_attrs)
       return unless hds_attrs.key?('facility') && !hds_attrs['facility'].empty?
+
       hds_attrs['facility']['type'] = 'COL'
       hds_attrs['facility'][:values]&.each do |value|
         value['code'] = value.delete('Code') if value['Code']
@@ -278,6 +282,7 @@ module CQM::Converter
     # Unpack references.
     def unpack_references(hds_attrs)
       return unless hds_attrs.key?('references') && !hds_attrs['references'].empty?
+
       hds_attrs['references'] = hds_attrs['references'][:values].collect { |value| { referenced_id: value['value'], referenced_type: value['referencedType'], type: value['type'] } }
     end
 

@@ -19,7 +19,7 @@ RSpec.describe CQM::Converter do
     expect(@converter_classes).to include(:HDSRecord)
   end
 
-  it 'Successfully converts all HDS records to QDM records and back (roundtrip)' do
+  xit 'Successfully converts all HDS records to QDM records and back (roundtrip)' do
     Dir.glob('spec/fixtures/roundtrip/*.json').each do |record_path|
       # Read in fixture as an HDS Record.
       hds_record1 = Record.new.from_json(File.read(record_path))

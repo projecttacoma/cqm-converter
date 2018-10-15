@@ -5,7 +5,7 @@
     {
       "anatomicalLocationSite": null,
       "authorDatetime": "2012-05-21T11:30:00.000-04:00",
-      "category": "condition",
+      "qdmCategory": "condition",
       "dataElementCodes": [
         {
           "codeSystem": "ICD-9-CM",
@@ -28,7 +28,7 @@
         "lowClosed": true,
         "highClosed": true
       },
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
       "severity": null,
       "_type": "QDM::Diagnosis"
@@ -36,7 +36,7 @@
     {
       "admissionSource": null,
       "authorDatetime": "2012-04-02T13:00:00.000-04:00",
-      "category": "encounter",
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -51,7 +51,7 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -59,7 +59,7 @@
       "negationRationale": null,
       "principalDiagnosis": null,
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-04-02T17:00:00.000+00:00",
         "high": "2012-04-02T21:00:00.000+00:00",
@@ -71,7 +71,7 @@
     {
       "admissionSource": null,
       "authorDatetime": "2012-05-21T11:00:00.000-04:00",
-      "category": "encounter",
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -86,7 +86,7 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -94,7 +94,7 @@
       "negationRationale": null,
       "principalDiagnosis": null,
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-05-21T15:00:00.000+00:00",
         "high": "2012-05-21T16:30:00.000+00:00",
@@ -106,7 +106,7 @@
     {
       "admissionSource": null,
       "authorDatetime": "2012-05-21T13:00:00.000-04:00",
-      "category": "encounter",
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -121,7 +121,7 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 3,
         "unit": "days"
@@ -129,7 +129,7 @@
       "negationRationale": null,
       "principalDiagnosis": null,
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-05-21T17:00:00.000+00:00",
         "high": "2012-05-24T18:00:00.000+00:00",
@@ -140,7 +140,7 @@
     },
     {
       "authorDatetime": "2012-05-21T12:15:00.000-04:00",
-      "category": "encounter",
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -149,16 +149,16 @@
       ],
       "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
       "facilityLocation": null,
-      "hqmfOid": "2.16.840.1.113883.3.560.1.83",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.27",
       "negationRationale": null,
       "qdmStatus": "order",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "reason": null,
       "_type": "QDM::EncounterOrder"
     },
     {
       "authorDatetime": "2012-05-21T17:00:00.000-04:00",
-      "category": "laboratory_test",
+      "qdmCategory": "laboratory_test",
       "components": [
 
       ],
@@ -169,11 +169,11 @@
         }
       ],
       "description": "Laboratory Test, Performed: LDL-c",
-      "hqmfOid": "2.16.840.1.113883.3.560.1.5",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.42",
       "method": null,
       "negationRationale": null,
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "reason": null,
       "referenceRange": null,
       "relevantPeriod": {
@@ -192,7 +192,7 @@
     },
     {
       "birthDatetime": "1937-03-06T10:30:00.000-05:00",
-      "category": "patient_characteristic",
+      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -206,11 +206,11 @@
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
       "qdmStatus": "birthdate",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "category": "patient_characteristic",
+      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2186-5",
@@ -224,11 +224,11 @@
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
       "qdmStatus": "ethnicity",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "category": "patient_characteristic",
+      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "1002-5",
@@ -242,11 +242,11 @@
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
       "qdmStatus": "race",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "category": "patient_characteristic",
+      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "M",
@@ -260,7 +260,7 @@
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
       "qdmStatus": "gender",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
     }
   ],
@@ -1023,5 +1023,5 @@
   "givenNames": [
     "A"
   ],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }

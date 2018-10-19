@@ -5,7 +5,7 @@
     {
       "admissionSource": null,
       "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-      "category": "encounter",
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -25,14 +25,14 @@
       "facilityLocations": [
 
       ],
-      "hqmfOid": "2.16.840.1.113883.3.560.1.79",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
       },
       "id": {
         "namingSystem": null,
-        "qdmVersion": "5.3",
+        "qdmVersion": "5.4",
         "value": "5abbdd05aeac508c3233e01f"
       },
       "negationRationale": null,
@@ -44,7 +44,7 @@
         "version": null
       },
       "qdmStatus": "performed",
-      "qdmVersion": "5.3",
+      "qdmVersion": "5.4",
       "relevantPeriod": {
         "low": "2012-04-06T08:00:00.000+00:00",
         "high": "2012-04-06T09:15:00.000+00:00",
@@ -62,5 +62,5 @@
   },
   "familyName": null,
   "givenNames": [],
-  "qdmVersion": "5.3"
+  "qdmVersion": "5.4"
 }

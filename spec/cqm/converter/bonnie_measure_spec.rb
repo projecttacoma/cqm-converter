@@ -43,7 +43,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section')
-    expect(population_set.populations).to be_instance_of(CQM::RatioPopulationMap)
+    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq("Initial Population")
   end
 
@@ -88,19 +88,19 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section 1')
-    expect(population_set.populations).to be_instance_of(CQM::RatioPopulationMap)
+    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq("Initial Population 1")
 
     population_set = cqm_measure.population_sets[1]
     expect(population_set.id).to eq('PopulationCriteria2')
     expect(population_set.title).to eq('Population Criteria Section 2')
-    expect(population_set.populations).to be_instance_of(CQM::RatioPopulationMap)
+    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.DENOM.statement_name).to eq("Denominator 2")
 
     population_set = cqm_measure.population_sets[2]
     expect(population_set.id).to eq('PopulationCriteria3')
     expect(population_set.title).to eq('Population Criteria Section 3')
-    expect(population_set.populations).to be_instance_of(CQM::RatioPopulationMap)
+    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.NUMER.statement_name).to eq("Numerator 3")
   end
 
@@ -110,8 +110,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
 
     expect(cqm_measure).to_not be_nil
-    expect(cqm_measure.measure_scoring).to eq('CONTNIUOUS_VARIABLE')
-    expect(cqm_measure.calculation_method).to eq('EPISODE')
+    expect(cqm_measure.measure_scoring).to eq('CONTINUOUS_VARIABLE')
+    expect(cqm_measure.calculation_method).to eq('EPISODE_OF_CARE')
 
     expect(cqm_measure.cql_libraries.size).to eq(1)
 
@@ -148,5 +148,21 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section')
     expect(population_set.populations).to be_instance_of(CQM::ContinuousVariablePopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq("Initial Population")
+    expect(population_set.populations.MSRPOPL.statement_name).to eq("Measure Population")
+    expect(population_set.populations.MSRPOPLEX.statement_name).to eq("Measure Population Exclusions")
+    # check stratifications
+    expect(population_set.stratifications.size).to eq(3)
+    expect(population_set.stratifications[0].id).to eq('PopulationCriteria1 - Stratification 1')
+    expect(population_set.stratifications[0].title).to eq('Stratification 1')
+    expect(population_set.stratifications[0].statement.statement_name).to eq('Stratification 1')
+    expect(population_set.stratifications[1].id).to eq('PopulationCriteria1 - Stratification 2')
+    expect(population_set.stratifications[1].title).to eq('Stratification 2')
+    expect(population_set.stratifications[1].statement.statement_name).to eq('Stratification 2')
+    expect(population_set.stratifications[2].id).to eq('PopulationCriteria1 - Stratification 3')
+    expect(population_set.stratifications[2].title).to eq('Stratification 3')
+    expect(population_set.stratifications[2].statement.statement_name).to eq('Stratification 3')
+    # check observation
+    expect(population_set.observations.size).to eq(1)
+    expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
   end
 end

@@ -165,4 +165,55 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.observations.size).to eq(1)
     expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
   end
+
+  it 'converts episode of care measure with single population set' do
+    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/CMS177v6.json'))
+    cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
+
+    expect(cqm_measure).to_not be_nil
+    expect(cqm_measure.measure_scoring).to eq('PROPORTION')
+    expect(cqm_measure.calculation_method).to eq('EPISODE_OF_CARE')
+
+    expect(cqm_measure.cql_libraries.size).to eq(1)
+
+    # check the main library name and find new library structure using it
+    expect(cqm_measure.main_cql_library).to eq('ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment')
+    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+
+    # check the new library structure
+    expect(main_library).to_not be_nil
+    expect(main_library.library_name).to eq('ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment')
+    expect(main_library.library_version).to eq('6.0.002')
+    expect(main_library.statement_dependencies.size).to eq(9)
+    expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment'])
+    expect(main_library.elm).to eq(bonnie_measure.elm[0])
+    expect(main_library.cql).to start_with('library ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment')
+
+    # check the references used by the "Initial Population"
+    ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population"}.first
+    expect(ipp_dep).to_not be_nil
+    expect(ipp_dep.statement_references.size).to eq(1)
+    expect(ipp_dep.statement_references.map(&:statement_name)).to include("Encounter with Major Depressive Disorder Diagnosis")
+
+    # Legacy fields that may be removed later
+    expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
+    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
+    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
+    expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
+    expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
+
+    # check population set
+    expect(cqm_measure.population_sets.size).to eq(1)
+    population_set = cqm_measure.population_sets[0]
+    expect(population_set.id).to eq('PopulationCriteria1')
+    expect(population_set.title).to eq('Population Criteria Section')
+    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect(population_set.populations.IPP.statement_name).to eq("Initial Population")
+    expect(population_set.populations.DENOM.statement_name).to eq("Denominator")
+    expect(population_set.populations.NUMER.statement_name).to eq("Numerator")
+    # check stratifications
+    expect(population_set.stratifications.size).to eq(0)
+    # check observation
+    expect(population_set.observations.size).to eq(0)
+  end
 end

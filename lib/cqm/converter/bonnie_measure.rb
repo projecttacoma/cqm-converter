@@ -65,8 +65,8 @@ module CQM::Converter
         # construct the population map and fill it
         population_map = construct_population_map(cqm_measure)
         bonnie_population.each_pair do |population_name, population_key|
-          # make sure it isnt metadata or an OBSERV
-          if !['id', 'title', 'OBSERV'].include?(population_name)
+          # make sure it isnt metadata or an OBSERV or SDE list
+          if !['id', 'title', 'OBSERV', 'supplemental_data_elements'].include?(population_name)
             population_map[population_name.to_sym] = CQM::StatementReference.new(
               library_name: cqm_measure.main_cql_library,
               statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, population_key)
@@ -75,7 +75,17 @@ module CQM::Converter
         end
 
         population_set.populations = population_map
-        # TODO: add SDEs, STRATS, and observations
+
+        # add SDEs
+        if bonnie_population.has_key?('supplemental_data_elements')
+          bonnie_population['supplemental_data_elements'].each do |sde_statement|
+            population_set.supplemental_data_elements << CQM::StatementReference.new(
+              library_name: cqm_measure.main_cql_library,
+              statement_name: sde_statement
+            )
+          end
+        end
+
         cqm_measure.population_sets << population_set
       end
 
@@ -103,6 +113,18 @@ module CQM::Converter
         )
         # add observation to each population set
         cqm_measure.population_sets.each { |population_set| population_set.observations << observation }
+      end
+
+      # composite measure fields
+      if bonnie_measure.composite
+        cqm_measure.composite = true
+        cqm_measure.component_hqmf_set_ids = bonnie_measure.component_hqmf_set_ids
+      end
+
+      # component measure fields
+      if bonnie_measure.component
+        cqm_measure.component = true
+        cqm_measure.composite_hqmf_set_id = bonnie_measure.composite_hqmf_set_id
       end
 
       cqm_measure

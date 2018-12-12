@@ -22,7 +22,7 @@ The `CQM::Converter` module provides a class (`CQM::Converter::HDSRecord`) for c
 ### Programmatic Conversion
 
 Example:
-```
+```ruby
 require 'cqm/converter'
 
 # Initialize a new HDS converter. NOTE: This only needs to be done once, and
@@ -54,7 +54,7 @@ The `CQM::Converter` module provides a class (`CQM::Converter::QDMPatient`) for 
 ### Programmatic Conversion
 
 Example:
-```
+```ruby
 require 'cqm/converter'
 
 # Initialize a new QDM converter. NOTE: This only needs to be done once, and

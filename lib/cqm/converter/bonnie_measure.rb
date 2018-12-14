@@ -1,6 +1,6 @@
-# CQM Converter module for HDS models.
+# CQM Converter module for HDS/Bonnie models.
 module CQM::Converter
-  # CQM Converter class for HDS based records.
+  # CQM Converter class for Bonnie CqlMeasures
   module BonnieMeasure
     # Given a bonnie model, convert it to 
     def self.to_cqm(bonnie_measure)

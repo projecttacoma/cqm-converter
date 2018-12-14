@@ -3,7 +3,7 @@ require 'spec_helper'
 RSpec.describe CQM::Converter::BonnieMeasure do
 
   it 'converts proportion measure with single population set' do
-    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/CMS134v6.json'))
+    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/core_measures/CMS134v6.json'))
     cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
 
     expect(cqm_measure).to_not be_nil
@@ -48,7 +48,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
   end
 
   it 'converts proportion measure with three population sets' do
-    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/CMS160v6.json'))
+    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/core_measures/CMS160v6.json'))
     cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
 
     expect(cqm_measure).to_not be_nil
@@ -106,7 +106,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
 
   it 'converts continuous variable episode measure with single population set and three stratifications' do
-    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/CMS32v7.json'))
+    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/core_measures/CMS32v7.json'))
     cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
 
     expect(cqm_measure).to_not be_nil
@@ -167,7 +167,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
   end
 
   it 'converts episode of care measure with single population set' do
-    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/CMS177v6.json'))
+    bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/core_measures/CMS177v6.json'))
     cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
 
     expect(cqm_measure).to_not be_nil

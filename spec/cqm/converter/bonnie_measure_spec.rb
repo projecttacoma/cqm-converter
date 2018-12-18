@@ -14,7 +14,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('DiabetesMedicalAttentionforNephropathy')
-    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
 
     # check the new library structure
     expect(main_library).to_not be_nil
@@ -24,6 +24,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['DiabetesMedicalAttentionforNephropathy'])
     expect(main_library.elm).to eq(bonnie_measure.elm[0])
     expect(main_library.cql).to start_with('library DiabetesMedicalAttentionforNephropathy')
+    expect(main_library.is_main_library).to eq(true)
 
     # check the references used by the "Initial Population"
     ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population"}.first
@@ -59,7 +60,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('DepressionUtilizationofthePHQ9Tool')
-    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
 
     # check the new library structure
     expect(main_library).to_not be_nil
@@ -69,6 +70,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['DepressionUtilizationofthePHQ9Tool'])
     expect(main_library.elm).to eq(bonnie_measure.elm[0])
     expect(main_library.cql).to start_with('library DepressionUtilizationofthePHQ9Tool')
+    expect(main_library.is_main_library).to eq(true)
 
     # check the references used by the "Initial Population 1"
     ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population 1"}.first
@@ -117,7 +119,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients')
-    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
 
     # check the new library structure
     expect(main_library).to_not be_nil
@@ -127,6 +129,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients'])
     expect(main_library.elm).to eq(bonnie_measure.elm[0])
     expect(main_library.cql).to start_with('library MedianTimefromEDArrivaltoEDDepartureforDischargedEDPatients')
+    expect(main_library.is_main_library).to eq(true)
 
     # check the references used by the "Initial Population"
     ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population"}.first
@@ -178,7 +181,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment')
-    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
 
     # check the new library structure
     expect(main_library).to_not be_nil
@@ -188,6 +191,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment'])
     expect(main_library.elm).to eq(bonnie_measure.elm[0])
     expect(main_library.cql).to start_with('library ChildandAdolescentMajorDepressiveDisorderMDDSuicideRiskAssessment')
+    expect(main_library.is_main_library).to eq(true)
 
     # check the references used by the "Initial Population"
     ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population"}.first
@@ -229,10 +233,12 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(cqm_measure.calculation_method).to eq('PATIENT')
 
     expect(cqm_measure.cql_libraries.size).to eq(20)
+    expect(cqm_measure.cql_libraries.select(&:is_main_library).size).to eq(1)
+    expect(cqm_measure.cql_libraries.select { |lib| !lib.is_main_library }.size).to eq(19)
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('AWATestComposite')
-    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
 
     # check the new library structure
     expect(main_library).to_not be_nil
@@ -242,6 +248,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['AWATestComposite'])
     expect(main_library.elm).to eq(bonnie_measure.elm[0])
     expect(main_library.cql).to start_with('library AWATestComposite')
+    expect(main_library.is_main_library).to eq(true)
 
     # check the references used by the "Initial Population"
     ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population"}.first
@@ -304,7 +311,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('AnnualWellnessAssessmentPreventiveCareScreeningforFallsRisk')
-    main_library = cqm_measure.cql_libraries.select { |lib| lib.library_name == cqm_measure.main_cql_library }.first
+    main_library = cqm_measure.cql_libraries.select { |lib| lib.is_main_library }.first
 
     # check the new library structure
     expect(main_library).to_not be_nil
@@ -314,6 +321,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['AnnualWellnessAssessmentPreventiveCareScreeningforFallsRisk'])
     expect(main_library.elm).to eq(bonnie_measure.elm[0])
     expect(main_library.cql).to start_with('library AnnualWellnessAssessmentPreventiveCareScreeningforFallsRisk')
+    expect(main_library.is_main_library).to eq(true)
 
     # check the references used by the "Initial Population"
     ipp_dep = main_library.statement_dependencies.select { |dep| dep.statement_name == "Initial Population" }.first

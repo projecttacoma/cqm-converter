@@ -29,6 +29,10 @@ module CQM::Converter
           elm: elm,
           cql: bonnie_measure.cql[elm_index]
         )
+        # if this is the main library, then mark it
+        if elm['library']['identifier']['id'] == cqm_measure.main_cql_library
+          cql_library.is_main_library = true
+        end
 
         cql_library.elm_annotations = bonnie_measure.elm_annotations[cql_library.library_name]
 

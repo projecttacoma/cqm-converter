@@ -107,9 +107,13 @@ RSpec.describe CQM::Converter::BonnieMeasure do
   end
 
 
-  it 'converts continuous variable episode measure with single population set and three stratifications' do
+  it 'converts continuous variable episode measure and valuesets with single population set and three stratifications' do
     bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/core_measures/CMS32v7.json'))
-    cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
+    hds_value_sets = JSON.parse(File.read('spec/fixtures/hds/valuesets/core_measures/CMS32v7.json')).map do |vs_json|
+      HealthDataStandards::SVS::ValueSet.new(vs_json)
+    end
+
+    cqm_measure = CQM::Converter::BonnieMeasure.measure_and_valuesets_to_cqm(bonnie_measure, hds_value_sets)
 
     expect(cqm_measure).to_not be_nil
     expect(cqm_measure.measure_scoring).to eq('CONTINUOUS_VARIABLE')
@@ -167,6 +171,9 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     # check observation
     expect(population_set.observations.size).to eq(1)
     expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
+
+    # check valuesets
+    expect(cqm_measure.value_sets.size).to eq(hds_value_sets.size)
   end
 
   it 'converts episode of care measure with single population set' do

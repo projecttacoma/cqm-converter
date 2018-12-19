@@ -134,6 +134,13 @@ module CQM::Converter
       cqm_measure
     end
 
+    def self.measure_and_valuesets_to_cqm(bonnie_measure, hds_valuesets)
+      cqm_measure = to_cqm(bonnie_measure)
+      cqm_valuesets = CQM::Converter::HDSValueSet.list_to_cqm(hds_valuesets)
+      cqm_measure.value_sets = cqm_valuesets
+      return cqm_measure
+    end
+
     private
     def self.construct_population_map(cqm_measure)
       case cqm_measure.measure_scoring

@@ -2,7 +2,6 @@ require 'bundler/setup'
 require 'cqm/converter'
 require 'json'
 
-
 class User
   include Mongoid::Document
 end
@@ -19,8 +18,8 @@ RSpec.configure do |config|
   end
 end
 
-def dump_database()
-  Mongoid.client(:default).database.drop()
+def dump_database
+  Mongoid.client(:default).database.drop
 end
 
 # Forces serialized models to use UTC for date and times. This is used for comparing date

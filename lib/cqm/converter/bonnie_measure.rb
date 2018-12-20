@@ -4,7 +4,7 @@ module CQM::Converter
   module BonnieMeasure
     # Given a bonnie model, convert it to the new CQM measure model. including value sets if they are found
     def self.to_cqm(bonnie_measure)
-      cqm_measure = CQM::Measure.new()
+      cqm_measure = CQM::Measure.new
 
       # basic fields
       cqm_measure.hqmf_id = bonnie_measure.hqmf_id
@@ -17,12 +17,11 @@ module CQM::Converter
       cqm_measure.main_cql_library = bonnie_measure.main_cql_library
 
       # more complicated fields
-      cqm_measure.measure_scoring = if bonnie_measure.continuous_variable then 'CONTINUOUS_VARIABLE' else 'PROPORTION' end
-      cqm_measure.calculation_method = if bonnie_measure.episode_of_care then 'EPISODE_OF_CARE' else 'PATIENT' end
+      cqm_measure.measure_scoring = bonnie_measure.continuous_variable ? 'CONTINUOUS_VARIABLE' : 'PROPORTION'
+      cqm_measure.calculation_method = bonnie_measure.episode_of_care ? 'EPISODE_OF_CARE' : 'PATIENT'
 
       # cql_libraries
       bonnie_measure.elm.each_with_index do |elm, elm_index|
-        #require 'pry'; binding.pry
         cql_library = CQM::CQLLibrary.new(
           library_name: elm['library']['identifier']['id'],
           library_version: elm['library']['identifier']['version'],
@@ -49,7 +48,6 @@ module CQM::Converter
         cqm_measure.cql_libraries << cql_library
       end
 
-
       cqm_measure.population_criteria = bonnie_measure.population_criteria
       cqm_measure.data_criteria = bonnie_measure.data_criteria
       cqm_measure.source_data_criteria = bonnie_measure.source_data_criteria
@@ -57,31 +55,31 @@ module CQM::Converter
       cqm_measure.measure_attributes = bonnie_measure.measure_attributes
 
       # convert populations, skipping strats to be added later
-      bonnie_measure.populations.each_with_index do |bonnie_population, pop_index|
+      bonnie_measure.populations.each do |bonnie_population|
         # skip if this is a stratification
-        next if bonnie_population.has_key?('stratification_index')
+        next if bonnie_population.key?('stratification_index')
 
         population_set = CQM::PopulationSet.new(
           title: bonnie_population['title'],
           id: bonnie_population['id']
         )
-        
+
         # construct the population map and fill it
         population_map = construct_population_map(cqm_measure)
         bonnie_population.each_pair do |population_name, population_key|
           # make sure it isnt metadata or an OBSERV or SDE list
-          if !['id', 'title', 'OBSERV', 'supplemental_data_elements'].include?(population_name)
-            population_map[population_name.to_sym] = CQM::StatementReference.new(
-              library_name: cqm_measure.main_cql_library,
-              statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, population_key)
-            )
-          end
+          next if ['id', 'title', 'OBSERV', 'supplemental_data_elements'].include?(population_name)
+
+          population_map[population_name.to_sym] = CQM::StatementReference.new(
+            library_name: cqm_measure.main_cql_library,
+            statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, population_key)
+          )
         end
 
         population_set.populations = population_map
 
         # add SDEs
-        if bonnie_population.has_key?('supplemental_data_elements')
+        if bonnie_population.key?('supplemental_data_elements')
           bonnie_population['supplemental_data_elements'].each do |sde_statement|
             population_set.supplemental_data_elements << CQM::StatementReference.new(
               library_name: cqm_measure.main_cql_library,
@@ -95,16 +93,16 @@ module CQM::Converter
 
       # add stratification info to population sets
       bonnie_measure.populations.each do |bonnie_stratification|
-        if bonnie_stratification.has_key?('stratification_index')
-          cqm_measure.population_sets[bonnie_stratification['population_index']].stratifications << CQM::Stratification.new(
-            title: bonnie_stratification['title'],
-            id: bonnie_stratification['id'],
-            statement: CQM::StatementReference.new(
-              library_name: cqm_measure.main_cql_library,
-              statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, bonnie_stratification['STRAT'])
-            )
+        next unless bonnie_stratification.key?('stratification_index')
+
+        cqm_measure.population_sets[bonnie_stratification['population_index']].stratifications << CQM::Stratification.new(
+          title: bonnie_stratification['title'],
+          id: bonnie_stratification['id'],
+          statement: CQM::StatementReference.new(
+            library_name: cqm_measure.main_cql_library,
+            statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, bonnie_stratification['STRAT'])
           )
-        end
+        )
       end
 
       # add observation info
@@ -132,7 +130,7 @@ module CQM::Converter
       end
 
       # value sets if they exist
-      if !bonnie_measure.value_sets.empty?
+      unless bonnie_measure.value_sets.empty?
         cqm_measure.value_sets = CQM::Converter::HDSValueSet.list_to_cqm(bonnie_measure.value_sets)
       end
 
@@ -144,20 +142,19 @@ module CQM::Converter
       cqm_measure = to_cqm(bonnie_measure)
       cqm_valuesets = CQM::Converter::HDSValueSet.list_to_cqm(hds_valuesets)
       cqm_measure.value_sets = cqm_valuesets
-      return cqm_measure
+      cqm_measure
     end
 
-    private
     def self.construct_population_map(cqm_measure)
       case cqm_measure.measure_scoring
       when 'PROPORTION'
-        CQM::ProportionPopulationMap.new()
+        CQM::ProportionPopulationMap.new
       when 'RATIO'
-        CQM::RatioPopulationMap.new()
+        CQM::RatioPopulationMap.new
       when 'CONTINUOUS_VARIABLE'
-        CQM::ContinuousVariablePopulationMap.new()
+        CQM::ContinuousVariablePopulationMap.new
       when 'COHORT'
-        CQM::CohortPopulationMap.new()
+        CQM::CohortPopulationMap.new
       else
         raise StandardError("Unknown measure scoring type encountered #{cqm_measure.measure_scoring}")
       end

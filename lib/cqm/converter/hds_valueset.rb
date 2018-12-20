@@ -7,7 +7,7 @@ module CQM::Converter
         oid: hds_value_set.oid,
         display_name: hds_value_set.display_name,
         version: hds_value_set.version,
-        concepts: hds_value_set.concepts.map { |hds_concept|
+        concepts: hds_value_set.concepts.map do |hds_concept|
           CQM::Concept.new(
             code: hds_concept.code,
             code_system_name: hds_concept.code_system_name,
@@ -15,7 +15,7 @@ module CQM::Converter
             code_system_oid: HealthDataStandards::Util::CodeSystemHelper.oid_for_code_system(hds_concept.code_system_name),
             display_name: hds_concept.display_name
           )
-        }
+        end
       )
     end
 

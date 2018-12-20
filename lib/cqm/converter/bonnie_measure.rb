@@ -2,7 +2,7 @@
 module CQM::Converter
   # CQM Converter class for Bonnie CqlMeasures
   module BonnieMeasure
-    # Given a bonnie model, convert it to 
+    # Given a bonnie model, convert it to the new CQM measure model. including value sets if they are found
     def self.to_cqm(bonnie_measure)
       cqm_measure = CQM::Measure.new()
 
@@ -131,9 +131,15 @@ module CQM::Converter
         cqm_measure.composite_hqmf_set_id = bonnie_measure.composite_hqmf_set_id
       end
 
+      # value sets if they exist
+      if !bonnie_measure.value_sets.empty?
+        cqm_measure.value_sets = CQM::Converter::HDSValueSet.list_to_cqm(bonnie_measure.value_sets)
+      end
+
       cqm_measure
     end
 
+    # convert bonnie measure and provide value sets to convert and attach to measure
     def self.measure_and_valuesets_to_cqm(bonnie_measure, hds_valuesets)
       cqm_measure = to_cqm(bonnie_measure)
       cqm_valuesets = CQM::Converter::HDSValueSet.list_to_cqm(hds_valuesets)

@@ -1,66 +1,133 @@
 {
-  "birthDatetime": null,
   "bundleId": null,
-  "dataElements": [
-    {
-      "admissionSource": null,
-      "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-      "qdmCategory": "encounter",
-      "dataElementCodes": [
-        {
-          "codeSystem": "SNOMED-CT",
-          "code": "4525004"
-        }
-      ],
-      "description": "Encounter, Performed: Emergency Department Visit",
-      "diagnoses": [
-        {
+  "expectedValues": null,
+  "familyName": null,
+  "givenNames": [
+
+  ],
+  "notes": null,
+  "qdmPatient": {
+    "birthDatetime": null,
+    "dataElements": [
+      {
+        "admissionSource": null,
+        "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+        "dataElementCodes": [
+          {
+            "codeSystem": "SNOMED-CT",
+            "code": "4525004"
+          }
+        ],
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "diagnoses": [
+          {
+            "code": "10278007",
+            "codeSystem": "SNOMED-CT",
+            "version": null,
+            "descriptor": "Psychiatric/Mental Health Diagnosis"
+          }
+        ],
+        "dischargeDisposition": null,
+        "facilityLocations": [
+
+        ],
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5abbdd05aeac508c3233e01f"
+        },
+        "lengthOfStay": {
+          "value": 0,
+          "unit": "days"
+        },
+        "negationRationale": null,
+        "principalDiagnosis": {
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
-          "version": null,
-          "descriptor": "Psychiatric/Mental Health Diagnosis"
-        }
-      ],
-      "dischargeDisposition": null,
-      "facilityLocations": [
-
-      ],
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
-      "lengthOfStay": {
-        "value": 0,
-        "unit": "days"
-      },
-      "id": {
-        "namingSystem": null,
+          "descriptor": "Psychiatric/Mental Health Diagnosis",
+          "codeSystemOid": null,
+          "version": null
+        },
+        "qdmCategory": "encounter",
+        "qdmStatus": "performed",
         "qdmVersion": "5.4",
-        "value": "5abbdd05aeac508c3233e01f"
-      },
-      "negationRationale": null,
-      "principalDiagnosis": {
-        "code": "10278007",
-        "codeSystem": "SNOMED-CT",
-        "descriptor": "Psychiatric/Mental Health Diagnosis",
-        "codeSystemOid": null,
-        "version": null
-      },
-      "qdmStatus": "performed",
-      "qdmVersion": "5.4",
-      "relevantPeriod": {
-        "low": "2012-04-06T08:00:00.000+00:00",
-        "high": "2012-04-06T09:15:00.000+00:00",
-        "lowClosed": true,
-        "highClosed": true
-      },
-      "_type": "QDM::EncounterPerformed"
-    }
-  ],
-  "extendedData": {
-    "insurance_providers": "[]",
-    "medical_record_assigner": null,
-    "medical_record_number": null,
-    "test_id": null
-  },
-  "familyName": null,
-  "givenNames": [],
-  "qdmVersion": "5.4"
+        "relevantPeriod": {
+          "low": "2012-04-06T08:00:00.000+00:00",
+          "high": "2012-04-06T09:15:00.000+00:00",
+          "lowClosed": true,
+          "highClosed": true
+        },
+        "patient": {
+          "birthDatetime": null,
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "4525004"
+                }
+              ],
+              "description": "Encounter, Performed: Emergency Department Visit",
+              "diagnoses": [
+                {
+                  "code": "10278007",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Psychiatric/Mental Health Diagnosis"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5abbdd05aeac508c3233e01f"
+              },
+              "lengthOfStay": {
+                "value": 0,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "10278007",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Psychiatric/Mental Health Diagnosis",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-04-06T08:00:00.000+00:00",
+                "high": "2012-04-06T09:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            }
+          ],
+          "extendedData": {
+            "test_id": null,
+            "medical_record_number": null,
+            "medical_record_assigner": null,
+            "insurance_providers": "[]"
+          },
+          "qdmVersion": "5.4"
+        }
+      }
+    ],
+    "extendedData": {
+      "test_id": null,
+      "medical_record_number": null,
+      "medical_record_assigner": null,
+      "insurance_providers": "[]"
+    },
+    "qdmVersion": "5.4"
+  }
 }

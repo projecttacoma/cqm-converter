@@ -1,696 +1,1958 @@
 {
-  "birthDatetime": "1998-10-11T10:00:00.000-04:00",
   "bundleId": "5abb9cd8aeac507a9c761e5c",
-  "dataElements": [
+  "expectedValues": [
     {
-      "admissionSource": null,
-      "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-      "qdmCategory": "encounter",
-      "dataElementCodes": [
-        {
-          "codeSystem": "SNOMED-CT",
-          "code": "4525004"
-        }
-      ],
-      "description": "Encounter, Performed: Emergency Department Visit",
-      "diagnoses": [
-        {
-          "code": "10278007",
-          "codeSystem": "SNOMED-CT",
-          "version": null,
-          "descriptor": "Psychiatric/Mental Health Diagnosis"
-        }
-      ],
-      "dischargeDisposition": null,
-      "facilityLocations": [
-
-      ],
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
-      "lengthOfStay": {
-        "value": 0,
-        "unit": "days"
-      },
-      "negationRationale": null,
-      "principalDiagnosis": {
-        "code": "10278007",
-        "codeSystem": "SNOMED-CT",
-        "descriptor": "Psychiatric/Mental Health Diagnosis",
-        "codeSystemOid": null,
-        "version": null
-      },
-      "qdmStatus": "performed",
-      "qdmVersion": "5.4",
-      "relevantPeriod": {
-        "low": "2012-04-06T08:00:00.000+00:00",
-        "high": "2012-04-06T09:15:00.000+00:00",
-        "lowClosed": true,
-        "highClosed": true
-      },
-      "_type": "QDM::EncounterPerformed"
+      "measure_id": "7D374C6A-3821-4333-A1BC-4531005D77B8",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
     },
     {
-      "birthDatetime": "1998-10-11T10:00:00.000-04:00",
-      "qdmCategory": "patient_characteristic",
-      "dataElementCodes": [
-        {
-          "code": "21112-8",
-          "codeSystem": "LOINC",
-          "descriptor": null,
-          "codeSystemOid": null,
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
-      "qdmStatus": "birthdate",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicBirthdate"
+      "measure_id": "EBFA203E-ACC1-4228-906C-855C4BF11310",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
     },
     {
-      "qdmCategory": "patient_characteristic",
-      "dataElementCodes": [
-        {
-          "code": "2135-2",
-          "codeSystem": "CDC Race",
-          "descriptor": "Hispanic Or Latino",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        }
+      "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "population_index": 1,
+      "STRAT": 1,
+      "IPP": 1,
+      "MSRPOPL": 1,
+      "OBSERV_UNIT": " mins",
+      "OBSERV": [
+        75
       ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
-      "qdmStatus": "ethnicity",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicEthnicity"
+      "MSRPOPLEX": 0
     },
     {
-      "qdmCategory": "patient_characteristic",
-      "dataElementCodes": [
-        {
-          "code": "2131-1",
-          "codeSystem": "CDC Race",
-          "descriptor": "Other",
-          "codeSystemOid": "2.16.840.1.113883.6.238",
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
-      "qdmStatus": "race",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicRace"
+      "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV_UNIT": " mins",
+      "MSRPOPLEX": 0
     },
     {
-      "qdmCategory": "patient_characteristic",
-      "dataElementCodes": [
-        {
-          "code": "F",
-          "codeSystem": "AdministrativeGender",
-          "descriptor": "F",
-          "codeSystemOid": "2.16.840.1.113883.5.1",
-          "version": null,
-          "_type": "QDM::Code"
-        }
-      ],
-      "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
-      "qdmStatus": "gender",
-      "qdmVersion": "5.4",
-      "_type": "QDM::PatientCharacteristicSex"
+      "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "population_index": 3,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV_UNIT": " mins",
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "BB481284-30DD-4383-928C-82385BBF1B17",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "32CFC834-843A-4F45-B359-8E158EAC4396",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 3,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 4,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 5,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 6,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+      "population_index": 7,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 2,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 3,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 4,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 5,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 6,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+      "population_index": 7,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "D78CE034-8288-4012-A31E-7F485A74F2A9",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+      "population_index": 1,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "03876D69-085B-415C-AE9D-9924171040C2",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "9A033274-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "9A033274-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 1,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "9A033274-3D9B-11E1-8634-00237D5BF174",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "7DC26160-E615-4CC2-879C-75985189EC1A",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0,
+      "DENEXCEP": 0
+    },
+    {
+      "measure_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+      "population_index": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+      "population_index": 1,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+      "population_index": 2,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+      "population_index": 0,
+      "IPP": 0,
+      "DENOM": 0,
+      "DENEX": 0,
+      "NUMER": 0
+    },
+    {
+      "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "population_index": 3,
+      "STRAT": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "OBSERV": null,
+      "MSRPOPLEX": 0
+    },
+    {
+      "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+      "population_index": 0,
+      "IPP": 0,
+      "MSRPOPL": 0,
+      "MSRPOPLEX": 0,
+      "OBSERV_UNIT": " mins"
     }
   ],
-  "extendedData": {
-    "measure_ids": [
-      "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
-      "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
-      "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
-      "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
-      "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
-      "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
-      "03876D69-085B-415C-AE9D-9924171040C2",
-      "1F503318-BB8D-4B91-AF63-223AE0A2328E",
-      "7DC26160-E615-4CC2-879C-75985189EC1A",
-      "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
-      "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
-      "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
-      "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
-      "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
-      "9A033274-3D9B-11E1-8634-00237D5BF174",
-      "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
-      "EBFA203E-ACC1-4228-906C-855C4BF11310",
-      "2838875A-07B5-4BF0-BE04-C3EB99F53975",
-      "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-      "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-      "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-      "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
-      "32CFC834-843A-4F45-B359-8E158EAC4396",
-      "BB481284-30DD-4383-928C-82385BBF1B17",
-      "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
-      "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
-      "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
-      "D78CE034-8288-4012-A31E-7F485A74F2A9",
-      "7D374C6A-3821-4333-A1BC-4531005D77B8",
-      null
-    ],
-    "source_data_criteria": [
-      {
-        "negation": false,
-        "definition": "encounter",
-        "status": "performed",
-        "title": "EmergencyDepartmentVisit",
-        "description": "Encounter, Performed: Emergency Department Visit",
-        "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
-        "type": "encounters",
-        "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
-        "start_date": 1333699200000,
-        "end_date": 1333703700000,
-        "value": [
-
-        ],
-        "references": null,
-        "field_values": {
-          "PRINCIPAL_DIAGNOSIS": {
-            "type": "CD",
-            "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
-            "field_title": "Principal Diagnosis",
-            "title": "Psychiatric/Mental Health Diagnosis"
-          },
-          "ADMISSION_DATETIME": {
-            "type": "TS",
-            "code_list_id": "",
-            "field_title": "Admission Date/Time",
-            "start_date": "04/06/2012",
-            "start_time": "8:00 AM",
-            "value": 1333699200000
-          },
-          "DISCHARGE_DATETIME": {
-            "type": "TS",
-            "code_list_id": "",
-            "field_title": "Discharge Date/Time",
-            "start_date": "04/06/2012",
-            "start_time": "9:15 AM",
-            "value": 1333703700000
-          }
-        },
-        "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        "cms_id": "CMS32v8",
-        "criteria_id": "1624f0dc31cWr",
-        "codes": {
-          "SNOMED-CT": [
-            "4525004"
-          ]
-        },
-        "negation_code_list_id": "",
-        "coded_entry_id": "5abbdd05aeac508c3233e01f",
-        "code_source": "DEFAULT"
-      },
-      {
-        "id": "MeasurePeriod",
-        "start_date": 0,
-        "end_date": 0,
-        "references": null
-      }
-    ],
-    "expected_values": [
-      {
-        "measure_id": "7D374C6A-3821-4333-A1BC-4531005D77B8",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "EBFA203E-ACC1-4228-906C-855C4BF11310",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        "population_index": 1,
-        "STRAT": 1,
-        "IPP": 1,
-        "MSRPOPL": 1,
-        "OBSERV_UNIT": " mins",
-        "OBSERV": [
-          75
-        ],
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        "population_index": 2,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV_UNIT": " mins",
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        "population_index": 3,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV_UNIT": " mins",
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "2838875A-07B5-4BF0-BE04-C3EB99F53975",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "BB481284-30DD-4383-928C-82385BBF1B17",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "32CFC834-843A-4F45-B359-8E158EAC4396",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 1,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 2,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 3,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 4,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 5,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 6,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
-        "population_index": 7,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 1,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 2,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 3,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 4,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 5,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 6,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FEEA3922-F61F-4B05-98F9-B72A11815F12",
-        "population_index": 7,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "D78CE034-8288-4012-A31E-7F485A74F2A9",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
-        "population_index": 1,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "03876D69-085B-415C-AE9D-9924171040C2",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "9A033274-3D9B-11E1-8634-00237D5BF174",
-        "population_index": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "9A033274-3D9B-11E1-8634-00237D5BF174",
-        "population_index": 1,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "9A033274-3D9B-11E1-8634-00237D5BF174",
-        "population_index": 2,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "7DC26160-E615-4CC2-879C-75985189EC1A",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "1F503318-BB8D-4B91-AF63-223AE0A2328E",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0,
-        "DENEXCEP": 0
-      },
-      {
-        "measure_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
-        "population_index": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
-        "population_index": 1,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
-        "population_index": 2,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
-        "population_index": 0,
-        "IPP": 0,
-        "DENOM": 0,
-        "DENEX": 0,
-        "NUMER": 0
-      },
-      {
-        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        "population_index": 3,
-        "STRAT": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "OBSERV": null,
-        "MSRPOPLEX": 0
-      },
-      {
-        "measure_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-        "population_index": 0,
-        "IPP": 0,
-        "MSRPOPL": 0,
-        "MSRPOPLEX": 0,
-        "OBSERV_UNIT": " mins"
-      }
-    ],
-    "notes": "14yo female; Den 32\n* 1qde\n* Pt presented to ED w principal dx of depression. ",
-    "is_shared": false,
-    "origin_data": [
-
-    ],
-    "test_id": null,
-    "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
-    "medical_record_assigner": "2.16.840.1.113883.4.572",
-    "description": "",
-    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
-    "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
-  },
   "familyName": "ED",
   "givenNames": [
     "4"
   ],
-  "qdmVersion": "5.4"
+  "notes": "14yo female; Den 32\n* 1qde\n* Pt presented to ED w principal dx of depression. ",
+  "qdmPatient": {
+    "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+    "dataElements": [
+      {
+        "admissionSource": null,
+        "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+        "dataElementCodes": [
+          {
+            "codeSystem": "SNOMED-CT",
+            "code": "4525004"
+          }
+        ],
+        "description": "Encounter, Performed: Emergency Department Visit",
+        "diagnoses": [
+          {
+            "code": "10278007",
+            "codeSystem": "SNOMED-CT",
+            "version": null,
+            "descriptor": "Psychiatric/Mental Health Diagnosis"
+          }
+        ],
+        "dischargeDisposition": null,
+        "facilityLocations": [
+
+        ],
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c180b9f57a11e3cc06c5c8d"
+        },
+        "lengthOfStay": {
+          "value": 0,
+          "unit": "days"
+        },
+        "negationRationale": null,
+        "principalDiagnosis": {
+          "code": "10278007",
+          "codeSystem": "SNOMED-CT",
+          "descriptor": "Psychiatric/Mental Health Diagnosis",
+          "codeSystemOid": null,
+          "version": null
+        },
+        "qdmCategory": "encounter",
+        "qdmStatus": "performed",
+        "qdmVersion": "5.4",
+        "relevantPeriod": {
+          "low": "2012-04-06T08:00:00.000+00:00",
+          "high": "2012-04-06T09:15:00.000+00:00",
+          "lowClosed": true,
+          "highClosed": true
+        },
+        "patient": {
+          "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "4525004"
+                }
+              ],
+              "description": "Encounter, Performed: Emergency Department Visit",
+              "diagnoses": [
+                {
+                  "code": "10278007",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Psychiatric/Mental Health Diagnosis"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180b9f57a11e3cc06c5c8d"
+              },
+              "lengthOfStay": {
+                "value": 0,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "10278007",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Psychiatric/Mental Health Diagnosis",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-04-06T08:00:00.000+00:00",
+                "high": "2012-04-06T09:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c92"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c93"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2131-1",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Other",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c94"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c95"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "measure_ids": [
+              "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+              "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+              "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+              "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+              "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+              "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+              "03876D69-085B-415C-AE9D-9924171040C2",
+              "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+              "7DC26160-E615-4CC2-879C-75985189EC1A",
+              "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+              "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+              "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+              "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+              "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+              "9A033274-3D9B-11E1-8634-00237D5BF174",
+              "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+              "EBFA203E-ACC1-4228-906C-855C4BF11310",
+              "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+              "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+              "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+              "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              "32CFC834-843A-4F45-B359-8E158EAC4396",
+              "BB481284-30DD-4383-928C-82385BBF1B17",
+              "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+              "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+              "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+              "D78CE034-8288-4012-A31E-7F485A74F2A9",
+              "7D374C6A-3821-4333-A1BC-4531005D77B8",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "EmergencyDepartmentVisit",
+                "description": "Encounter, Performed: Emergency Department Visit",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "type": "encounters",
+                "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+                "start_date": 1333699200000,
+                "end_date": 1333703700000,
+                "value": [
+
+                ],
+                "references": null,
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Psychiatric/Mental Health Diagnosis"
+                  },
+                  "ADMISSION_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Admission Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "8:00 AM",
+                    "value": 1333699200000
+                  },
+                  "DISCHARGE_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Discharge Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "9:15 AM",
+                    "value": 1333703700000
+                  }
+                },
+                "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+                "cms_id": "CMS32v8",
+                "criteria_id": "1624f0dc31cWr",
+                "codes": {
+                  "SNOMED-CT": [
+                    "4525004"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "5abbdd05aeac508c3233e01f",
+                "code_source": "DEFAULT"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": false,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
+            "medical_record_assigner": "2.16.840.1.113883.4.572",
+            "description": "",
+            "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+            "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+        "dataElementCodes": [
+          {
+            "code": "21112-8",
+            "codeSystem": "LOINC",
+            "descriptor": null,
+            "codeSystemOid": null,
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c180ba057a11e3cc06c5c92"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "birthdate",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "4525004"
+                }
+              ],
+              "description": "Encounter, Performed: Emergency Department Visit",
+              "diagnoses": [
+                {
+                  "code": "10278007",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Psychiatric/Mental Health Diagnosis"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180b9f57a11e3cc06c5c8d"
+              },
+              "lengthOfStay": {
+                "value": 0,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "10278007",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Psychiatric/Mental Health Diagnosis",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-04-06T08:00:00.000+00:00",
+                "high": "2012-04-06T09:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c92"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c93"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2131-1",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Other",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c94"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c95"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "measure_ids": [
+              "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+              "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+              "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+              "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+              "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+              "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+              "03876D69-085B-415C-AE9D-9924171040C2",
+              "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+              "7DC26160-E615-4CC2-879C-75985189EC1A",
+              "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+              "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+              "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+              "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+              "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+              "9A033274-3D9B-11E1-8634-00237D5BF174",
+              "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+              "EBFA203E-ACC1-4228-906C-855C4BF11310",
+              "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+              "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+              "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+              "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              "32CFC834-843A-4F45-B359-8E158EAC4396",
+              "BB481284-30DD-4383-928C-82385BBF1B17",
+              "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+              "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+              "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+              "D78CE034-8288-4012-A31E-7F485A74F2A9",
+              "7D374C6A-3821-4333-A1BC-4531005D77B8",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "EmergencyDepartmentVisit",
+                "description": "Encounter, Performed: Emergency Department Visit",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "type": "encounters",
+                "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+                "start_date": 1333699200000,
+                "end_date": 1333703700000,
+                "value": [
+
+                ],
+                "references": null,
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Psychiatric/Mental Health Diagnosis"
+                  },
+                  "ADMISSION_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Admission Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "8:00 AM",
+                    "value": 1333699200000
+                  },
+                  "DISCHARGE_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Discharge Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "9:15 AM",
+                    "value": 1333703700000
+                  }
+                },
+                "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+                "cms_id": "CMS32v8",
+                "criteria_id": "1624f0dc31cWr",
+                "codes": {
+                  "SNOMED-CT": [
+                    "4525004"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "5abbdd05aeac508c3233e01f",
+                "code_source": "DEFAULT"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": false,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
+            "medical_record_assigner": "2.16.840.1.113883.4.572",
+            "description": "",
+            "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+            "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "dataElementCodes": [
+          {
+            "code": "2135-2",
+            "codeSystem": "CDC Race",
+            "descriptor": "Hispanic Or Latino",
+            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c180ba057a11e3cc06c5c93"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "ethnicity",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "4525004"
+                }
+              ],
+              "description": "Encounter, Performed: Emergency Department Visit",
+              "diagnoses": [
+                {
+                  "code": "10278007",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Psychiatric/Mental Health Diagnosis"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180b9f57a11e3cc06c5c8d"
+              },
+              "lengthOfStay": {
+                "value": 0,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "10278007",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Psychiatric/Mental Health Diagnosis",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-04-06T08:00:00.000+00:00",
+                "high": "2012-04-06T09:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c92"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c93"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2131-1",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Other",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c94"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c95"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "measure_ids": [
+              "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+              "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+              "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+              "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+              "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+              "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+              "03876D69-085B-415C-AE9D-9924171040C2",
+              "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+              "7DC26160-E615-4CC2-879C-75985189EC1A",
+              "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+              "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+              "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+              "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+              "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+              "9A033274-3D9B-11E1-8634-00237D5BF174",
+              "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+              "EBFA203E-ACC1-4228-906C-855C4BF11310",
+              "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+              "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+              "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+              "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              "32CFC834-843A-4F45-B359-8E158EAC4396",
+              "BB481284-30DD-4383-928C-82385BBF1B17",
+              "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+              "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+              "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+              "D78CE034-8288-4012-A31E-7F485A74F2A9",
+              "7D374C6A-3821-4333-A1BC-4531005D77B8",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "EmergencyDepartmentVisit",
+                "description": "Encounter, Performed: Emergency Department Visit",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "type": "encounters",
+                "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+                "start_date": 1333699200000,
+                "end_date": 1333703700000,
+                "value": [
+
+                ],
+                "references": null,
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Psychiatric/Mental Health Diagnosis"
+                  },
+                  "ADMISSION_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Admission Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "8:00 AM",
+                    "value": 1333699200000
+                  },
+                  "DISCHARGE_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Discharge Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "9:15 AM",
+                    "value": 1333703700000
+                  }
+                },
+                "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+                "cms_id": "CMS32v8",
+                "criteria_id": "1624f0dc31cWr",
+                "codes": {
+                  "SNOMED-CT": [
+                    "4525004"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "5abbdd05aeac508c3233e01f",
+                "code_source": "DEFAULT"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": false,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
+            "medical_record_assigner": "2.16.840.1.113883.4.572",
+            "description": "",
+            "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+            "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "dataElementCodes": [
+          {
+            "code": "2131-1",
+            "codeSystem": "CDC Race",
+            "descriptor": "Other",
+            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c180ba057a11e3cc06c5c94"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "race",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "4525004"
+                }
+              ],
+              "description": "Encounter, Performed: Emergency Department Visit",
+              "diagnoses": [
+                {
+                  "code": "10278007",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Psychiatric/Mental Health Diagnosis"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180b9f57a11e3cc06c5c8d"
+              },
+              "lengthOfStay": {
+                "value": 0,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "10278007",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Psychiatric/Mental Health Diagnosis",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-04-06T08:00:00.000+00:00",
+                "high": "2012-04-06T09:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c92"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c93"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2131-1",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Other",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c94"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c95"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "measure_ids": [
+              "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+              "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+              "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+              "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+              "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+              "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+              "03876D69-085B-415C-AE9D-9924171040C2",
+              "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+              "7DC26160-E615-4CC2-879C-75985189EC1A",
+              "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+              "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+              "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+              "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+              "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+              "9A033274-3D9B-11E1-8634-00237D5BF174",
+              "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+              "EBFA203E-ACC1-4228-906C-855C4BF11310",
+              "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+              "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+              "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+              "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              "32CFC834-843A-4F45-B359-8E158EAC4396",
+              "BB481284-30DD-4383-928C-82385BBF1B17",
+              "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+              "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+              "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+              "D78CE034-8288-4012-A31E-7F485A74F2A9",
+              "7D374C6A-3821-4333-A1BC-4531005D77B8",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "EmergencyDepartmentVisit",
+                "description": "Encounter, Performed: Emergency Department Visit",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "type": "encounters",
+                "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+                "start_date": 1333699200000,
+                "end_date": 1333703700000,
+                "value": [
+
+                ],
+                "references": null,
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Psychiatric/Mental Health Diagnosis"
+                  },
+                  "ADMISSION_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Admission Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "8:00 AM",
+                    "value": 1333699200000
+                  },
+                  "DISCHARGE_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Discharge Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "9:15 AM",
+                    "value": 1333703700000
+                  }
+                },
+                "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+                "cms_id": "CMS32v8",
+                "criteria_id": "1624f0dc31cWr",
+                "codes": {
+                  "SNOMED-CT": [
+                    "4525004"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "5abbdd05aeac508c3233e01f",
+                "code_source": "DEFAULT"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": false,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
+            "medical_record_assigner": "2.16.840.1.113883.4.572",
+            "description": "",
+            "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+            "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
+          },
+          "qdmVersion": "5.4"
+        }
+      },
+      {
+        "dataElementCodes": [
+          {
+            "code": "F",
+            "codeSystem": "AdministrativeGender",
+            "descriptor": "F",
+            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "version": null,
+            "_type": "QDM::Code"
+          }
+        ],
+        "description": null,
+        "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+        "id": {
+          "namingSystem": null,
+          "qdmVersion": "5.4",
+          "value": "5c180ba057a11e3cc06c5c95"
+        },
+        "qdmCategory": "patient_characteristic",
+        "qdmStatus": "gender",
+        "qdmVersion": "5.4",
+        "patient": {
+          "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+          "dataElements": [
+            {
+              "admissionSource": null,
+              "authorDatetime": "2012-04-06T04:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "codeSystem": "SNOMED-CT",
+                  "code": "4525004"
+                }
+              ],
+              "description": "Encounter, Performed: Emergency Department Visit",
+              "diagnoses": [
+                {
+                  "code": "10278007",
+                  "codeSystem": "SNOMED-CT",
+                  "version": null,
+                  "descriptor": "Psychiatric/Mental Health Diagnosis"
+                }
+              ],
+              "dischargeDisposition": null,
+              "facilityLocations": [
+
+              ],
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180b9f57a11e3cc06c5c8d"
+              },
+              "lengthOfStay": {
+                "value": 0,
+                "unit": "days"
+              },
+              "negationRationale": null,
+              "principalDiagnosis": {
+                "code": "10278007",
+                "codeSystem": "SNOMED-CT",
+                "descriptor": "Psychiatric/Mental Health Diagnosis",
+                "codeSystemOid": null,
+                "version": null
+              },
+              "qdmCategory": "encounter",
+              "qdmStatus": "performed",
+              "qdmVersion": "5.4",
+              "relevantPeriod": {
+                "low": "2012-04-06T08:00:00.000+00:00",
+                "high": "2012-04-06T09:15:00.000+00:00",
+                "lowClosed": true,
+                "highClosed": true
+              }
+            },
+            {
+              "birthDatetime": "1998-10-11T10:00:00.000-04:00",
+              "dataElementCodes": [
+                {
+                  "code": "21112-8",
+                  "codeSystem": "LOINC",
+                  "descriptor": null,
+                  "codeSystemOid": null,
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c92"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "birthdate",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2135-2",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Hispanic Or Latino",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c93"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "ethnicity",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "2131-1",
+                  "codeSystem": "CDC Race",
+                  "descriptor": "Other",
+                  "codeSystemOid": "2.16.840.1.113883.6.238",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c94"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "race",
+              "qdmVersion": "5.4"
+            },
+            {
+              "dataElementCodes": [
+                {
+                  "code": "F",
+                  "codeSystem": "AdministrativeGender",
+                  "descriptor": "F",
+                  "codeSystemOid": "2.16.840.1.113883.5.1",
+                  "version": null,
+                  "_type": "QDM::Code"
+                }
+              ],
+              "description": null,
+              "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+              "id": {
+                "namingSystem": null,
+                "qdmVersion": "5.4",
+                "value": "5c180ba057a11e3cc06c5c95"
+              },
+              "qdmCategory": "patient_characteristic",
+              "qdmStatus": "gender",
+              "qdmVersion": "5.4"
+            }
+          ],
+          "extendedData": {
+            "measure_ids": [
+              "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+              "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+              "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+              "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+              "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+              "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+              "03876D69-085B-415C-AE9D-9924171040C2",
+              "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+              "7DC26160-E615-4CC2-879C-75985189EC1A",
+              "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+              "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+              "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+              "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+              "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+              "9A033274-3D9B-11E1-8634-00237D5BF174",
+              "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+              "EBFA203E-ACC1-4228-906C-855C4BF11310",
+              "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+              "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+              "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+              "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+              "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+              "32CFC834-843A-4F45-B359-8E158EAC4396",
+              "BB481284-30DD-4383-928C-82385BBF1B17",
+              "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+              "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+              "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+              "D78CE034-8288-4012-A31E-7F485A74F2A9",
+              "7D374C6A-3821-4333-A1BC-4531005D77B8",
+              null
+            ],
+            "source_data_criteria": [
+              {
+                "negation": false,
+                "definition": "encounter",
+                "status": "performed",
+                "title": "EmergencyDepartmentVisit",
+                "description": "Encounter, Performed: Emergency Department Visit",
+                "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+                "type": "encounters",
+                "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+                "start_date": 1333699200000,
+                "end_date": 1333703700000,
+                "value": [
+
+                ],
+                "references": null,
+                "field_values": {
+                  "PRINCIPAL_DIAGNOSIS": {
+                    "type": "CD",
+                    "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+                    "field_title": "Principal Diagnosis",
+                    "title": "Psychiatric/Mental Health Diagnosis"
+                  },
+                  "ADMISSION_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Admission Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "8:00 AM",
+                    "value": 1333699200000
+                  },
+                  "DISCHARGE_DATETIME": {
+                    "type": "TS",
+                    "code_list_id": "",
+                    "field_title": "Discharge Date/Time",
+                    "start_date": "04/06/2012",
+                    "start_time": "9:15 AM",
+                    "value": 1333703700000
+                  }
+                },
+                "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+                "cms_id": "CMS32v8",
+                "criteria_id": "1624f0dc31cWr",
+                "codes": {
+                  "SNOMED-CT": [
+                    "4525004"
+                  ]
+                },
+                "negation_code_list_id": "",
+                "coded_entry_id": "5abbdd05aeac508c3233e01f",
+                "code_source": "DEFAULT"
+              },
+              {
+                "id": "MeasurePeriod",
+                "start_date": 0,
+                "end_date": 0,
+                "references": null
+              }
+            ],
+            "is_shared": false,
+            "origin_data": [
+
+            ],
+            "test_id": null,
+            "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
+            "medical_record_assigner": "2.16.840.1.113883.4.572",
+            "description": "",
+            "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+            "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
+          },
+          "qdmVersion": "5.4"
+        }
+      }
+    ],
+    "extendedData": {
+      "measure_ids": [
+        "979F21BD-3F93-4CDD-8273-B23DFE9C0513",
+        "42BF391F-38A3-4C0F-9ECE-DCD47E9609D9",
+        "7FE69617-FA28-4305-A2B8-CEB6BCD9693D",
+        "93F3479F-75D8-4731-9A3F-B7749D8BCD37",
+        "E1CB05E0-97D5-40FC-B456-15C5DBF44309",
+        "6F069BB2-B3C4-4BF4-ADC5-F6DD424A10B7",
+        "03876D69-085B-415C-AE9D-9924171040C2",
+        "1F503318-BB8D-4B91-AF63-223AE0A2328E",
+        "7DC26160-E615-4CC2-879C-75985189EC1A",
+        "FD7CA18D-B56D-4BCA-AF35-71CE36B15246",
+        "BCCE43DD-08E3-46C3-BFDD-0B1B472690F0",
+        "0924FBAE-3FDB-4D0A-AAB7-9F354E699FDE",
+        "38B0B5EC-0F63-466F-8FE3-2CD20DDD1622",
+        "FA91BA68-1E66-4A23-8EB2-BAA8E6DF2F2F",
+        "9A033274-3D9B-11E1-8634-00237D5BF174",
+        "FF796FD9-F99D-41FD-B8C2-57D0A59A5D8D",
+        "EBFA203E-ACC1-4228-906C-855C4BF11310",
+        "2838875A-07B5-4BF0-BE04-C3EB99F53975",
+        "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+        "FEEA3922-F61F-4B05-98F9-B72A11815F12",
+        "D09ADD1D-30F5-462D-B677-3D17D9CCD664",
+        "217FDF0D-3D64-4720-9116-D5E5AFA27F2C",
+        "32CFC834-843A-4F45-B359-8E158EAC4396",
+        "BB481284-30DD-4383-928C-82385BBF1B17",
+        "909CF4B4-7A85-4ABF-A1C7-CB597ED1C0B6",
+        "8243EAE0-BBD7-4107-920B-FC3DB04B9584",
+        "84B9D0B5-0CAF-4E41-B345-3492A23C2E9F",
+        "D78CE034-8288-4012-A31E-7F485A74F2A9",
+        "7D374C6A-3821-4333-A1BC-4531005D77B8",
+        null
+      ],
+      "source_data_criteria": [
+        {
+          "negation": false,
+          "definition": "encounter",
+          "status": "performed",
+          "title": "EmergencyDepartmentVisit",
+          "description": "Encounter, Performed: Emergency Department Visit",
+          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
+          "type": "encounters",
+          "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
+          "start_date": 1333699200000,
+          "end_date": 1333703700000,
+          "value": [
+
+          ],
+          "references": null,
+          "field_values": {
+            "PRINCIPAL_DIAGNOSIS": {
+              "type": "CD",
+              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
+              "field_title": "Principal Diagnosis",
+              "title": "Psychiatric/Mental Health Diagnosis"
+            },
+            "ADMISSION_DATETIME": {
+              "type": "TS",
+              "code_list_id": "",
+              "field_title": "Admission Date/Time",
+              "start_date": "04/06/2012",
+              "start_time": "8:00 AM",
+              "value": 1333699200000
+            },
+            "DISCHARGE_DATETIME": {
+              "type": "TS",
+              "code_list_id": "",
+              "field_title": "Discharge Date/Time",
+              "start_date": "04/06/2012",
+              "start_time": "9:15 AM",
+              "value": 1333703700000
+            }
+          },
+          "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
+          "cms_id": "CMS32v8",
+          "criteria_id": "1624f0dc31cWr",
+          "codes": {
+            "SNOMED-CT": [
+              "4525004"
+            ]
+          },
+          "negation_code_list_id": "",
+          "coded_entry_id": "5abbdd05aeac508c3233e01f",
+          "code_source": "DEFAULT"
+        },
+        {
+          "id": "MeasurePeriod",
+          "start_date": 0,
+          "end_date": 0,
+          "references": null
+        }
+      ],
+      "is_shared": false,
+      "origin_data": [
+
+      ],
+      "test_id": null,
+      "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
+      "medical_record_assigner": "2.16.840.1.113883.4.572",
+      "description": "",
+      "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+      "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
+    },
+    "qdmVersion": "5.4"
+  }
 }

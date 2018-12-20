@@ -3,6 +3,8 @@ language: ruby
 rvm:
   - 2.4.1
   - 2.3.8
+services:
+  - mongodb
 before_install: gem install bundler
 script:
   - bundle exec rake

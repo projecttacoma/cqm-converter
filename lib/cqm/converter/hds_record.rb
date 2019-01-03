@@ -114,21 +114,26 @@ module CQM::Converter
       patient.notes = record.notes if record.respond_to?('notes')
 
       # Convert extended_data.
-      patient.qdmPatient.extendedData = {}
-      patient.qdmPatient.extendedData['type'] = record.type if record.respond_to?('type')
-      patient.qdmPatient.extendedData['measure_ids'] = record.measure_ids if record.respond_to?('measure_ids')
-      patient.qdmPatient.extendedData['source_data_criteria'] = record.source_data_criteria if record.respond_to?('source_data_criteria')
-      patient.qdmPatient.extendedData['is_shared'] = record.is_shared if record.respond_to?('is_shared')
-      patient.qdmPatient.extendedData['origin_data'] = record.origin_data if record.respond_to?('origin_data')
-      patient.qdmPatient.extendedData['test_id'] = record.test_id if record.respond_to?('test_id')
-      patient.qdmPatient.extendedData['medical_record_number'] = record.medical_record_number if record.respond_to?('medical_record_number')
-      patient.qdmPatient.extendedData['medical_record_assigner'] = record.medical_record_assigner if record.respond_to?('medical_record_assigner')
-      patient.qdmPatient.extendedData['description'] = record.description if record.respond_to?('description')
-      patient.qdmPatient.extendedData['description_category'] = record.description_category if record.respond_to?('description_category')
-      patient.qdmPatient.extendedData['insurance_providers'] = record.insurance_providers.to_json(except: '_id') if record.respond_to?('insurance_providers')
-      patient.qdmPatient.extendedData['provider_performances'] = record.provider_performances.to_json(except: '_id') unless record.provider_performances.empty?
+      patient.qdmPatient.extendedData = convert_extended_data(record)
 
       patient
+    end
+
+    def convert_extended_data(record)
+      extended_data = {}
+      extended_data['type'] = record.type if record.respond_to?('type')
+      extended_data['measure_ids'] = record.measure_ids if record.respond_to?('measure_ids')
+      extended_data['source_data_criteria'] = record.source_data_criteria if record.respond_to?('source_data_criteria')
+      extended_data['is_shared'] = record.is_shared if record.respond_to?('is_shared')
+      extended_data['origin_data'] = record.origin_data if record.respond_to?('origin_data')
+      extended_data['test_id'] = record.test_id if record.respond_to?('test_id')
+      extended_data['medical_record_number'] = record.medical_record_number if record.respond_to?('medical_record_number')
+      extended_data['medical_record_assigner'] = record.medical_record_assigner if record.respond_to?('medical_record_assigner')
+      extended_data['description'] = record.description if record.respond_to?('description')
+      extended_data['description_category'] = record.description_category if record.respond_to?('description_category')
+      extended_data['insurance_providers'] = record.insurance_providers.to_json(except: '_id') if record.respond_to?('insurance_providers')
+      extended_data['provider_performances'] = record.provider_performances.to_json(except: '_id') unless record.provider_performances.empty?
+      extended_data
     end
 
     def generate_qdm_data_element(dc_fixed_keys, dc_type)

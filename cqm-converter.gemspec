@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'byebug'
   spec.add_runtime_dependency 'coffee-script'
-  #spec.add_runtime_dependency 'cqm-models', '>= 1.0.2'
+  # spec.add_runtime_dependency 'cqm-models', '>= 1.0.2'
   spec.add_runtime_dependency 'execjs'
   spec.add_runtime_dependency 'health-data-standards', '>= 4.3.2'
   spec.add_runtime_dependency 'momentjs-rails'

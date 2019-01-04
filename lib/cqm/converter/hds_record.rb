@@ -43,7 +43,7 @@ module CQM::Converter
 
     def to_qdm(record)
       # Start with a new QDM patient.
-      qdmPatient = QDM::Patient.new
+      qdm_patient = QDM::Patient.new
 
       # Build and execute JavaScript that will create a 'CQL_QDM.Patient'
       # JavaScript version of the HDS record. Specifically, we will use
@@ -66,7 +66,7 @@ module CQM::Converter
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? :codeSystem : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? :descriptor : key }
 
-          qdmPatient.dataElements << generate_qdm_data_element(dc_fixed_keys, dc_type)
+          qdm_patient.dataElements << generate_qdm_data_element(dc_fixed_keys, dc_type)
         end
       end
 
@@ -75,7 +75,7 @@ module CQM::Converter
       if birthdate
         birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
         code = QDM::Code.new('21112-8', 'LOINC')
-        qdmPatient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
+        qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
       end
 
       # Convert patient characteristic clinical trial participant.
@@ -92,7 +92,7 @@ module CQM::Converter
         # Same change is present in `race` below.
         code = QDM::Code.new(ethnicity['code'], 'CDC Race', ethnicity['name'], '2.16.840.1.113883.6.238')
         # code = QDM::Code.new(ethnicity['code'], 'cdcrec', ethnicity['name'], '2.16.840.1.113883.6.238')
-        qdmPatient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code])
+        qdm_patient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code])
       end
 
       # Convert patient characteristic expired.
@@ -100,7 +100,7 @@ module CQM::Converter
       if expired
         expired_datetime = DateTime.strptime(expired.to_s, '%s')
         code = QDM::Code.new('419099009', 'SNOMED-CT')
-        qdmPatient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
+        qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
       end
 
       # Convert patient characteristic race.
@@ -109,7 +109,7 @@ module CQM::Converter
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
         code = QDM::Code.new(race['code'], 'CDC Race', race['name'], '2.16.840.1.113883.6.238')
         # code = QDM::Code.new(race['code'], 'cdcrec', race['name'], '2.16.840.1.113883.6.238')
-        qdmPatient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code])
+        qdm_patient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code])
       end
 
       # Convert patient characteristic sex.
@@ -117,15 +117,15 @@ module CQM::Converter
       if sex
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.5.1
         code = QDM::Code.new(sex, 'AdministrativeGender', sex, '2.16.840.1.113883.5.1')
-        qdmPatient.dataElements << QDM::PatientCharacteristicSex.new(dataElementCodes: [code])
+        qdm_patient.dataElements << QDM::PatientCharacteristicSex.new(dataElementCodes: [code])
       end
 
       # Convert remaining metadata.
-      qdmPatient.birthDatetime = DateTime.strptime(record.birthdate.to_s, '%s') if record.birthdate
+      qdm_patient.birthDatetime = DateTime.strptime(record.birthdate.to_s, '%s') if record.birthdate
       # Convert extended_data.
-      qdmPatient.extendedData = convert_extended_data(record)
+      qdm_patient.extendedData = convert_extended_data(record)
 
-      qdmPatient
+      qdm_patient
     end
 
     def convert_extended_data(record)

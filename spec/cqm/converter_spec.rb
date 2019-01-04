@@ -24,7 +24,7 @@ RSpec.describe CQM::Converter do
       # Read in fixture as an HDS Record.
       hds_record1 = Record.new.from_json(File.read(record_path))
       # Convert the HDS Record to a QDM Patient.
-      cqm_record = @hds_record_converter.to_qdm(hds_record1)
+      cqm_record = @hds_record_converter.to_cqm(hds_record1)
       # Convert the QDM Patient back to an HDS Record.
       hds_record2 = @qdm_record_converter.to_hds(cqm_record)
       hds_record2_json = ignore_irrelavant_fields(JSON.parse(hds_record2.to_json(except: '_id', methods: :_type).to_s)).clean_hash

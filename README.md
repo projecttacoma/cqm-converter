@@ -33,7 +33,7 @@ hds_record_converter = CQM::Converter::HDSRecord.new
 hds_record = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/1.json')))
 
 # Convert the HDS Record into a QDM Patient.
-qdm_patient = hds_record_converter.to_qdm(hds_record)
+qdm_patient = hds_record_converter.to_cqm(hds_record)
 ```
 
 ### Rake Task Conversion
@@ -44,7 +44,7 @@ __Note__: This rake task is not intended for anything other than experimentation
 
 Example:
 ```
-bundle exec rake cqm:hds:to_qdm RECORD=spec/fixtures/hds/records/eh/1.json
+bundle exec rake cqm:hds:to_cqm RECORD=spec/fixtures/hds/records/eh/1.json
 ```
 
 ## HDS Record <= QDM Patient

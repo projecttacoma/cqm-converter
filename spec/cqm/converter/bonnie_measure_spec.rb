@@ -183,6 +183,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     # check observation
     expect(population_set.observations.size).to eq(1)
     expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
+    expect(population_set.observations[0].observation_parameter.statement_name).to eq('Measure Population')
 
     # check valuesets
     expect(cqm_measure.value_sets.size).to eq(hds_value_sets.size)
@@ -296,6 +297,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     # check observation
     expect(population_set.observations.size).to eq(1)
     expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
+    expect(population_set.observations[0].observation_parameter.statement_name).to eq('Measure Population')
     # check SDEs
     expect(population_set.supplemental_data_elements.map(&:statement_name)).to eq(
       [

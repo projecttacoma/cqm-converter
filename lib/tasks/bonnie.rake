@@ -28,7 +28,7 @@ namespace :cqm do
 
       # load HDS valuesets if they are provided
       if ENV.key?('VALUESETS')
-        hds_value_sets = JSON.parse(File.read('spec/fixtures/hds/valuesets/core_measures/CMS32v7.json')).map do |vs_json|
+        hds_value_sets = JSON.parse(File.read(ENV['VALUESETS'])).map do |vs_json|
           HealthDataStandards::SVS::ValueSet.new(vs_json)
         end
         hds_value_sets.each(&:save)

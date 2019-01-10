@@ -1,3 +1,4 @@
+# placeholder class needed for bonnie measure model
 class User
   include Mongoid::Document
 end
@@ -15,9 +16,10 @@ namespace :cqm do
     You must specify an input bonnie measure JSON file. The result will be
     output to STDOUT unless an output file is specified.
 
-    Value sets can also be converted by pointing to a JSON file with the HDS value sets in an array. 
+    Value sets can also be converted by pointing to a JSON file with the HDS value sets in an array.
 
-    $ rake cqm:bonnie:to_cqm MEASURE=spec/fixtures/bonnie/CMS999v9.json VALUESETS=spec/fixtures/hds/valuesets/CMS999v9.json MEASURE_OUT=spec/fixtures/cqm/measure/CMS999v9.json VALUESETS_OUT=spec/fixutres/cqm/valuesets/CMS999v9.json)
+    $ rake cqm:bonnie:to_cqm MEASURE=spec/fixtures/bonnie/CMS999v9.json VALUESETS=spec/fixtures/hds/valuesets/CMS999v9.json\
+      MEASURE_OUT=spec/fixtures/cqm/measure/CMS999v9.json VALUESETS_OUT=spec/fixutres/cqm/valuesets/CMS999v9.json)
     task :to_cqm do
       dump_db
       # load bonnie measure
@@ -44,8 +46,8 @@ namespace :cqm do
       end
 
       # if value set output is defined, export if there are valuesets
-      if ENV.key?('VALUESETS_OUT') & (cqm_measure.value_sets.size > 0)
-        File.write(ENV['VALUESETS_OUT'], JSON.pretty_generate(JSON.parse(cqm_measure.value_sets.to_json())))
+      if ENV.key?('VALUESETS_OUT') && !cqm_measure.value_sets.empty?
+        File.write(ENV['VALUESETS_OUT'], JSON.pretty_generate(JSON.parse(cqm_measure.value_sets.to_json)))
       end
     end
   end

@@ -106,19 +106,21 @@ module CQM::Converter
       end
 
       # add observation info
-      bonnie_measure.observations.each do |bonnie_observation|
-        observation = CQM::Observation.new(
-          observation_function: CQM::StatementReference.new(
-            library_name: cqm_measure.main_cql_library,
-            statement_name: bonnie_observation['function_name']
-          ),
-          observation_parameter: CQM::StatementReference.new(
-            library_name: cqm_measure.main_cql_library,
-            statement_name: bonnie_observation['parameter']
+      unless bonnie_measure.observations.nil?
+        bonnie_measure.observations.each do |bonnie_observation|
+          observation = CQM::Observation.new(
+            observation_function: CQM::StatementReference.new(
+              library_name: cqm_measure.main_cql_library,
+              statement_name: bonnie_observation['function_name']
+            ),
+            observation_parameter: CQM::StatementReference.new(
+              library_name: cqm_measure.main_cql_library,
+              statement_name: bonnie_observation['parameter']
+            )
           )
-        )
-        # add observation to each population set
-        cqm_measure.population_sets.each { |population_set| population_set.observations << observation }
+          # add observation to each population set
+          cqm_measure.population_sets.each { |population_set| population_set.observations << observation }
+        end
       end
 
       # composite measure fields

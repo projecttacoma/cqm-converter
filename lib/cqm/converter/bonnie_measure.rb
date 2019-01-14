@@ -61,7 +61,7 @@ module CQM::Converter
 
         population_set = CQM::PopulationSet.new(
           title: bonnie_population['title'],
-          id: bonnie_population['id']
+          population_set_id: bonnie_population['id']
         )
 
         # construct the population map and fill it
@@ -97,7 +97,7 @@ module CQM::Converter
 
         cqm_measure.population_sets[bonnie_stratification['population_index']].stratifications << CQM::Stratification.new(
           title: bonnie_stratification['title'],
-          id: bonnie_stratification['id'],
+          stratification_id: bonnie_stratification['id'],
           statement: CQM::StatementReference.new(
             library_name: cqm_measure.main_cql_library,
             statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, bonnie_stratification['STRAT'])

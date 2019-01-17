@@ -12,7 +12,7 @@ RSpec.describe CQM::Converter::HDSRecord do
 
     # specifically check the id of the encounter is turned into a QDM.Id
     expect(cqm_eh_id_test.qdmPatient.dataElements.first.id.value).to eq(hds_eh_id_test.encounters.first._id.to_s)
-    cqm_eh_id_test_json = JSON.parse(to_utc(cqm_eh_id_test.to_json(except: '_id').to_s)).clean_hash
+    cqm_eh_id_test_json = JSON.parse(to_utc(cqm_eh_id_test.qdmPatient.to_json(except: '_id').to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/id_test.json'))).clean_hash
     expect(cqm_eh_id_test_json).to eq(fixture)
   end
@@ -42,7 +42,7 @@ RSpec.describe CQM::Converter::HDSRecord do
     # There are some 'id' fields that are an example of data loss between hds to
     # the qdm based on the model info file.  We test the 'id's that should persist above, so
     # can ignore them in these tests rather than updating them all.
-    cqm_eh1_json = JSON.parse(to_utc(cqm_eh1.to_json(except: ['_id', 'id']).to_s)).clean_hash
+    cqm_eh1_json = JSON.parse(to_utc(cqm_eh1.qdmPatient.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/1.json')))
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
     expect(cqm_eh1_json).to eq(fixture)
@@ -51,7 +51,7 @@ RSpec.describe CQM::Converter::HDSRecord do
   it 'converts HDS EH 2 to QDM EH 2 properly' do
     hds_eh2 = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/2.json'))
     cqm_eh2 = @hds_record_converter.to_cqm(hds_eh2)
-    cqm_eh2_json = JSON.parse(to_utc(cqm_eh2.to_json(except: ['_id', 'id']).to_s)).clean_hash
+    cqm_eh2_json = JSON.parse(to_utc(cqm_eh2.qdmPatient.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/2.json'))).clean_hash
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
     expect(cqm_eh2_json).to eq(fixture)
@@ -60,7 +60,7 @@ RSpec.describe CQM::Converter::HDSRecord do
   it 'converts HDS EH 3 to QDM EH 3 properly' do
     hds_eh3 = Record.new.from_json(File.read('spec/fixtures/hds/records/eh/3.json'))
     cqm_eh3 = @hds_record_converter.to_cqm(hds_eh3)
-    cqm_eh3_json = JSON.parse(to_utc(cqm_eh3.to_json(except: ['_id', 'id']).to_s)).clean_hash
+    cqm_eh3_json = JSON.parse(to_utc(cqm_eh3.qdmPatient.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/3.json'))).clean_hash
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
     expect(cqm_eh3_json).to eq(fixture)

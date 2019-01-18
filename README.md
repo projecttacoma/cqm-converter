@@ -38,7 +38,7 @@ qdm_patient = hds_record_converter.to_cqm(hds_record)
 
 ### Rake Task Conversion
 
-Also included is a rake task to do this conversion. Just point it to a JSON file containing an HDS `Record`, and it will output the corresponding QDM `Patient` JSON to STDOUT.
+Also included is a rake task to do this conversion. Just point it to a JSON file containing an HDS `Record`, and it will output the corresponding CQM `Patient` JSON to STDOUT.
 
 __Note__: This rake task is not intended for anything other than experimentation. Any serious use of this library should be programmatic.
 

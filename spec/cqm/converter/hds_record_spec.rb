@@ -79,7 +79,7 @@ RSpec.describe CQM::Converter::HDSRecord do
     expect(hds_element).to eq(qdm_element)
     hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::EncounterPerformed' }
     qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::EncounterPerformed' }
-    expect(hds_element).to eq(qdm_element)
+    expect(hds_element.count).to eq(qdm_element.count)
     hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::EncounterOrder' }
     qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::EncounterOrder' }
     expect(hds_element).to eq(qdm_element)

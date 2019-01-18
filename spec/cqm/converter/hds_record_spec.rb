@@ -55,16 +55,40 @@ RSpec.describe CQM::Converter::HDSRecord do
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/2.json'))).clean_hash
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
 
-    expect(qdm_eh2_json["birthDatetime"]).to eq(fixture["birthDatetime"])
-    expect(qdm_eh2_json["qdmVersion"]).to eq(fixture["qdmVersion"])
+    expect(qdm_eh2_json['birthDatetime']).to eq(fixture['birthDatetime'])
+    expect(qdm_eh2_json['qdmVersion']).to eq(fixture['qdmVersion'])
 
-    hdq_dataElements = qdm_eh2_json["dataElements"].sort_by{ |element| element['qdmCategory'].to_i }
-    qdm_dataElements = fixture["dataElements"].sort_by{ |element| element['qdmCategory'].to_i }
-    expect(hdq_dataElements.count).to eq(qdm_dataElements.count)
-    expect(hdq_dataElements).to eq(qdm_dataElements)
+    hds_dataElements = qdm_eh2_json['dataElements']
+    qdm_dataElements = fixture['dataElements']
+    expect(hds_dataElements.count).to eq(qdm_dataElements.count)
 
-    expect(qdm_eh2_json["extendedData"].count).to eq(fixture["extendedData"].count)
-    expect(qdm_eh2_json["extendedData"]).to eq(fixture["extendedData"])
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicBirthdate' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicBirthdate' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::LaboratoryTestPerformed' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::LaboratoryTestPerformed' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicSex' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicSex' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicEthnicity' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicEthnicity' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicRace' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::PatientCharacteristicRace' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::EncounterPerformed' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::EncounterPerformed' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::EncounterOrder' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::EncounterOrder' }
+    expect(hds_element).to eq(qdm_element)
+    hds_element = hds_dataElements.select { |e| e['_type'] == 'QDM::Diagnosis' }
+    qdm_element = qdm_dataElements.select { |e| e['_type'] == 'QDM::Diagnosis' }
+    expect(hds_element).to eq(qdm_element)
+
+    expect(qdm_eh2_json['extendedData'].count).to eq(fixture['extendedData'].count)
+    expect(qdm_eh2_json['extendedData']).to eq(fixture['extendedData'])
   end
 
   it 'converts HDS EH 3 to QDM EH 3 properly' do

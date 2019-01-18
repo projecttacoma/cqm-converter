@@ -1,15 +1,14 @@
 {
   "birthDatetime": null,
-  "bundleId": null,
   "dataElements": [
     {
+      "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
-      "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-      "qdmCategory": "encounter",
+      "authorDatetime": "2012-04-06T08:00:00+00:00",
       "dataElementCodes": [
         {
-          "codeSystem": "SNOMED-CT",
-          "code": "4525004"
+          "code": "4525004",
+          "codeSystem": "SNOMED-CT"
         }
       ],
       "description": "Encounter, Performed: Emergency Department Visit",
@@ -17,8 +16,8 @@
         {
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
-          "version": null,
-          "descriptor": "Psychiatric/Mental Health Diagnosis"
+          "descriptor": "Psychiatric/Mental Health Diagnosis",
+          "version": null
         }
       ],
       "dischargeDisposition": null,
@@ -26,32 +25,32 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
-      "lengthOfStay": {
-        "value": 0,
-        "unit": "days"
-      },
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
         "value": "5abbdd05aeac508c3233e01f"
       },
+      "lengthOfStay": {
+        "unit": "days",
+        "value": 0
+      },
       "negationRationale": null,
       "principalDiagnosis": {
         "code": "10278007",
         "codeSystem": "SNOMED-CT",
-        "descriptor": "Psychiatric/Mental Health Diagnosis",
         "codeSystemOid": null,
+        "descriptor": "Psychiatric/Mental Health Diagnosis",
         "version": null
       },
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
-        "low": "2012-04-06T08:00:00.000+00:00",
-        "high": "2012-04-06T09:15:00.000+00:00",
-        "lowClosed": true,
-        "highClosed": true
-      },
-      "_type": "QDM::EncounterPerformed"
+        "high": "2012-04-06T09:15:00+00:00",
+        "highClosed": true,
+        "low": "2012-04-06T08:00:00+00:00",
+        "lowClosed": true
+      }
     }
   ],
   "extendedData": {
@@ -60,7 +59,5 @@
     "medical_record_number": null,
     "test_id": null
   },
-  "familyName": null,
-  "givenNames": [],
   "qdmVersion": "5.4"
 }

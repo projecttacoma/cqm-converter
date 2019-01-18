@@ -19,8 +19,21 @@ module CQM::Converter
       )
     end
 
-    def self.list_to_cqm(hds_value_sets)
-      hds_value_sets.map { |hds_value_set| to_cqm(hds_value_set) }
+    def self.list_to_cqm(hds_value_sets, value_set_oid_version_objects)
+      value_set_versions = Hash.new
+      value_sets = []
+      value_set_oid_version_objects.each do |vs|
+        if (vs["version" == "N/A"])
+          vs["version"] = ""
+        end
+        value_set_versions[vs["oid"]] = vs["version"]
+      end
+      hds_value_sets.each { |hds_value_set|
+        if (hds_value_set.version == value_set_versions[hds_value_set.oid])
+          value_sets.push(to_cqm(hds_value_set))
+        end
+      }
+      return value_sets
     end
   end
 end

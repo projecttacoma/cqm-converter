@@ -134,7 +134,7 @@ module CQM::Converter
 
       # value sets if they exist
       unless bonnie_measure.value_sets.empty?
-        cqm_measure.value_sets = CQM::Converter::HDSValueSet.list_to_cqm(bonnie_measure.value_sets)
+        cqm_measure.value_sets = CQM::Converter::HDSValueSet.list_to_cqm(bonnie_measure.value_sets, bonnie_measure.value_set_oid_version_objects)
       end
 
       cqm_measure
@@ -143,7 +143,7 @@ module CQM::Converter
     # convert bonnie measure and provide value sets to convert and attach to measure
     def self.measure_and_valuesets_to_cqm(bonnie_measure, hds_valuesets)
       cqm_measure = to_cqm(bonnie_measure)
-      cqm_valuesets = CQM::Converter::HDSValueSet.list_to_cqm(hds_valuesets)
+      cqm_valuesets = CQM::Converter::HDSValueSet.list_to_cqm(hds_valuesets, bonnie_measure.value_set_oid_version_objects)
       cqm_measure.value_sets = cqm_valuesets
       cqm_measure
     end

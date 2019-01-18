@@ -116,7 +116,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     cqm_measure = CQM::Converter::BonnieMeasure.to_cqm(bonnie_measure)
     # check valuesets
-    expect(cqm_measure.value_sets.size).to eq(hds_value_sets.size)
+    expect(cqm_measure.value_sets.size).to eq(bonnie_measure.value_set_oid_version_objects.size)
   end
 
   it 'converts continuous variable episode measure and valuesets with single population set and three stratifications' do
@@ -186,7 +186,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.observations[0].observation_parameter.statement_name).to eq('Measure Population')
 
     # check valuesets
-    expect(cqm_measure.value_sets.size).to eq(hds_value_sets.size)
+    expect(cqm_measure.value_sets.size).to eq(bonnie_measure.value_set_oid_version_objects.size)
   end
 
   it 'converts episode of care measure with single population set' do

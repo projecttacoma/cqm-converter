@@ -252,9 +252,13 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(cqm_measure.measure_scoring).to eq('CONTINUOUS_VARIABLE')
     expect(cqm_measure.calculation_method).to eq('PATIENT')
 
-    expect(cqm_measure.cql_libraries.size).to eq(20)
+    # duplicate libraries should be removed
+    expect(cqm_measure.cql_libraries.size).to eq(11)
     expect(cqm_measure.cql_libraries.select(&:is_main_library).size).to eq(1)
-    expect(cqm_measure.cql_libraries.reject(&:is_main_library).size).to eq(19)
+    expect(cqm_measure.cql_libraries.reject(&:is_main_library).size).to eq(10)
+
+    # library order should match order of cql_statement_dependencies
+    expect(cqm_measure.cql_libraries.collect(&:library_name)).to eq(bonnie_measure.cql_statement_dependencies.keys)
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('AWATestComposite')

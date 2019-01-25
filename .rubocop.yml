@@ -37,7 +37,7 @@ Metrics/ModuleLength:
   Max: 150
 
 Metrics/MethodLength:
-  Max: 97
+  Max: 101
 
 Style/IfUnlessModifier:
   Enabled: false

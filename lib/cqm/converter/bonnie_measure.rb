@@ -20,32 +20,39 @@ module CQM::Converter
       cqm_measure.measure_scoring = bonnie_measure.continuous_variable ? 'CONTINUOUS_VARIABLE' : 'PROPORTION'
       cqm_measure.calculation_method = bonnie_measure.episode_of_care ? 'EPISODE_OF_CARE' : 'PATIENT'
 
-      # cql_libraries
-      bonnie_measure.elm.each_with_index do |elm, elm_index|
-        cql_library = CQM::CQLLibrary.new(
-          library_name: elm['library']['identifier']['id'],
-          library_version: elm['library']['identifier']['version'],
-          elm: elm,
-          cql: bonnie_measure.cql[elm_index]
-        )
-        # if this is the main library, then mark it
-        if elm['library']['identifier']['id'] == cqm_measure.main_cql_library
-          cql_library.is_main_library = true
-        end
+      # cql_libraries. the order we need to match is of cql_statement_dependencies
+      bonnie_measure.cql_statement_dependencies.keys.each do |library_name|
+        # find the elm for this library
+        bonnie_measure.elm.each_with_index do |elm, elm_index|
+          # skip if this is not the library we are looking for
+          next unless elm['library']['identifier']['id'] == library_name
 
-        cql_library.elm_annotations = bonnie_measure.elm_annotations[cql_library.library_name]
-
-        # convert statement dependencies to new form
-        bonnie_measure.cql_statement_dependencies[cql_library.library_name].each do |statement_name, dependencies|
-          statement_dependency = CQM::StatementDependency.new(statement_name: statement_name)
-          # TODO: consider removing duplicates
-          statement_dependency.statement_references = dependencies.map do |dependency|
-            CQM::StatementReference.new(library_name: dependency['library_name'], statement_name: dependency['statement_name'])
+          cql_library = CQM::CQLLibrary.new(
+            library_name: elm['library']['identifier']['id'],
+            library_version: elm['library']['identifier']['version'],
+            elm: elm,
+            cql: bonnie_measure.cql[elm_index]
+          )
+          # if this is the main library, then mark it
+          if elm['library']['identifier']['id'] == cqm_measure.main_cql_library
+            cql_library.is_main_library = true
           end
-          cql_library.statement_dependencies << statement_dependency
-        end
 
-        cqm_measure.cql_libraries << cql_library
+          cql_library.elm_annotations = bonnie_measure.elm_annotations[cql_library.library_name]
+
+          # convert statement dependencies to new form
+          bonnie_measure.cql_statement_dependencies[cql_library.library_name].each do |statement_name, dependencies|
+            statement_dependency = CQM::StatementDependency.new(statement_name: statement_name)
+            # TODO: consider removing duplicates
+            statement_dependency.statement_references = dependencies.map do |dependency|
+              CQM::StatementReference.new(library_name: dependency['library_name'], statement_name: dependency['statement_name'])
+            end
+            cql_library.statement_dependencies << statement_dependency
+          end
+
+          cqm_measure.cql_libraries << cql_library
+          break
+        end
       end
 
       cqm_measure.population_criteria = bonnie_measure.population_criteria

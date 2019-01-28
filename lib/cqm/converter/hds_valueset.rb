@@ -29,7 +29,7 @@ module CQM::Converter
         value_set_versions[vs['oid']] = vs['version']
       end
       hds_value_sets.each do |hds_value_set|
-        if hds_value_set.version == value_set_versions[hds_value_set.oid]
+        if hds_value_set.version == value_set_versions[hds_value_set.oid] || value_set_versions[hds_value_set.oid] == ''
           value_sets.push(to_cqm(hds_value_set))
         end
       end

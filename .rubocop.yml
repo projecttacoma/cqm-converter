@@ -24,9 +24,6 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Max: 30
 
-Metrics/MethodLength:
-  Max: 50
-
 Style/WordArray:
   Enabled: false
 
@@ -36,8 +33,11 @@ Style/FrozenStringLiteralComment:
 Metrics/ClassLength:
   Max: 250
 
+Metrics/ModuleLength:
+  Max: 150
+
 Metrics/MethodLength:
-  Max: 60
+  Max: 101
 
 Style/IfUnlessModifier:
   Enabled: false

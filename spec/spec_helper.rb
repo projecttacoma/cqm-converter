@@ -1,6 +1,14 @@
+require_relative './simplecov_init'
 require 'bundler/setup'
 require 'cqm/converter'
 require 'json'
+
+class User
+  include Mongoid::Document
+end
+
+Mongoid.load!('config/mongoid.yml', :test)
+Mongo::Logger.logger.level = Logger::FATAL
 
 RSpec.configure do |config|
   # Disable RSpec exposing methods globally on `Module` and `main`.
@@ -9,6 +17,10 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+def dump_database
+  Mongoid.client(:default).database.drop
 end
 
 # Forces serialized models to use UTC for date and times. This is used for comparing date

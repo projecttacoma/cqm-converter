@@ -19,14 +19,14 @@ RSpec.describe CQM::Converter do
     expect(@converter_classes).to include(:HDSRecord)
   end
 
-  xit 'Successfully converts all HDS records to QDM records and back (roundtrip)' do
+  xit 'Successfully converts all HDS records to CQM patients and back (roundtrip)' do
     Dir.glob('spec/fixtures/roundtrip/*.json').each do |record_path|
       # Read in fixture as an HDS Record.
       hds_record1 = Record.new.from_json(File.read(record_path))
-      # Convert the HDS Record to a QDM Patient.
-      qdm_record = @hds_record_converter.to_qdm(hds_record1)
-      # Convert the QDM Patient back to an HDS Record.
-      hds_record2 = @qdm_record_converter.to_hds(qdm_record)
+      # Convert the HDS Record to a CQM Patient.
+      cqm_patient = @hds_record_converter.to_cqm(hds_record1)
+      # Convert the CQM Patient back to an HDS Record.
+      hds_record2 = @qdm_record_converter.to_hds(cqm_patient)
       hds_record2_json = ignore_irrelavant_fields(JSON.parse(hds_record2.to_json(except: '_id', methods: :_type).to_s)).clean_hash
       fixture = ignore_irrelavant_fields(JSON.parse(File.read(record_path))).clean_hash
       # Make sure the HDS records are equivalent.

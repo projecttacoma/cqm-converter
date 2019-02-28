@@ -98,7 +98,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.populations.DENEX.statement_name).to eq('Denominator Exclusion 1')
     expect(population_set.populations.DENEX.hqmf_id).to eq('08821615-9B0E-4C1C-AE75-63807597A68E')
 
-
     population_set = cqm_measure.population_sets[1]
     expect(population_set.population_set_id).to eq('PopulationCriteria2')
     expect(population_set.title).to eq('Population Criteria Section 2')

@@ -36,8 +36,13 @@ namespace :cqm do
         else
           hds_value_sets = []
           value_set_fixtures.each_pair do |_, versions|
-            versions.each_pair do |_, vs_json|
-              hds_value_sets << HealthDataStandards::SVS::ValueSet.new(vs_json)
+            # if there is a _id then this level is a actually a valueset fixture
+            if versions.key?('_id')
+              hds_value_sets << HealthDataStandards::SVS::ValueSet.new(versions)
+            else
+              versions.each_pair do |_, vs_json|
+                hds_value_sets << HealthDataStandards::SVS::ValueSet.new(vs_json)
+              end
             end
           end
         end

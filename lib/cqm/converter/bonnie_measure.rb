@@ -144,7 +144,7 @@ module CQM::Converter
       observations = []
       bonnie_measure&.observations&.each_with_index do |bonnie_observation, observation_index|
         # if this happens to be a multiple observation measure _this is unlikely_ we need to make a key to grab the proper hqmf_id
-        observation_population_key = observation_index.positive? ? "OBSERV_#{observation_index - 1}" : 'OBSERV'
+        observation_population_key = observation_index.positive? ? "OBSERV_#{observation_index}" : 'OBSERV'
         observation_hqmf_id = bonnie_measure.population_criteria[observation_population_key]['hqmf_id']
 
         observations << CQM::Observation.new(

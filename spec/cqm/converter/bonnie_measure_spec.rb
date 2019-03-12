@@ -45,6 +45,9 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section')
     expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
+    expect(population_set.populations.IPP.hqmf_id).to eq('6CD39B4B-16E6-4FD4-9241-527F9F4A48D0')
+    expect(population_set.populations.DENOM.statement_name).to eq('Denominator')
+    expect(population_set.populations.DENOM.hqmf_id).to eq('B735F4BD-DFAE-45E3-BAA9-E09BDF731B8E')
   end
 
   it 'converts proportion measure with three population sets' do
@@ -91,18 +94,27 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section 1')
     expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population 1')
+    expect(population_set.populations.IPP.hqmf_id).to eq('E5CAD3E0-2CF4-4F7D-B0CB-84CEA6BC44AB')
+    expect(population_set.populations.DENEX.statement_name).to eq('Denominator Exclusion 1')
+    expect(population_set.populations.DENEX.hqmf_id).to eq('08821615-9B0E-4C1C-AE75-63807597A68E')
 
     population_set = cqm_measure.population_sets[1]
     expect(population_set.population_set_id).to eq('PopulationCriteria2')
     expect(population_set.title).to eq('Population Criteria Section 2')
     expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect(population_set.populations.IPP.statement_name).to eq('Initial Population 2')
+    expect(population_set.populations.IPP.hqmf_id).to eq('6D6BC9D7-1492-412C-A076-EC0A6DFEFC4C')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator 2')
+    expect(population_set.populations.DENOM.hqmf_id).to eq('70D8CAA3-4182-41C0-9A73-335396BB6764')
 
     population_set = cqm_measure.population_sets[2]
     expect(population_set.population_set_id).to eq('PopulationCriteria3')
     expect(population_set.title).to eq('Population Criteria Section 3')
     expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect(population_set.populations.DENOM.statement_name).to eq('Denominator 3')
+    expect(population_set.populations.DENOM.hqmf_id).to eq('1EE7E1F6-E10A-4BE0-93C5-EED14D088023')
     expect(population_set.populations.NUMER.statement_name).to eq('Numerator 3')
+    expect(population_set.populations.NUMER.hqmf_id).to eq('4C5B11DD-040D-460D-B6F6-57D440BE7B36')
   end
 
   it 'converts continuous variable episode measure and valuesets using bonnie measure.value_sets getter' do
@@ -167,24 +179,35 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section')
     expect(population_set.populations).to be_instance_of(CQM::ContinuousVariablePopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
+    expect(population_set.populations.IPP.hqmf_id).to eq('036B7EEE-DEB5-40E2-B802-BC6CDF2B8A43')
     expect(population_set.populations.MSRPOPL.statement_name).to eq('Measure Population')
+    expect(population_set.populations.MSRPOPL.hqmf_id).to eq('4A80FF43-6FC1-4975-806B-4FD40C7C4B95')
     expect(population_set.populations.MSRPOPLEX.statement_name).to eq('Measure Population Exclusions')
+    expect(population_set.populations.MSRPOPLEX.hqmf_id).to eq('34607208-5E04-4BC6-94E4-F3168609640E')
     # check stratifications
     expect(population_set.stratifications.size).to eq(3)
     expect(population_set.stratifications[0].stratification_id).to eq('PopulationCriteria1 - Stratification 1')
     expect(population_set.stratifications[0].title).to eq('Stratification 1')
+    expect(population_set.stratifications[0].hqmf_id).to eq('041A37F6-86D3-471F-86DD-12FB668092BD')
     expect(population_set.stratifications[0].statement.statement_name).to eq('Stratification 1')
+    expect(population_set.stratifications[0].statement.hqmf_id).to eq('041A37F6-86D3-471F-86DD-12FB668092BD')
     expect(population_set.stratifications[1].stratification_id).to eq('PopulationCriteria1 - Stratification 2')
     expect(population_set.stratifications[1].title).to eq('Stratification 2')
+    expect(population_set.stratifications[1].hqmf_id).to eq('7846CD9A-9B68-4C2C-9CFB-0E52777D9EEA')
     expect(population_set.stratifications[1].statement.statement_name).to eq('Stratification 2')
+    expect(population_set.stratifications[1].statement.hqmf_id).to eq('7846CD9A-9B68-4C2C-9CFB-0E52777D9EEA')
     expect(population_set.stratifications[2].stratification_id).to eq('PopulationCriteria1 - Stratification 3')
     expect(population_set.stratifications[2].title).to eq('Stratification 3')
+    expect(population_set.stratifications[2].hqmf_id).to eq('566164F8-47E0-4ADB-A3A6-383067490DA8')
     expect(population_set.stratifications[2].statement.statement_name).to eq('Stratification 3')
+    expect(population_set.stratifications[2].statement.hqmf_id).to eq('566164F8-47E0-4ADB-A3A6-383067490DA8')
     # check observation
     expect(population_set.observations.size).to eq(1)
     expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
+    expect(population_set.observations[0].observation_function.hqmf_id).to eq('FFB1B6BE-B96F-4B29-A920-0E4966D209A3')
     expect(population_set.observations[0].observation_parameter.statement_name).to eq('Measure Population')
-
+    expect(population_set.observations[0].observation_parameter.hqmf_id).to eq('FFB1B6BE-B96F-4B29-A920-0E4966D209A3')
+    expect(population_set.observations[0].hqmf_id).to eq('FFB1B6BE-B96F-4B29-A920-0E4966D209A3')
     # check valuesets
     expect(cqm_measure.value_sets.size).to eq(bonnie_measure.value_set_oid_version_objects.size)
   end
@@ -233,9 +256,12 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section')
     expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
+    expect(population_set.populations.IPP.hqmf_id).to eq('814DC710-4366-4E53-8747-EA68A1D82146')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator')
+    expect(population_set.populations.DENOM.hqmf_id).to eq('FB9470CF-9D17-4D21-A56C-DD50333C41DB')
     expect(population_set.populations.DENEX).to be_nil
     expect(population_set.populations.NUMER.statement_name).to eq('Numerator')
+    expect(population_set.populations.NUMER.hqmf_id).to eq('487BEADB-29B5-43D7-8E33-F0E40184E27B')
     # check stratifications
     expect(population_set.stratifications.size).to eq(0)
     # check observation
@@ -294,14 +320,20 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section')
     expect(population_set.populations).to be_instance_of(CQM::ContinuousVariablePopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
+    expect(population_set.populations.IPP.hqmf_id).to eq('136D71C8-8541-45DA-8486-4279A21078F4')
     expect(population_set.populations.MSRPOPL.statement_name).to eq('Measure Population')
+    expect(population_set.populations.MSRPOPL.hqmf_id).to eq('64F43997-E94E-4FAF-BEE9-EB6758F380C5')
     expect(population_set.populations.MSRPOPLEX.statement_name).to eq('Measure Population Exclusions')
+    expect(population_set.populations.MSRPOPLEX.hqmf_id).to eq('07F38F88-9008-4436-AC4A-C9ABA6FA5F95')
     # check stratifications
     expect(population_set.stratifications.size).to eq(0)
     # check observation
     expect(population_set.observations.size).to eq(1)
     expect(population_set.observations[0].observation_function.statement_name).to eq('Measure Observation')
+    expect(population_set.observations[0].observation_function.hqmf_id).to eq('BB3FA997-D7F6-4872-A004-9484EF913C7F')
     expect(population_set.observations[0].observation_parameter.statement_name).to eq('Measure Population')
+    expect(population_set.observations[0].observation_parameter.hqmf_id).to eq('BB3FA997-D7F6-4872-A004-9484EF913C7F')
+    expect(population_set.observations[0].hqmf_id).to eq('BB3FA997-D7F6-4872-A004-9484EF913C7F')
     # check SDEs
     expect(population_set.supplemental_data_elements.map(&:statement_name)).to eq(
       [
@@ -372,9 +404,13 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.title).to eq('Population Criteria Section')
     expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
+    expect(population_set.populations.IPP.hqmf_id).to eq('8DF5C762-DA90-4D43-BCD2-F266F6E75F83')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator')
+    expect(population_set.populations.DENOM.hqmf_id).to eq('D8E4FFD1-8B7B-4B3F-A9A3-9BF8DC51E529')
     expect(population_set.populations.DENEX.statement_name).to eq('Denominator Exclusions')
+    expect(population_set.populations.DENEX.hqmf_id).to eq('B6D5424F-E911-4688-9759-5BC7FCEBCA2E')
     expect(population_set.populations.NUMER.statement_name).to eq('Numerator')
+    expect(population_set.populations.NUMER.hqmf_id).to eq('2B35FE50-8557-4415-9AC5-5F32225C427E')
     # check stratifications
     expect(population_set.stratifications.size).to eq(0)
     # check observation

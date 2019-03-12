@@ -79,7 +79,8 @@ module CQM::Converter
 
           population_map[population_name.to_sym] = CQM::StatementReference.new(
             library_name: cqm_measure.main_cql_library,
-            statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, population_key)
+            statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, population_key),
+            hqmf_id: bonnie_measure.population_criteria[population_key]['hqmf_id']
           )
         end
 
@@ -107,22 +108,14 @@ module CQM::Converter
           stratification_id: bonnie_stratification['id'],
           statement: CQM::StatementReference.new(
             library_name: cqm_measure.main_cql_library,
-            statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, bonnie_stratification['STRAT'])
-          )
+            statement_name: get_cql_statement_for_bonnie_population_key(bonnie_measure.populations_cql_map, bonnie_stratification['STRAT']),
+            hqmf_id: bonnie_measure.population_criteria[bonnie_stratification['STRAT']]['hqmf_id']
+          ),
+          hqmf_id: bonnie_measure.population_criteria[bonnie_stratification['STRAT']]['hqmf_id']
         )
       end
 
-      bonnie_measure&.observations&.each do |bonnie_observation|
-        observation = CQM::Observation.new(
-          observation_function: CQM::StatementReference.new(
-            library_name: cqm_measure.main_cql_library,
-            statement_name: bonnie_observation['function_name']
-          ),
-          observation_parameter: CQM::StatementReference.new(
-            library_name: cqm_measure.main_cql_library,
-            statement_name: bonnie_observation['parameter']
-          )
-        )
+      convert_observations(bonnie_measure, cqm_measure.main_cql_library).each do |observation|
         # add observation to each population set
         cqm_measure.population_sets.each { |population_set| population_set.observations << observation }
       end
@@ -145,6 +138,30 @@ module CQM::Converter
       end
 
       cqm_measure
+    end
+
+    def self.convert_observations(bonnie_measure, main_cql_library)
+      observations = []
+      bonnie_measure&.observations&.each_with_index do |bonnie_observation, observation_index|
+        # if this happens to be a multiple observation measure _this is unlikely_ we need to make a key to grab the proper hqmf_id
+        observation_population_key = observation_index.positive? ? "OBSERV_#{observation_index}" : 'OBSERV'
+        observation_hqmf_id = bonnie_measure.population_criteria[observation_population_key]['hqmf_id']
+
+        observations << CQM::Observation.new(
+          observation_function: CQM::StatementReference.new(
+            library_name: main_cql_library,
+            statement_name: bonnie_observation['function_name'],
+            hqmf_id: observation_hqmf_id
+          ),
+          observation_parameter: CQM::StatementReference.new(
+            library_name: main_cql_library,
+            statement_name: bonnie_observation['parameter'],
+            hqmf_id: observation_hqmf_id
+          ),
+          hqmf_id: observation_hqmf_id
+        )
+      end
+      observations
     end
 
     # convert bonnie measure and provide value sets to convert and attach to measure

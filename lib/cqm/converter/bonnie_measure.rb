@@ -31,14 +31,14 @@ module CQM::Converter
             library_name: elm['library']['identifier']['id'],
             library_version: elm['library']['identifier']['version'],
             elm: elm,
+            elm_annotations: bonnie_measure.elm_annotations[elm['library']['identifier']['id']],
+            is_top_level: bonnie_measure.elm_annotations[elm['library']['identifier']['id']].present?,
             cql: bonnie_measure.cql[elm_index]
           )
           # if this is the main library, then mark it
           if elm['library']['identifier']['id'] == cqm_measure.main_cql_library
             cql_library.is_main_library = true
           end
-
-          cql_library.elm_annotations = bonnie_measure.elm_annotations[cql_library.library_name]
 
           # convert statement dependencies to new form
           bonnie_measure.cql_statement_dependencies[cql_library.library_name].each do |statement_name, dependencies|

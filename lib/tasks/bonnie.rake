@@ -16,7 +16,11 @@ namespace :cqm do
     You must specify an input bonnie measure JSON file. The result will be
     output to STDOUT unless an output file is specified.
 
-    Value sets can also be converted by pointing to a JSON file with the HDS value sets in an array.
+    Value sets can also be converted by pointing to a JSON file with the HDS value sets in an array. There are three forms that the
+    value sets fixtures are allowed to be in.
+      - An array of value set objects.
+      - A map of OIDs to value set objects.
+      - A map of OIDs to versions to value set objects.
 
     $ rake cqm:bonnie:to_cqm MEASURE=spec/fixtures/bonnie/CMS999v9.json VALUESETS=spec/fixtures/hds/valuesets/CMS999v9.json\
       MEASURE_OUT=spec/fixtures/cqm/measure/CMS999v9.json VALUESETS_OUT=spec/fixutres/cqm/valuesets/CMS999v9.json)
@@ -29,15 +33,23 @@ namespace :cqm do
       # load HDS valuesets if they are provided
       if ENV.key?('VALUESETS')
         value_set_fixtures = JSON.parse(File.read(ENV['VALUESETS']))
+        # if the fixture file is an array then simply load each element in as a valueset.
         if value_set_fixtures.is_a?(Array)
           hds_value_sets = value_set_fixtures.map do |vs_json|
             HealthDataStandards::SVS::ValueSet.new(vs_json)
           end
         else
           hds_value_sets = []
+          # if the fixture file is an object. then we should iterate over the pairs
           value_set_fixtures.each_pair do |_, versions|
-            versions.each_pair do |_, vs_json|
-              hds_value_sets << HealthDataStandards::SVS::ValueSet.new(vs_json)
+            # if there is a _id then this level is a actually a valueset fixture and the file is a map of OIDs to valuesets
+            if versions.key?('_id')
+              hds_value_sets << HealthDataStandards::SVS::ValueSet.new(versions)
+            else
+              # if we have to go down another level then this file is a map of OIDs to versions to value sets
+              versions.each_pair do |_, vs_json|
+                hds_value_sets << HealthDataStandards::SVS::ValueSet.new(vs_json)
+              end
             end
           end
         end

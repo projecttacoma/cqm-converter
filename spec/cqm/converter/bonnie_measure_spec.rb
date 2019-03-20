@@ -288,8 +288,10 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # check the main library name and find new library structure using it
     expect(cqm_measure.main_cql_library).to eq('AWATestComposite')
-    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
+    expect(cqm_measure.cql_libraries.find_by(library_name: 'AWATestComposite').is_top_level).to eq(true)
+    expect(cqm_measure.cql_libraries.find_by(library_name: 'MATGlobalCommonFunctions').is_top_level).to eq(false)
 
+    main_library = cqm_measure.cql_libraries.select(&:is_main_library).first
     # check the new library structure
     expect(main_library).to_not be_nil
     expect(main_library.library_name).to eq('AWATestComposite')

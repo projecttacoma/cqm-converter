@@ -4,21 +4,7 @@ module CQM::Converter
   module BonnieMeasure
     # Given a bonnie model, convert it to the new CQM measure model. including value sets if they are found
     def self.to_cqm(bonnie_measure)
-      cqm_measure = CQM::Measure.new
-
-      # basic fields
-      cqm_measure.hqmf_id = bonnie_measure.hqmf_id
-      cqm_measure.hqmf_set_id = bonnie_measure.hqmf_set_id
-      cqm_measure.hqmf_version_number = bonnie_measure.hqmf_version_number
-      cqm_measure.cms_id = bonnie_measure.cms_id
-      cqm_measure.title = bonnie_measure.title
-      cqm_measure.description = bonnie_measure.description
-      cqm_measure.calculate_sdes = bonnie_measure.calculate_sdes
-      cqm_measure.main_cql_library = bonnie_measure.main_cql_library
-
-      # more complicated fields
-      cqm_measure.measure_scoring = bonnie_measure.continuous_variable ? 'CONTINUOUS_VARIABLE' : 'PROPORTION'
-      cqm_measure.calculation_method = bonnie_measure.episode_of_care ? 'EPISODE_OF_CARE' : 'PATIENT'
+      cqm_measure = shallow_copy(bonnie_measure)
 
       # cql_libraries. the order we need to match is of cql_statement_dependencies
       bonnie_measure.cql_statement_dependencies.keys.each do |library_name|
@@ -31,14 +17,14 @@ module CQM::Converter
             library_name: elm['library']['identifier']['id'],
             library_version: elm['library']['identifier']['version'],
             elm: elm,
+            elm_annotations: bonnie_measure.elm_annotations[elm['library']['identifier']['id']],
+            is_top_level: bonnie_measure.elm_annotations[elm['library']['identifier']['id']].present?,
             cql: bonnie_measure.cql[elm_index]
           )
           # if this is the main library, then mark it
           if elm['library']['identifier']['id'] == cqm_measure.main_cql_library
             cql_library.is_main_library = true
           end
-
-          cql_library.elm_annotations = bonnie_measure.elm_annotations[cql_library.library_name]
 
           # convert statement dependencies to new form
           bonnie_measure.cql_statement_dependencies[cql_library.library_name].each do |statement_name, dependencies|
@@ -54,12 +40,6 @@ module CQM::Converter
           break
         end
       end
-
-      cqm_measure.population_criteria = bonnie_measure.population_criteria
-      cqm_measure.data_criteria = bonnie_measure.data_criteria
-      cqm_measure.source_data_criteria = bonnie_measure.source_data_criteria
-      cqm_measure.measure_period = bonnie_measure.measure_period
-      cqm_measure.measure_attributes = bonnie_measure.measure_attributes
 
       # convert populations, skipping strats to be added later
       bonnie_measure.populations.each do |bonnie_population|
@@ -140,30 +120,6 @@ module CQM::Converter
       cqm_measure
     end
 
-    def self.convert_observations(bonnie_measure, main_cql_library)
-      observations = []
-      bonnie_measure&.observations&.each_with_index do |bonnie_observation, observation_index|
-        # if this happens to be a multiple observation measure _this is unlikely_ we need to make a key to grab the proper hqmf_id
-        observation_population_key = observation_index.positive? ? "OBSERV_#{observation_index}" : 'OBSERV'
-        observation_hqmf_id = bonnie_measure.population_criteria[observation_population_key]['hqmf_id']
-
-        observations << CQM::Observation.new(
-          observation_function: CQM::StatementReference.new(
-            library_name: main_cql_library,
-            statement_name: bonnie_observation['function_name'],
-            hqmf_id: observation_hqmf_id
-          ),
-          observation_parameter: CQM::StatementReference.new(
-            library_name: main_cql_library,
-            statement_name: bonnie_observation['parameter'],
-            hqmf_id: observation_hqmf_id
-          ),
-          hqmf_id: observation_hqmf_id
-        )
-      end
-      observations
-    end
-
     # convert bonnie measure and provide value sets to convert and attach to measure
     def self.measure_and_valuesets_to_cqm(bonnie_measure, hds_valuesets)
       cqm_measure = to_cqm(bonnie_measure)
@@ -171,32 +127,81 @@ module CQM::Converter
       cqm_measure.value_sets = cqm_valuesets
       cqm_measure
     end
-
-    def self.construct_population_map(cqm_measure)
-      case cqm_measure.measure_scoring
-      when 'PROPORTION'
-        CQM::ProportionPopulationMap.new
-      when 'RATIO'
-        CQM::RatioPopulationMap.new
-      when 'CONTINUOUS_VARIABLE'
-        CQM::ContinuousVariablePopulationMap.new
-      when 'COHORT'
-        CQM::CohortPopulationMap.new
-      else
-        raise StandardError("Unknown measure scoring type encountered #{cqm_measure.measure_scoring}")
-      end
-    end
-
-    def self.get_cql_statement_for_bonnie_population_key(populations_cql_map, population_key)
-      if population_key.include?('_')
-        pop_name, pop_index = population_key.split('_')
-        pop_index = pop_index.to_i
-      else
-        pop_name = population_key
-        pop_index = 0
-      end
-
-      populations_cql_map[pop_name][pop_index]
-    end
   end
+end
+
+def shallow_copy(bonnie_measure)
+  cqm_measure = CQM::Measure.new
+
+  # basic fields
+  cqm_measure.hqmf_id = bonnie_measure.hqmf_id
+  cqm_measure.hqmf_set_id = bonnie_measure.hqmf_set_id
+  cqm_measure.hqmf_version_number = bonnie_measure.hqmf_version_number
+  cqm_measure.cms_id = bonnie_measure.cms_id
+  cqm_measure.title = bonnie_measure.title
+  cqm_measure.description = bonnie_measure.description
+  cqm_measure.calculate_sdes = bonnie_measure.calculate_sdes
+  cqm_measure.main_cql_library = bonnie_measure.main_cql_library
+  cqm_measure.population_criteria = bonnie_measure.population_criteria
+  cqm_measure.data_criteria = bonnie_measure.data_criteria
+  cqm_measure.source_data_criteria = bonnie_measure.source_data_criteria
+  cqm_measure.measure_period = bonnie_measure.measure_period
+  cqm_measure.measure_attributes = bonnie_measure.measure_attributes
+
+  # more complicated fields
+  cqm_measure.measure_scoring = bonnie_measure.continuous_variable ? 'CONTINUOUS_VARIABLE' : 'PROPORTION'
+  cqm_measure.calculation_method = bonnie_measure.episode_of_care ? 'EPISODE_OF_CARE' : 'PATIENT'
+
+  cqm_measure
+end
+
+def convert_observations(bonnie_measure, main_cql_library)
+  observations = []
+  bonnie_measure&.observations&.each_with_index do |bonnie_observation, observation_index|
+    # if this happens to be a multiple observation measure _this is unlikely_ we need to make a key to grab the proper hqmf_id
+    observation_population_key = observation_index.positive? ? "OBSERV_#{observation_index}" : 'OBSERV'
+    observation_hqmf_id = bonnie_measure.population_criteria[observation_population_key]['hqmf_id']
+
+    observations << CQM::Observation.new(
+      observation_function: CQM::StatementReference.new(
+        library_name: main_cql_library,
+        statement_name: bonnie_observation['function_name'],
+        hqmf_id: observation_hqmf_id
+      ),
+      observation_parameter: CQM::StatementReference.new(
+        library_name: main_cql_library,
+        statement_name: bonnie_observation['parameter'],
+        hqmf_id: observation_hqmf_id
+      ),
+      hqmf_id: observation_hqmf_id
+    )
+  end
+  observations
+end
+
+def construct_population_map(cqm_measure)
+  case cqm_measure.measure_scoring
+  when 'PROPORTION'
+    CQM::ProportionPopulationMap.new
+  when 'RATIO'
+    CQM::RatioPopulationMap.new
+  when 'CONTINUOUS_VARIABLE'
+    CQM::ContinuousVariablePopulationMap.new
+  when 'COHORT'
+    CQM::CohortPopulationMap.new
+  else
+    raise StandardError("Unknown measure scoring type encountered #{cqm_measure.measure_scoring}")
+  end
+end
+
+def get_cql_statement_for_bonnie_population_key(populations_cql_map, population_key)
+  if population_key.include?('_')
+    pop_name, pop_index = population_key.split('_')
+    pop_index = pop_index.to_i
+  else
+    pop_name = population_key
+    pop_index = 0
+  end
+
+  populations_cql_map[pop_name][pop_index]
 end

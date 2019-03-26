@@ -394,6 +394,17 @@ RSpec.describe CQM::Converter::BonnieMeasure do
         '244B4F52-C9CA-45AA-8BDB-2F005DA05BFC&BA108B7B-90B4-4692-B1D0-5DB554D2A1A2'
       ]
     )
+
+    # check source data criteria
+    code_list_ids = []
+    descriptions = []
+    bonnie_measure.source_data_criteria.map do |_, sdc|
+      code_list_ids << sdc['code_list_id']
+      descriptions << sdc['description']
+    end
+    expect(cqm_measure.source_data_criteria.map(&:description)).to eq(descriptions)
+    expect(cqm_measure.source_data_criteria.map(&:codeListId)).to eq(code_list_ids)
+    expect(cqm_measure.source_data_criteria.map { |sdc| sdc.class.ancestors[2] }.uniq).to eq([QDM::DataElement])
   end
 
   it 'converts component measure' do
@@ -463,5 +474,16 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(cqm_measure.composite).to eq(false)
     expect(cqm_measure.component).to eq(true)
     expect(cqm_measure.composite_hqmf_set_id).to eq('244B4F52-C9CA-45AA-8BDB-2F005DA05BFC')
+
+    # check source data criteria
+    code_list_ids = []
+    descriptions = []
+    bonnie_measure.source_data_criteria.map do |_, sdc|
+      code_list_ids << sdc['code_list_id']
+      descriptions << sdc['description']
+    end
+    expect(cqm_measure.source_data_criteria.map(&:description)).to eq(descriptions)
+    expect(cqm_measure.source_data_criteria.map(&:codeListId)).to eq(code_list_ids)
+    expect(cqm_measure.source_data_criteria.map { |sdc| sdc.class.ancestors[2] }.uniq).to eq([QDM::DataElement])
   end
 end

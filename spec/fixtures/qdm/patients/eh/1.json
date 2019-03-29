@@ -17,7 +17,6 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
-      "hqmfTitle": "Patient Characteristic Birthdate",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
       "qdmTitle": "Patient Characteristic Birthdate",
@@ -38,7 +37,6 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
-      "hqmfTitle": "Patient Characteristic Ethnicity",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmTitle": "Patient Characteristic Ethnicity",
@@ -59,7 +57,6 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
-      "hqmfTitle": "Patient Characteristic Race",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmTitle": "Patient Characteristic Race",
@@ -80,7 +77,6 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
-      "hqmfTitle": "Patient Characteristic Sex",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmTitle": "Patient Characteristic Sex",
@@ -111,7 +107,6 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
-      "hqmfTitle": "Encounter, Performed",
       "lengthOfStay": {
         "unit": "days",
         "value": 0

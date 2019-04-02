@@ -158,7 +158,7 @@ def convert_source_data_criteria(bonnie_measure)
   @map_definition_and_status_to_model ||= JSON.parse(File.read(File.join(File.dirname(__FILE__), 'map_definition_and_status_to_model.json')))
   converted_source_data_criteria = bonnie_measure.source_data_criteria.map do |_, sdc|
     key = "#{sdc['definition']}::#{sdc['status']}"
-    raise StandardError("Unmapped type found: no match for #{key} found in the model map file.") unless @map_definition_and_status_to_model[key].present?
+    raise StandardError.new("Unmapped type found: no match for #{key} found in the model map file.") unless @map_definition_and_status_to_model[key].present?
 
     model_name = @map_definition_and_status_to_model[key]['model_name']
     QDM.const_get(model_name).new(
@@ -204,7 +204,7 @@ def construct_population_map(cqm_measure)
   when 'COHORT'
     CQM::CohortPopulationMap.new
   else
-    raise StandardError("Unknown measure scoring type encountered #{cqm_measure.measure_scoring}")
+    raise StandardError.new("Unknown measure scoring type encountered #{cqm_measure.measure_scoring}")
   end
 end
 

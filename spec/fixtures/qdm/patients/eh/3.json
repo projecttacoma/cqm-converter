@@ -4,6 +4,7 @@
     {
       "_type": "QDM::PatientCharacteristicBirthdate",
       "birthDatetime": "1998-10-11T14:00:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -15,13 +16,15 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
+      "qdmTitle": "Patient Characteristic Birthdate",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::PatientCharacteristicEthnicity",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -33,13 +36,15 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
+      "qdmTitle": "Patient Characteristic Ethnicity",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::PatientCharacteristicRace",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -51,13 +56,15 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
+      "qdmTitle": "Patient Characteristic Race",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::PatientCharacteristicSex",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -69,15 +76,17 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
+      "qdmTitle": "Patient Characteristic Sex",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
       "authorDatetime": "2012-04-06T08:00:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "4525004",
@@ -112,6 +121,7 @@
       },
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
         "high": "2012-04-06T09:15:00+00:00",

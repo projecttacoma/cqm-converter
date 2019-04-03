@@ -5,6 +5,7 @@ module CQM::Converter
     # Given a bonnie model, convert it to the new CQM measure model. including value sets if they are found
     def self.to_cqm(bonnie_measure)
       cqm_measure = shallow_copy(bonnie_measure)
+      cqm_measure.source_data_criteria = convert_source_data_criteria(bonnie_measure)
 
       # cql_libraries. the order we need to match is of cql_statement_dependencies
       bonnie_measure.cql_statement_dependencies.keys.each do |library_name|
@@ -143,8 +144,6 @@ def shallow_copy(bonnie_measure)
   cqm_measure.calculate_sdes = bonnie_measure.calculate_sdes
   cqm_measure.main_cql_library = bonnie_measure.main_cql_library
   cqm_measure.population_criteria = bonnie_measure.population_criteria
-  cqm_measure.data_criteria = bonnie_measure.data_criteria
-  cqm_measure.source_data_criteria = bonnie_measure.source_data_criteria
   cqm_measure.measure_period = bonnie_measure.measure_period
   cqm_measure.measure_attributes = bonnie_measure.measure_attributes
 
@@ -153,6 +152,21 @@ def shallow_copy(bonnie_measure)
   cqm_measure.calculation_method = bonnie_measure.episode_of_care ? 'EPISODE_OF_CARE' : 'PATIENT'
 
   cqm_measure
+end
+
+def convert_source_data_criteria(bonnie_measure)
+  @map_definition_and_status_to_model ||= JSON.parse(File.read(File.join(File.dirname(__FILE__), 'map_definition_and_status_to_model.json')))
+  converted_source_data_criteria = bonnie_measure.source_data_criteria.map do |_, sdc|
+    key = "#{sdc['definition']}::#{sdc['status']}"
+    raise StandardError, "Unmapped type found: no match for #{key} found in the model map file." unless @map_definition_and_status_to_model[key].present?
+
+    model_name = @map_definition_and_status_to_model[key]['model_name']
+    QDM.const_get(model_name).new(
+      description: sdc['description'],
+      codeListId: sdc['code_list_id']
+    )
+  end
+  converted_source_data_criteria
 end
 
 def convert_observations(bonnie_measure, main_cql_library)
@@ -190,7 +204,7 @@ def construct_population_map(cqm_measure)
   when 'COHORT'
     CQM::CohortPopulationMap.new
   else
-    raise StandardError("Unknown measure scoring type encountered #{cqm_measure.measure_scoring}")
+    raise StandardError, "Unknown measure scoring type encountered #{cqm_measure.measure_scoring}"
   end
 end
 

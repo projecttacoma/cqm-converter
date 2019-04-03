@@ -4,6 +4,7 @@
     {
       "_type": "QDM::PatientCharacteristicBirthdate",
       "birthDatetime": "1937-03-06T15:30:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -15,13 +16,15 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.54",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
+      "qdmTitle": "Patient Characteristic Birthdate",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::PatientCharacteristicSex",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -33,13 +36,15 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.55",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
+      "qdmTitle": "Patient Characteristic Sex",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::PatientCharacteristicRace",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -51,13 +56,15 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.59",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
+      "qdmTitle": "Patient Characteristic Race",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::PatientCharacteristicEthnicity",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "_type": "QDM::Code",
@@ -69,15 +76,17 @@
         }
       ],
       "description": null,
-      "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "hqmfOid": "2.16.840.1.113883.10.20.28.4.56",
       "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
+      "qdmTitle": "Patient Characteristic Ethnicity",
       "qdmVersion": "5.4"
     },
     {
       "_type": "QDM::Diagnosis",
       "anatomicalLocationSite": null,
       "authorDatetime": "2012-05-21T15:30:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "427.31",
@@ -101,6 +110,7 @@
         "lowClosed": true
       },
       "qdmCategory": "condition",
+      "qdmTitle": "Diagnosis",
       "qdmVersion": "5.4",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
       "severity": null
@@ -108,6 +118,7 @@
     {
       "_type": "QDM::EncounterOrder",
       "authorDatetime": "2012-05-21T16:15:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "19951005",
@@ -120,6 +131,7 @@
       "negationRationale": null,
       "qdmCategory": "encounter",
       "qdmStatus": "order",
+      "qdmTitle": "Encounter, Order",
       "qdmVersion": "5.4",
       "reason": null
     },
@@ -127,6 +139,7 @@
       "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
       "authorDatetime": "2012-05-21T15:00:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "4525004",
@@ -150,6 +163,7 @@
       "principalDiagnosis": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
         "high": "2012-05-21T16:30:00+00:00",
@@ -162,6 +176,7 @@
       "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
       "authorDatetime": "2012-04-02T17:00:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "4525004",
@@ -185,6 +200,7 @@
       "principalDiagnosis": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
         "high": "2012-04-02T21:00:00+00:00",
@@ -197,6 +213,7 @@
       "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
       "authorDatetime": "2012-05-21T17:00:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "32485007",
@@ -220,6 +237,7 @@
       "principalDiagnosis": null,
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
         "high": "2012-05-24T18:00:00+00:00",
@@ -231,6 +249,7 @@
     {
       "_type": "QDM::LaboratoryTestPerformed",
       "authorDatetime": "2012-05-21T21:00:00+00:00",
+      "codeListId": null,
       "components": [
 
       ],
@@ -246,6 +265,7 @@
       "negationRationale": null,
       "qdmCategory": "laboratory_test",
       "qdmStatus": "performed",
+      "qdmTitle": "Laboratory Test, Performed",
       "qdmVersion": "5.4",
       "reason": null,
       "referenceRange": null,

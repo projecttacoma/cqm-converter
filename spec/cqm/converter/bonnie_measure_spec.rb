@@ -1,5 +1,18 @@
 require 'spec_helper'
 
+def check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
+  # check source data criteria
+  code_list_ids = []
+  descriptions = []
+  bonnie_measure.source_data_criteria.map do |_, sdc|
+    code_list_ids << sdc['code_list_id']
+    descriptions << sdc['description']
+  end
+  expect(cqm_measure.source_data_criteria.map(&:description)).to eq(descriptions)
+  expect(cqm_measure.source_data_criteria.map(&:codeListId)).to eq(code_list_ids)
+  expect(cqm_measure.source_data_criteria.map { |sdc| sdc.class.ancestors[2] }.uniq).to eq([QDM::DataElement])
+end
+
 RSpec.describe CQM::Converter::BonnieMeasure do
   it 'converts proportion measure with single population set' do
     bonnie_measure = CqlMeasure.new.from_json(File.read('spec/fixtures/bonnie/core_measures/CMS134v6.json'))
@@ -33,8 +46,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # Legacy fields that may be removed later
     expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
-    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
-    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
     expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
     expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
 
@@ -48,6 +59,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.populations.IPP.hqmf_id).to eq('6CD39B4B-16E6-4FD4-9241-527F9F4A48D0')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator')
     expect(population_set.populations.DENOM.hqmf_id).to eq('B735F4BD-DFAE-45E3-BAA9-E09BDF731B8E')
+
+    check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   end
 
   it 'converts proportion measure with three population sets' do
@@ -82,8 +95,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # Legacy fields that may be removed later
     expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
-    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
-    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
     expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
     expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
 
@@ -115,6 +126,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.populations.DENOM.hqmf_id).to eq('1EE7E1F6-E10A-4BE0-93C5-EED14D088023')
     expect(population_set.populations.NUMER.statement_name).to eq('Numerator 3')
     expect(population_set.populations.NUMER.hqmf_id).to eq('4C5B11DD-040D-460D-B6F6-57D440BE7B36')
+
+    check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   end
 
   it 'converts continuous variable episode measure and valuesets using bonnie measure.value_sets getter' do
@@ -167,8 +180,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # Legacy fields that may be removed later
     expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
-    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
-    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
     expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
     expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
 
@@ -210,6 +221,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.observations[0].hqmf_id).to eq('FFB1B6BE-B96F-4B29-A920-0E4966D209A3')
     # check valuesets
     expect(cqm_measure.value_sets.size).to eq(bonnie_measure.value_set_oid_version_objects.size)
+
+    check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   end
 
   it 'converts episode of care measure with single population set' do
@@ -244,8 +257,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # Legacy fields that may be removed later
     expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
-    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
-    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
     expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
     expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
 
@@ -268,6 +279,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(population_set.observations.size).to eq(0)
     # check SDEs
     expect(population_set.supplemental_data_elements.size).to eq(0)
+
+    check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   end
 
   it 'converts composite measure' do
@@ -310,8 +323,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # Legacy fields that may be removed later
     expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
-    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
-    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
     expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
     expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
 
@@ -360,6 +371,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
         '244B4F52-C9CA-45AA-8BDB-2F005DA05BFC&BA108B7B-90B4-4692-B1D0-5DB554D2A1A2'
       ]
     )
+
+    check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   end
 
   it 'converts component measure' do
@@ -394,8 +407,6 @@ RSpec.describe CQM::Converter::BonnieMeasure do
 
     # Legacy fields that may be removed later
     expect(cqm_measure.population_criteria).to eq(bonnie_measure.population_criteria)
-    expect(cqm_measure.data_criteria).to eq(bonnie_measure.data_criteria)
-    expect(cqm_measure.source_data_criteria).to eq(bonnie_measure.source_data_criteria)
     expect(cqm_measure.measure_period).to eq(bonnie_measure.measure_period)
     expect(cqm_measure.measure_attributes).to eq(bonnie_measure.measure_attributes)
 
@@ -431,5 +442,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(cqm_measure.composite).to eq(false)
     expect(cqm_measure.component).to eq(true)
     expect(cqm_measure.composite_hqmf_set_id).to eq('244B4F52-C9CA-45AA-8BDB-2F005DA05BFC')
+
+    check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   end
 end

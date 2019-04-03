@@ -5,6 +5,7 @@
       "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
       "authorDatetime": "2012-04-06T08:00:00+00:00",
+      "codeListId": null,
       "dataElementCodes": [
         {
           "code": "4525004",
@@ -44,6 +45,7 @@
       },
       "qdmCategory": "encounter",
       "qdmStatus": "performed",
+      "qdmTitle": "Encounter, Performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
         "high": "2012-04-06T09:15:00+00:00",

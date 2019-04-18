@@ -4,8 +4,7 @@
   "dataElements": [
     {
       "anatomicalLocationSite": null,
-      "authorDatetime": "2012-05-21T11:30:00.000-04:00",
-      "qdmCategory": "condition",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "ICD-9-CM",
@@ -22,12 +21,18 @@
       ],
       "description": "Diagnosis: Atrial Fibrillation/Flutter",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.110",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f375"
+      },
       "prevalencePeriod": {
         "low": "2012-05-21T15:30:00.000+00:00",
-        "high": "9999-12-31T23:59:59.990+00:00",
+        "high": "9999-12-31T23:59:59.999+00:00",
         "lowClosed": true,
         "highClosed": true
       },
+      "qdmCategory": "condition",
       "qdmVersion": "5.4",
       "qrdaOid": "2.16.840.1.113883.10.20.24.3.135",
       "severity": null,
@@ -35,8 +40,7 @@
     },
     {
       "admissionSource": null,
-      "authorDatetime": "2012-04-02T13:00:00.000-04:00",
-      "qdmCategory": "encounter",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -52,12 +56,18 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f376"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
       },
       "negationRationale": null,
       "principalDiagnosis": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
@@ -70,8 +80,7 @@
     },
     {
       "admissionSource": null,
-      "authorDatetime": "2012-05-21T11:00:00.000-04:00",
-      "qdmCategory": "encounter",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -87,12 +96,18 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f377"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
       },
       "negationRationale": null,
       "principalDiagnosis": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
@@ -105,8 +120,7 @@
     },
     {
       "admissionSource": null,
-      "authorDatetime": "2012-05-21T13:00:00.000-04:00",
-      "qdmCategory": "encounter",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -122,12 +136,18 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f378"
+      },
       "lengthOfStay": {
         "value": 3,
         "unit": "days"
       },
       "negationRationale": null,
       "principalDiagnosis": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
@@ -140,7 +160,6 @@
     },
     {
       "authorDatetime": "2012-05-21T12:15:00.000-04:00",
-      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -150,15 +169,20 @@
       "description": "Encounter, Order: Decision to Admit to Hospital Inpatient",
       "facilityLocation": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.27",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f379"
+      },
       "negationRationale": null,
+      "qdmCategory": "encounter",
       "qdmStatus": "order",
       "qdmVersion": "5.4",
       "reason": null,
       "_type": "QDM::EncounterOrder"
     },
     {
-      "authorDatetime": "2012-05-21T17:00:00.000-04:00",
-      "qdmCategory": "laboratory_test",
+      "authorDatetime": null,
       "components": [
 
       ],
@@ -170,8 +194,14 @@
       ],
       "description": "Laboratory Test, Performed: LDL-c",
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.42",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f37c"
+      },
       "method": null,
       "negationRationale": null,
+      "qdmCategory": "laboratory_test",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "reason": null,
@@ -192,7 +222,6 @@
     },
     {
       "birthDatetime": "1937-03-06T10:30:00.000-05:00",
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -205,12 +234,17 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f37e"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2186-5",
@@ -223,12 +257,17 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f37f"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "1002-5",
@@ -241,12 +280,17 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f380"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "M",
@@ -259,6 +303,12 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d9af08fa18af1df9f381"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"

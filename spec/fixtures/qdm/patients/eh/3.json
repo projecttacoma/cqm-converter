@@ -4,8 +4,7 @@
   "dataElements": [
     {
       "admissionSource": null,
-      "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-      "qdmCategory": "encounter",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -22,10 +21,13 @@
         }
       ],
       "dischargeDisposition": null,
-      "facilityLocations": [
-
-      ],
+      "facilityLocations": [],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d84808fa18ae2f2188d9"
+      },
       "lengthOfStay": {
         "value": 0,
         "unit": "days"
@@ -38,6 +40,7 @@
         "codeSystemOid": null,
         "version": null
       },
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
@@ -50,7 +53,6 @@
     },
     {
       "birthDatetime": "1998-10-11T10:00:00.000-04:00",
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "21112-8",
@@ -63,12 +65,17 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.54",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d84808fa18ae2f2188dd"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "birthdate",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicBirthdate"
     },
     {
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2135-2",
@@ -81,12 +88,17 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.56",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d84808fa18ae2f2188de"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "ethnicity",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicEthnicity"
     },
     {
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "2131-1",
@@ -99,12 +111,17 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.59",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d84808fa18ae2f2188df"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "race",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicRace"
     },
     {
-      "qdmCategory": "patient_characteristic",
       "dataElementCodes": [
         {
           "code": "F",
@@ -117,6 +134,12 @@
       ],
       "description": null,
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.55",
+      "id": {
+        "namingSystem": null,
+        "qdmVersion": "5.4",
+        "value": "5cb7d84808fa18ae2f2188e0"
+      },
+      "qdmCategory": "patient_characteristic",
       "qdmStatus": "gender",
       "qdmVersion": "5.4",
       "_type": "QDM::PatientCharacteristicSex"
@@ -167,9 +190,7 @@
         "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
         "start_date": 1333699200000,
         "end_date": 1333703700000,
-        "value": [
-
-        ],
+        "value": [],
         "references": null,
         "field_values": {
           "PRINCIPAL_DIAGNOSIS": {
@@ -678,9 +699,7 @@
     ],
     "notes": "14yo female; Den 32\n* 1qde\n* Pt presented to ED w principal dx of depression. ",
     "is_shared": false,
-    "origin_data": [
-
-    ],
+    "origin_data": [],
     "test_id": null,
     "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
     "medical_record_assigner": "2.16.840.1.113883.4.572",

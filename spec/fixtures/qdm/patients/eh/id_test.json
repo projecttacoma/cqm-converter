@@ -4,8 +4,7 @@
   "dataElements": [
     {
       "admissionSource": null,
-      "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-      "qdmCategory": "encounter",
+      "authorDatetime": null,
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -26,14 +25,14 @@
 
       ],
       "hqmfOid": "2.16.840.1.113883.10.20.28.3.5",
-      "lengthOfStay": {
-        "value": 0,
-        "unit": "days"
-      },
       "id": {
         "namingSystem": null,
         "qdmVersion": "5.4",
         "value": "5abbdd05aeac508c3233e01f"
+      },
+      "lengthOfStay": {
+        "value": 0,
+        "unit": "days"
       },
       "negationRationale": null,
       "principalDiagnosis": {
@@ -43,6 +42,7 @@
         "codeSystemOid": null,
         "version": null
       },
+      "qdmCategory": "encounter",
       "qdmStatus": "performed",
       "qdmVersion": "5.4",
       "relevantPeriod": {
@@ -55,12 +55,14 @@
     }
   ],
   "extendedData": {
-    "insurance_providers": "[]",
-    "medical_record_assigner": null,
+    "test_id": null,
     "medical_record_number": null,
-    "test_id": null
+    "medical_record_assigner": null,
+    "insurance_providers": "[]"
   },
   "familyName": null,
-  "givenNames": [],
+  "givenNames": [
+
+  ],
   "qdmVersion": "5.4"
 }

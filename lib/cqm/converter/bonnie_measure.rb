@@ -19,7 +19,7 @@ module CQM::Converter
             library_version: elm['library']['identifier']['version'],
             elm: elm,
             elm_annotations: bonnie_measure.elm_annotations[elm['library']['identifier']['id']],
-            is_top_level: bonnie_measure.elm_annotations[elm['library']['identifier']['id']].present?,
+            is_top_level: bonnie_measure.elm_annotations.key?(elm['library']['identifier']['id']),
             cql: bonnie_measure.cql[elm_index]
           )
           # if this is the main library, then mark it

@@ -141,7 +141,7 @@ module CQM::Converter
     # Adjust improper date times from the cql_qdm_patientapi.
     def self.date_time_adjuster(results)
       if results.is_a?(Hash) && results.key?('year') && results.key?('minute')
-        DateTime.new(results['year'], results['month'], results['day'], results['hour'], results['minute'], (results['second'] + (results['millisecond'] / 1000.0))).strftime('%Y-%m-%d %H:%M:%S.%3N%Z')
+        DateTime.new(results['year'], results['month'], results['day'], results['hour'], results['minute'], (results['second'] + (results['millisecond'] / 1000.0))).strftime('%Y-%m-%d %H:%M:%S.%N%Z')
       elsif results.is_a?(Hash)
         results.each do |key, value|
           results[key] = date_time_adjuster(value)

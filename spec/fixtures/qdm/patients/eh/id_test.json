@@ -5,6 +5,7 @@
     {
       "admissionSource": null,
       "authorDatetime": null,
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",

@@ -5,6 +5,7 @@
     {
       "admissionSource": null,
       "authorDatetime": null,
+      "qdmCategory": "encounter",
       "dataElementCodes": [
         {
           "codeSystem": "SNOMED-CT",
@@ -710,7 +711,7 @@
     "medical_record_number": "cf947d6d01c22a3a03239e0ca396ac687d596c45a352249185c1c69bb0369ae6",
     "medical_record_assigner": "2.16.840.1.113883.4.572",
     "description": "",
-    "insurance_providers": "[{\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
+    "insurance_providers": "[{\"author_datetime\":null,\"codes\":{\"SOP\":[\"349\"]},\"description\":null,\"end_time\":null,\"financial_responsibility_type\":{\"code\":\"SELF\",\"codeSystem\":\"HL7 Relationship Code\"},\"health_record_field\":null,\"member_id\":\"1234567890\",\"mood_code\":\"EVN\",\"name\":\"Other\",\"negationInd\":null,\"negationReason\":null,\"oid\":null,\"payer\":{\"name\":\"Other\"},\"reason\":null,\"relationship\":null,\"specifics\":null,\"start_time\":1199163600,\"status_code\":null,\"time\":null,\"type\":\"OT\"}]",
     "provider_performances": "[{\"end_date\":null,\"provider_id\":\"59c13eb95bd177142c6f1f06\",\"start_date\":null}]"
   },
   "familyName": "ED",

@@ -45,6 +45,7 @@ RSpec.describe CQM::Converter::HDSRecord do
     qdm_eh1_json = JSON.parse(to_utc(cqm_eh1.qdmPatient.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/1.json')))
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
+    fixture = fixture['qdmPatient']
     expect(qdm_eh1_json).to eq(fixture)
   end
 
@@ -54,6 +55,7 @@ RSpec.describe CQM::Converter::HDSRecord do
     qdm_eh2_json = JSON.parse(to_utc(cqm_eh2.qdmPatient.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/2.json'))).clean_hash
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
+    fixture = fixture['qdmPatient']
 
     expect(qdm_eh2_json['birthDatetime']).to eq(fixture['birthDatetime'])
     expect(qdm_eh2_json['qdmVersion']).to eq(fixture['qdmVersion'])
@@ -97,6 +99,7 @@ RSpec.describe CQM::Converter::HDSRecord do
     qdm_eh3_json = JSON.parse(to_utc(cqm_eh3.qdmPatient.to_json(except: ['_id', 'id']).to_s)).clean_hash
     fixture = JSON.parse(to_utc(File.read('spec/fixtures/qdm/patients/eh/3.json'))).clean_hash
     fixture = JSON.parse(fixture.to_json(except: ['_id', 'id'])).clean_hash
+    fixture = fixture['qdmPatient']
     expect(qdm_eh3_json).to eq(fixture)
   end
 

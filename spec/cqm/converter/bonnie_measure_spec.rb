@@ -54,7 +54,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.population_set_id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section')
-    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect((population_set.populations.instance_of? CQM::ProportionPopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
     expect(population_set.populations.IPP.hqmf_id).to eq('6CD39B4B-16E6-4FD4-9241-527F9F4A48D0')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator')
@@ -103,7 +103,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.population_set_id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section 1')
-    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect((population_set.populations.instance_of? CQM::ProportionPopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population 1')
     expect(population_set.populations.IPP.hqmf_id).to eq('E5CAD3E0-2CF4-4F7D-B0CB-84CEA6BC44AB')
     expect(population_set.populations.DENEX.statement_name).to eq('Denominator Exclusion 1')
@@ -112,7 +112,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[1]
     expect(population_set.population_set_id).to eq('PopulationCriteria2')
     expect(population_set.title).to eq('Population Criteria Section 2')
-    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect((population_set.populations.instance_of? CQM::ProportionPopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population 2')
     expect(population_set.populations.IPP.hqmf_id).to eq('6D6BC9D7-1492-412C-A076-EC0A6DFEFC4C')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator 2')
@@ -121,7 +121,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[2]
     expect(population_set.population_set_id).to eq('PopulationCriteria3')
     expect(population_set.title).to eq('Population Criteria Section 3')
-    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect((population_set.populations.instance_of? CQM::ProportionPopulationMap)).to eq(true)
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator 3')
     expect(population_set.populations.DENOM.hqmf_id).to eq('1EE7E1F6-E10A-4BE0-93C5-EED14D088023')
     expect(population_set.populations.NUMER.statement_name).to eq('Numerator 3')
@@ -188,7 +188,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.population_set_id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section')
-    expect(population_set.populations).to be_instance_of(CQM::ContinuousVariablePopulationMap)
+    expect((population_set.populations.instance_of? CQM::ContinuousVariablePopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
     expect(population_set.populations.IPP.hqmf_id).to eq('036B7EEE-DEB5-40E2-B802-BC6CDF2B8A43')
     expect(population_set.populations.MSRPOPL.statement_name).to eq('Measure Population')
@@ -265,7 +265,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.population_set_id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section')
-    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect((population_set.populations.instance_of? CQM::ProportionPopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
     expect(population_set.populations.IPP.hqmf_id).to eq('814DC710-4366-4E53-8747-EA68A1D82146')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator')
@@ -331,7 +331,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.population_set_id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section')
-    expect(population_set.populations).to be_instance_of(CQM::ContinuousVariablePopulationMap)
+    expect((population_set.populations.instance_of? CQM::ContinuousVariablePopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
     expect(population_set.populations.IPP.hqmf_id).to eq('136D71C8-8541-45DA-8486-4279A21078F4')
     expect(population_set.populations.MSRPOPL.statement_name).to eq('Measure Population')
@@ -415,7 +415,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     population_set = cqm_measure.population_sets[0]
     expect(population_set.population_set_id).to eq('PopulationCriteria1')
     expect(population_set.title).to eq('Population Criteria Section')
-    expect(population_set.populations).to be_instance_of(CQM::ProportionPopulationMap)
+    expect((population_set.populations.instance_of? CQM::ProportionPopulationMap)).to eq(true)
     expect(population_set.populations.IPP.statement_name).to eq('Initial Population')
     expect(population_set.populations.IPP.hqmf_id).to eq('8DF5C762-DA90-4D43-BCD2-F266F6E75F83')
     expect(population_set.populations.DENOM.statement_name).to eq('Denominator')

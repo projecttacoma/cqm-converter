@@ -37,7 +37,8 @@ module CQM::Converter
       patient.bundleId = record.bundle_id if record.bundle_id
       patient.expectedValues = record.expected_values if record.respond_to?('expected_values')
       patient.notes = record.notes if record.respond_to?('notes')
-      
+
+      measure_ids = []
       if record.respond_to?('measure_ids')
         record['measure_ids'].each do |measure_id|
           measure_ids << measure_id unless measure_id.nil?

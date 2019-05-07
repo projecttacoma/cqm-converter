@@ -39,7 +39,7 @@ module CQM::Converter
       patient.notes = record.notes if record.respond_to?('notes')
       
       if record.respond_to?('measure_ids')
-        record.measure_ids.each do |measure_id|
+        record['measure_ids'].each do |measure_id|
           measure_ids << measure_id unless measure_id.nil?
         end
       end

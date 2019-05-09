@@ -404,6 +404,18 @@
       "source_data_criteria": "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
       "variable": false
     },
+    "Duplicate_Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098": {
+      "title": "Hospicecareambulatory",
+      "description": "Intervention, Order: Hospicecareambulatory",
+      "code_list_id": "2.16.840.1.113762.1.4.1108.15",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
+      "variable": false
+    },
     "Hospicecareambulatory_InterventionPerformed_95cca057_9695_4ee4_a5bd_eff4b54c6098": {
       "title": "Hospicecareambulatory",
       "description": "Intervention, Performed: Hospicecareambulatory",
@@ -13664,6 +13676,18 @@
       "variable": false
     },
     "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source": {
+      "title": "Hospicecareambulatory",
+      "description": "Intervention, Order: Hospicecareambulatory",
+      "code_list_id": "2.16.840.1.113762.1.4.1108.15",
+      "type": "interventions",
+      "definition": "intervention",
+      "status": "ordered",
+      "hard_status": true,
+      "negation": false,
+      "source_data_criteria": "Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098_source",
+      "variable": false
+    },
+    "Duplicate_Hospicecareambulatory_InterventionOrder_95cca057_9695_4ee4_a5bd_eff4b54c6098": {
       "title": "Hospicecareambulatory",
       "description": "Intervention, Order: Hospicecareambulatory",
       "code_list_id": "2.16.840.1.113762.1.4.1108.15",

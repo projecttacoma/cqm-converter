@@ -4,8 +4,8 @@ def check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   # check source data criteria
   code_list_ids = []
   descriptions = []
-  # SDC with duplicate code_list_id are removed since the newly converted CQM measure shouldn't have duplicates
-  unique_sdc = bonnie_measure.source_data_criteria.values.index_by {|h| h['code_list_id'] }
+  # SDC with duplicate code_list_id and descriptions are removed since the newly converted CQM measure shouldn't have duplicates
+  unique_sdc = bonnie_measure.source_data_criteria.values.index_by { |sdc| [sdc['code_list_id'], sdc['description']] }
   unique_sdc.map do |_, sdc|
     code_list_ids << sdc['code_list_id']
     descriptions << sdc['description']

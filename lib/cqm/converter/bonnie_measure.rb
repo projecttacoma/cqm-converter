@@ -6,6 +6,7 @@ module CQM::Converter
     def self.to_cqm(bonnie_measure)
       cqm_measure = shallow_copy(bonnie_measure)
       cqm_measure.source_data_criteria = convert_source_data_criteria(bonnie_measure)
+      cqm_measure.source_data_criteria = cqm_measure.source_data_criteria.uniq { |sdc| [sdc.codeListId, sdc.description] }
 
       # cql_libraries. the order we need to match is of cql_statement_dependencies
       bonnie_measure.cql_statement_dependencies.keys.each do |library_name|

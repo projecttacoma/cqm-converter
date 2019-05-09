@@ -4,10 +4,13 @@ def check_source_data_criteria_converted_correctly(bonnie_measure, cqm_measure)
   # check source data criteria
   code_list_ids = []
   descriptions = []
-  bonnie_measure.source_data_criteria.map do |_, sdc|
+  # SDC with duplicate code_list_id and descriptions are removed since the newly converted CQM measure shouldn't have duplicates
+  unique_sdc = bonnie_measure.source_data_criteria.values.index_by { |sdc| [sdc['code_list_id'], sdc['description']] }
+  unique_sdc.map do |_, sdc|
     code_list_ids << sdc['code_list_id']
     descriptions << sdc['description']
   end
+  expect(cqm_measure.source_data_criteria.length).to eq(unique_sdc.count)
   expect(cqm_measure.source_data_criteria.map(&:description)).to eq(descriptions)
   expect(cqm_measure.source_data_criteria.map(&:codeListId)).to eq(code_list_ids)
   expect(cqm_measure.source_data_criteria.map { |sdc| sdc.class.ancestors[2] }.uniq).to eq([QDM::DataElement])

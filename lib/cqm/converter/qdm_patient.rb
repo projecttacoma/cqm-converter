@@ -123,6 +123,8 @@ module CQM::Converter
       # Unpack extended_data.
       unpack_extended_data(patient, record)
 
+      record['measure_ids'] = patient['measure_ids'] if patient['measure_ids']
+
       record
     end
 
@@ -327,7 +329,6 @@ module CQM::Converter
     # Unpack extended data.
     def unpack_extended_data(patient, record)
       record['type'] = patient.extendedData['type'] if patient.extendedData['type']
-      record['measure_ids'] = patient.extendedData['measure_ids'] if patient.extendedData['measure_ids']
       record['source_data_criteria'] = patient.extendedData['source_data_criteria'] if patient.extendedData['source_data_criteria']
       record['expected_values'] = patient.extendedData['expected_values'] if patient.extendedData['expected_values'].is_a?(Array)
       record['notes'] = patient.extendedData['notes'] if patient.extendedData['notes']

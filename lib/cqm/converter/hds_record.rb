@@ -38,6 +38,14 @@ module CQM::Converter
       patient.expectedValues = record.expected_values if record.respond_to?('expected_values')
       patient.notes = record.notes if record.respond_to?('notes')
 
+      measure_ids = []
+      if record.respond_to?('measure_ids')
+        record['measure_ids'].each do |measure_id|
+          measure_ids << measure_id unless measure_id.nil?
+        end
+      end
+      patient.measure_ids = measure_ids
+
       patient
     end
 
@@ -131,7 +139,6 @@ module CQM::Converter
     def convert_extended_data(record)
       extended_data = {}
       extended_data['type'] = record.type if record.respond_to?('type')
-      extended_data['measure_ids'] = record.measure_ids if record.respond_to?('measure_ids')
       extended_data['source_data_criteria'] = record.source_data_criteria if record.respond_to?('source_data_criteria')
       extended_data['is_shared'] = record.is_shared if record.respond_to?('is_shared')
       extended_data['origin_data'] = record.origin_data if record.respond_to?('origin_data')

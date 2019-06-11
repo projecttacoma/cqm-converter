@@ -38,6 +38,8 @@ module CQM::Converter
             cql_library.statement_dependencies << statement_dependency
           end
 
+          update_oids(cql_library)
+
           cqm_measure.cql_libraries << cql_library
           break
         end
@@ -128,6 +130,19 @@ module CQM::Converter
       cqm_valuesets = CQM::Converter::HDSValueSet.list_to_cqm(hds_valuesets, bonnie_measure.value_set_oid_version_objects)
       cqm_measure.value_sets = cqm_valuesets
       cqm_measure
+    end
+
+    def self.update_oids(cql_library)
+      name_oid_hash = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'name_oid_map.json')))
+      return unless cql_library['elm']['library'] && cql_library['elm']['library']['codeSystems'] && cql_library['elm']['library']['codeSystems']['def']
+
+      cql_library['elm']['library']['codeSystems']['def'].each do |codesystem|
+        if name_oid_hash[codesystem['id']].nil?
+          puts 'ERROR: Could Not Resolve OID For Code System ' + codesystem['id']
+        else
+          codesystem['id'] = name_oid_hash[codesystem['id']]
+        end
+      end
     end
   end
 end

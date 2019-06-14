@@ -511,6 +511,7 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "code": "4525004"
           }
         ],
@@ -519,6 +520,7 @@
           {
             "code": "10278007",
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "version": null,
             "descriptor": "Psychiatric/Mental Health Diagnosis"
           }
@@ -542,7 +544,7 @@
           "code": "10278007",
           "codeSystem": "SNOMED-CT",
           "descriptor": "Psychiatric/Mental Health Diagnosis",
-          "codeSystemOid": null,
+          "codeSystemOid": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -565,7 +567,7 @@
             "code": "21112-8",
             "codeSystem": "LOINC",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "version": null,
             "_type": "QDM::Code"
           }

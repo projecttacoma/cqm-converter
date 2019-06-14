@@ -79,7 +79,7 @@ module CQM::Converter
       birthdate = record.birthdate
       if birthdate
         birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
-        code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1')
+        code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1', nil, 'LOINC')
         qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
       end
 

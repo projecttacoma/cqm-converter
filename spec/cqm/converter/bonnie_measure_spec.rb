@@ -87,7 +87,7 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.statement_dependencies.size).to eq(33)
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['DepressionUtilizationofthePHQ9Tool'])
     # Assert code system id's have been changed from name to oid
-    expect(main_library.elm['library']['codeSystems']['def'][0]['id']).to eq("2.16.840.1.113883.6.96")
+    expect(main_library.elm['library']['codeSystems']['def'][0]['id']).to eq('2.16.840.1.113883.6.96')
     expect(main_library.cql).to start_with('library DepressionUtilizationofthePHQ9Tool')
     expect(main_library.is_main_library).to eq(true)
 
@@ -402,8 +402,8 @@ RSpec.describe CQM::Converter::BonnieMeasure do
     expect(main_library.statement_dependencies.size).to eq(14)
     expect(main_library.elm_annotations).to eq(bonnie_measure.elm_annotations['AnnualWellnessAssessmentPreventiveCareScreeningforFallsRisk'])
     # Assert code system id's have been changed from name to oid
-    expect(main_library.elm['library']['codeSystems']['def'][0]['id']).to eq("2.16.840.1.113883.6.1")
-    expect(main_library.elm['library']['codeSystems']['def'][1]['id']).to eq("2.16.840.1.113883.6.96")
+    expect(main_library.elm['library']['codeSystems']['def'][0]['id']).to eq('2.16.840.1.113883.6.1')
+    expect(main_library.elm['library']['codeSystems']['def'][1]['id']).to eq('2.16.840.1.113883.6.96')
     main_library.elm['library']['codeSystems'] = {}
     bonnie_measure.elm[0]['library']['codeSystems'] = {}
     expect(main_library.elm).to eq(bonnie_measure.elm[0])

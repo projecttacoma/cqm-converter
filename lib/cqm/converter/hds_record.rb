@@ -159,12 +159,12 @@ module CQM::Converter
         end
       end
       populate_codesystem_oid(data_element)
-      # iterate over all of the fields
-      # if array or one of the nested types (facility location) dive deeper
-      # if object contains codeSystem and codeSystemOid doesn't have a value then set codeSystemOid to the correct OID
       data_element
     end
 
+    # iterate over all of the fields
+    # if array or one of the nested types (facility location) dive deeper
+    # if object contains codeSystem and codeSystemOid doesn't have a value then set codeSystemOid to the correct OID
     def populate_codesystem_oid(entry)
       if entry.nil? || entry.is_a?(String) || entry.is_a?(BSON::ObjectId) ||
          entry.is_a?(Time) || entry.is_a?(Date) || entry.is_a?(Boolean) || entry.is_a?(Integer) || entry.is_a?(Float)

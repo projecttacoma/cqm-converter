@@ -521,14 +521,17 @@
         "dataElementCodes": [
           {
             "codeSystem": "ICD-9-CM",
+            "codeSystemOid": "2.16.840.1.113883.6.103",
             "code": "427.31"
           },
           {
             "codeSystem": "ICD-10-CM",
+            "codeSystemOid": "2.16.840.1.113883.6.90",
             "code": "I48.1"
           },
           {
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "code": "233911009"
           }
         ],
@@ -559,6 +562,7 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "code": "4525004"
           }
         ],
@@ -601,6 +605,7 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "code": "4525004"
           }
         ],
@@ -643,6 +648,7 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "code": "32485007"
           }
         ],
@@ -684,6 +690,7 @@
         "dataElementCodes": [
           {
             "codeSystem": "SNOMED-CT",
+            "codeSystemOid": "2.16.840.1.113883.6.96",
             "code": "19951005"
           }
         ],
@@ -712,7 +719,8 @@
         "dataElementCodes": [
           {
             "codeSystem": "LOINC",
-            "code": "18261-8"
+            "code": "18261-8",
+            "codeSystemOid": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Laboratory Test, Performed: LDL-c",
@@ -752,7 +760,7 @@
             "code": "21112-8",
             "codeSystem": "LOINC",
             "descriptor": null,
-            "codeSystemOid": null,
+            "codeSystemOid": "2.16.840.1.113883.6.1",
             "version": null,
             "_type": "QDM::Code"
           }

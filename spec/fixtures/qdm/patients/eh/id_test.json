@@ -9,17 +9,15 @@
       "dataElementCodes": [
         {
           "code": "4525004",
-          "codeSystem": "SNOMED-CT",
-          "codeSystemOid": "2.16.840.1.113883.6.96"
+          "system": "2.16.840.1.113883.6.96"
         }
       ],
       "description": "Encounter, Performed: Emergency Department Visit",
       "diagnoses": [
         {
           "code": "10278007",
-          "codeSystem": "SNOMED-CT",
-          "codeSystemOid": "2.16.840.1.113883.6.96",
-          "descriptor": "Psychiatric/Mental Health Diagnosis",
+          "system": "2.16.840.1.113883.6.96",
+          "display": "Psychiatric/Mental Health Diagnosis",
           "version": null
         }
       ],
@@ -40,9 +38,8 @@
       "negationRationale": null,
       "principalDiagnosis": {
         "code": "10278007",
-        "codeSystem": "SNOMED-CT",
-        "codeSystemOid": "2.16.840.1.113883.6.96",
-        "descriptor": "Psychiatric/Mental Health Diagnosis",
+        "system": "2.16.840.1.113883.6.96",
+        "display": "Psychiatric/Mental Health Diagnosis",
         "version": null
       },
       "qdmCategory": "encounter",

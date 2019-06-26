@@ -47,6 +47,16 @@ module CQM::Converter
       patient
     end
 
+    # given an HDS data_criteria and HDS record, find code_list_id for coresponding data_criteria
+    def find_code_list_id_for_element(data_criteria, record)
+      source_data_criteria = record.source_data_criteria if record.respond_to?('source_data_criteria')
+      if source_data_criteria
+        data_criteria_source = source_data_criteria.select { |sdc| sdc['description'] == data_criteria['description'] }
+        data_criteria_source = data_criteria_source[0]['code_list_id'] if data_criteria_source
+      end
+      data_criteria_source || nil
+    end
+
     def to_qdm(record)
       # Start with a new QDM patient.
       qdm_patient = QDM::Patient.new
@@ -71,7 +81,8 @@ module CQM::Converter
           # conversion is made. Also do this for 'display', where we call this descriptor.
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? 'codeSystem' : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? 'descriptor' : key }
-          qdm_patient.dataElements << generate_qdm_data_element(dc_fixed_keys, dc_type)
+          data_element = generate_qdm_data_element(dc_fixed_keys, dc_type, record)
+          qdm_patient.dataElements << data_element
         end
       end
 
@@ -147,7 +158,7 @@ module CQM::Converter
       extended_data
     end
 
-    def generate_qdm_data_element(dc_fixed_keys, dc_type)
+    def generate_qdm_data_element(dc_fixed_keys, dc_type, record)
       populate_codesystem_oid(dc_fixed_keys)
       data_element = QDM.const_get(dc_type).new(dc_fixed_keys)
       # Any nested QDM types that need initialization should be handled here
@@ -158,6 +169,7 @@ module CQM::Converter
           QDM::FacilityLocation.new.from_json(facility.to_json)
         end
       end
+      data_element.codeListId = find_code_list_id_for_element(dc_fixed_keys, record)
       data_element
     end
 

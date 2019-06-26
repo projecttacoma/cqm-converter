@@ -517,7 +517,7 @@
       {
         "anatomicalLocationSite": null,
         "authorDatetime": "2012-05-21T11:30:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.202",
         "dataElementCodes": [
           {
             "system": "2.16.840.1.113883.6.103",
@@ -680,7 +680,7 @@
       },
       {
         "authorDatetime": "2012-05-21T12:15:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.295",
         "dataElementCodes": [
           {
             "system": "2.16.840.1.113883.6.96",
@@ -705,7 +705,7 @@
       },
       {
         "authorDatetime": "2012-05-21T17:00:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.215",
         "components": [
 
         ],

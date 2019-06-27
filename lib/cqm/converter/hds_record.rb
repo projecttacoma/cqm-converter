@@ -1,6 +1,5 @@
 require 'execjs'
 require 'sprockets'
-require 'byebug'
 # CQM Converter module for HDS models.
 module CQM::Converter
   # CQM Converter class for HDS based records.

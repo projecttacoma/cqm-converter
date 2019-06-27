@@ -20,7 +20,7 @@ module CQM::Converter
       qdm_codes = []
       hds_codes.each do |code_system, codes|
         codes.each do |code|
-          qdm_codes << { codeSystem: code_system, code: code }
+          qdm_codes << { system: code_system, code: code }
         end
       end
       qdm_codes
@@ -92,6 +92,7 @@ module CQM::Converter
       # before generating the executable JavaScript.
       record_json = record_json.deep_transform_keys { |key| key.to_s == 'start_date' ? 'start_time' : key }
       record_json = record_json.deep_transform_keys { |key| key.to_s == 'end_date' ? 'end_time' : key }
+
       <<-JS
         window = {};
         #{js_dependencies};

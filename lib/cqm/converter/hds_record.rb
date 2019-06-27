@@ -46,6 +46,16 @@ module CQM::Converter
       patient
     end
 
+    # given an HDS data_criteria and HDS record, find code_list_id for coresponding data_criteria
+    def find_code_list_id_for_element(data_criteria, record)
+      source_data_criteria = record.source_data_criteria if record.respond_to?('source_data_criteria')
+      if source_data_criteria
+        data_criteria_source = source_data_criteria.select { |sdc| sdc['description'] == data_criteria['description'] }
+        data_criteria_source = data_criteria_source[0]['code_list_id'] if data_criteria_source
+      end
+      data_criteria_source || nil
+    end
+
     def to_qdm(record)
       # Start with a new QDM patient.
       qdm_patient = QDM::Patient.new
@@ -70,8 +80,8 @@ module CQM::Converter
           # conversion is made. Also do this for 'display', where we call this descriptor.
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? 'codeSystem' : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? 'descriptor' : key }
-
-          qdm_patient.dataElements << generate_qdm_data_element(dc_fixed_keys, dc_type)
+          data_element = generate_qdm_data_element(dc_fixed_keys, dc_type, record)
+          qdm_patient.dataElements << data_element
         end
       end
 
@@ -79,7 +89,7 @@ module CQM::Converter
       birthdate = record.birthdate
       if birthdate
         birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
-        code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1', nil, 'LOINC')
+        code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1', nil)
         qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
       end
 
@@ -95,8 +105,7 @@ module CQM::Converter
         # Bonnie currently uses 'CDC Race' instead of the correct 'CDC Race'.  This incorrect code is here as a temporary
         # workaround until the larger change of making bonnie use 'CDC Race' can be implemented.
         # Same change is present in `race` below.
-        code = QDM::Code.new(ethnicity['code'], '2.16.840.1.113883.6.238', ethnicity['name'], 'CDC Race')
-        # code = QDM::Code.new(ethnicity['code'], 'CDC Race', ethnicity['name'], '2.16.840.1.113883.6.238')
+        code = QDM::Code.new(ethnicity['code'], '2.16.840.1.113883.6.238', ethnicity['name'])
         qdm_patient.dataElements << QDM::PatientCharacteristicEthnicity.new(dataElementCodes: [code])
       end
 
@@ -112,7 +121,7 @@ module CQM::Converter
       race = record.race
       if race
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.6.238
-        code = QDM::Code.new(race['code'], '2.16.840.1.113883.6.238', race['name'], 'CDC Race')
+        code = QDM::Code.new(race['code'], '2.16.840.1.113883.6.238', race['name'])
         # code = QDM::Code.new(race['code'], 'CDC Race', race['name'], '2.16.840.1.113883.6.238')
         qdm_patient.dataElements << QDM::PatientCharacteristicRace.new(dataElementCodes: [code])
       end
@@ -121,7 +130,7 @@ module CQM::Converter
       sex = record.gender
       if sex
         # See: https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.5.1
-        code = QDM::Code.new(sex, '2.16.840.1.113883.5.1', sex, 'AdministrativeGender')
+        code = QDM::Code.new(sex, '2.16.840.1.113883.5.1', sex)
         qdm_patient.dataElements << QDM::PatientCharacteristicSex.new(dataElementCodes: [code])
       end
 
@@ -148,7 +157,8 @@ module CQM::Converter
       extended_data
     end
 
-    def generate_qdm_data_element(dc_fixed_keys, dc_type)
+    def generate_qdm_data_element(dc_fixed_keys, dc_type, record)
+      populate_codesystem_oid(dc_fixed_keys)
       data_element = QDM.const_get(dc_type).new(dc_fixed_keys)
       # Any nested QDM types that need initialization should be handled here
       # when converting from the QDM models to the HDS models.
@@ -158,13 +168,13 @@ module CQM::Converter
           QDM::FacilityLocation.new.from_json(facility.to_json)
         end
       end
-      populate_codesystem_oid(data_element)
+      data_element.codeListId = find_code_list_id_for_element(dc_fixed_keys, record)
       data_element
     end
 
     # iterate over all of the fields
     # if array or one of the nested types (facility location) dive deeper
-    # if object contains codeSystem and codeSystemOid doesn't have a value then set codeSystemOid to the correct OID
+    # if object contains codeSystem and system doesn't have a value then set system to the correct OID
     def populate_codesystem_oid(entry)
       if entry.nil? || entry.is_a?(String) || entry.is_a?(BSON::ObjectId) ||
          entry.is_a?(Time) || entry.is_a?(Date) || entry.is_a?(Boolean) || entry.is_a?(Integer) || entry.is_a?(Float)
@@ -176,8 +186,14 @@ module CQM::Converter
           if name_oid_hash[entry['codeSystem']].nil? && name_oid_hash[entry[:codeSystem]].nil?
             puts 'ERROR: Could Not Resolve OID For Code System ' + entry['codeSystem']
           else
-            entry['codeSystemOid'] = name_oid_hash[entry['codeSystem']] || name_oid_hash[entry[:codeSystem]]
+            entry['system'] = name_oid_hash[entry['codeSystem']] || name_oid_hash[entry[:codeSystem]]
+            # cqm codes mirror cql codes and do not include the human-readable codeSystem name
+            entry.delete('codeSystem')
           end
+        end
+        if entry['descriptor'] || entry[:descriptor]
+          entry['display'] = entry['descriptor'] || entry[:descriptor]
+          entry.delete('descriptor')
         end
         entry.keys.each { |key| populate_codesystem_oid(entry[key]) }
       elsif entry.is_a?(QDM::DataElement) || entry.is_a?(QDM::Attribute)

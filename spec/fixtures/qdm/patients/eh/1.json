@@ -507,11 +507,10 @@
       {
         "admissionSource": null,
         "authorDatetime": "2012-04-06T04:00:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.292",
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "code": "4525004"
           }
         ],
@@ -519,10 +518,9 @@
         "diagnoses": [
           {
             "code": "10278007",
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "version": null,
-            "descriptor": "Psychiatric/Mental Health Diagnosis"
+            "display": "Psychiatric/Mental Health Diagnosis"
           }
         ],
         "dischargeDisposition": null,
@@ -542,9 +540,8 @@
         "negationRationale": null,
         "principalDiagnosis": {
           "code": "10278007",
-          "codeSystem": "SNOMED-CT",
-          "descriptor": "Psychiatric/Mental Health Diagnosis",
-          "codeSystemOid": "2.16.840.1.113883.6.96",
+          "display": "Psychiatric/Mental Health Diagnosis",
+          "system": "2.16.840.1.113883.6.96",
           "version": null
         },
         "qdmCategory": "encounter",
@@ -565,9 +562,8 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
-            "descriptor": null,
-            "codeSystemOid": "2.16.840.1.113883.6.1",
+            "display": null,
+            "system": "2.16.840.1.113883.6.1",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -590,9 +586,8 @@
         "dataElementCodes": [
           {
             "code": "2135-2",
-            "codeSystem": "CDC Race",
-            "descriptor": "Hispanic Or Latino",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "display": "Hispanic Or Latino",
+            "system": "2.16.840.1.113883.6.238",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -615,9 +610,8 @@
         "dataElementCodes": [
           {
             "code": "2131-1",
-            "codeSystem": "CDC Race",
-            "descriptor": "Other",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "display": "Other",
+            "system": "2.16.840.1.113883.6.238",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -640,9 +634,8 @@
         "dataElementCodes": [
           {
             "code": "F",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "F",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "display": "F",
+            "system": "2.16.840.1.113883.5.1",
             "version": null,
             "_type": "QDM::Code"
           }

@@ -517,21 +517,18 @@
       {
         "anatomicalLocationSite": null,
         "authorDatetime": "2012-05-21T11:30:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.202",
         "dataElementCodes": [
           {
-            "codeSystem": "ICD-9-CM",
-            "codeSystemOid": "2.16.840.1.113883.6.103",
+            "system": "2.16.840.1.113883.6.103",
             "code": "427.31"
           },
           {
-            "codeSystem": "ICD-10-CM",
-            "codeSystemOid": "2.16.840.1.113883.6.90",
+            "system": "2.16.840.1.113883.6.90",
             "code": "I48.1"
           },
           {
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "code": "233911009"
           }
         ],
@@ -561,8 +558,7 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "code": "4525004"
           }
         ],
@@ -604,8 +600,7 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "code": "4525004"
           }
         ],
@@ -647,8 +642,7 @@
         "codeListId": null,
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "code": "32485007"
           }
         ],
@@ -686,11 +680,10 @@
       },
       {
         "authorDatetime": "2012-05-21T12:15:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.295",
         "dataElementCodes": [
           {
-            "codeSystem": "SNOMED-CT",
-            "codeSystemOid": "2.16.840.1.113883.6.96",
+            "system": "2.16.840.1.113883.6.96",
             "code": "19951005"
           }
         ],
@@ -712,15 +705,14 @@
       },
       {
         "authorDatetime": "2012-05-21T17:00:00.000-04:00",
-        "codeListId": null,
+        "codeListId": "2.16.840.1.113883.3.117.1.7.1.215",
         "components": [
 
         ],
         "dataElementCodes": [
           {
-            "codeSystem": "LOINC",
             "code": "18261-8",
-            "codeSystemOid": "2.16.840.1.113883.6.1"
+            "system": "2.16.840.1.113883.6.1"
           }
         ],
         "description": "Laboratory Test, Performed: LDL-c",
@@ -758,9 +750,8 @@
         "dataElementCodes": [
           {
             "code": "21112-8",
-            "codeSystem": "LOINC",
-            "descriptor": null,
-            "codeSystemOid": "2.16.840.1.113883.6.1",
+            "display": null,
+            "system": "2.16.840.1.113883.6.1",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -783,9 +774,8 @@
         "dataElementCodes": [
           {
             "code": "2186-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "Not Hispanic or Latino",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "display": "Not Hispanic or Latino",
+            "system": "2.16.840.1.113883.6.238",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -808,9 +798,8 @@
         "dataElementCodes": [
           {
             "code": "1002-5",
-            "codeSystem": "CDC Race",
-            "descriptor": "American Indian or Alaska Native",
-            "codeSystemOid": "2.16.840.1.113883.6.238",
+            "display": "American Indian or Alaska Native",
+            "system": "2.16.840.1.113883.6.238",
             "version": null,
             "_type": "QDM::Code"
           }
@@ -833,9 +822,8 @@
         "dataElementCodes": [
           {
             "code": "M",
-            "codeSystem": "AdministrativeGender",
-            "descriptor": "M",
-            "codeSystemOid": "2.16.840.1.113883.5.1",
+            "display": "M",
+            "system": "2.16.840.1.113883.5.1",
             "version": null,
             "_type": "QDM::Code"
           }

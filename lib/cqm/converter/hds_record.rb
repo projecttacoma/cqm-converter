@@ -51,7 +51,18 @@ module CQM::Converter
       source_data_criteria = record.source_data_criteria if record.respond_to?('source_data_criteria')
       if source_data_criteria
         data_criteria_source = source_data_criteria.select { |sdc| sdc['description'] == data_criteria['description'] }
-        data_criteria_source = data_criteria_source[0]['code_list_id'] if data_criteria_source
+
+        # Edge case where there are multiple source data criteria but they have different code_list_ids
+        # Select the correct code_list_id based on the codes that are used
+        if data_criteria_source.length > 1
+          data_criteria_source.each do |sdc|
+            data_criteria['dataElementCodes'].each do |code|
+              data_criteria_source = sdc['code_list_id'] if sdc['codes'].value?([code['code']])
+            end
+          end
+        elsif data_criteria_source
+          data_criteria_source = data_criteria_source[0]['code_list_id']
+        end
       end
       data_criteria_source || nil
     end

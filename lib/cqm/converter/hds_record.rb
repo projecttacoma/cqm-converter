@@ -96,9 +96,12 @@ module CQM::Converter
         end
       end
 
-      # Convert patient characteristic birthdate.
+      # Convert patient characteristic birthdate if one exists on the measure
       birthdate = record.birthdate
-      if birthdate
+      measure = CQM::Measure.where(hqmf_set_id: record.measure_ids[0]).first
+      # Don't add birthdate if the patients are orphaned
+      # Add birthdate characteristic if it is in the measure source data criteria
+      if !measure.nil? && (measure.source_data_criteria.select {|sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }).length() > 0
         birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
         code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1', nil)
         qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])

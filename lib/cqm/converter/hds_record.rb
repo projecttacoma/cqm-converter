@@ -98,7 +98,7 @@ module CQM::Converter
 
       # Convert patient characteristic birthdate if one exists on the measure
       birthdate = record.birthdate
-      measure = CQM::Measure.where(hqmf_set_id: record.measure_ids[0]).first
+      measure = CQM::Measure.where(hqmf_set_id: record.measure_ids[0]).first if record.respond_to?('measure_ids')
       # Don't add birthdate if the patients are orphaned
       # Add birthdate characteristic if it is in the measure source data criteria
       if !measure.nil? && (measure.source_data_criteria.select {|sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }).length() > 0
@@ -125,7 +125,7 @@ module CQM::Converter
 
       # Convert patient characteristic expired.
       expired = record.deathdate
-      if expired
+      if !measure.nil? && (measure.source_data_criteria.select {|sdc| sdc.qdmTitle == 'Patient Characteristic Expired' }).length() > 0
         expired_datetime = DateTime.strptime(expired.to_s, '%s')
         code = QDM::Code.new('419099009', '2.16.840.1.113883.6.96')
         qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])

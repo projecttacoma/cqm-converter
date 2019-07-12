@@ -67,6 +67,8 @@ RSpec.describe CQM::Converter::HDSRecord do
 
     hds_element = hds_data_elements.select { |e| e['_type'] == 'QDM::PatientCharacteristicBirthdate' }
     qdm_element = qdm_data_elements.select { |e| e['_type'] == 'QDM::PatientCharacteristicBirthdate' }
+    # Both should be missing because QDM::PatientCharacteristicBirthdate should not be on the patient if the measure
+    # doesn't contain QDM::PatientCharacteristicBirthdate in the source data criteria
     expect(hds_element).to eq(qdm_element)
     hds_element = hds_data_elements.select { |e| e['_type'] == 'QDM::LaboratoryTestPerformed' }
     qdm_element = qdm_data_elements.select { |e| e['_type'] == 'QDM::LaboratoryTestPerformed' }

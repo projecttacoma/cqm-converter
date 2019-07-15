@@ -95,7 +95,8 @@ module CQM::Converter
           # Remove the principalDiagnosis from the diagnoses field value. It gets duplicated
           # when pulling the data elements from the record
           if dc_type == 'EncounterPerformed' && dc_fixed_keys['principalDiagnosis'].present?
-            dc_fixed_keys['diagnoses'].delete_at(dc_fixed_keys['diagnoses'].index(dc_fixed_keys['principalDiagnosis']) || dc_fixed_keys['diagnoses'].length)
+            principal_diagnosis_index = dc_fixed_keys['diagnoses'].index(dc_fixed_keys['principalDiagnosis'])
+            dc_fixed_keys['diagnoses'].delete_at(principal_diagnosis_index)
           end
 
           data_element = generate_qdm_data_element(dc_fixed_keys, dc_type, record)

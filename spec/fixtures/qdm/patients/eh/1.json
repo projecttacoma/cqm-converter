@@ -515,14 +515,7 @@
           }
         ],
         "description": "Encounter, Performed: Emergency Department Visit",
-        "diagnoses": [
-          {
-            "code": "10278007",
-            "system": "2.16.840.1.113883.6.96",
-            "version": null,
-            "display": "Psychiatric/Mental Health Diagnosis"
-          }
-        ],
+        "diagnoses": [],
         "dischargeDisposition": null,
         "facilityLocations": [
 

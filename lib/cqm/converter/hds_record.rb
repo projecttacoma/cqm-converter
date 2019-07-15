@@ -91,6 +91,14 @@ module CQM::Converter
           # conversion is made. Also do this for 'display', where we call this descriptor.
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'system' ? 'codeSystem' : key }
           dc_fixed_keys = dc_fixed_keys.deep_transform_keys { |key| key.to_s == 'display' ? 'descriptor' : key }
+
+          # Remove the principalDiagnosis from the diagnoses field value. It gets duplicated
+          # when pulling the data elements from the record
+          if dc_type == 'EncounterPerformed' && dc_fixed_keys['principalDiagnosis'].present?
+            principal_diagnosis_index = dc_fixed_keys['diagnoses'].index(dc_fixed_keys['principalDiagnosis'])
+            dc_fixed_keys['diagnoses'].delete_at(principal_diagnosis_index)
+          end
+
           data_element = generate_qdm_data_element(dc_fixed_keys, dc_type, record)
           qdm_patient.dataElements << data_element
         end

@@ -4,7 +4,7 @@
     {
       "_type": "QDM::EncounterPerformed",
       "admissionSource": null,
-      "authorDatetime": "2012-04-06T08:00:00+00:00",
+      "authorDatetime": null,
       "codeListId": null,
       "dataElementCodes": [
         {

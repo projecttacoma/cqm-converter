@@ -516,7 +516,7 @@
     "dataElements": [
       {
         "anatomicalLocationSite": null,
-        "authorDatetime": "2012-05-21T11:30:00.000-04:00",
+        "authorDatetime": null,
         "codeListId": "2.16.840.1.113883.3.117.1.7.1.202",
         "dataElementCodes": [
           {
@@ -541,7 +541,7 @@
         },
         "prevalencePeriod": {
           "low": "2012-05-21T15:30:00.000+00:00",
-          "high": "9999-12-31T23:59:59.000+00:00",
+          "high": null,
           "lowClosed": true,
           "highClosed": true
         },
@@ -554,7 +554,7 @@
       },
       {
         "admissionSource": null,
-        "authorDatetime": "2012-04-02T13:00:00.000-04:00",
+        "authorDatetime": null,
         "codeListId": null,
         "dataElementCodes": [
           {
@@ -596,7 +596,7 @@
       },
       {
         "admissionSource": null,
-        "authorDatetime": "2012-05-21T11:00:00.000-04:00",
+        "authorDatetime": null,
         "codeListId": null,
         "dataElementCodes": [
           {
@@ -638,7 +638,7 @@
       },
       {
         "admissionSource": null,
-        "authorDatetime": "2012-05-21T13:00:00.000-04:00",
+        "authorDatetime": null,
         "codeListId": null,
         "dataElementCodes": [
           {
@@ -704,7 +704,7 @@
         "_type": "QDM::EncounterOrder"
       },
       {
-        "authorDatetime": "2012-05-21T17:00:00.000-04:00",
+        "authorDatetime": null,
         "codeListId": "2.16.840.1.113883.3.117.1.7.1.215",
         "components": [
 

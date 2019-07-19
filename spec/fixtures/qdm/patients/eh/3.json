@@ -623,65 +623,6 @@
       }
     ],
     "extendedData": {
-      "source_data_criteria": [
-        {
-          "negation": false,
-          "definition": "encounter",
-          "status": "performed",
-          "title": "EmergencyDepartmentVisit",
-          "description": "Encounter, Performed: Emergency Department Visit",
-          "code_list_id": "2.16.840.1.113883.3.117.1.7.1.292",
-          "type": "encounters",
-          "id": "EmergencyDepartmentVisit_EncounterPerformed_e9dfea5a_0011_42cc_b048_3a8748c1c4b0_source",
-          "start_date": 1333699200000,
-          "end_date": 1333703700000,
-          "value": [
-
-          ],
-          "references": null,
-          "field_values": {
-            "PRINCIPAL_DIAGNOSIS": {
-              "type": "CD",
-              "code_list_id": "2.16.840.1.113883.3.117.1.7.1.299",
-              "field_title": "Principal Diagnosis",
-              "title": "Psychiatric/Mental Health Diagnosis"
-            },
-            "ADMISSION_DATETIME": {
-              "type": "TS",
-              "code_list_id": "",
-              "field_title": "Admission Date/Time",
-              "start_date": "04/06/2012",
-              "start_time": "8:00 AM",
-              "value": 1333699200000
-            },
-            "DISCHARGE_DATETIME": {
-              "type": "TS",
-              "code_list_id": "",
-              "field_title": "Discharge Date/Time",
-              "start_date": "04/06/2012",
-              "start_time": "9:15 AM",
-              "value": 1333703700000
-            }
-          },
-          "hqmf_set_id": "3FD13096-2C8F-40B5-9297-B714E8DE9133",
-          "cms_id": "CMS32v8",
-          "criteria_id": "1624f0dc31cWr",
-          "codes": {
-            "SNOMED-CT": [
-              "4525004"
-            ]
-          },
-          "negation_code_list_id": "",
-          "coded_entry_id": "5abbdd05aeac508c3233e01f",
-          "code_source": "DEFAULT"
-        },
-        {
-          "id": "MeasurePeriod",
-          "start_date": 0,
-          "end_date": 0,
-          "references": null
-        }
-      ],
       "is_shared": false,
       "origin_data": [
 

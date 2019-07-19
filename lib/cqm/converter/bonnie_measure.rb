@@ -175,11 +175,11 @@ def convert_source_data_criteria(bonnie_measure)
   converted_source_data_criteria = bonnie_measure.source_data_criteria.map do |_, sdc|
     key = "#{sdc['definition']}::#{sdc['status']}"
     if @map_definition_and_status_to_model[key].present?
-        model_name = @map_definition_and_status_to_model[key]['model_name']
-        QDM.const_get(model_name).new(
-          description: sdc['description'],
-          codeListId: sdc['code_list_id']
-        )
+      model_name = @map_definition_and_status_to_model[key]['model_name']
+      QDM.const_get(model_name).new(
+        description: sdc['description'],
+        codeListId: sdc['code_list_id']
+      )
     else
       puts "\nRemoving SDC #{key} from measure".light_blue
     end

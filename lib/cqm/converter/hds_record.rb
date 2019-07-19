@@ -48,6 +48,7 @@ module CQM::Converter
 
     # given an HDS data_criteria and HDS record, find code_list_id for coresponding data_criteria
     def find_code_list_id_for_element(data_criteria, record)
+      code_list_id = nil
       source_data_criteria = record.source_data_criteria if record.respond_to?('source_data_criteria')
       if source_data_criteria
         data_criteria_source = source_data_criteria.select { |sdc| sdc['description'] == data_criteria['description'] }
@@ -57,14 +58,19 @@ module CQM::Converter
         if data_criteria_source.length > 1
           data_criteria_source.each do |sdc|
             data_criteria['dataElementCodes'].each do |code|
-              data_criteria_source = sdc['code_list_id'] if sdc['codes'].value?([code['code']])
+              if sdc['codes'].value?([code['code']])
+                code_list_id = sdc['code_list_id']
+              end
             end
           end
-        elsif data_criteria_source
-          data_criteria_source = data_criteria_source[0]['code_list_id']
+        end
+
+        if data_criteria_source && code_list_id.nil?
+          code_list_id = data_criteria_source[0]['code_list_id']
         end
       end
-      data_criteria_source || nil
+
+      code_list_id
     end
 
     def to_qdm(record)
@@ -133,7 +139,7 @@ module CQM::Converter
 
       # Convert patient characteristic expired.
       expired = record.deathdate
-      if !measure.nil? && (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' }).any?
+      if !measure.nil? && (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' }).any? && expired
         expired_datetime = DateTime.strptime(expired.to_s, '%s')
         code = QDM::Code.new('419099009', '2.16.840.1.113883.6.96')
         qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
@@ -166,7 +172,6 @@ module CQM::Converter
     def convert_extended_data(record)
       extended_data = {}
       extended_data['type'] = record.type if record.respond_to?('type')
-      extended_data['source_data_criteria'] = record.source_data_criteria if record.respond_to?('source_data_criteria')
       extended_data['is_shared'] = record.is_shared if record.respond_to?('is_shared')
       extended_data['origin_data'] = record.origin_data if record.respond_to?('origin_data')
       extended_data['test_id'] = record.test_id if record.respond_to?('test_id')

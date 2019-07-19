@@ -174,13 +174,15 @@ def convert_source_data_criteria(bonnie_measure)
   @map_definition_and_status_to_model ||= JSON.parse(File.read(File.join(File.dirname(__FILE__), 'map_definition_and_status_to_model.json')))
   converted_source_data_criteria = bonnie_measure.source_data_criteria.map do |_, sdc|
     key = "#{sdc['definition']}::#{sdc['status']}"
-    raise StandardError, "Unmapped type found: no match for #{key} found in the model map file." unless @map_definition_and_status_to_model[key].present?
-
-    model_name = @map_definition_and_status_to_model[key]['model_name']
-    QDM.const_get(model_name).new(
-      description: sdc['description'],
-      codeListId: sdc['code_list_id']
-    )
+    if @map_definition_and_status_to_model[key].present?
+        model_name = @map_definition_and_status_to_model[key]['model_name']
+        QDM.const_get(model_name).new(
+          description: sdc['description'],
+          codeListId: sdc['code_list_id']
+        )
+    else
+      puts "\nRemoving SDC #{key} from measure".light_blue
+    end
   end
   converted_source_data_criteria
 end

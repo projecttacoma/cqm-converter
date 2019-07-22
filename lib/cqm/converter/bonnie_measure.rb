@@ -30,7 +30,9 @@ module CQM::Converter
 
           # convert statement dependencies to new form
           bonnie_measure.cql_statement_dependencies[cql_library.library_name].each do |statement_name, dependencies|
-            statement_dependency = CQM::StatementDependency.new(statement_name: statement_name)
+            # Replace "escaped" period with period now that statement_name is no longer a key
+            statement_name_fixed = statement_name.gsub '^p', '.'
+            statement_dependency = CQM::StatementDependency.new(statement_name: statement_name_fixed)
             # TODO: consider removing duplicates
             statement_dependency.statement_references = dependencies.map do |dependency|
               CQM::StatementReference.new(library_name: dependency['library_name'], statement_name: dependency['statement_name'])

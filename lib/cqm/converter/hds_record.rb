@@ -112,7 +112,7 @@ module CQM::Converter
 
       # Convert patient characteristic birthdate if one exists on the measure
       birthdate = record.birthdate
-      measure = CQM::Measure.where(hqmf_set_id: record.measure_ids[0]).first if record.respond_to?('measure_ids')
+      measure = CQM::Measure.where(user_id: record.user_id, hqmf_set_id: record.measure_ids[0]).first if record.respond_to?('measure_ids')
       # Don't add birthdate if the patients are orphaned
       # Add birthdate characteristic if it is in the measure source data criteria
       if !measure.nil? && (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }).any?

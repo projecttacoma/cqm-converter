@@ -145,7 +145,7 @@ module CQM::Converter
       # Convert patient characteristic expired.
       sdc = (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' })[0]
       expired = record.deathdate
-      if !measure.nil? && .any? && expired && !sdc.nil?
+      if !measure.nil? && expired && !sdc.nil?
         expired_datetime = DateTime.strptime(expired.to_s, '%s')
         code = measure.value_sets.where({oid: sdc.codeListId })[0].concepts[0]
         if !code.nil?

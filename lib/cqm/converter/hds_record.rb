@@ -115,10 +115,15 @@ module CQM::Converter
       measure = CQM::Measure.where(hqmf_set_id: record.measure_ids[0]).first if record.respond_to?('measure_ids')
       # Don't add birthdate if the patients are orphaned
       # Add birthdate characteristic if it is in the measure source data criteria
-      if !measure.nil? && (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }).any?
+      sdc = measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }[0]
+      if !measure.nil? && !sdc.nil?
         birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
-        code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1', nil)
-        qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
+        code = measure.value_sets.where({oid: sdc.codeListId })[0].concepts[0]
+        if !code.nil?
+          qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
+        else
+          # TODO PRINT OUT INFO ABOUT PATIENT/MEASURE
+        end
       end
 
       # Convert patient characteristic clinical trial participant.
@@ -138,11 +143,16 @@ module CQM::Converter
       end
 
       # Convert patient characteristic expired.
+      sdc = (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' })[0]
       expired = record.deathdate
-      if !measure.nil? && (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' }).any? && expired
+      if !measure.nil? && .any? && expired && !sdc.nil?
         expired_datetime = DateTime.strptime(expired.to_s, '%s')
-        code = QDM::Code.new('419099009', '2.16.840.1.113883.6.96')
-        qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
+        code = measure.value_sets.where({oid: sdc.codeListId })[0].concepts[0]
+        if !code.nil?
+          qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
+        else
+          # TODO PRINT OUT INFO ABOUT PATIENT/MEASURE
+        end
       end
 
       # Convert patient characteristic race.

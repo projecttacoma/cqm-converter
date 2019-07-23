@@ -225,7 +225,7 @@ module CQM::Converter
         entry.keys.each { |key| populate_codesystem_oid(entry[key]) }
       elsif entry.is_a?(QDM::DataElement) || entry.is_a?(QDM::Attribute)
         entry.attribute_names.each { |key| populate_codesystem_oid(entry[key]) }
-      else
+        # else
         # puts 'WARNING: Unable To Search For Codes In ' + entry.to_s
       end
     end

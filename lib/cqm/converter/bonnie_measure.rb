@@ -183,6 +183,7 @@ def convert_source_data_criteria(bonnie_measure)
         codeListId: sdc['code_list_id']
       )
     else
+      printf ''
       # puts "\nRemoving SDC #{key} from measure".light_blue
     end
   end

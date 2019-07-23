@@ -178,13 +178,37 @@ def convert_source_data_criteria(bonnie_measure)
     key = "#{sdc['definition']}::#{sdc['status']}"
     if @map_definition_and_status_to_model[key].present?
       model_name = @map_definition_and_status_to_model[key]['model_name']
+      if model_name == 'PatientCharacteristicExpired' || model_name == 'PatientCharacteristicBirthdate'
+        if bonnie_measure.value_set_oids.any? { |s| s.include?('drc-') }
+          bonnie_measure.elm.each do |elm|
+            # Loops over all single codes and saves them as fake valuesets.
+            (elm.dig('library','codes','def') || []).each do |code_reference|
+              birthdate_names = ['birthdate', 'birth date']
+              dead_names = ['dead', 'expired']
+              if (model_name == 'PatientCharacteristicExpired' && dead_names.include?(code_reference['name'].downcase)) || (model_name == 'PatientCharacteristicBirthdate' && birthdate_names.include?(code_reference['name'].downcase))
+                # look up the referenced code system
+                code_system_def = elm['library']['codeSystems']['def'].find { |code_sys| code_sys['name'] == code_reference['codeSystem']['name'] }
+                # Generate a unique number as our fake "oid" based on parameters that identify the DRC
+                code_system_name = code_system_def['id']
+                code_system_version = code_system_def['version']
+
+                # Generate a unique number as our fake "oid" based on parameters that identify the DRC
+                code_hash = "drc-" + Digest::SHA2.hexdigest("#{code_system_name} #{code_reference['id']} #{code_reference['name']} #{code_system_version}")
+                if bonnie_measure.value_set_oids.any? { |s| s == code_hash }
+                  sdc['code_list_id'] = code_hash
+                end
+              end
+            end
+          end
+        end
+      end
       QDM.const_get(model_name).new(
         description: sdc['description'],
         codeListId: sdc['code_list_id']
       )
     else
-      printf ''
-      # puts "\nRemoving SDC #{key} from measure".light_blue
+      # printf ''
+      puts "\nRemoving SDC #{key} from measure".light_blue
     end
   end
   converted_source_data_criteria

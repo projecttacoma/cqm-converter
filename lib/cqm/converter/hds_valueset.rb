@@ -23,7 +23,7 @@ module CQM::Converter
       value_sets = []
       value_set_oid_version_objects.each do |vs|
         hds_value_set = hds_value_sets.where({oid: vs['oid'], version: vs['version']})[0] || hds_value_sets.where({oid: vs['oid']})[0]
-        value_sets.push(to_cqm(hds_value_set))
+        value_sets.push(to_cqm(hds_value_set)) if hds_value_set
       end
       value_sets
     end

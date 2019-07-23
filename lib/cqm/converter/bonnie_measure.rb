@@ -140,7 +140,7 @@ module CQM::Converter
 
       cql_library['elm']['library']['codeSystems']['def'].each do |codesystem|
         if name_oid_hash[codesystem['id']].nil?
-          # puts 'ERROR: Could Not Resolve OID For Code System ' + codesystem['id']
+          puts 'ERROR: Could Not Resolve OID For Code System ' + codesystem['id']
         else
           codesystem['id'] = name_oid_hash[codesystem['id']]
         end
@@ -207,7 +207,6 @@ def convert_source_data_criteria(bonnie_measure)
         codeListId: sdc['code_list_id']
       )
     else
-      # printf ''
       puts "\nRemoving SDC #{key} from measure".light_blue
     end
   end

@@ -211,7 +211,7 @@ module CQM::Converter
         if entry['codeSystem'] || entry[:codeSystem]
           name_oid_hash = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'name_oid_map.json')))
           if name_oid_hash[entry['codeSystem']].nil? && name_oid_hash[entry[:codeSystem]].nil?
-            puts 'ERROR: Could Not Resolve OID For Code System ' + entry['codeSystem']
+            # puts 'ERROR: Could Not Resolve OID For Code System ' + entry['codeSystem']
           else
             entry['system'] = name_oid_hash[entry['codeSystem']] || name_oid_hash[entry[:codeSystem]]
             # cqm codes mirror cql codes and do not include the human-readable codeSystem name
@@ -226,7 +226,7 @@ module CQM::Converter
       elsif entry.is_a?(QDM::DataElement) || entry.is_a?(QDM::Attribute)
         entry.attribute_names.each { |key| populate_codesystem_oid(entry[key]) }
       else
-        puts 'WARNING: Unable To Search For Codes In ' + entry.to_s
+        # puts 'WARNING: Unable To Search For Codes In ' + entry.to_s
       end
     end
   end

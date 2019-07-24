@@ -115,14 +115,17 @@ module CQM::Converter
       measure = CQM::Measure.where(user_id: record.user_id, hqmf_set_id: record.measure_ids[0]).first if record.respond_to?('measure_ids')
       # Don't add birthdate if the patients are orphaned
       # Add birthdate characteristic if it is in the measure source data criteria
-      sdc = measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }[0]
-      if !measure.nil? && !sdc.nil?
-        birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
-        code = measure.value_sets.where({oid: sdc.codeListId })[0].concepts[0]
-        if !code.nil?
-          qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
-        else
-          # TODO PRINT OUT INFO ABOUT PATIENT/MEASURE
+      if !measure.nil?
+        sdc = measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }[0]
+        if !sdc.nil?
+          birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
+          concepts = measure.value_sets.where({oid: sdc.codeListId })[0]&.concepts
+          if !concepts.nil? && !concepts[0].nil? && !concepts[0].code.nil?
+            code = concepts[0]
+            qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code.code])
+          else
+            puts "No code for birthdate on measure #{measure._id}"
+          end
         end
       end
 
@@ -143,15 +146,18 @@ module CQM::Converter
       end
 
       # Convert patient characteristic expired.
-      sdc = (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' })[0]
       expired = record.deathdate
-      if !measure.nil? && expired && !sdc.nil?
-        expired_datetime = DateTime.strptime(expired.to_s, '%s')
-        code = measure.value_sets.where({oid: sdc.codeListId })[0].concepts[0]
-        if !code.nil?
-          qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
-        else
-          # TODO PRINT OUT INFO ABOUT PATIENT/MEASURE
+      if !measure.nil? && !expired.nil?
+        sdc = (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' })[0]
+        if !sdc.nil?
+          expired_datetime = DateTime.strptime(expired.to_s, '%s')
+          concepts = measure.value_sets.where({oid: sdc.codeListId })[0]&.concepts
+          if !concepts.nil? && !concepts[0].nil? && !concepts[0].code.nil?
+            code = concepts[0]
+            qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code.code])
+          else
+            puts "No code for expired on measure #{measure._id}"
+          end
         end
       end
 

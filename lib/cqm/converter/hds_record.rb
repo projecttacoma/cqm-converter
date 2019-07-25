@@ -109,23 +109,27 @@ module CQM::Converter
           qdm_patient.dataElements << data_element
         end
       end
-
       # Convert patient characteristic birthdate if one exists on the measure
       birthdate = record.birthdate
       measure = CQM::Measure.where(user_id: record.user_id, hqmf_set_id: record.measure_ids[0]).first if record.respond_to?('measure_ids')
       # Don't add birthdate if the patients are orphaned
       # Add birthdate characteristic if it is in the measure source data criteria
       if !measure.nil?
+        birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
         sdc = measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Birthdate' }[0]
+        concepts = nil
         if !sdc.nil?
-          birth_datetime = DateTime.strptime(birthdate.to_s, '%s')
           concepts = measure.value_sets.where({oid: sdc.codeListId })[0]&.concepts
           if !concepts.nil? && !concepts[0].nil? && !concepts[0].code.nil?
             code = concepts[0]
             qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code.code])
-          else
-            puts "No code for birthdate on measure #{measure._id}"
           end
+        end
+
+        # This case _shouldn't_ happen now that we are adding birthdate and expired onto measure source_data_criteria
+        if concepts.nil?
+          code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1', nil)
+          qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code])
         end
       end
 
@@ -148,16 +152,20 @@ module CQM::Converter
       # Convert patient characteristic expired.
       expired = record.deathdate
       if !measure.nil? && !expired.nil?
+        expired_datetime = DateTime.strptime(expired.to_s, '%s')
         sdc = (measure.source_data_criteria.select { |sdc| sdc.qdmTitle == 'Patient Characteristic Expired' })[0]
+        concepts = nil
         if !sdc.nil?
-          expired_datetime = DateTime.strptime(expired.to_s, '%s')
           concepts = measure.value_sets.where({oid: sdc.codeListId })[0]&.concepts
           if !concepts.nil? && !concepts[0].nil? && !concepts[0].code.nil?
             code = concepts[0]
             qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code.code])
-          else
-            puts "No code for expired on measure #{measure._id}"
           end
+        end
+        # This case _shouldn't_ happen now that we are adding birthdate and expired onto measure source_data_criteria
+        if concepts.nil?
+          code = QDM::Code.new('419099009', '2.16.840.1.113883.6.96')
+          qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code])
         end
       end
 

@@ -211,16 +211,6 @@ def convert_source_data_criteria(bonnie_measure)
     end
   end
 
-  if (converted_source_data_criteria.select { |sdc| sdc&.qdmTitle == 'Patient Characteristic Birthdate' }).count == 0
-    code = QDM::Code.new('21112-8', '2.16.840.1.113883.6.1')
-    converted_source_data_criteria << QDM::PatientCharacteristicBirthdate.new(dataElementCodes: [code])
-  end
-
-  if (converted_source_data_criteria.select { |sdc| sdc&.qdmTitle == 'Patient Characteristic Expired' }).count == 0
-    code = QDM::Code.new('419099009', '2.16.840.1.113883.6.96')
-    converted_source_data_criteria << QDM::PatientCharacteristicExpired.new(dataElementCodes: [code])
-  end
-
   converted_source_data_criteria
 end
 

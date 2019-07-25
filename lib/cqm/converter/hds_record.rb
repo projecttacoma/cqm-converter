@@ -122,7 +122,8 @@ module CQM::Converter
           concepts = measure.value_sets.where({oid: sdc.codeListId })[0]&.concepts
           if !concepts.nil? && !concepts[0].nil? && !concepts[0].code.nil?
             code = concepts[0]
-            qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [code.code])
+            qdmCode = QDM::Code.new(code.code,code.code_system_oid,code.display_name)
+            qdm_patient.dataElements << QDM::PatientCharacteristicBirthdate.new(birthDatetime: birth_datetime, dataElementCodes: [qdmCode])
           end
         end
 
@@ -159,7 +160,8 @@ module CQM::Converter
           concepts = measure.value_sets.where({oid: sdc.codeListId })[0]&.concepts
           if !concepts.nil? && !concepts[0].nil? && !concepts[0].code.nil?
             code = concepts[0]
-            qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [code.code])
+            qdmCode = QDM::Code.new(code.code,code.code_system_oid,code.display_name)
+            qdm_patient.dataElements << QDM::PatientCharacteristicExpired.new(expiredDatetime: expired_datetime, dataElementCodes: [qdmCode])
           end
         end
         # This case _shouldn't_ happen now that we are adding birthdate and expired onto measure source_data_criteria
